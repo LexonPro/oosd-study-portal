@@ -58,7 +58,7 @@ for idx, s in enumerate(all_sections):
     prev_sec = all_sections[idx-1] if idx > 0 else None
     next_sec = all_sections[idx+1] if idx < len(all_sections) - 1 else None
     
-    prev_link = f"""<a href="#{prev_sec['id']}" class="nav-btn prev-btn">← {prev_sec['number']}. {prev_sec['title']}</a>""" if prev_sec else """<a href="index.html#sec-36" class="nav-btn prev-btn">← Unit 2 (Sec 36)</a>"""
+    prev_link = f"""<a href="#{prev_sec['id']}" class="nav-btn prev-btn">← {prev_sec['number']}. {prev_sec['title']}</a>""" if prev_sec else """<a href="unit2.html#sec-36" class="nav-btn prev-btn">← Unit 2 (Sec 36)</a>"""
     next_link = f"""<a href="#{next_sec['id']}" class="nav-btn next-btn">{next_sec['number']}. {next_sec['title']} →</a>""" if next_sec else """<a href="unit4.html#u4-sec-1" class="nav-btn next-btn">Proceed to Unit 4 (Sec 01) →</a>"""
     
     content_sections_html.append(f"""
@@ -95,10 +95,10 @@ for idx, s in enumerate(all_sections):
 sections_html = "\n".join(content_sections_html)
 
 html_template = f"""<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>OOSD — UNIT 3: Complete Master Study Guide (All 28 Topics)</title>
   <meta name="description" content="Comprehensive interactive study portal covering all 28 topics of Object Oriented System Design Unit 3 (OOA, OOD, Object Design, SA/SD, JSD, Non-OO Mapping & OO Principles) with real-life analogies, commented code examples, and vector diagrams.">
   <link rel="stylesheet" href="style.css">
@@ -126,12 +126,12 @@ html_template = f"""<!DOCTYPE html>
     <div class="mobile-controls">
       <div class="unit-switcher">
         <a href="unit1.html" class="unit-tab" title="Go to Unit 1">U1</a>
-        <a href="index.html" class="unit-tab" title="Go to Unit 2">U2</a>
+        <a href="unit2.html" class="unit-tab" title="Go to Unit 2">U2</a>
         <a href="unit3.html" class="unit-tab active" title="Current: Unit 3">U3</a>
         <a href="unit4.html" class="unit-tab" title="Go to Unit 4">U4</a>
         <a href="unit5.html" class="unit-tab" title="Go to Unit 5">U5</a>
       </div>
-      <button id="theme-toggle-mob" class="icon-btn" title="Toggle Dark/Light Mode">🌙</button>
+      <button id="theme-toggle-mob" class="icon-btn" title="Toggle Dark/Light Mode">☀️</button>
     </div>
   </header>
 
@@ -152,7 +152,7 @@ html_template = f"""<!DOCTYPE html>
           <a href="unit1.html" class="unit-tab" style="flex: 1; justify-content: center; padding: 5px 2px; font-size: 11px;">
             U1 <span class="unit-tab-count">23</span>
           </a>
-          <a href="index.html" class="unit-tab" style="flex: 1; justify-content: center; padding: 5px 2px; font-size: 11px;">
+          <a href="unit2.html" class="unit-tab" style="flex: 1; justify-content: center; padding: 5px 2px; font-size: 11px;">
             U2 <span class="unit-tab-count">36</span>
           </a>
           <a href="unit3.html" class="unit-tab active" style="flex: 1; justify-content: center; padding: 5px 2px; font-size: 11px;">
@@ -226,7 +226,7 @@ html_template = f"""<!DOCTYPE html>
             <a href="unit1.html" class="unit-tab">
               Unit 1 <span class="unit-tab-count">23</span>
             </a>
-            <a href="index.html" class="unit-tab">
+            <a href="unit2.html" class="unit-tab">
               Unit 2 <span class="unit-tab-count">36</span>
             </a>
             <a href="unit3.html" class="unit-tab active">
@@ -244,14 +244,14 @@ html_template = f"""<!DOCTYPE html>
             <span class="tool-icon">⛶</span>
             <span class="tool-text">Focus Mode</span>
           </button>
-          <div class="font-sizer">
-            <button id="font-dec" title="Decrease font size">A-</button>
-            <button id="font-reset" title="Reset font size">A</button>
-            <button id="font-inc" title="Increase font size">A+</button>
+          <div class="zoom-controls" title="Zoom In / Out">
+            <button id="zoom-dec" title="Zoom Out (Ctrl -)">−</button>
+            <span id="zoom-level" class="zoom-level-text" title="Click to Reset Zoom">100%</span>
+            <button id="zoom-inc" title="Zoom In (Ctrl +)">+</button>
           </div>
           <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
-            <span class="theme-icon">🌙</span>
-            <span class="theme-text">Dark</span>
+            <span class="theme-icon">☀️</span>
+            <span class="theme-text">Light</span>
           </button>
         </div>
       </div>
@@ -287,7 +287,7 @@ html_template = f"""<!DOCTYPE html>
           <p>Designed for Computer Science & Engineering (B.Tech / MCA / Software Engineering) students.</p>
           <div class="footer-links">
             <a href="unit1.html">Switch to Unit 1 (23 Topics)</a> • 
-            <a href="index.html">Switch to Unit 2 (36 Topics)</a> • 
+            <a href="unit2.html">Switch to Unit 2 (36 Topics)</a> • 
             <a href="unit4.html">Proceed to Unit 4 (20 Topics)</a> • 
             <a href="unit5.html">Proceed to Unit 5 (24 Topics)</a> • 
             <a href="#u3-sec-1">Back to Section 01</a> • 

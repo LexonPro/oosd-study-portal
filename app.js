@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentActiveIndex = 0;
 
-  // 1. Theme Management (Dark / Light)
-  const savedTheme = localStorage.getItem('oosd_theme') || 'dark';
+  // 1. Theme Management (Default: Light Mode)
+  const savedTheme = localStorage.getItem('oosd_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcons(savedTheme);
 
   function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('oosd_theme', next);
@@ -66,28 +66,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Font Sizer Controls
-  const fontDec = document.getElementById('font-dec');
-  const fontReset = document.getElementById('font-reset');
-  const fontInc = document.getElementById('font-inc');
-  let currentFontSize = 16;
+  // 3. Zoom Controls (Range: 75% to 160% with instant visual scaling)
+  const zoomDec = document.getElementById('zoom-dec') || document.getElementById('font-dec');
+  const zoomReset = document.getElementById('zoom-reset') || document.getElementById('font-reset') || document.getElementById('zoom-level');
+  const zoomInc = document.getElementById('zoom-inc') || document.getElementById('font-inc');
+  const zoomLevelEl = document.getElementById('zoom-level');
 
-  if (fontDec && fontReset && fontInc) {
-    fontDec.addEventListener('click', () => {
-      if (currentFontSize > 13) {
-        currentFontSize -= 1;
-        document.documentElement.style.fontSize = `${currentFontSize}px`;
-      }
+  let currentZoom = parseFloat(localStorage.getItem('oosd_zoom') || '1.0');
+
+  function applyZoom(newZoom) {
+    currentZoom = Math.min(Math.max(newZoom, 0.75), 1.6);
+    currentZoom = Math.round(currentZoom * 10) / 10; // Clean 0.8, 0.9, 1.0, 1.1, etc.
+    
+    document.documentElement.style.setProperty('--content-zoom', currentZoom);
+    document.body.style.setProperty('--content-zoom', currentZoom);
+    
+    // Explicitly apply zoom to hero and sections
+    const zoomTargets = document.querySelectorAll('.sections-wrapper, .course-hero');
+    zoomTargets.forEach(el => {
+      el.style.zoom = currentZoom;
     });
-    fontReset.addEventListener('click', () => {
-      currentFontSize = 16;
-      document.documentElement.style.fontSize = '16px';
+
+    const percentString = `${Math.round(currentZoom * 100)}%`;
+    if (zoomLevelEl) zoomLevelEl.textContent = percentString;
+    if (zoomReset && zoomReset !== zoomLevelEl) {
+      zoomReset.textContent = currentZoom === 1.0 ? '100%' : percentString;
+    }
+    localStorage.setItem('oosd_zoom', currentZoom.toString());
+  }
+
+  // Initialize saved zoom on load
+  applyZoom(currentZoom);
+
+  if (zoomDec) {
+    zoomDec.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyZoom(currentZoom - 0.1);
     });
-    fontInc.addEventListener('click', () => {
-      if (currentFontSize < 20) {
-        currentFontSize += 1;
-        document.documentElement.style.fontSize = `${currentFontSize}px`;
-      }
+  }
+  if (zoomReset) {
+    zoomReset.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyZoom(1.0);
+    });
+  }
+  if (zoomInc) {
+    zoomInc.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyZoom(currentZoom + 0.1);
     });
   }
 

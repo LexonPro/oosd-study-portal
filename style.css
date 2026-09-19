@@ -643,28 +643,57 @@ body.focus-mode .top-nav-bar {
   color: var(--text-primary);
 }
 
+.zoom-controls,
 .font-sizer {
   display: flex;
+  align-items: center;
   background: var(--bg-card);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
+.zoom-controls button,
 .font-sizer button {
   background: none;
   border: none;
-  padding: 4px 8px;
+  padding: 4px 9px;
   color: var(--text-secondary);
   cursor: pointer;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
-.font-sizer button:hover {
+.zoom-controls .zoom-level-text,
+.font-sizer .zoom-level-text {
+  padding: 3px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  cursor: pointer;
+  user-select: none;
+  min-width: 44px;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+.zoom-controls button:hover,
+.font-sizer button:hover,
+.zoom-controls .zoom-level-text:hover,
+.font-sizer .zoom-level-text:hover {
   background: var(--bg-elevated);
   color: var(--text-primary);
+}
+
+.course-hero,
+.sections-wrapper {
+  zoom: var(--content-zoom, 1);
+  transform-origin: top center;
 }
 
 .theme-btn {
