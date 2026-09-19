@@ -285,7 +285,7 @@ def get_part2_sections():
         
         <!-- Instance 1: Order -->
         <rect x="15" y="50" width="135" height="65" rx="3" fill="var(--bg-secondary)" stroke="#10b981"/>
-        <text x="82" y="68" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>o101 : Order</u></text>
+        <text x="82" y="68" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">o101 : Order</text>
         <line x1="15" y1="75" x2="150" y2="75" stroke="#10b981"/>
         <text x="20" y="90" font-size="9" fill="var(--text-primary)">orderId = 101</text>
         <text x="20" y="103" font-size="9" fill="var(--text-primary)">total = 149.50</text>
@@ -296,14 +296,14 @@ def get_part2_sections():
 
         <!-- Instance 2: Item 1 -->
         <rect x="195" y="40" width="130" height="55" rx="3" fill="var(--bg-secondary)" stroke="#10b981"/>
-        <text x="260" y="56" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>item1 : Item</u></text>
+        <text x="260" y="56" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">item1 : Item</text>
         <line x1="195" y1="62" x2="325" y2="62" stroke="#10b981"/>
         <text x="200" y="75" font-size="9" fill="var(--text-primary)">sku = "KBD-99"</text>
         <text x="200" y="87" font-size="9" fill="var(--text-primary)">price = 99.50</text>
 
         <!-- Instance 3: Item 2 -->
         <rect x="195" y="115" width="130" height="55" rx="3" fill="var(--bg-secondary)" stroke="#10b981"/>
-        <text x="260" y="131" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>item2 : Item</u></text>
+        <text x="260" y="131" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">item2 : Item</text>
         <line x1="195" y1="137" x2="325" y2="137" stroke="#10b981"/>
         <text x="200" y="150" font-size="9" fill="var(--text-primary)">sku = "MOU-50"</text>
         <text x="200" y="162" font-size="9" fill="var(--text-primary)">price = 50.00</text>

@@ -99,7 +99,7 @@ def get_part3_sections():
       <!-- Object: OrderController -->
       <g transform="translate(230, 95)">
         <rect width="150" height="50" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:OrderController</u></text>
+        <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:OrderController</text>
       </g>
 
       <!-- Link 2: OrderController to PaymentGateway -->
@@ -111,7 +111,7 @@ def get_part3_sections():
       <!-- Object: PaymentGateway -->
       <g transform="translate(520, 95)">
         <rect width="160" height="50" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:PaymentGateway</u></text>
+        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:PaymentGateway</text>
       </g>
 
       <!-- Link 3: OrderController down to Inventory -->
@@ -122,7 +122,7 @@ def get_part3_sections():
       <!-- Object: Inventory -->
       <g transform="translate(230, 200)">
         <rect width="150" height="45" rx="4" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
-        <text x="75" y="27" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:Inventory</u></text>
+        <text x="75" y="27" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:Inventory</text>
       </g>
     </svg>
   </div>
@@ -208,7 +208,7 @@ def get_part3_sections():
       <!-- Sender Object -->
       <g transform="translate(40, 70)">
         <rect width="140" height="55" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="70" y="32" text-anchor="middle" font-size="12" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>sender : Client</u></text>
+        <text x="70" y="32" text-anchor="middle" font-size="12" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">sender : Client</text>
       </g>
 
       <!-- Link Line -->
@@ -221,7 +221,7 @@ def get_part3_sections():
       <!-- Receiver Object -->
       <g transform="translate(520, 70)">
         <rect width="160" height="55" rx="4" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
-        <text x="80" y="32" text-anchor="middle" font-size="12" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>receiver : Server</u></text>
+        <text x="80" y="32" text-anchor="middle" font-size="12" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">receiver : Server</text>
       </g>
 
       <!-- Annotations -->
@@ -323,7 +323,7 @@ def get_part3_sections():
       <!-- Client -->
       <g transform="translate(40, 80)">
         <rect width="130" height="50" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="65" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:ClientApp</u></text>
+        <text x="65" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:ClientApp</text>
       </g>
 
       <!-- Link -->
@@ -340,7 +340,7 @@ def get_part3_sections():
       <!-- AuthServer -->
       <g transform="translate(520, 80)">
         <rect width="150" height="50" rx="4" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
-        <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:AuthService</u></text>
+        <text x="75" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:AuthService</text>
       </g>
 
       <text x="345" y="195" text-anchor="middle" font-size="11" fill="var(--text-muted)">Two messages over a single link with explicit sequence order and return binding.</text>
@@ -425,7 +425,7 @@ def get_part3_sections():
       <!-- Sender: MonthlyPayroll -->
       <g transform="translate(190, 100)">
         <rect width="160" height="50" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:MonthlyPayroll</u></text>
+        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:MonthlyPayroll</text>
       </g>
 
       <!-- Branch A: FullTimeEmployee -->
@@ -435,7 +435,7 @@ def get_part3_sections():
 
       <g transform="translate(490, 25)">
         <rect width="210" height="50" rx="4" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
-        <text x="105" y="24" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:FullTimeEmployee</u></text>
+        <text x="105" y="24" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:FullTimeEmployee</text>
         <text x="105" y="40" text-anchor="middle" font-size="9" fill="var(--text-muted)">Fixed Monthly Grade Base</text>
       </g>
 
@@ -446,7 +446,7 @@ def get_part3_sections():
 
       <g transform="translate(490, 100)">
         <rect width="210" height="50" rx="4" fill="var(--card-bg)" stroke="#f59e0b" stroke-width="2"/>
-        <text x="105" y="24" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:PartTimeEmployee</u></text>
+        <text x="105" y="24" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:PartTimeEmployee</text>
         <text x="105" y="40" text-anchor="middle" font-size="9" fill="var(--text-muted)">Hours Worked * Hourly Rate</text>
       </g>
 
@@ -457,7 +457,7 @@ def get_part3_sections():
 
       <g transform="translate(490, 175)">
         <rect width="210" height="50" rx="4" fill="var(--card-bg)" stroke="#8b5cf6" stroke-width="2"/>
-        <text x="105" y="24" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:TemporaryEmployee</u></text>
+        <text x="105" y="24" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:TemporaryEmployee</text>
         <text x="105" y="40" text-anchor="middle" font-size="9" fill="var(--text-muted)">Flat Stipend (No Pension Ded.)</text>
       </g>
 
@@ -532,7 +532,7 @@ def get_part3_sections():
       <!-- Order Object -->
       <g transform="translate(60, 75)">
         <rect width="140" height="50" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="70" y="30" text-anchor="middle" font-size="12" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:Order</u></text>
+        <text x="70" y="30" text-anchor="middle" font-size="12" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:Order</text>
       </g>
 
       <!-- Link to OrderItem collection -->
@@ -547,7 +547,7 @@ def get_part3_sections():
         <!-- Back rectangle representing collection -->
         <rect x="8" y="-8" width="160" height="50" rx="4" fill="var(--bg-secondary)" stroke="#64748b" stroke-width="1.5"/>
         <rect width="160" height="50" rx="4" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
-        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>items[i] : OrderItem</u></text>
+        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">items[i] : OrderItem</text>
       </g>
 
       <text x="340" y="160" text-anchor="middle" font-size="11" fill="var(--text-muted)">The asterisk (*) informs the parser and developer that this message repeats n times.</text>
@@ -623,7 +623,7 @@ def get_part3_sections():
       <!-- ATM Controller -->
       <g transform="translate(60, 80)">
         <rect width="140" height="50" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
-        <text x="70" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:ATMController</u></text>
+        <text x="70" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:ATMController</text>
       </g>
 
       <!-- Incoming Message -->
@@ -634,7 +634,7 @@ def get_part3_sections():
       <!-- BankAccount with Self-Loop -->
       <g transform="translate(380, 80)">
         <rect width="160" height="50" rx="4" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
-        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:BankAccount</u></text>
+        <text x="80" y="30" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:BankAccount</text>
       </g>
 
       <!-- Self Link Arc -->

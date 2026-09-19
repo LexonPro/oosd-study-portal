@@ -61,7 +61,7 @@ def get_part4_sections():
       <!-- Participant 1: User -->
       <g transform="translate(100, 20)">
         <rect width="110" height="35" rx="3" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
-        <text x="55" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:Customer</u></text>
+        <text x="55" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:Customer</text>
         <line x1="55" y1="35" x2="55" y2="220" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="50" y="60" width="10" height="140" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -69,7 +69,7 @@ def get_part4_sections():
       <!-- Participant 2: Controller -->
       <g transform="translate(320, 20)">
         <rect width="130" height="35" rx="3" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
-        <text x="65" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:ATMController</u></text>
+        <text x="65" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:ATMController</text>
         <line x1="65" y1="35" x2="65" y2="220" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="60" y="70" width="10" height="120" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -77,7 +77,7 @@ def get_part4_sections():
       <!-- Participant 3: BankServer -->
       <g transform="translate(540, 20)">
         <rect width="130" height="35" rx="3" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
-        <text x="65" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:BankServer</u></text>
+        <text x="65" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:BankServer</text>
         <line x1="65" y1="35" x2="65" y2="220" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="60" y="100" width="10" height="60" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -306,7 +306,7 @@ def get_part4_sections():
       <!-- Producer Lifeline -->
       <g transform="translate(60, 20)">
         <rect width="120" height="35" rx="3" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
-        <text x="60" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:SensorProducer</u></text>
+        <text x="60" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:SensorProducer</text>
         <line x1="60" y1="35" x2="60" y2="210" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="55" y="60" width="10" height="130" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -331,7 +331,7 @@ def get_part4_sections():
       <!-- Consumer Lifeline -->
       <g transform="translate(560, 20)">
         <rect width="120" height="35" rx="3" fill="var(--card-bg)" stroke="#10b981" stroke-width="1.5"/>
-        <text x="60" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:WorkerConsumer</u></text>
+        <text x="60" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:WorkerConsumer</text>
         <line x1="60" y1="35" x2="60" y2="210" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="55" y="90" width="10" height="100" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -419,7 +419,7 @@ def get_part4_sections():
       <!-- Client Participant -->
       <g transform="translate(100, 20)">
         <rect width="140" height="35" rx="3" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
-        <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>client : DownloadUI</u></text>
+        <text x="70" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">client : DownloadUI</text>
         <line x1="70" y1="35" x2="70" y2="230" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="65" y="60" width="10" height="40" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
         <rect x="65" y="170" width="10" height="40" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
@@ -428,7 +428,7 @@ def get_part4_sections():
       <!-- Server Participant -->
       <g transform="translate(500, 20)">
         <rect width="150" height="35" rx="3" fill="var(--card-bg)" stroke="#10b981" stroke-width="1.5"/>
-        <text x="75" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>server : DownloadMgr</u></text>
+        <text x="75" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">server : DownloadMgr</text>
         <line x1="75" y1="35" x2="75" y2="230" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="70" y="70" width="10" height="120" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -542,7 +542,7 @@ def get_part4_sections():
       <!-- Broadcaster -->
       <g transform="translate(60, 20)">
         <rect width="130" height="35" rx="3" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
-        <text x="65" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:OrderService</u></text>
+        <text x="65" y="22" text-anchor="middle" font-size="11" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:OrderService</text>
         <line x1="65" y1="35" x2="65" y2="230" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="60" y="60" width="10" height="40" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -558,7 +558,7 @@ def get_part4_sections():
       <!-- Subscriber 1: EmailService -->
       <g transform="translate(440, 20)">
         <rect width="120" height="35" rx="3" fill="var(--card-bg)" stroke="#10b981" stroke-width="1.5"/>
-        <text x="60" y="22" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:EmailService</u></text>
+        <text x="60" y="22" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:EmailService</text>
         <line x1="60" y1="35" x2="60" y2="230" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="55" y="110" width="10" height="30" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
@@ -566,7 +566,7 @@ def get_part4_sections():
       <!-- Subscriber 2: AnalyticsService -->
       <g transform="translate(590, 20)">
         <rect width="130" height="35" rx="3" fill="var(--card-bg)" stroke="#10b981" stroke-width="1.5"/>
-        <text x="65" y="22" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)"><u>:AnalyticsEngine</u></text>
+        <text x="65" y="22" text-anchor="middle" font-size="10" font-weight="bold" text-decoration="underline" fill="var(--text-primary)">:AnalyticsEngine</text>
         <line x1="65" y1="35" x2="65" y2="230" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
         <rect x="60" y="150" width="10" height="30" class="uml-activation" fill="rgba(56,189,248,0.25)" stroke="#38bdf8"/>
       </g>
