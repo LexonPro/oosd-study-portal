@@ -1,0 +1,818 @@
+# generate_sections_part1.py: Part 1 - Basic Structural Modeling (Sections 1 to 6)
+
+def get_part1_sections():
+    return [
+        {
+            "id": "sec-1",
+            "number": "01",
+            "part": "Part 1 — Basic Structural Modeling",
+            "title": "Basic Structural Modeling",
+            "subtitle": "Static Features, System Framework & Structural vs Behavioral Perspectives",
+            "content": """
+<div class="topic-grid">
+  <div class="card overview-card">
+    <div class="card-badge">Core Concept</div>
+    <h3>Meaning of Structural Modeling</h3>
+    <p><strong>Structural modeling</strong> captures the <em>static aspects</em> of a software system. Unlike behavioral modeling which tracks activities and message flows over time, structural modeling represents the skeleton or physical fabric of the system: the things that exist (classes, interfaces, components, nodes) and how they are wired together.</p>
+    <p>It forms the <strong>system framework</strong>—the structural blueprint that provides the architectural foundation upon which dynamic behaviors and algorithms execute.</p>
+  </div>
+</div>
+
+<div class="subtopics-container">
+  <h4>Key Subtopics & In-Depth Concepts</h4>
+  
+  <div class="detail-block">
+    <h5>1. Static Features of a System</h5>
+    <p>A software system's static features remain invariant across runtime execution flows:</p>
+    <ul>
+      <li><strong>Structural Entities (Nouns):</strong> Objects, Classes, Interfaces, Collaborations, Components, and Nodes.</li>
+      <li><strong>Relationships:</strong> Associations, Generalizations, Dependencies, Realizations, and Aggregations.</li>
+      <li><strong>Structural Properties:</strong> Attributes, data types, multiplicity constraints, visibility rules (public, private, protected), and component boundaries.</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h5>2. Structural Model and System Framework</h5>
+    <p>In software architecture, the <strong>system framework</strong> is the persistent structural backbone. Think of a skyscraper: the steel beams, concrete floors, and elevator shafts are the <em>structural model</em>; the movement of elevators, human foot-traffic, and power grid flows are the <em>behavioral model</em>. Without a robust structural model, the software lacks cohesion and maintainability.</p>
+  </div>
+
+  <div class="detail-block">
+    <h5>3. The Structural Diagrams</h5>
+    <p>UML provides dedicated structural diagrams to capture the system at different levels of abstraction:</p>
+    <div class="badge-list">
+      <span class="tech-badge">Class Diagram</span>
+      <span class="tech-badge">Object Diagram</span>
+      <span class="tech-badge">Component Diagram</span>
+      <span class="tech-badge">Deployment Diagram</span>
+      <span class="tech-badge">Package Diagram</span>
+      <span class="tech-badge">Composite Structure Diagram</span>
+    </div>
+  </div>
+
+  <div class="detail-block">
+    <h5>4. Structural vs. Behavioral Modeling (Deep Comparison)</h5>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th>Structural Modeling (Static)</th>
+          <th>Behavioral Modeling (Dynamic)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Core Question</strong></td>
+          <td><em>"What is the system composed of?"</em></td>
+          <td><em>"How does the system behave and interact?"</em></td>
+        </tr>
+        <tr>
+          <td><strong>Time Dependency</strong></td>
+          <td>Time-invariant (snapshot / permanent relations)</td>
+          <td>Time-dependent (chronological flows, triggers, lifecycles)</td>
+        </tr>
+        <tr>
+          <td><strong>Primary Elements</strong></td>
+          <td>Classes, attributes, operations, components, nodes</td>
+          <td>Messages, events, states, transitions, activities</td>
+        </tr>
+        <tr>
+          <td><strong>Key Diagrams</strong></td>
+          <td>Class, Object, Component, Deployment, Package</td>
+          <td>Use Case, Sequence, Collaboration, State Machine, Activity</td>
+        </tr>
+        <tr>
+          <td><strong>Analogy</strong></td>
+          <td>Anatomy of an organism (organs, bones)</td>
+          <td>Physiology of an organism (blood circulation, nerve signals)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="diagram-container">
+  <h4>Visual Model: Structural Architecture vs Dynamic Interaction</h4>
+  <div class="svg-diagram">
+    <svg viewBox="0 0 760 220" width="100%" height="220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#3b82f6"/>
+        </marker>
+        <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+        </marker>
+      </defs>
+      <!-- Structural Box -->
+      <rect x="20" y="20" width="340" height="180" rx="10" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
+      <rect x="20" y="20" width="340" height="36" rx="10" fill="#3b82f6" fill-opacity="0.15"/>
+      <text x="190" y="44" text-anchor="middle" font-size="14" font-weight="700" fill="#2563eb">STRUCTURAL MODEL (Static Framework)</text>
+      <g transform="translate(45, 75)">
+        <rect x="0" y="0" width="110" height="60" rx="4" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1.5"/>
+        <text x="55" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Class: User</text>
+        <line x1="0" y1="30" x2="110" y2="30" stroke="var(--border-color)"/>
+        <text x="8" y="45" font-size="10" fill="var(--text-muted)">- userId: String</text>
+      </g>
+      <line x1="155" y1="105" x2="215" y2="105" stroke="#3b82f6" stroke-width="2" marker-end="url(#arr1)"/>
+      <text x="185" y="98" text-anchor="middle" font-size="10" fill="#3b82f6">association</text>
+      <g transform="translate(225, 75)">
+        <rect x="0" y="0" width="110" height="60" rx="4" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1.5"/>
+        <text x="55" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Class: Account</text>
+        <line x1="0" y1="30" x2="110" y2="30" stroke="var(--border-color)"/>
+        <text x="8" y="45" font-size="10" fill="var(--text-muted)">- balance: double</text>
+      </g>
+      <text x="190" y="180" text-anchor="middle" font-size="11" fill="var(--text-muted)">Focus: "What entities exist &amp; how are they linked?"</text>
+
+      <!-- Behavioral Box -->
+      <rect x="400" y="20" width="340" height="180" rx="10" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
+      <rect x="400" y="20" width="340" height="36" rx="10" fill="#10b981" fill-opacity="0.15"/>
+      <text x="570" y="44" text-anchor="middle" font-size="14" font-weight="700" fill="#059669">BEHAVIORAL MODEL (Dynamic Execution)</text>
+      <g transform="translate(425, 80)">
+        <circle cx="20" cy="15" r="14" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.5"/>
+        <text x="20" y="19" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">:User</text>
+        <line x1="45" y1="15" x2="145" y2="15" stroke="#10b981" stroke-width="2" marker-end="url(#arr2)"/>
+        <text x="95" y="9" text-anchor="middle" font-size="9" fill="#059669">1: withdraw(amt)</text>
+        <rect x="155" y="0" width="80" height="30" rx="4" fill="var(--bg-secondary)" stroke="var(--border-color)" stroke-width="1.5"/>
+        <text x="195" y="19" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-primary)">:Account</text>
+        <path d="M 195 30 L 195 55 L 220 55 L 220 30" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="207" y="70" text-anchor="middle" font-size="9" fill="#059669">2: deduct()</text>
+      </g>
+      <text x="570" y="180" text-anchor="middle" font-size="11" fill="var(--text-muted)">Focus: "How do messages flow over time?"</text>
+    </svg>
+  </div>
+</div>
+
+<div class="exam-corner">
+  <div class="exam-title">🎓 University Exam Corner (AKTU Reference)</div>
+  <p><strong>Common Question:</strong> <em>"What is structural modeling? Differentiate between structural and behavioral modeling with examples."</em> [5 Marks]</p>
+  <div class="tip-box">
+    <strong>Scoring Strategy:</strong>
+    <ol>
+      <li>Define structural modeling as the static specification of system structure and its vocabulary.</li>
+      <li>Provide the 4+ structural diagrams (Class, Object, Component, Deployment).</li>
+      <li>Draw the 2-column comparison table above. Mention that Class diagrams model static architecture while Sequence diagrams model message exchange over time.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="quick-recall">
+  <div class="recall-header">⚡ 30-Second Quick Recall</div>
+  <ul>
+    <li>Structural Modeling = Static features ("What is"), vocabulary, classes, relationships.</li>
+    <li>Behavioral Modeling = Dynamic execution ("How it behaves"), interactions, states, workflows.</li>
+    <li>Structural diagrams = Class, Object, Component, Deployment, Package.</li>
+  </ul>
+</div>
+"""
+        },
+        {
+            "id": "sec-2",
+            "number": "02",
+            "part": "Part 1 — Basic Structural Modeling",
+            "title": "Types of Modeling",
+            "subtitle": "Structural, Behavioral & Architectural Modeling Dimensions",
+            "content": """
+<div class="topic-grid">
+  <div class="card overview-card">
+    <div class="card-badge">Taxonomy</div>
+    <h3>The Three Modeling Dimensions in UML</h3>
+    <p>UML provides three comprehensive perspectives to specify, visualize, and document software systems: <strong>Structural Modeling</strong>, <strong>Behavioral Modeling</strong>, and <strong>Architectural Modeling</strong>. A complete system model requires all three perspectives working synergistically.</p>
+  </div>
+</div>
+
+<div class="subtopics-container">
+  <h4>Detailed Analysis of Modeling Types</h4>
+
+  <div class="three-col-cards">
+    <div class="feature-card">
+      <div class="col-head blue-head">1. Structural Modeling</div>
+      <p>Represents the static skeleton of software entities, their attributes, operations, and inter-connections.</p>
+      <ul>
+        <li><strong>Class Diagram:</strong> Types, inheritance, associations.</li>
+        <li><strong>Component Diagram:</strong> Physical modules, libraries, JARs, APIs.</li>
+        <li><strong>Deployment Diagram:</strong> Hardware nodes, network topologies, runtime placement.</li>
+        <li><strong>Object Diagram:</strong> Runtime instance snapshots.</li>
+      </ul>
+    </div>
+
+    <div class="feature-card">
+      <div class="col-head green-head">2. Behavioral Modeling</div>
+      <p>Represents the dynamic behavior, state transitions, message interactions, and control logic.</p>
+      <ul>
+        <li><strong>Activity Diagram:</strong> Step-by-step algorithms, business workflows, parallel forks/joins.</li>
+        <li><strong>Interaction Diagrams:</strong> Sequence & Collaboration (Communication) diagrams showing message flows.</li>
+        <li><strong>Use Case Diagram:</strong> High-level external user interactions and functional requirements.</li>
+        <li><strong>State Machine Diagram:</strong> Event-driven lifecycle of reactive objects.</li>
+      </ul>
+    </div>
+
+    <div class="feature-card">
+      <div class="col-head purple-head">3. Architectural Modeling</div>
+      <p>Represents the global framework, physical distribution, packaging, and non-functional blueprints.</p>
+      <ul>
+        <li><strong>Overall System Framework:</strong> Blends structural components with deployment nodes.</li>
+        <li><strong>Package Diagram:</strong> Organizes large enterprise codebases into layered subsystems and namespaces.</li>
+        <li><strong>Cross-cutting Concerns:</strong> Security, scalability, network protocols, fault tolerance.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="diagram-container">
+  <h4>Visual Model: The Three Modeling Pillars</h4>
+  <div class="svg-diagram">
+    <svg viewBox="0 0 760 210" width="100%" height="210" xmlns="http://www.w3.org/2000/svg">
+      <!-- Pillar 1 -->
+      <g transform="translate(30, 20)">
+        <rect width="210" height="170" rx="8" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
+        <rect width="210" height="34" rx="8" fill="#3b82f6"/>
+        <text x="105" y="22" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Structural Modeling</text>
+        <text x="15" y="55" font-size="11" fill="var(--text-primary)">• Class Diagram</text>
+        <text x="15" y="78" font-size="11" fill="var(--text-primary)">• Component Diagram</text>
+        <text x="15" y="101" font-size="11" fill="var(--text-primary)">• Deployment Diagram</text>
+        <text x="15" y="124" font-size="11" fill="var(--text-primary)">• Object Diagram</text>
+        <rect x="15" y="140" width="180" height="20" rx="4" fill="#3b82f6" fill-opacity="0.15"/>
+        <text x="105" y="154" text-anchor="middle" font-size="10" font-weight="600" fill="#2563eb">Static Skeleton ("What is")</text>
+      </g>
+      <!-- Pillar 2 -->
+      <g transform="translate(275, 20)">
+        <rect width="210" height="170" rx="8" fill="var(--card-bg)" stroke="#10b981" stroke-width="2"/>
+        <rect width="210" height="34" rx="8" fill="#10b981"/>
+        <text x="105" y="22" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Behavioral Modeling</text>
+        <text x="15" y="55" font-size="11" fill="var(--text-primary)">• Activity Diagram</text>
+        <text x="15" y="78" font-size="11" fill="var(--text-primary)">• Interaction Diagrams</text>
+        <text x="15" y="101" font-size="11" fill="var(--text-primary)">• Use Case Diagram</text>
+        <text x="15" y="124" font-size="11" fill="var(--text-primary)">• State Machine</text>
+        <rect x="15" y="140" width="180" height="20" rx="4" fill="#10b981" fill-opacity="0.15"/>
+        <text x="105" y="154" text-anchor="middle" font-size="10" font-weight="600" fill="#059669">Dynamic Flow ("How it runs")</text>
+      </g>
+      <!-- Pillar 3 -->
+      <g transform="translate(520, 20)">
+        <rect width="210" height="170" rx="8" fill="var(--card-bg)" stroke="#8b5cf6" stroke-width="2"/>
+        <rect width="210" height="34" rx="8" fill="#8b5cf6"/>
+        <text x="105" y="22" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">Architectural Modeling</text>
+        <text x="15" y="55" font-size="11" fill="var(--text-primary)">• Package Diagram</text>
+        <text x="15" y="78" font-size="11" fill="var(--text-primary)">• System Blueprint</text>
+        <text x="15" y="101" font-size="11" fill="var(--text-primary)">• Physical Topology</text>
+        <text x="15" y="124" font-size="11" fill="var(--text-primary)">• Subsystem Layering</text>
+        <rect x="15" y="140" width="180" height="20" rx="4" fill="#8b5cf6" fill-opacity="0.15"/>
+        <text x="105" y="154" text-anchor="middle" font-size="10" font-weight="600" fill="#7c3aed">Global Framework ("Blueprint")</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="exam-corner">
+  <div class="exam-title">🎓 University Exam Corner (AKTU Reference)</div>
+  <p><strong>PYQ (AKTU 2013-14):</strong> <em>"Explain different types of modeling in object-oriented system design."</em> [5 Marks]</p>
+  <div class="tip-box">
+    <strong>Key Points to Cover:</strong>
+    <ul>
+      <li>Explain the 3 main types: Structural (Static), Behavioral (Dynamic), Architectural (Blueprint).</li>
+      <li>List all diagram types under each category.</li>
+      <li>Mention that Architectural modeling bridges the gap between software design and hardware execution environments.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="quick-recall">
+  <div class="recall-header">⚡ 30-Second Quick Recall</div>
+  <ul>
+    <li>Structural = Class, Component, Deployment (Static physical/logical skeleton).</li>
+    <li>Behavioral = Activity, Interaction (Sequence/Collaboration), Use Case, State Machine (Dynamic messages & states).</li>
+    <li>Architectural = Package, Deployment, Subsystems (Overall structural and operational framework).</li>
+  </ul>
+</div>
+"""
+        },
+        {
+            "id": "sec-3",
+            "number": "03",
+            "part": "Part 1 — Basic Structural Modeling",
+            "title": "Class",
+            "subtitle": "Basic UML Element, Attributes, Operations & 3-Compartment Notation",
+            "content": """
+<div class="topic-grid">
+  <div class="card overview-card">
+    <div class="card-badge">Foundational Element</div>
+    <h3>Meaning of Class in UML</h3>
+    <p>A <strong>Class</strong> is a description of a set of objects that share the same attributes, operations, relationships, and semantics. In UML, a class is the central <em>classifier</em> used to represent software entities, domain concepts, or technical abstractions.</p>
+  </div>
+</div>
+
+<div class="subtopics-container">
+  <h4>Key Subtopics & Syntax Specifications</h4>
+
+  <div class="detail-block">
+    <h5>1. Class as a Basic UML Element</h5>
+    <p>In UML metamodel, a Class is represented as a solid-bordered rectangle divided into <strong>three standard compartments</strong>:</p>
+    <ol>
+      <li><strong>Top Compartment (Name):</strong> Contains the class name. Centered, bold, starting with an uppercase letter (e.g., <code>Student</code>). Abstract classes are written in <em>Italics</em> or adorned with <code>{abstract}</code>.</li>
+      <li><strong>Middle Compartment (Attributes):</strong> Lists the data fields/properties holding the object's internal state.</li>
+      <li><strong>Bottom Compartment (Operations):</strong> Lists the functions/methods that define the object's behavior.</li>
+    </ol>
+  </div>
+
+  <div class="detail-block">
+    <h5>2. Class Attributes Syntax & Visibility</h5>
+    <p>Full UML attribute specification syntax:</p>
+    <div class="code-box"><code>[visibility] name : type [multiplicity] [= default-value] [{property-string}]</code></div>
+    <p>Standard visibility indicators:</p>
+    <ul>
+      <li><code>+</code> <strong>Public:</strong> Accessible by any classifier in the system.</li>
+      <li><code>-</code> <strong>Private:</strong> Accessible only within this class.</li>
+      <li><code>#</code> <strong>Protected:</strong> Accessible within this class and its descendants (subclasses).</li>
+      <li><code>~</code> <strong>Package:</strong> Accessible by any classifier within the same package.</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h5>3. Class Operations Syntax</h5>
+    <p>Full UML operation specification syntax:</p>
+    <div class="code-box"><code>[visibility] name (parameter-list) : return-type [{property-string}]</code></div>
+    <p>Where each parameter has the form: <code>direction name : type = default-value</code> (directions: <code>in</code>, <code>out</code>, <code>inout</code>).</p>
+  </div>
+</div>
+
+<div class="diagram-container">
+  <h4>Visual Model: 3-Compartment UML Class Box</h4>
+  <div class="svg-diagram">
+    <svg viewBox="0 0 760 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+      <!-- General Layout -->
+      <g transform="translate(40, 20)">
+        <rect width="280" height="220" rx="4" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="2"/>
+        <!-- Name compartment -->
+        <rect width="280" height="40" fill="#3b82f6" fill-opacity="0.15"/>
+        <text x="140" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">BankAccount</text>
+        <line x1="0" y1="40" x2="280" y2="40" stroke="#3b82f6" stroke-width="1.5"/>
+        <!-- Attributes compartment -->
+        <text x="12" y="65" font-size="12" fill="var(--text-primary)">- accountNumber : String</text>
+        <text x="12" y="88" font-size="12" fill="var(--text-primary)">- balance : double = 0.0</text>
+        <text x="12" y="111" font-size="12" fill="var(--text-primary)"># interestRate : float</text>
+        <line x1="0" y1="125" x2="280" y2="125" stroke="#3b82f6" stroke-width="1.5"/>
+        <!-- Operations compartment -->
+        <text x="12" y="150" font-size="12" fill="var(--text-primary)">+ deposit(amt : double) : void</text>
+        <text x="12" y="173" font-size="12" fill="var(--text-primary)">+ withdraw(amt : double) : boolean</text>
+        <text x="12" y="196" font-size="12" fill="var(--text-primary)">+ getBalance() : double</text>
+      </g>
+
+      <!-- Annotations -->
+      <g transform="translate(360, 20)">
+        <!-- Top callout -->
+        <path d="M 0 20 L 50 20" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <rect x="50" y="5" width="310" height="32" rx="4" fill="var(--bg-secondary)" stroke="var(--border-color)"/>
+        <text x="60" y="26" font-size="11" fill="var(--text-primary)"><tspan font-weight="bold">Name Compartment:</tspan> Class identifier (Bold)</text>
+        <!-- Mid callout -->
+        <path d="M 0 85 L 50 85" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <rect x="50" y="70" width="310" height="42" rx="4" fill="var(--bg-secondary)" stroke="var(--border-color)"/>
+        <text x="60" y="88" font-size="11" fill="var(--text-primary)"><tspan font-weight="bold">Attribute Compartment:</tspan> State &amp; properties</text>
+        <text x="60" y="103" font-size="10" fill="var(--text-muted)">Syntax: visibility name : type = default</text>
+        <!-- Bottom callout -->
+        <path d="M 0 170 L 50 170" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <rect x="50" y="150" width="310" height="42" rx="4" fill="var(--bg-secondary)" stroke="var(--border-color)"/>
+        <text x="60" y="168" font-size="11" fill="var(--text-primary)"><tspan font-weight="bold">Operation Compartment:</tspan> Behavioral methods</text>
+        <text x="60" y="183" font-size="10" fill="var(--text-muted)">Syntax: visibility name(params) : returnType</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="exam-corner">
+  <div class="exam-title">🎓 University Exam Corner (AKTU Reference)</div>
+  <p><strong>PYQ:</strong> <em>"What do you understand by classes in object-oriented system design? Show its general layout with an example."</em> [5 Marks]</p>
+  <div class="tip-box">
+    <strong>Exam Must-Haves:</strong>
+    <ul>
+      <li>Draw a neat 3-compartment rectangle.</li>
+      <li>Explicitly write all 4 visibility symbols (+, -, #, ~) and define their scope.</li>
+      <li>Mention that static attributes/methods are represented by <u>underlining</u> their names.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="quick-recall">
+  <div class="recall-header">⚡ 30-Second Quick Recall</div>
+  <ul>
+    <li>Class = 3 compartments: Name, Attributes, Operations.</li>
+    <li>Visibilities: <code>+</code> Public, <code>-</code> Private, <code>#</code> Protected, <code>~</code> Package.</li>
+    <li>Class is an abstraction/blueprint; an Object is a concrete runtime instance.</li>
+  </ul>
+</div>
+"""
+        },
+        {
+            "id": "sec-4",
+            "number": "04",
+            "part": "Part 1 — Basic Structural Modeling",
+            "title": "Relationships",
+            "subtitle": "Dependency, Association, Generalization, Inheritance & Aggregation",
+            "content": """
+<div class="topic-grid">
+  <div class="card overview-card">
+    <div class="card-badge">Structural Connectivity</div>
+    <h3>Meaning of Relationship in UML</h3>
+    <p>In object-oriented modeling, a <strong>Relationship</strong> is a semantic connection among model elements. Standalone classes provide little value; real-world systems emerge from how classes connect, collaborate, inherit, and depend on each other.</p>
+  </div>
+</div>
+
+<div class="subtopics-container">
+  <h4>The Four Fundamental UML Relationships</h4>
+
+  <div class="detail-block">
+    <h5>1. Dependency (<code>- - - -></code>)</h5>
+    <p>A semantic connection where a change in the independent element affects the dependent element (a <em>"uses-a"</em> relationship). Example: A class operation that takes another class as a method parameter.</p>
+    <p><strong>Notation:</strong> Dashed line with an open arrow pointing toward the independent provider.</p>
+  </div>
+
+  <div class="detail-block">
+    <h5>2. Association (<code>─────</code>)</h5>
+    <p>A structural relationship that specifies that objects of one class are connected to objects of another class. It indicates a permanent or semi-permanent link.</p>
+    <ul>
+      <li><strong>Role Names:</strong> Specify the role a class plays in the association.</li>
+      <li><strong>Multiplicity:</strong> Specifies how many instances can connect (<code>0..1</code>, <code>1</code>, <code>*</code>, <code>1..*</code>).</li>
+      <li><strong>Navigability:</strong> An arrow on one end shows directed association (can traverse A to B, but not B to A).</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h5>3. Generalization & Inheritance (<code>─────▷</code>)</h5>
+    <p>A taxonomic relationship between a more general classifier (superclass) and a more specific classifier (subclass). The subclass inherits attributes, operations, and relationships of the superclass (<em>"is-a"</em> relationship).</p>
+    <p><strong>Notation:</strong> Solid line with a hollow triangular arrowhead pointing to the parent class.</p>
+  </div>
+
+  <div class="detail-block">
+    <h5>4. Aggregation & Composition (<code>◇─────</code> & <code>◆─────</code>)</h5>
+    <p>A specialized form of association representing a whole-part (<em>"has-a"</em>) relationship:</p>
+    <ul>
+      <li><strong>Shared Aggregation (Weak):</strong> Hollow diamond (<code>◇</code>). The part can exist independently of the whole. (Example: <em>College and Department</em>, or <em>Car and Wheel</em>).</li>
+      <li><strong>Composite Aggregation (Strong / Composition):</strong> Solid filled diamond (<code>◆</code>). The parts are strictly owned by the whole and die when the whole dies. (Example: <em>Order and OrderLineItem</em>, or <em>Human and Brain</em>).</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h5>Categorizing Real-World Relationships (Classic AKTU Problems)</h5>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Real-World Statement</th>
+          <th>Relationship Category</th>
+          <th>Justification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><em>"A country has a capital city"</em></td>
+          <td><strong>Association (1 to 1)</strong></td>
+          <td>Peer structural connection between two distinct entities.</td>
+        </tr>
+        <tr>
+          <td><em>"A file contains records"</em></td>
+          <td><strong>Aggregation / Composition</strong></td>
+          <td>Whole-part relationship; records form the contents of a file.</td>
+        </tr>
+        <tr>
+          <td><em>"A student is a person"</em></td>
+          <td><strong>Generalization (is-a)</strong></td>
+          <td>Subclass specialization; Student inherits Person properties.</td>
+        </tr>
+        <tr>
+          <td><em>"A controller uses a printer service"</em></td>
+          <td><strong>Dependency (uses-a)</strong></td>
+          <td>Temporary reliance via method invocation without structural ownership.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="diagram-container">
+  <h4>Visual Model: UML Relationship Notations Master Chart</h4>
+  <div class="svg-diagram">
+    <svg viewBox="0 0 760 250" width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+      <!-- Defs for arrows -->
+      <defs>
+        <marker id="depArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M 0 1 L 10 5 L 0 9" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+        </marker>
+        <marker id="genArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+          <polygon points="0,1 11,6 0,11" fill="#fff" stroke="#10b981" stroke-width="1.8"/>
+        </marker>
+      </defs>
+
+      <!-- Row 1: Dependency -->
+      <g transform="translate(40, 25)">
+        <rect width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="55" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">ClientClass</text>
+        <line x1="120" y1="15" x2="260" y2="15" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#depArrow)"/>
+        <text x="190" y="10" text-anchor="middle" font-size="10" fill="#ef4444">&lt;&lt;uses&gt;&gt;</text>
+        <rect x="270" y="0" width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="325" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">SupplierClass</text>
+        <text x="440" y="20" font-size="12" font-weight="600" fill="#ef4444">Dependency (Dashed with open arrow)</text>
+      </g>
+
+      <!-- Row 2: Association -->
+      <g transform="translate(40, 75)">
+        <rect width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="55" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Professor</text>
+        <line x1="120" y1="15" x2="260" y2="15" stroke="#3b82f6" stroke-width="2"/>
+        <text x="130" y="28" font-size="10" fill="#3b82f6">1</text>
+        <text x="190" y="10" text-anchor="middle" font-size="10" fill="#3b82f6">teaches</text>
+        <text x="245" y="28" font-size="10" fill="#3b82f6">1..*</text>
+        <rect x="270" y="0" width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="325" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Course</text>
+        <text x="440" y="20" font-size="12" font-weight="600" fill="#3b82f6">Association (Solid line + Multiplicity)</text>
+      </g>
+
+      <!-- Row 3: Generalization -->
+      <g transform="translate(40, 125)">
+        <rect width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="55" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Student</text>
+        <line x1="120" y1="15" x2="260" y2="15" stroke="#10b981" stroke-width="2" marker-end="url(#genArrow)"/>
+        <rect x="270" y="0" width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="325" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Person</text>
+        <text x="440" y="20" font-size="12" font-weight="600" fill="#10b981">Generalization (Solid line + Hollow triangle)</text>
+      </g>
+
+      <!-- Row 4: Aggregation &amp; Composition -->
+      <g transform="translate(40, 175)">
+        <rect width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="55" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Department</text>
+        <!-- Aggregation diamond -->
+        <polygon points="120,15 130,10 140,15 130,20" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+        <line x1="140" y1="15" x2="260" y2="15" stroke="#f59e0b" stroke-width="2"/>
+        <text x="245" y="28" font-size="10" fill="#f59e0b">1..*</text>
+        <rect x="270" y="0" width="110" height="30" rx="3" fill="var(--card-bg)" stroke="var(--border-color)"/>
+        <text x="325" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--text-primary)">Professor</text>
+        <text x="440" y="20" font-size="12" font-weight="600" fill="#f59e0b">Aggregation (Hollow diamond on Whole)</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="exam-corner">
+  <div class="exam-title">🎓 University Exam Corner (AKTU Reference)</div>
+  <p><strong>PYQ (AKTU 2010-11, 2012-13):</strong> <em>"Explain relationships with their different types. Categorize: (a) A country has a capital, (b) Files contain records."</em> [5 Marks]</p>
+  <div class="tip-box">
+    <strong>Common Pitfalls:</strong> Students frequently mix up the diamond placement in aggregation. Remember: <strong>The diamond always sits next to the "Whole" (Container), never the part!</strong>
+  </div>
+</div>
+
+<div class="quick-recall">
+  <div class="recall-header">⚡ 30-Second Quick Recall</div>
+  <ul>
+    <li>Dependency: Dashed arrow <code>- - -&gt;</code> (Uses-a).</li>
+    <li>Association: Solid line (Peer structural link).</li>
+    <li>Generalization: Solid line with hollow triangle <code>──▷</code> (Is-a).</li>
+    <li>Aggregation: Hollow diamond <code>◇──</code> (Weak Whole-Part); Composition: Solid diamond <code>◆──</code> (Strong Whole-Part).</li>
+  </ul>
+</div>
+"""
+        },
+        {
+            "id": "sec-5",
+            "number": "05",
+            "part": "Part 1 — Basic Structural Modeling",
+            "title": "Common Mechanisms",
+            "subtitle": "Specifications, Adornments, Common Divisions & Extensibility (Stereotypes, Tags, Constraints)",
+            "content": """
+<div class="topic-grid">
+  <div class="card overview-card">
+    <div class="card-badge">UML Architecture</div>
+    <h3>The 4 Common Mechanisms of UML</h3>
+    <p>To make the language simple, consistent, and endlessly scalable, the creators of UML (Booch, Rumbaugh, Jacobson) built four common mechanisms that apply uniformly across all diagrams.</p>
+  </div>
+</div>
+
+<div class="subtopics-container">
+  <h4>Detailed Breakdown of Common Mechanisms</h4>
+
+  <div class="detail-block">
+    <h5>1. Specifications</h5>
+    <p>Behind every graphical icon in UML lies a detailed textual <strong>specification</strong>. The graphic diagram provides the visual overview, while the underlying specification defines formal semantics, full type contracts, preconditions, and invariant expressions.</p>
+  </div>
+
+  <div class="detail-block">
+    <h5>2. Adornments</h5>
+    <p>Basic UML notations can be visually embellished with <strong>adornments</strong>. Examples include:</p>
+    <ul>
+      <li>Visibility signs (<code>+</code>, <code>-</code>, <code>#</code>) added to attribute lines.</li>
+      <li>Multiplicities (<code>1..*</code>) adorning association ends.</li>
+      <li>Navigability arrowheads and role names.</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h5>3. Common Divisions</h5>
+    <p>UML enforces two fundamental dichotomies across the entire system:</p>
+    <ul>
+      <li><strong>Division of Classifier vs. Instance:</strong> Classes, Components, and Nodes are classifiers (types); Objects, Component Instances, and Node Instances are concrete runtime manifestations.</li>
+      <li><strong>Division of Interface vs. Implementation:</strong> An interface specifies what contract a service promises, while an implementation specifies how that contract is fulfilled.</li>
+    </ul>
+  </div>
+
+  <div class="detail-block">
+    <h5>4. Extensibility Mechanisms (Crucial for Exams)</h5>
+    <p>UML is an open-ended modeling language. It can be tailored to any specialized domain (e.g. Real-time systems, Java Enterprise, Aerospace) using three built-in extensibility mechanisms:</p>
+    
+    <div class="three-col-cards">
+      <div class="feature-card">
+        <div class="col-head blue-head">Stereotypes &lt;&lt;name&gt;&gt;</div>
+        <p>Extends the UML vocabulary by creating <em>new building blocks</em> derived from existing ones.</p>
+        <p><strong>Syntax:</strong> Enclosed in guillemets <code>&lt;&lt;...&gt;&gt;</code>.</p>
+        <p><strong>Examples:</strong> <code>&lt;&lt;interface&gt;&gt;</code>, <code>&lt;&lt;utility&gt;&gt;</code>, <code>&lt;&lt;entity&gt;&gt;</code>, <code>&lt;&lt;actor&gt;&gt;</code>.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="col-head green-head">Tagged Values {tag=val}</div>
+        <p>Extends model elements by attaching <em>new metadata or properties</em> not present in standard UML.</p>
+        <p><strong>Syntax:</strong> <code>{name = value}</code></p>
+        <p><strong>Examples:</strong> <code>{version = "2.1"}</code>, <code>{author = "Lexon"}</code>, <code>{cost = "$500"}</code>.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="col-head purple-head">Constraints {rule}</div>
+        <p>Extends element semantics by introducing <em>new rules or conditions</em> that must evaluate to true.</p>
+        <p><strong>Syntax:</strong> <code>{boolean condition}</code></p>
+        <p><strong>Examples:</strong> <code>{age &gt;= 18}</code>, <code>{ordered}</code>, <code>{read-only}</code>, <code>{xor}</code>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="diagram-container">
+  <h4>Visual Model: Stereotypes, Tagged Values, and Constraints in Action</h4>
+  <div class="svg-diagram">
+    <svg viewBox="0 0 760 210" width="100%" height="210" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(60, 20)">
+        <rect width="280" height="170" rx="6" fill="var(--card-bg)" stroke="#8b5cf6" stroke-width="2"/>
+        <!-- Stereotype &amp; Name -->
+        <rect width="280" height="46" rx="6" fill="#8b5cf6" fill-opacity="0.15"/>
+        <text x="140" y="20" text-anchor="middle" font-size="11" fill="#7c3aed">&lt;&lt;RESTController&gt;&gt;</text>
+        <text x="140" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="var(--text-primary)">PaymentGateway</text>
+        <line x1="0" y1="46" x2="280" y2="46" stroke="#8b5cf6" stroke-width="1.5"/>
+        <!-- Attributes with Tagged Value -->
+        <text x="12" y="70" font-size="12" fill="var(--text-primary)">- apiKey : String {encrypted}</text>
+        <text x="12" y="94" font-size="12" fill="var(--text-primary)">- timeout : int = 3000</text>
+        <line x1="0" y1="108" x2="280" y2="108" stroke="#8b5cf6" stroke-width="1.5"/>
+        <!-- Operations with Constraint -->
+        <text x="12" y="132" font-size="12" fill="var(--text-primary)">+ processCharge(amt : double) : boolean</text>
+        <text x="12" y="152" font-size="11" fill="#ef4444">{amt &gt; 0.00}</text>
+      </g>
+
+      <!-- Explanatory Callouts -->
+      <g transform="translate(380, 30)">
+        <text x="0" y="15" font-size="13" font-weight="bold" fill="#7c3aed">← Stereotype &lt;&lt;RESTController&gt;&gt;</text>
+        <text x="0" y="32" font-size="11" fill="var(--text-muted)">Classifies this class specifically as a Web API controller.</text>
+
+        <text x="0" y="75" font-size="13" font-weight="bold" fill="#10b981">← Tagged Value {encrypted}</text>
+        <text x="0" y="92" font-size="11" fill="var(--text-muted)">Adds custom architectural metadata regarding data privacy.</text>
+
+        <text x="0" y="135" font-size="13" font-weight="bold" fill="#ef4444">← Constraint {amt &gt; 0.00}</text>
+        <text x="0" y="152" font-size="11" fill="var(--text-muted)">Specifies a strict invariant rule for transaction validity.</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="exam-corner">
+  <div class="exam-title">🎓 University Exam Corner (AKTU Reference)</div>
+  <p><strong>PYQ:</strong> <em>"Explain common mechanisms in UML with specific focus on extensibility mechanisms."</em> [5 Marks]</p>
+  <div class="tip-box">
+    <strong>Key Marking Formula:</strong> Define the 4 mechanisms (Specifications, Adornments, Common Divisions, Extensibility). Dedicate half your answer to <strong>Stereotypes</strong>, <strong>Tagged Values</strong>, and <strong>Constraints</strong> with precise syntax brackets (<code>&lt;&lt;&gt;&gt;</code>, <code>{}</code>).
+  </div>
+</div>
+
+<div class="quick-recall">
+  <div class="recall-header">⚡ 30-Second Quick Recall</div>
+  <ul>
+    <li>Stereotypes: <code>&lt;&lt;name&gt;&gt;</code> (New model elements).</li>
+    <li>Tagged Values: <code>{tag = value}</code> (New metadata properties).</li>
+    <li>Constraints: <code>{rule}</code> (New semantic restrictions).</li>
+    <li>Common divisions: Classifier vs Instance, Interface vs Implementation.</li>
+  </ul>
+</div>
+"""
+        },
+        {
+            "id": "sec-6",
+            "number": "06",
+            "part": "Part 1 — Basic Structural Modeling",
+            "title": "Diagrams",
+            "subtitle": "UML Diagram Classification, Structural, Behavioral & Architectural Views",
+            "content": """
+<div class="topic-grid">
+  <div class="card overview-card">
+    <div class="card-badge">Visual Blueprint</div>
+    <h3>Purpose of UML Diagrams</h3>
+    <p>A <strong>UML Diagram</strong> is the graphical presentation of a set of elements, most often rendered as a connected graph of vertices (things) and arcs (relationships). Diagrams provide human stakeholders and developers with accessible visual projections into the system model.</p>
+  </div>
+</div>
+
+<div class="subtopics-container">
+  <h4>Classification of UML Diagrams</h4>
+
+  <div class="detail-block">
+    <h5>The Master Diagram Classification Hierarchy</h5>
+    <p>Standard UML defines 14 official diagrams grouped under two fundamental branches:</p>
+    
+    <div class="two-col-cards">
+      <div class="feature-card">
+        <div class="col-head blue-head">Structural Diagrams (7)</div>
+        <p>Display the static organization of system elements:</p>
+        <ol>
+          <li><strong>Class Diagram:</strong> Central blueprint of classes and associations.</li>
+          <li><strong>Object Diagram:</strong> Static runtime snapshots of instances.</li>
+          <li><strong>Component Diagram:</strong> Modular physical code/binary components.</li>
+          <li><strong>Deployment Diagram:</strong> Hardware network topology & artifact placement.</li>
+          <li><strong>Package Diagram:</strong> Hierarchical organization into namespaces.</li>
+          <li><strong>Composite Structure Diagram:</strong> Internal class decomposition & ports.</li>
+          <li><strong>Profile Diagram:</strong> Custom domain stereotypes and metamodels.</li>
+        </ol>
+      </div>
+
+      <div class="feature-card">
+        <div class="col-head green-head">Behavioral Diagrams (7)</div>
+        <p>Display dynamic behavioral changes and message interactions:</p>
+        <ol>
+          <li><strong>Use Case Diagram:</strong> External actor interactions & requirements.</li>
+          <li><strong>Activity Diagram:</strong> Step-by-step control & object flows.</li>
+          <li><strong>State Machine Diagram:</strong> Lifecycle states of reactive entities.</li>
+          <li><strong>Sequence Diagram:</strong> Chronological, time-ordered messaging.</li>
+          <li><strong>Communication (Collaboration) Diagram:</strong> Structural link messaging.</li>
+          <li><strong>Timing Diagram:</strong> Exact real-time duration waveforms.</li>
+          <li><strong>Interaction Overview Diagram:</strong> Activity diagram containing sequence frames.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-block">
+    <h5>Architectural Role of Diagrams (The 4+1 View Model)</h5>
+    <p>Diagrams correspond directly to the famous <strong>Kruchten 4+1 Architectural View Model</strong>:</p>
+    <ul>
+      <li><strong>Logical View:</strong> Class & Object Diagrams (End-user functionality).</li>
+      <li><strong>Process View:</strong> State Machine, Activity, & Sequence Diagrams (Concurrency & performance).</li>
+      <li><strong>Development View:</strong> Component & Package Diagrams (Code organization).</li>
+      <li><strong>Physical View:</strong> Deployment Diagrams (Hardware execution nodes).</li>
+      <li><strong>Scenarios (+1):</strong> Use Case Diagrams (Unifies all four views).</li>
+    </ul>
+  </div>
+</div>
+
+<div class="diagram-container">
+  <h4>Visual Model: Complete Taxonomy Tree of UML Diagrams</h4>
+  <div class="svg-diagram">
+    <svg viewBox="0 0 760 250" width="100%" height="250" xmlns="http://www.w3.org/2000/svg">
+      <!-- Root -->
+      <rect x="305" y="10" width="150" height="34" rx="6" class="uml-dark-shape" fill="#60a5fa" stroke="#64748b" stroke-width="2"/>
+      <text x="380" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#f8fafc">UML DIAGRAMS</text>
+
+      <!-- Connecting tree lines -->
+      <line x1="380" y1="44" x2="380" y2="70" stroke="#64748b" stroke-width="2"/>
+      <line x1="180" y1="70" x2="580" y2="70" stroke="#64748b" stroke-width="2"/>
+      <line x1="180" y1="70" x2="180" y2="90" stroke="#64748b" stroke-width="2"/>
+      <line x1="580" y1="70" x2="580" y2="90" stroke="#64748b" stroke-width="2"/>
+
+      <!-- Branch 1: Structural -->
+      <rect x="80" y="90" width="200" height="32" rx="5" fill="#3b82f6"/>
+      <text x="180" y="111" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Structural (Static View)</text>
+      
+      <rect x="70" y="132" width="220" height="105" rx="5" fill="var(--card-bg)" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="85" y="152" font-size="11" fill="var(--text-primary)">• Class Diagram</text>
+      <text x="85" y="170" font-size="11" fill="var(--text-primary)">• Object Diagram</text>
+      <text x="85" y="188" font-size="11" fill="var(--text-primary)">• Component &amp; Deployment</text>
+      <text x="85" y="206" font-size="11" fill="var(--text-primary)">• Package &amp; Composite Struct.</text>
+      <text x="85" y="224" font-size="11" fill="var(--text-muted)">• Profile Diagram</text>
+
+      <!-- Branch 2: Behavioral -->
+      <rect x="480" y="90" width="200" height="32" rx="5" fill="#10b981"/>
+      <text x="580" y="111" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Behavioral (Dynamic View)</text>
+
+      <rect x="470" y="132" width="220" height="105" rx="5" fill="var(--card-bg)" stroke="#10b981" stroke-width="1.5"/>
+      <text x="485" y="152" font-size="11" fill="var(--text-primary)">• Use Case Diagram</text>
+      <text x="485" y="170" font-size="11" fill="var(--text-primary)">• Activity Diagram</text>
+      <text x="485" y="188" font-size="11" fill="var(--text-primary)">• State Machine Diagram</text>
+      <text x="485" y="206" font-size="11" fill="var(--text-primary)">• Sequence &amp; Communication</text>
+      <text x="485" y="224" font-size="11" fill="var(--text-muted)">• Timing &amp; Interaction Overview</text>
+    </svg>
+  </div>
+</div>
+
+<div class="exam-corner">
+  <div class="exam-title">🎓 University Exam Corner (AKTU Reference)</div>
+  <p><strong>PYQ (AKTU 2013-14):</strong> <em>"Discuss the purpose of UML diagrams. Classify them into structural and behavioral categories."</em> [5 Marks]</p>
+  <div class="tip-box">
+    <strong>Exam Tip:</strong> Draw the taxonomy tree hierarchy above. It takes only 2 minutes to sketch in an exam booklet and guarantees full marks for clarity and structural neatness.
+  </div>
+</div>
+
+<div class="quick-recall">
+  <div class="recall-header">⚡ 30-Second Quick Recall</div>
+  <ul>
+    <li>Total 14 diagrams in modern UML: 7 Structural + 7 Behavioral.</li>
+    <li>Structural = Class, Object, Component, Deployment, Package, Composite, Profile.</li>
+    <li>Behavioral = Use Case, Activity, State Machine, Sequence, Communication, Timing, Interaction Overview.</li>
+  </ul>
+</div>
+"""
+        }
+    ]

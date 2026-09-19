@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Local test scratch files
+test.html
+test_pillow.jpg
+
+# Heavy reference binaries and raw book scans
+notes_images/
+*.pdf
