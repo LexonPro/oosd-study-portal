@@ -533,6 +533,8 @@
         <div class="quick-stats-pills">
           <span class="q-pill">📚 6 Core Parts</span>
           <span class="q-pill">📌 36 Exhaustive Sections</span>
+          <span class="q-pill">💡 Real-Life Analogies</span>
+          <span class="q-pill">💻 Commented C++ Code</span>
           <span class="q-pill">📐 36 Vector UML Diagrams</span>
           <span class="q-pill">🎓 AKTU PYQs & Solutions</span>
           <span class="q-pill">⚡ Continuous Unrestricted Scroll</span>
@@ -569,6 +571,12 @@
     <p><strong>Structural modeling</strong> captures the <em>static aspects</em> of a software system. Unlike behavioral modeling which tracks activities and message flows over time, structural modeling represents the skeleton or physical fabric of the system: the things that exist (classes, interfaces, components, nodes) and how they are wired together.</p>
     <p>It forms the <strong>system framework</strong>—the structural blueprint that provides the architectural foundation upon which dynamic behaviors and algorithms execute.</p>
   </div>
+</div>
+
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Architectural Blueprint of an Airport Terminal</div>
+  <p>Think of an international airport. The concrete runways, terminal walls, customs booths, and baggage conveyor belts constitute the <strong>structural model</strong>—they form the permanent static framework that exists 24/7. In contrast, the arrival of passengers, announcements over the PA system, and flight boarding queues represent the <strong>behavioral model</strong>. Just as an airport cannot handle flights without physical gates and runways, software cannot execute dynamic business logic without a robust structural framework.</p>
 </div>
 
 <div class="subtopics-container">
@@ -641,6 +649,60 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Structural Framework: Classes & Permanent Wiring)</span>
+    <span class="code-desc">Demonstrating static entities (BoardingPass, Passenger) wired with structural associations</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/* 1. Structural Entity: Represents a static domain concept */
+class BoardingPass {
+public:
+    std::string passId;
+    std::string seatNumber;
+    
+    BoardingPass(std::string id, std::string seat) 
+        : passId(id), seatNumber(seat) {}
+};
+
+/* 2. Structural Entity with Permanent Association */
+class Passenger {
+private:
+    std::string passportNumber;
+    std::string fullName;
+    BoardingPass* currentPass; // Structural association link
+
+public:
+    Passenger(std::string passport, std::string name) 
+        : passportNumber(passport), fullName(name), currentPass(nullptr) {}
+
+    /* Establishing structural connectivity at runtime */
+    void assignBoardingPass(BoardingPass* pass) {
+        currentPass = pass;
+    }
+
+    void displayDetails() const {
+        std::cout &lt;&lt; "Passenger: " &lt;&lt; fullName &lt;&lt; " [Passport: " &lt;&lt; passportNumber &lt;&lt; "]";
+        if (currentPass) {
+            std::cout &lt;&lt; " -&gt; Assigned Seat: " &lt;&lt; currentPass-&gt;seatNumber &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    // Instantiating the static structural framework
+    BoardingPass bp1("BP-9042", "14A");
+    Passenger p1("K8492019", "Aarav Sharma");
+    
+    p1.assignBoardingPass(&amp;bp1);
+    p1.displayDetails();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -754,6 +816,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: The Three Dimensions of an Automobile System</div>
+  <p>When automotive engineers design an electric vehicle, they separate their work into three distinct modeling perspectives: <strong>Structural Modeling</strong> specifies the chassis, battery cells, suspension, and wiring harnesses (the static anatomy). <strong>Behavioral Modeling</strong> specifies the Anti-Lock Braking System (ABS) control loops, regenerative braking triggers, and touchscreen state transitions (the dynamic physiology). <strong>Architectural Modeling</strong> specifies the CAN-bus network topology, multi-tier microcontroller packaging, and thermal safety redundancy (the overarching system framework).</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Detailed Analysis of Modeling Types</h4>
 
@@ -790,6 +858,55 @@
       </ul>
     </div>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Structural vs Behavioral vs Architectural Perspectives)</span>
+    <span class="code-desc">Illustrating structural entities, dynamic behavioral transitions, and architectural namespaces</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/* 3. Architectural Modeling: Subsystem boundary &amp; packaging */
+namespace VehicleArchitecture {
+    
+    /* 1. Structural Modeling: Static entity definitions &amp; properties */
+    class BatteryPack {
+    public:
+        double chargePercent;
+        double tempCelsius;
+        BatteryPack() : chargePercent(100.0), tempCelsius(25.0) {}
+    };
+
+    class PowertrainController {
+    private:
+        BatteryPack battery; // Structural composition
+        bool ecoMode;
+
+    public:
+        PowertrainController() : ecoMode(false) {}
+
+        /* 2. Behavioral Modeling: Dynamic state transitions &amp; algorithms */
+        void monitorThermalStatus(double currentTemp) {
+            battery.tempCelsius = currentTemp;
+            if (battery.tempCelsius &gt; 65.0) {
+                std::cout &lt;&lt; "[BEHAVIORAL TRANSITION] Temp exceeded 65C! Engaging Eco-Throttle." &lt;&lt; std::endl;
+                ecoMode = true; // Runtime state modification
+            } else {
+                std::cout &lt;&lt; "[BEHAVIORAL FLOW] Operating normally at " &lt;&lt; currentTemp &lt;&lt; " C." &lt;&lt; std::endl;
+            }
+        }
+    };
+}
+
+int main() {
+    VehicleArchitecture::PowertrainController ecu;
+    ecu.monitorThermalStatus(45.0);
+    ecu.monitorThermalStatus(72.5); // Triggers behavioral transition
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -896,6 +1013,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: The ATM Bank Vault and Customer Interface</div>
+  <p>An Automated Teller Machine (ATM) class cleanly demonstrates the 3-compartment class structure and visibility rules. The <strong>Name Compartment</strong> identifies the entity (`ATM`). The <strong>Attribute Compartment</strong> contains private data (`- cashReserve`, `- encryptionKey`) that customers cannot directly touch, and protected parameters (`# branchCode`). The <strong>Operation Compartment</strong> exposes public member functions (`+ insertCard()`, `+ enterPIN()`, `+ dispenseCash()`) that form the interface through which external users interact safely without compromising internal security.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Subtopics & Syntax Specifications</h4>
 
@@ -928,6 +1051,61 @@
     <div class="code-box"><code>[visibility] name (parameter-list) : return-type [{property-string}]</code></div>
     <p>Where each parameter has the form: <code>direction name : type = default-value</code> (directions: <code>in</code>, <code>out</code>, <code>inout</code>).</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (UML Class: 3 Compartments, Visibility & Static Scope)</span>
+    <span class="code-desc">Demonstrating Private (-), Protected (#), Public (+) visibility and class-level static variables</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/* UML Class: Name Compartment = BankAccount */
+class BankAccount {
+private:
+    /* Attribute Compartment: Private (-) visibility */
+    std::string accountNumber;
+    double balance;
+
+protected:
+    /* Attribute Compartment: Protected (#) visibility (accessible by subclasses) */
+    int tierLevel;
+
+public:
+    /* Class-Scope Attribute: Static underlined variable in UML */
+    static double interestRate;
+
+    /* Operation Compartment: Public (+) visibility */
+    BankAccount(std::string accNo, double initialBal) 
+        : accountNumber(accNo), balance(initialBal), tierLevel(1) {}
+
+    void deposit(double amount) {
+        if (amount &gt; 0) balance += amount;
+    }
+
+    bool withdraw(double amount) {
+        if (amount &lt;= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    double getBalance() const { return balance; }
+};
+
+// Defining static class-scoped attribute
+double BankAccount::interestRate = 4.5;
+
+int main() {
+    BankAccount acc("SB-20419", 5000.0);
+    acc.deposit(1500.0);
+    std::cout &lt;&lt; "Account Balance: ₹" &lt;&lt; acc.getBalance() &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Static Base Interest Rate: " &lt;&lt; BankAccount::interestRate &lt;&lt; "%" &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -1033,6 +1211,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Human Body and Medical Team Relationships</div>
+  <p>Real-world relationships accurately mirror the 4 UML relationship categories. <strong>Dependency ('uses-a'):</strong> A surgeon uses a scalpel during an operation (temporary method parameter). <strong>Association ('connected-to'):</strong> A doctor treats a patient (structural link). <strong>Aggregation ('has-a', weak):</strong> A hospital department has doctors; if the department closes, the doctors still exist independently. <strong>Composition ('has-a', strong):</strong> A patient has a biological heart; if the patient passes away, the heart cannot survive independently. <strong>Generalization ('is-a'):</strong> A Cardiologist is a Doctor.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The Four Fundamental UML Relationships</h4>
 
@@ -1101,6 +1285,65 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Implementing All UML Relationships in Code)</span>
+    <span class="code-desc">Demonstrating Dependency, Association, Aggregation, Composition, and Generalization</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;memory&gt;
+
+/* 1. Entity for Dependency */
+class MedicalReport {
+public:
+    void print() const { std::cout &lt;&lt; "Medical Report Generated." &lt;&lt; std::endl; }
+};
+
+/* 2. Composition Entity: Part cannot outlive the Whole */
+class Heart {
+public:
+    Heart() { std::cout &lt;&lt; "Heart created." &lt;&lt; std::endl; }
+    ~Heart() { std::cout &lt;&lt; "Heart destroyed with Human." &lt;&lt; std::endl; }
+};
+
+/* 3. Generalization Base Class */
+class Doctor {
+public:
+    virtual void consult() { std::cout &lt;&lt; "General Doctor Consultation." &lt;&lt; std::endl; }
+    // Dependency: Uses MedicalReport as parameter
+    void reviewReport(const MedicalReport&amp; rep) { rep.print(); }
+};
+
+/* 4. Generalization Subclass: Cardiologist IS-A Doctor */
+class Cardiologist : public Doctor {
+public:
+    void consult() override { std::cout &lt;&lt; "Cardiologist Heart Examination." &lt;&lt; std::endl; }
+};
+
+/* 5. Whole with Composition (Heart) and Aggregation (Doctor pointer) */
+class Patient {
+private:
+    Heart biologicalHeart; // Composition: Owned value object
+    Doctor* assignedDoctor; // Aggregation: Doctor exists independently
+
+public:
+    Patient(Doctor* doc) : assignedDoctor(doc) {}
+};
+
+int main() {
+    Cardiologist drMehta;
+    {
+        // Patient owns heart; shares reference to doctor
+        Patient patient1(&amp;drMehta);
+    } // patient1 destroyed here -&gt; Heart is destroyed, but drMehta lives on!
+    
+    drMehta.consult();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -1223,6 +1466,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: International Passports & Custom Visa Stamps</div>
+  <p>UML's common mechanisms resemble global passport control. The <strong>Specification</strong> is the formal text of immigration law defining citizenship. The <strong>Adornment</strong> is the holographic security seal physically stamped on a page. The <strong>Common Division</strong> distinguishes the abstract passport type definition from your specific booklet with your photo. <strong>Extensibility Mechanisms</strong> allow customizing the standard rules: a <strong>Stereotype</strong> (`<<DiplomaticPassport>>`) modifies standard border checks; a <strong>Tagged Value</strong> (`{expiryDate = 2035-12-31}`) attaches metadata; and a <strong>Constraint</strong> (`{mustHaveBlankPages >= 2}`) enforces validation rules.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Detailed Breakdown of Common Mechanisms</h4>
 
@@ -1277,6 +1526,62 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Stereotypes, Tagged Values & Constraints in Code)</span>
+    <span class="code-desc">Representing UML extensible metadata, stereotypes, and invariant constraints in C++</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;stdexcept&gt;
+
+/* UML Stereotype representation: &lt;&lt;Utility&gt;&gt; or &lt;&lt;Entity&gt;&gt; */
+enum class ClassifierStereotype {
+    ENTITY,
+    CONTROL,
+    BOUNDARY
+};
+
+/* UML Tagged Values: Key-value metadata pair {author="DevTeam", version="2.1"} */
+struct UMLTaggedValues {
+    std::string author;
+    int version;
+    std::string persistenceType;
+};
+
+class CustomerProfile {
+private:
+    std::string customerId;
+    int age;
+
+public:
+    CustomerProfile(std::string id, int a) : customerId(id), age(a) {
+        /* UML Constraint Enforcement: {age &gt;= 18} */
+        if (age &lt; 18) {
+            throw std::invalid_argument("UML Constraint Violation: {age &gt;= 18} violated!");
+        }
+    }
+
+    void display() const {
+        std::cout &lt;&lt; "Customer: " &lt;&lt; customerId &lt;&lt; " (Age: " &lt;&lt; age &lt;&lt; ")" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    try {
+        CustomerProfile validUser("CUST-100", 22);
+        validUser.display();
+
+        // Testing constraint breach
+        CustomerProfile invalidUser("CUST-101", 15);
+    } catch (const std::exception&amp; e) {
+        std::cout &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; std::endl;
+    }
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -1370,6 +1675,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: City Maps: Physical Infrastructure vs Traffic Flow vs Power Grid</div>
+  <p>A comprehensive city atlas contains multiple overlay diagrams for different professionals. The civil surveyor uses a <strong>Structural Diagram</strong> (Class / Component) showing roads, buildings, and property boundaries that remain stationary. The traffic police use a <strong>Behavioral Diagram</strong> (Sequence / Activity) tracking rush-hour vehicular flow, stoplight timing, and detour routing over time. The telecommunications team uses an <strong>Architectural / Deployment Diagram</strong> mapping underground fiber cables, cell towers, and data centers. UML diagrams serve this exact purpose for software.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Classification of UML Diagrams</h4>
 
@@ -1419,6 +1730,47 @@
       <li><strong>Scenarios (+1):</strong> Use Case Diagrams (Unifies all four views).</li>
     </ul>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (How UML Diagrams Map to Software Source Code)</span>
+    <span class="code-desc">Demonstrating how Class Diagrams map to headers, Sequence to methods, and Deployment to network endpoints</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/* 
+ * 1. CLASS DIAGRAM MAPS TO: Header declaration (.h)
+ * Shows types, data members, and public contract.
+ */
+class AuthenticationService {
+public:
+    /* 
+     * 2. SEQUENCE DIAGRAM MAPS TO: Chronological execution flow
+     * Step 1: validateCredentials()
+     * Step 2: generateSessionToken()
+     * Step 3: return authSuccess
+     */
+    bool login(std::string username, std::string password) {
+        std::cout &lt;&lt; "Step 1: Validating credentials for " &lt;&lt; username &lt;&lt; std::endl;
+        if (username == "admin" &amp;&amp; password == "pass123") {
+            std::cout &lt;&lt; "Step 2: Generating secure JWT Token..." &lt;&lt; std::endl;
+            std::cout &lt;&lt; "Step 3: Returning true to caller." &lt;&lt; std::endl;
+            return true;
+        }
+        return false;
+    }
+};
+
+int main() {
+    // 3. OBJECT DIAGRAM: Concrete runtime snapshot
+    AuthenticationService authNode;
+    bool isSuccess = authNode.login("admin", "pass123");
+    std::cout &lt;&lt; "Login Result: " &lt;&lt; (isSuccess ? "SUCCESS" : "FAILED") &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -1515,6 +1867,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: University Course Enrollment Registry</div>
+  <p>In a university registrar system, the <strong>Class Diagram</strong> establishes that each `Department` offers `1..*` `Course`s. Each `Course` is taught by `1` `Professor` and taken by `0..*` `Student`s. When an association contains data that belongs to the connection itself rather than either entity alone—such as `grade` and `attendancePercent`—UML introduces an <strong>Association Class</strong> (`Enrollment`). Multiplicity constraints (`1..*`, `0..1`) enforce real-world university administrative regulations.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Subtopics & Architectural Components</h4>
 
@@ -1543,6 +1901,73 @@
     <h5>3. Comprehensive Real-World Example: Library Management System</h5>
     <p>Let us consider a university library management system showing classes, attributes, operations, multiplicities, aggregation, and inheritance:</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Class Diagram: Multiplicity & Association Class)</span>
+    <span class="code-desc">Demonstrating 1-to-many multiplicity containers and an Association Class (Enrollment)</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+class Student; // Forward declaration
+
+/* Association Class: Holds properties of the connection itself */
+class Enrollment {
+public:
+    Student* student;
+    std::string courseCode;
+    char grade;
+    double attendancePercent;
+
+    Enrollment(Student* s, std::string c, char g, double att)
+        : student(s), courseCode(c), grade(g), attendancePercent(att) {}
+};
+
+class Student {
+public:
+    std::string studentId;
+    std::string name;
+
+    Student(std::string id, std::string n) : studentId(id), name(n) {}
+};
+
+/* Class with 1..* Multiplicity Association to Enrollment */
+class Course {
+private:
+    std::string courseName;
+    std::string courseCode;
+    std::vector&lt;Enrollment&gt; enrollments; // Multiplicity: 0..*
+
+public:
+    Course(std::string name, std::string code) : courseName(name), courseCode(code) {}
+
+    void enrollStudent(Student* s, char initialGrade, double initialAtt) {
+        enrollments.emplace_back(s, courseCode, initialGrade, initialAtt);
+    }
+
+    void displayRoster() const {
+        std::cout &lt;&lt; "Roster for Course: " &lt;&lt; courseName &lt;&lt; " [" &lt;&lt; courseCode &lt;&lt; "]" &lt;&lt; std::endl;
+        for (const auto&amp; e : enrollments) {
+            std::cout &lt;&lt; " - " &lt;&lt; e.student-&gt;name &lt;&lt; " (Grade: " &lt;&lt; e.grade &lt;&lt; ", Att: " &lt;&lt; e.attendancePercent &lt;&lt; "%)" &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    Course c1("Object Oriented System Design", "KCS-054");
+    Student s1("ST-101", "Rohan Verma");
+    Student s2("ST-102", "Priya Singh");
+
+    c1.enrollStudent(&amp;s1, 'A', 92.5);
+    c1.enrollStudent(&amp;s2, 'B', 85.0);
+
+    c1.displayRoster();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -1687,6 +2112,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: High-Speed Photograph of a Football Match</div>
+  <p>Imagine a football coach's tactical playbook versus an actual photograph taken during the match. The playbook is the <strong>Class Diagram</strong>: it specifies player positions (`Forward`, `Midfielder`, `Goalkeeper`) and legal rules for passes. The high-speed photograph taken at minute 44:12 is the <strong>Object Diagram</strong>: it freezes concrete instances in time (`messi:Forward` with `x=45, y=32` executing a link `passBall` to `pedri:Midfielder` with `x=52, y=40`). It validates whether the runtime system state actually obeys the rules of the class diagram!</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Subtopics & Syntax Rules</h4>
 
@@ -1763,6 +2194,59 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Object Diagram: Freezing Runtime Instance Graph)</span>
+    <span class="code-desc">Instantiating concrete objects with underlined names and printing snapshot state</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Player {
+public:
+    std::string instanceName; // Represents underlined "messi:Player"
+    int jerseyNumber;
+    int coordinateX;
+    int coordinateY;
+    Player* linkedTeammate;   // Represents the runtime Link
+
+    Player(std::string inst, int num, int x, int y)
+        : instanceName(inst), jerseyNumber(num), coordinateX(x), coordinateY(y), linkedTeammate(nullptr) {}
+
+    void passBallTo(Player* other) {
+        linkedTeammate = other; // Establishing the runtime link
+    }
+
+    void printSnapshot() const {
+        std::cout &lt;&lt; "[OBJECT SNAPSHOT] Instance: " &lt;&lt; instanceName 
+                  &lt;&lt; " (#" &lt;&lt; jerseyNumber &lt;&lt; ") at (" &lt;&lt; coordinateX &lt;&lt; ", " &lt;&lt; coordinateY &lt;&lt; ")";
+        if (linkedTeammate) {
+            std::cout &lt;&lt; " linked to -&gt; " &lt;&lt; linkedTeammate-&gt;instanceName;
+        }
+        std::cout &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    /* 
+     * Object Diagram Notation:
+     * p1 : Player (Underlined in UML)
+     * p2 : Player (Underlined in UML)
+     */
+    Player p1("messi:Player", 10, 45, 32);
+    Player p2("pedri:Player", 8, 52, 40);
+
+    // Establishing the link between the two instances
+    p1.passBallTo(&amp;p2);
+
+    // Visualizing the runtime object graph
+    p1.printSnapshot();
+    p2.printSnapshot();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -1890,6 +2374,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Vehicle Registration Hierarchy and Road Safety Rules</div>
+  <p>Consider the department of motor vehicles. <strong>Abstract Classes:</strong> `Vehicle` cannot be bought directly from a showroom; you can only purchase concrete subclasses like `Sedan` or `Truck`. <strong>Role Names:</strong> When an `InsurancePolicy` is linked to a `Person`, the person plays the role of `policyHolder`, while the underwriter plays the role of `insurer`. <strong>Class Invariants:</strong> Invariant rules must hold true for all valid instances at all times: `{speed <= 120 km/h && fuelCapacity > 0}`.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The 10 Essential Concepts Explained</h4>
 
@@ -1925,6 +2415,62 @@
     </ul>
     <p>A <strong>Constraint</strong> is an extension mechanism specifying a condition or proposition that must hold true for the model element, declared within curly braces: <code>{age &gt;= 0}</code>, <code>{ordered}</code>, <code>{frozen}</code>.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Abstract Class, Role Names & Invariant Contracts)</span>
+    <span class="code-desc">Demonstrating pure virtual abstract class, role-based pointers, and invariant assertions</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;cassert&gt;
+
+/* 1. Abstract Class: In italic in UML, cannot be directly instantiated */
+class Vehicle {
+protected:
+    std::string registrationNo;
+    double currentSpeed;
+    double maxSpeed;
+
+public:
+    Vehicle(std::string reg, double maxS) 
+        : registrationNo(reg), currentSpeed(0.0), maxSpeed(maxS) {}
+
+    virtual ~Vehicle() = default;
+
+    /* Pure Virtual Function: Defines interface contract */
+    virtual double calculateTollFee() const = 0;
+
+    /* Class Invariant check: Invariant {currentSpeed &lt;= maxSpeed &amp;&amp; currentSpeed &gt;= 0} */
+    void setSpeed(double s) {
+        currentSpeed = s;
+        validateInvariants();
+    }
+
+    void validateInvariants() const {
+        assert(currentSpeed &gt;= 0.0 &amp;&amp; "Invariant Violated: Negative Speed!");
+        assert(currentSpeed &lt;= maxSpeed &amp;&amp; "Invariant Violated: Exceeded Max Speed!");
+    }
+};
+
+/* 2. Leaf Concrete Subclass */
+class Car : public Vehicle {
+public:
+    Car(std::string reg, double maxS) : Vehicle(reg, maxS) {}
+
+    double calculateTollFee() const override {
+        return 120.0; // Flat toll for cars
+    }
+};
+
+int main() {
+    Car myCar("UP-32-AB-1234", 160.0);
+    myCar.setSpeed(85.0);
+    std::cout &lt;&lt; "Car registered. Toll: ₹" &lt;&lt; myCar.calculateTollFee() &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2032,6 +2578,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Architectural 3D CAD vs Laser 3D Scanning</div>
+  <p>Modeling techniques bridge the gap between abstract design models and executable production code. <strong>Forward Engineering</strong> is like taking a 3D architectural blueprint and sending it to a computer-controlled 3D concrete printer that builds the walls automatically—transforming UML class boxes into SQL tables and C++ class declarations. <strong>Reverse Engineering</strong> is like laser-scanning a 100-year-old historic clock tower with LIDAR to reconstruct its internal gear blueprints—taking legacy legacy binary or C++ source code and reconstructing the UML class and object diagrams.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The 7-Step Modeling Pipeline</h4>
 
@@ -2107,6 +2659,64 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Forward Engineering to Relational Schema Mapping)</span>
+    <span class="code-desc">Illustrating forward-engineered classes mapping directly to relational database tables</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/*
+ * FORWARD ENGINEERING MAPPING:
+ * UML Class "Customer" ---&gt; SQL Table "CUSTOMERS"
+ * Attribute customerId ---&gt; PRIMARY KEY VARCHAR(20)
+ * Attribute email      ---&gt; UNIQUE VARCHAR(100)
+ */
+class CustomerEntity {
+public:
+    std::string customerId; // PRIMARY KEY
+    std::string fullName;
+    std::string email;
+
+    // Generates equivalent DDL statement
+    std::string generateSQL_DDL() const {
+        return "CREATE TABLE CUSTOMERS ("
+               "customerId VARCHAR(20) PRIMARY KEY, "
+               "fullName VARCHAR(100) NOT NULL, "
+               "email VARCHAR(100) UNIQUE);";
+    }
+};
+
+/*
+ * Association 1-to-Many:
+ * UML Association "places" ---&gt; Foreign Key column in ORDERS table
+ */
+class OrderEntity {
+public:
+    std::string orderId;    // PRIMARY KEY
+    std::string customerId; // FOREIGN KEY REFERENCES CUSTOMERS(customerId)
+    double orderTotal;
+
+    std::string generateSQL_DDL() const {
+        return "CREATE TABLE ORDERS ("
+               "orderId VARCHAR(20) PRIMARY KEY, "
+               "customerId VARCHAR(20) REFERENCES CUSTOMERS(customerId), "
+               "orderTotal DECIMAL(10,2));";
+    }
+};
+
+int main() {
+    CustomerEntity cust;
+    OrderEntity ord;
+    std::cout &lt;&lt; "-- Forward Engineered SQL DDL --" &lt;&lt; std::endl;
+    std::cout &lt;&lt; cust.generateSQL_DDL() &lt;&lt; std::endl;
+    std::cout &lt;&lt; ord.generateSQL_DDL() &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2223,6 +2833,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Restaurant Kitchen: Spatial Layout and Service Tickets</div>
+  <p>A Collaboration (Communication) Diagram is like watching a busy five-star restaurant kitchen from an overhead camera. The Waiter, Head Chef, Prep Cook, and Cashier stand at fixed spatial stations (an object graph with structural links). As an order arrives, numbered tickets flow along these physical paths: `1: submitOrder()` goes from Waiter to Head Chef; `1.1: chopIngredients()` goes from Head Chef to Prep Cook; `2: generateBill()` goes from Waiter to Cashier. Unlike Sequence Diagrams which focus on a timeline, Collaboration Diagrams emphasize <strong>which objects are connected and communicate directly</strong>.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Subtopics & Architectural Perspectives</h4>
 
@@ -2270,6 +2886,58 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Collaboration Diagram: Object Graph & Numbered Links)</span>
+    <span class="code-desc">Demonstrating interconnected objects communicating via sequenced method calls</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class KitchenManager {
+public:
+    void prepareDish(std::string dish) {
+        // Step 1.1: Nested call along structural link
+        std::cout &lt;&lt; "  [1.1] KitchenManager: Cooking " &lt;&lt; dish &lt;&lt; "..." &lt;&lt; std::endl;
+    }
+};
+
+class BillingService {
+public:
+    void generateInvoice(double amount) {
+        // Step 2: Top-level subsequent sequence call
+        std::cout &lt;&lt; "  [2.0] BillingService: Printed invoice for ₹" &lt;&lt; amount &lt;&lt; std::endl;
+    }
+};
+
+class WaiterService {
+private:
+    KitchenManager* kitchen; // Link 1: Waiter -&gt; KitchenManager
+    BillingService* billing; // Link 2: Waiter -&gt; BillingService
+
+public:
+    WaiterService(KitchenManager* k, BillingService* b) : kitchen(k), billing(b) {}
+
+    void handleDineInOrder(std::string dish, double price) {
+        std::cout &lt;&lt; "[1.0] WaiterService: Received order for " &lt;&lt; dish &lt;&lt; std::endl;
+        kitchen-&gt;prepareDish(dish);     // Triggers 1.1 along Link 1
+        billing-&gt;generateInvoice(price); // Triggers 2.0 along Link 2
+    }
+};
+
+int main() {
+    // Structural Object Graph: All instances linked in memory
+    KitchenManager kitchen;
+    BillingService billing;
+    WaiterService waiter(&amp;kitchen, &amp;billing);
+
+    // Initiating collaboration flow
+    waiter.handleDineInOrder("Paneer Butter Masala", 450.0);
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2388,6 +3056,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Corporate Chain of Command & Work Orders</div>
+  <p>In a corporate enterprise, work flows along strict organizational links. The Chief Executive Officer assigns order `1: launchProduct()` to the Technical Director. The Director delegates sub-task `1.1: buildBackend()` to the Lead Architect. The Architect commands `1.1.1: designDatabaseSchema()` to the Database Engineer. The decimal hierarchy (`1 -> 1.1 -> 1.1.1`) explicitly maps to the <strong>call-stack depth</strong> in computing, making it immediately obvious which routine triggered which sub-task.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The 6 Core Terms and Symbols</h4>
 
@@ -2420,6 +3094,48 @@
     <h5>6. Receiver Role</h5>
     <p>The object that accepts the incoming message and executes the requested operation.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Decimal Sequence Numbering & Nested Call Stacks)</span>
+    <span class="code-desc">Illustrating how sequence numbers 1, 1.1, and 1.1.1 map directly to nested function execution frames</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+
+class DatabaseEngineer {
+public:
+    void createSchema() {
+        std::cout &lt;&lt; "    [1.1.1] DatabaseEngineer: Schema migration executed." &lt;&lt; std::endl;
+    }
+};
+
+class LeadArchitect {
+private:
+    DatabaseEngineer dbDev;
+public:
+    void buildBackend() {
+        std::cout &lt;&lt; "  [1.1] LeadArchitect: Coordinating backend services..." &lt;&lt; std::endl;
+        dbDev.createSchema(); // 1.1.1: Nested call
+    }
+};
+
+class TechnicalDirector {
+private:
+    LeadArchitect architect;
+public:
+    void executeProject() {
+        std::cout &lt;&lt; "[1.0] TechnicalDirector: Project kickoff initiated." &lt;&lt; std::endl;
+        architect.buildBackend(); // 1.1: Nested delegation
+    }
+};
+
+int main() {
+    TechnicalDirector director;
+    director.executeProject();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2516,6 +3232,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Automated Metro Rail Smart Gate</div>
+  <p>An automated transit gate operates on formal UML message syntax: `[guard] seq_no *[iteration] : return_val := message_name(arguments)`. When a commuter approaches, the gate evaluates the guard condition: `[tokenScanned == true] 1.1: isSuccess := unlockFlaps(tokenID)`. If the guard is false, the message does not execute. The formal syntax explicitly models return values, passed parameters, sequence order, and conditional gates.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Message Syntax and Conventions</h4>
 
@@ -2554,6 +3276,57 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (UML Message Syntax: Guards, Arguments & Return Values)</span>
+    <span class="code-desc">Demonstrating [guard] condition, method arguments, and return value assignment in C++</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class TurnstileGate {
+public:
+    /*
+     * UML Message Mapping:
+     * [isValidToken] 1.1: isOpened := openGate(tokenCardId, timeoutSeconds)
+     */
+    bool openGate(std::string tokenCardId, int timeoutSeconds) {
+        std::cout &lt;&lt; "  [1.1] Gate: Unlocking flaps for Token [" 
+                  &lt;&lt; tokenCardId &lt;&lt; "] for " &lt;&lt; timeoutSeconds &lt;&lt; "s." &lt;&lt; std::endl;
+        return true; // return_val
+    }
+};
+
+class TransitController {
+private:
+    TurnstileGate gate;
+
+public:
+    void processCommuter(std::string cardId, double cardBalance) {
+        // [guard] evaluation: Must have minimum travel balance &gt;= ₹30
+        bool isValidToken = (cardBalance &gt;= 30.0);
+
+        std::cout &lt;&lt; "[1.0] Controller: Evaluating commuter token " &lt;&lt; cardId &lt;&lt; std::endl;
+
+        if (isValidToken) { // The Guard [isValidToken]
+            // return_val := message_name(arguments)
+            bool isOpened = gate.openGate(cardId, 10);
+            std::cout &lt;&lt; "  Commuter passage permitted: " &lt;&lt; (isOpened ? "YES" : "NO") &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "  [Guard Denied] Insufficient balance! Alarm buzzes." &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    TransitController station;
+    station.processCommuter("METRO-8812", 50.0); // Guard passes
+    station.processCommuter("METRO-9931", 10.0); // Guard fails
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2653,6 +3426,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Universal Point-of-Sale Payment Terminal</div>
+  <p>When you pay at a retail cashier counter, the billing register does not need separate physical cords for every bank on earth. The register simply sends a message `1: processPayment(amount)` to the generic `PaymentGateway` link. At runtime, depending on what card or phone you tap, <strong>Polymorphism</strong> dispatches the message to `CreditCardGateway`, `UPIQRGateway`, or `ApplePayGateway`. The collaboration diagram links an interface, and the concrete receiver binds dynamically at runtime.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Classic AKTU Scenario: The University Payroll System</h4>
 
@@ -2666,6 +3445,57 @@
     </ul>
     <p><strong>Key Design Advantage:</strong> The <code>MonthlyPayroll</code> object does not contain an ugly <code>if-else</code> or <code>switch</code> ladder checking types. It simply dispatches <code>calculatePay()</code>, relying on dynamic runtime binding!</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Polymorphic Dynamic Dispatch in Collaboration)</span>
+    <span class="code-desc">Invoking a virtual message over an interface link, dispatching to different concrete receivers</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+
+/* 1. Interface / Abstract Base Link */
+class IPaymentChannel {
+public:
+    virtual ~IPaymentChannel() = default;
+    virtual void processPayment(double amount) = 0; // Polymorphic message
+};
+
+/* 2. Concrete Polymorphic Implementations */
+class UPIGateway : public IPaymentChannel {
+public:
+    void processPayment(double amount) override {
+        std::cout &lt;&lt; "  [Dynamic Binding] Processing ₹" &lt;&lt; amount &lt;&lt; " via UPI VPA handle." &lt;&lt; std::endl;
+    }
+};
+
+class CardGateway : public IPaymentChannel {
+public:
+    void processPayment(double amount) override {
+        std::cout &lt;&lt; "  [Dynamic Binding] Processing ₹" &lt;&lt; amount &lt;&lt; " via EMV Chip &amp; PIN." &lt;&lt; std::endl;
+    }
+};
+
+/* 3. Sender collaborating via the polymorphic link */
+class POSRegister {
+public:
+    void checkout(IPaymentChannel* channel, double billAmount) {
+        std::cout &lt;&lt; "[1.0] POSRegister: Sending message 'processPayment' across link..." &lt;&lt; std::endl;
+        channel-&gt;processPayment(billAmount); // Dynamic virtual dispatch
+    }
+};
+
+int main() {
+    POSRegister registerNode;
+    UPIGateway upi;
+    CardGateway card;
+
+    registerNode.checkout(&amp;upi, 850.0);  // Dynamically targets UPI
+    registerNode.checkout(&amp;card, 3200.0); // Dynamically targets Card
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2792,6 +3622,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Automated Mass Alert & SMS Broadcasting</div>
+  <p>In a disaster response center, sending messages can happen sequentially or concurrently. A <strong>Sequential Iterated Message</strong> (`*[i:=1..n]: sendSMS(phone[i])`) loops through the phone directory one citizen at a time. A <strong>Concurrent Iterated Message</strong> (`*[||]: broadcastSiren()`) fires alarms across all 50 city sectors at the exact same physical instant. UML collaboration diagrams express this difference using the `*[iteration]` and `*[||]` markers.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Syntax and Notation for Iteration</h4>
 
@@ -2810,6 +3646,58 @@
     <h5>2. Real-World Concrete Example: Shopping Cart Total Calculation</h5>
     <p>In an e-commerce platform, an <code>Order</code> object must compute the order grand total. It iterates through an array of <code>OrderItem</code> objects, invoking <code>getItemTotal()</code> on each item in sequence.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Iterated Messages: Sequential Loop vs Concurrent Threads)</span>
+    <span class="code-desc">Demonstrating sequential iteration *[i:=1..n] and parallel concurrent iteration *[||]</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;thread&gt;
+
+class NotificationService {
+public:
+    // 1. Sequential Iteration: *[i := 1..N]
+    void sendSequentialAlerts(const std::vector&lt;std::string&gt;&amp; subscribers, std::string message) {
+        std::cout &lt;&lt; "[Sequential Iteration *[i:=1..N]] Starting message loop:" &lt;&lt; std::endl;
+        for (size_t i = 0; i &lt; subscribers.size(); ++i) {
+            std::cout &lt;&lt; "  [" &lt;&lt; (i + 1) &lt;&lt; "] Alert sent to " &lt;&lt; subscribers[i] 
+                      &lt;&lt; ": " &lt;&lt; message &lt;&lt; std::endl;
+        }
+    }
+
+    // 2. Concurrent Iteration: *[||]
+    void sendConcurrentAlerts(const std::vector&lt;std::string&gt;&amp; sectors, std::string alertMsg) {
+        std::cout &lt;&lt; "[Concurrent Iteration *[||]] Spawning parallel worker threads:" &lt;&lt; std::endl;
+        std::vector&lt;std::thread&gt; workers;
+
+        for (const auto&amp; sec : sectors) {
+            workers.emplace_back([sec, alertMsg]() {
+                std::cout &lt;&lt; "  [PARALLEL SIREN] Sector " &lt;&lt; sec &lt;&lt; " sirens activated: " 
+                          &lt;&lt; alertMsg &lt;&lt; std::endl;
+            });
+        }
+
+        // Wait for all concurrent messages to complete
+        for (auto&amp; t : workers) {
+            if (t.joinable()) t.join();
+        }
+    }
+};
+
+int main() {
+    NotificationService notifier;
+    std::vector&lt;std::string&gt; users = {"Aarav", "Bhavna", "Chirag"};
+    notifier.sendSequentialAlerts(users, "Weather Warning");
+
+    std::vector&lt;std::string&gt; sectors = {"East-Zone", "Central-Square", "West-Dock"};
+    notifier.sendConcurrentAlerts(sectors, "Flash Flood Alert");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -2903,6 +3791,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Bank Teller Self-Verification & Stamp Validation</div>
+  <p>When a bank teller receives a demand draft from a customer, before crediting the funds, the teller performs a private, internal self-check: the teller steps aside and examines the holographic watermark and security stamp under ultraviolet light (`1.1: self.verifyHologram()`). In UML, a message directed back to the object itself represents <strong>self-delegation</strong>—invoking an internal private helper function or a recursive routine without involving any external partner.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Purpose and Representation</h4>
 
@@ -2920,6 +3814,52 @@
     <h5>2. Graphical Representation in Collaboration Diagrams</h5>
     <p>A self-message is depicted as a <strong>looping link (semicircular arc)</strong> originating from the object box and terminating back onto the same object box, accompanied by a directed arrow and sequence number.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Self-Message: Private Helper Invocation & Recursion)</span>
+    <span class="code-desc">Demonstrating internal self-delegation using this->pointer and recursive member execution</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class BankTeller {
+private:
+    /* Self-message target: Private internal verification method */
+    bool verifySignatureAndWatermark(std::string checkNumber) {
+        std::cout &lt;&lt; "  [1.1: self.verifySignatureAndWatermark()] Teller inspecting check #" 
+                  &lt;&lt; checkNumber &lt;&lt; " under UV light..." &lt;&lt; std::endl;
+        return true; // Verified
+    }
+
+public:
+    void depositCheck(std::string checkNumber, double amount) {
+        std::cout &lt;&lt; "[1.0] Teller: Received deposit request for ₹" &lt;&lt; amount &lt;&lt; std::endl;
+        
+        // Explicit self-message: Invoking internal method on 'this'
+        bool isValid = this-&gt;verifySignatureAndWatermark(checkNumber);
+        
+        if (isValid) {
+            std::cout &lt;&lt; "[1.2] Teller: Check valid. Funds credited successfully." &lt;&lt; std::endl;
+        }
+    }
+
+    /* Recursive self-message: factorial calculation */
+    long long computeCompoundMultiplier(int period) {
+        if (period &lt;= 1) return 1;
+        // Recursive self-call: self.computeCompoundMultiplier(period - 1)
+        return period * this-&gt;computeCompoundMultiplier(period - 1);
+    }
+};
+
+int main() {
+    BankTeller teller;
+    teller.depositCheck("CHK-774921", 25000.0);
+    std::cout &lt;&lt; "Compound Factor (5 yrs): " &lt;&lt; teller.computeCompoundMultiplier(5) &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3019,6 +3959,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Musical Orchestral Score Timeline</div>
+  <p>A Sequence Diagram is organized exactly like a classical orchestra conductor's musical score. The top of the page lists the instruments along the horizontal axis (`Violin`, `Flute`, `Trombone`, `Timpani`). Running vertically down the page is the <strong>time dimension</strong>. As time moves strictly from top to bottom, horizontal musical notes dictate when an instrument must play, how long it holds an active note (the <strong>activation focus box</strong>), and when it pauses. In software, this makes it immediately obvious which service responds first and where latency bottlenecks occur.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Subtopics & Temporal Dimensions</h4>
 
@@ -3039,6 +3985,64 @@
       <li><strong>Event Diagrams:</strong> Used in telecommunications and embedded systems to trace signals emitted by sensors and received by controllers over millisecond timelines.</li>
     </ul>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Chronological Sequence Flow Across Services)</span>
+    <span class="code-desc">Demonstrating top-to-bottom time-ordered interactions across distinct service lifelines</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class DatabaseService {
+public:
+    bool verifyUserRecord(std::string user) {
+        std::cout &lt;&lt; "    [Step 3: DatabaseService] Querying DB for user: " &lt;&lt; user &lt;&lt; std::endl;
+        return true;
+    }
+};
+
+class TokenService {
+public:
+    std::string issueJWT(std::string user) {
+        std::cout &lt;&lt; "    [Step 5: TokenService] Generating cryptographically signed JWT..." &lt;&lt; std::endl;
+        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
+    }
+};
+
+class AuthenticationGateway {
+private:
+    DatabaseService db;
+    TokenService tokenIssuer;
+
+public:
+    // Chronological Message Flow: Executed top-to-bottom
+    std::string processLogin(std::string username, std::string password) {
+        std::cout &lt;&lt; "  [Step 1: Gateway] Received login request from Client." &lt;&lt; std::endl;
+        
+        // Step 2 &amp; 3: Gateway calls Database
+        bool exists = db.verifyUserRecord(username);
+        
+        if (exists) {
+            // Step 4 &amp; 5: Gateway calls TokenService
+            std::string token = tokenIssuer.issueJWT(username);
+            std::cout &lt;&lt; "  [Step 6: Gateway] Returning JWT token back to Client." &lt;&lt; std::endl;
+            return token;
+        }
+        return "AUTH_FAILED";
+    }
+};
+
+int main() {
+    // Client Lifeline initiating message flow
+    AuthenticationGateway gateway;
+    std::cout &lt;&lt; "[Step 0: Client] User submits username &amp; password:" &lt;&lt; std::endl;
+    std::string token = gateway.processLogin("kavita_cse", "pass@2026");
+    std::cout &lt;&lt; "[Step 7: Client] Authentication complete. Token: " &lt;&lt; token.substr(0, 15) &lt;&lt; "..." &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3157,6 +4161,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Police Radio and Walkie-Talkie Protocol</div>
+  <p>Different message arrowheads in Sequence Diagrams represent distinct communication protocols. A <strong>Synchronous Call (Solid Line + Filled Arrowhead)</strong> is a phone call: the caller holds the phone to their ear and waits blocked until the receiver answers. An <strong>Asynchronous Call (Solid Line + Open Arrowhead)</strong> is a walkie-talkie broadcast: dispatch says 'Suspect spotted on Main Street, over' and continues driving without waiting for a reply. A <strong>Return Message (Dashed Line)</strong> is a delivery receipt. The <strong>Destruction Marker (Large X)</strong> is shredding a temporary security badge at the exit gate.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The Standard Primitives Explained</h4>
 
@@ -3201,6 +4211,54 @@
       <li><code>par</code>: Parallel / concurrent thread execution.</li>
     </ul>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Synchronous, Asynchronous, Return & Destruction X)</span>
+    <span class="code-desc">Demonstrating blocking calls, return values, and explicit heap object destruction (~Destructor)</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class TemporarySession {
+public:
+    std::string sessionId;
+    TemporarySession(std::string id) : sessionId(id) {
+        std::cout &lt;&lt; "  [Creation] TemporarySession " &lt;&lt; sessionId &lt;&lt; " allocated in memory." &lt;&lt; std::endl;
+    }
+    ~TemporarySession() {
+        // Corresponds to the large 'X' at the base of a UML lifeline
+        std::cout &lt;&lt; "  [Destruction 'X'] TemporarySession " &lt;&lt; sessionId &lt;&lt; " deallocated from memory!" &lt;&lt; std::endl;
+    }
+};
+
+class SecurityManager {
+public:
+    // Synchronous Call (Solid line with filled arrow) -&gt; Blocks until return
+    bool validatePIN(int pin) {
+        std::cout &lt;&lt; "  [Sync Message] Verifying PIN synchronously..." &lt;&lt; std::endl;
+        return (pin == 1234); // Dashed return line
+    }
+};
+
+int main() {
+    SecurityManager sec;
+    
+    // 1. Synchronous Blocking Call
+    bool isValid = sec.validatePIN(1234);
+    std::cout &lt;&lt; "  [Return Reply received]: " &lt;&lt; (isValid ? "VALID" : "INVALID") &lt;&lt; std::endl;
+
+    // 2. Lifeline with Explicit Destruction Cross 'X'
+    TemporarySession* session = new TemporarySession("SESS-808");
+    
+    // Explicitly destroying the object -&gt; triggers UML 'X' symbol
+    delete session;
+    session = nullptr;
+
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3308,6 +4366,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Coffee Shop Order Pickup Token</div>
+  <p>Ordering at a coffee shop illustrates asynchronous messaging. You place an order and the cashier hands you a receipt with token #42. The cashier does <em>not</em> freeze and stand motionless for 5 minutes while your espresso brews; the cashier immediately serves customer #43. Meanwhile, the barista prepares your drink asynchronously on another counter. When finished, your number is called. In software, <strong>asynchronous messages</strong> prevent the main UI or thread from freezing during heavy background computations or network I/O.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Message Queues and Priority Handling</h4>
 
@@ -3333,6 +4397,40 @@
     <h5>3. Multiple Priority Queues Architecture</h5>
     <p>Instead of a single complex sorting heap, modern real-time operating systems and event dispatchers maintain <strong>multiple distinct FIFO queues</strong>—one dedicated to each priority level (e.g., Critical, High, Standard, Background). The scheduler always drains higher queues before touching lower ones.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Asynchronous Messaging with std::async & Futures)</span>
+    <span class="code-desc">Executing background non-blocking tasks with std::async without stalling main thread</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;future&gt;
+#include &lt;chrono&gt;
+#include &lt;string&gt;
+
+// Asynchronous background worker
+std::string brewCoffeeTask(int orderId) {
+    std::cout &lt;&lt; "  [Async Barista] Brewing espresso for Order #" &lt;&lt; orderId &lt;&lt; "..." &lt;&lt; std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Simulating work
+    return "Caramel Macchiato Ready!";
+}
+
+int main() {
+    std::cout &lt;&lt; "[Cashier Main Thread] Order #101 received." &lt;&lt; std::endl;
+
+    // Solid Line with Open Arrowhead: Asynchronous Non-blocking Call
+    std::future&lt;std::string&gt; coffeeFuture = std::async(std::launch::async, brewCoffeeTask, 101);
+
+    // Main thread is NOT blocked! Can continue serving next customer
+    std::cout &lt;&lt; "[Cashier Main Thread] Ready for next customer! Serving Order #102..." &lt;&lt; std::endl;
+
+    // Awaiting asynchronous response when needed
+    std::string result = coffeeFuture.get();
+    std::cout &lt;&lt; "[Notification] Customer picked up: " &lt;&lt; result &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3451,6 +4549,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: E-Commerce Courier Delivery Phone Call</div>
+  <p>When you buy an item online, you do not sit by the front door staring at the street for three days straight. Instead, you provide your phone number (registering a <strong>callback function</strong>) and go about your daily routine. When the delivery driver finally arrives at your neighborhood gate, the driver dials your number (invoking the callback). The initiative reverses: the background worker calls <em>you</em> back upon event completion.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The 3-Phase Callback Lifecycle</h4>
 
@@ -3468,6 +4572,50 @@
     <h5>3. Phase 3: Callback Message Invocation</h5>
     <p>Upon event occurrence, the server actively initiates a call <strong>back</strong> to the client: <code>onTaskCompleted(result)</code>. The client handles the result asynchronously.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Callback Mechanism: std::function & Event Hooks)</span>
+    <span class="code-desc">Registering a listener callback that gets invoked asynchronously when work finishes</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;functional&gt;
+#include &lt;string&gt;
+
+// Type alias for callback signature: void(bool, string)
+using DownloadCallback = std::function&lt;void(bool success, std::string filename)&gt;;
+
+class FileDownloader {
+public:
+    void startDownload(std::string url, DownloadCallback onComplete) {
+        std::cout &lt;&lt; "Downloader: Starting download of " &lt;&lt; url &lt;&lt; "..." &lt;&lt; std::endl;
+        
+        // Simulating completion of network transfer
+        bool downloadSuccess = true;
+        std::string localFile = "lecture_notes.pdf";
+
+        // Triggering the Callback Mechanism!
+        std::cout &lt;&lt; "Downloader: Download finished. Triggering client callback hook..." &lt;&lt; std::endl;
+        onComplete(downloadSuccess, localFile);
+    }
+};
+
+int main() {
+    FileDownloader client;
+
+    // Registering lambda function as the callback hook
+    client.startDownload("https://aktu.ac.in/syllabus/oosd.pdf", [](bool ok, std::string filename) {
+        if (ok) {
+            std::cout &lt;&lt; "  [CALLBACK TRIGGERED] UI updated! Opened file: " &lt;&lt; filename &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "  [CALLBACK TRIGGERED] Download failed!" &lt;&lt; std::endl;
+        }
+    });
+
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3571,6 +4719,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Emergency Civil Defense Sirens & FM Radio Alert</div>
+  <p>When a severe thunderstorm approaches, civil authorities do not place 500,000 individual telephone calls to each resident one by one. Instead, they activate a <strong>Broadcast Message</strong> over the emergency FM radio frequency and outdoor sirens. Every radio receiver tuned to that channel and every citizen within hearing range receives the exact same signal at the same time. The sender does not know or need to manage who is listening—demonstrating complete <strong>Publisher-Subscriber decoupling</strong>.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Representation and Architectural Patterns</h4>
 
@@ -3613,6 +4767,76 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Broadcast Message: Observer / Publisher-Subscriber)</span>
+    <span class="code-desc">Demonstrating 1-to-many broadcast message distribution to multiple decoupled listeners</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;memory&gt;
+
+/* Subscriber Interface */
+class IAlertSubscriber {
+public:
+    virtual ~IAlertSubscriber() = default;
+    virtual void onBroadcast(const std::string&amp; message) = 0;
+};
+
+/* Concrete Observers */
+class MobileAppUser : public IAlertSubscriber {
+private:
+    std::string username;
+public:
+    MobileAppUser(std::string name) : username(name) {}
+    void onBroadcast(const std::string&amp; message) override {
+        std::cout &lt;&lt; "  [Push Notification -&gt; " &lt;&lt; username &lt;&lt; "]: " &lt;&lt; message &lt;&lt; std::endl;
+    }
+};
+
+class HighwayDisplayBoard : public IAlertSubscriber {
+public:
+    void onBroadcast(const std::string&amp; message) override {
+        std::cout &lt;&lt; "  [LED MATRIX BOARD]: FLASHING -&gt; " &lt;&lt; message &lt;&lt; std::endl;
+    }
+};
+
+/* Broadcast Publisher */
+class EmergencyBroadcastStation {
+private:
+    std::vector&lt;IAlertSubscriber*&gt; listeners;
+
+public:
+    void registerSubscriber(IAlertSubscriber* sub) {
+        listeners.push_back(sub);
+    }
+
+    // Broadcast Message: Sends signal to all registered observers
+    void broadcastAlert(std::string alertText) {
+        std::cout &lt;&lt; "[BROADCAST TRANSMITTER] Sending alert to " &lt;&lt; listeners.size() &lt;&lt; " listeners:" &lt;&lt; std::endl;
+        for (auto* l : listeners) {
+            l-&gt;onBroadcast(alertText); // Multicast distribution
+        }
+    }
+};
+
+int main() {
+    EmergencyBroadcastStation tower;
+    MobileAppUser user1("Pooja");
+    MobileAppUser user2("Vikas");
+    HighwayDisplayBoard highwaySign;
+
+    tower.registerSubscriber(&amp;user1);
+    tower.registerSubscriber(&amp;user2);
+    tower.registerSubscriber(&amp;highwaySign);
+
+    tower.broadcastAlert("Severe Thunderstorm Warning: Seek shelter immediately!");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3730,6 +4954,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Biological Organism: Anatomy vs Living Physiology</div>
+  <p>Consider a human being. The bones, skull, muscles, and circulatory vessels represent the static structural model—the permanent skeleton. But breathing, heartbeat regulation, adrenaline surge during danger, and muscle contraction represent the <strong>behavioral model</strong>. If you only look at an X-ray of bones, you have no idea whether the person is sleeping, running a marathon, or composing poetry! Software functions identically: classes define the structure, but behavioral modeling captures how objects react to external events over their runtime lifecycle.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Behavior Across the Software Development Life Cycle (SDLC)</h4>
 
@@ -3765,6 +4995,60 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Behavioral Dynamic State & Event Processing)</span>
+    <span class="code-desc">Demonstrating how stateful objects change behavior dynamically in response to external events</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+enum class SystemMode {
+    STANDBY,
+    ACTIVE,
+    EMERGENCY_SHUTDOWN
+};
+
+class ReactorCore {
+private:
+    SystemMode currentMode;
+    double coreTempCelsius;
+
+public:
+    ReactorCore() : currentMode(SystemMode::STANDBY), coreTempCelsius(200.0) {}
+
+    // Behavioral Event Handler: Changes state dynamically over time
+    void onSensoryEvent(double newTemp, bool coolantFailure) {
+        coreTempCelsius = newTemp;
+        std::cout &lt;&lt; "[EVENT RECEIVED] Temp: " &lt;&lt; coreTempCelsius &lt;&lt; " C, Coolant Failure: " 
+                  &lt;&lt; (coolantFailure ? "YES" : "NO") &lt;&lt; std::endl;
+
+        if (coolantFailure &amp;&amp; coreTempCelsius &gt; 800.0) {
+            currentMode = SystemMode::EMERGENCY_SHUTDOWN;
+            std::cout &lt;&lt; "  -&gt; STATE TRANSITION: EMERGENCY_SHUTDOWN! Control rods inserted." &lt;&lt; std::endl;
+        } else if (coreTempCelsius &gt; 350.0) {
+            currentMode = SystemMode::ACTIVE;
+            std::cout &lt;&lt; "  -&gt; STATE TRANSITION: ACTIVE. Generating power." &lt;&lt; std::endl;
+        }
+    }
+
+    void displayStatus() const {
+        std::cout &lt;&lt; "Current Operating State: " 
+                  &lt;&lt; (currentMode == SystemMode::ACTIVE ? "ACTIVE" : 
+                     (currentMode == SystemMode::STANDBY ? "STANDBY" : "SHUTDOWN")) &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    ReactorCore core;
+    core.onSensoryEvent(420.0, false); // Transitions to ACTIVE
+    core.onSensoryEvent(890.0, true);  // Transitions to EMERGENCY_SHUTDOWN
+    core.displayStatus();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3845,6 +5129,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Gym Membership: Measurable Goals vs Internal Workings</div>
+  <p>When a person visits a fitness gym, they interact with the facility through discrete, measurable business goals called <strong>Use Cases</strong>. The customer is an <strong>Actor</strong>. Their use cases include: 'Sign Up for Annual Membership', 'Book Personal Training Session', and 'Check-in at Turnstile'. The actor does not care what accounting database the gym uses or how the turnstile motor is wired; the usecase defines a sequence of interactions that yields an observable, valuable result for the actor.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Core Terms & Relationships</h4>
 
@@ -3883,6 +5173,59 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Use Case Controller & Actor Interaction)</span>
+    <span class="code-desc">Implementing end-to-end Use Case handlers fulfilling business goals with validation</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+// Actor: Gym Member
+struct MemberCredentials {
+    std::string memberId;
+    std::string planType;
+    bool isFeePaid;
+};
+
+// Use Case System Boundary: GymManagementSystem
+class GymManagementSystem {
+public:
+    /* USE CASE 1: 'Check-in at Turnstile' */
+    bool executeCheckIn(const MemberCredentials&amp; member) {
+        std::cout &lt;&lt; "[USE CASE: Check-in] Processing actor ID: " &lt;&lt; member.memberId &lt;&lt; std::endl;
+        
+        // Step 1: Verify membership validity
+        if (!member.isFeePaid) {
+            std::cout &lt;&lt; "  [Alternate Flow] Membership fee overdue! Access denied." &lt;&lt; std::endl;
+            return false;
+        }
+
+        // Step 2: Unlock gate
+        std::cout &lt;&lt; "  [Primary Flow] Welcome! Turnstile gate unlocked." &lt;&lt; std::endl;
+        return true;
+    }
+
+    /* USE CASE 2: 'Book Personal Trainer' */
+    void bookTrainer(std::string memberId, std::string trainerName, std::string slot) {
+        std::cout &lt;&lt; "[USE CASE: Book Trainer] Member " &lt;&lt; memberId 
+                  &lt;&lt; " booked " &lt;&lt; trainerName &lt;&lt; " for " &lt;&lt; slot &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    GymManagementSystem system;
+    MemberCredentials m1{"MEM-501", "Gold", true};
+    MemberCredentials m2{"MEM-502", "Silver", false};
+
+    system.executeCheckIn(m1); // Primary success path
+    system.executeCheckIn(m2); // Alternate exception path
+    system.bookTrainer("MEM-501", "Coach Vikram", "6:00 PM");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -3992,6 +5335,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Online Food Ordering: Mandatory vs Optional Add-ons</div>
+  <p>When you order dinner on a food delivery app, the primary use case is 'Order Meal'. To complete this use case, the system <strong>MUST UNCONDITIONALLY</strong> execute 'Authenticate User' and 'Process Payment'—this is represented by the <strong>&lt;&lt;include&gt;&gt;</strong> relationship. However, you might optionally choose to 'Apply Promo Coupon Code' or 'Add Delivery Tip'—this is an optional branch extending the base behavior, represented by the <strong>&lt;&lt;extend&gt;&gt;</strong> relationship with an extension point condition.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Components and Utility in System Design</h4>
 
@@ -4034,6 +5383,64 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Implementing <<include>> and <<extend>> Relationships)</span>
+    <span class="code-desc">Demonstrating mandatory helper inclusions vs conditional extension points in code</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class OrderFoodWorkflow {
+private:
+    /* &lt;&lt;include&gt;&gt; Mandatory sub-use cases */
+    bool include_AuthenticateUser(std::string user) {
+        std::cout &lt;&lt; "  &lt;&lt;include&gt;&gt; Step 1: User [" &lt;&lt; user &lt;&lt; "] authenticated." &lt;&lt; std::endl;
+        return true;
+    }
+
+    bool include_ProcessPayment(double amount) {
+        std::cout &lt;&lt; "  &lt;&lt;include&gt;&gt; Step 2: Payment of ₹" &lt;&lt; amount &lt;&lt; " processed." &lt;&lt; std::endl;
+        return true;
+    }
+
+    /* &lt;&lt;extend&gt;&gt; Optional sub-use case triggered by extension point */
+    double extend_ApplyPromoCode(std::string promo, double amount) {
+        std::cout &lt;&lt; "  &lt;&lt;extend&gt;&gt; Extension Point Triggered: Applied coupon [" &lt;&lt; promo &lt;&lt; "] -&gt; 10% Off!" &lt;&lt; std::endl;
+        return amount * 0.90;
+    }
+
+public:
+    // Base Use Case: "Order Meal"
+    void executeOrderMeal(std::string user, double total, std::string promoCode = "") {
+        std::cout &lt;&lt; "[BASE USE CASE: Order Meal Started]" &lt;&lt; std::endl;
+
+        // Mandatory inclusions: Always executed!
+        include_AuthenticateUser(user);
+
+        // Optional extension: Executed ONLY if extension condition holds
+        if (!promoCode.empty()) {
+            total = extend_ApplyPromoCode(promoCode, total);
+        }
+
+        include_ProcessPayment(total);
+        std::cout &lt;&lt; "[BASE USE CASE: Order Meal Completed Successfully]
+" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    OrderFoodWorkflow app;
+    // Flow without extension
+    app.executeOrderMeal("rohit_cse", 500.0);
+
+    // Flow WITH &lt;&lt;extend&gt;&gt; coupon applied
+    app.executeOrderMeal("ananya_it", 1000.0, "WELCOME50");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4137,6 +5544,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Airport Passenger Processing: Parallel Forks and Joins</div>
+  <p>An Activity Diagram represents workflow logic, decision branching, and concurrency. At an airport, after the action state 'Pass Security Check', the flow encounters a <strong>Fork Bar</strong>: the traveler can simultaneously 'Grab a Coffee at Lounge' and 'Shop at Duty-Free Store' in parallel. However, before the traveler can 'Board Aircraft', both parallel actions must converge at the <strong>Join Bar</strong>: the gate attendants will not let you board until your identity is scanned and your carry-on luggage is weighed.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Activity Diagram Notations and Components</h4>
 
@@ -4170,6 +5583,52 @@
     <h5>3. Swimlanes (Activity Partitions)</h5>
     <p>Vertical or horizontal parallel columns dividing the diagram into distinct organizational departments, actors, or microservices (e.g. Customer, OrderService, Warehouse). Shows exactly <em>who is responsible</em> for each action.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Activity Workflow: Decision Nodes, Fork & Join Concurrency)</span>
+    <span class="code-desc">Modeling activity decision branching and multithreaded Fork/Join synchronization</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;chrono&gt;
+
+void action_CheckBaggage() {
+    std::cout &lt;&lt; "Action State 1: Baggage checked into hold." &lt;&lt; std::endl;
+}
+
+void parallel_DutyFreeShopping() {
+    std::cout &lt;&lt; "  [Fork Worker A] Browsing Duty Free Shop..." &lt;&lt; std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    std::cout &lt;&lt; "  [Fork Worker A] Duty Free Shopping Complete." &lt;&lt; std::endl;
+}
+
+void parallel_LoungeRefreshment() {
+    std::cout &lt;&lt; "  [Fork Worker B] Drinking coffee at airport lounge..." &lt;&lt; std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(250));
+    std::cout &lt;&lt; "  [Fork Worker B] Finished refreshment." &lt;&lt; std::endl;
+}
+
+int main() {
+    std::cout &lt;&lt; "--- ACTIVITY DIAGRAM WORKFLOW START ---" &lt;&lt; std::endl;
+    action_CheckBaggage();
+
+    // FORK BAR: Concurrently executing two parallel activities
+    std::cout &lt;&lt; "== FORK BAR: Splitting into parallel threads ==" &lt;&lt; std::endl;
+    std::thread branchA(parallel_DutyFreeShopping);
+    std::thread branchB(parallel_LoungeRefreshment);
+
+    // JOIN BAR: Synchronizing both threads before next action state
+    branchA.join();
+    branchB.join();
+    std::cout &lt;&lt; "== JOIN BAR: All parallel activities synchronized ==" &lt;&lt; std::endl;
+
+    std::cout &lt;&lt; "Action State 4: Passenger boarding flight at Gate 12." &lt;&lt; std::endl;
+    std::cout &lt;&lt; "--- ACTIVITY DIAGRAM WORKFLOW END ---" &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4294,6 +5753,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Digital Microwave Oven Operating States</div>
+  <p>A microwave oven is a classic reactive object whose internal state dictates how it responds to user button clicks. In the <strong>IDLE</strong> state, pressing 'Start' transitions to <strong>COOKING</strong> (action: turn on magnetron and light). If the user opens the door during cooking, the event 'DoorOpened' triggers a transition to <strong>PAUSED</strong> (action: turn off magnetron, keep timer frozen). Pressing 'Stop' resets the timer and transitions back to IDLE. State machine diagrams capture this event-driven behavior.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>State Machine Anatomy & Syntax</h4>
 
@@ -4322,6 +5787,68 @@
     <h5>3. Classic AKTU Exam Scenario: Answering a Telephone Call</h5>
     <p>States: <code>Idle</code> &rarr; <code>Ringing</code> (on incoming call) &rarr; <code>Connected</code> (on pickup) &rarr; <code>Talking</code> &rarr; <code>Disconnected</code> (on hangup) &rarr; <code>Idle</code>.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (State Machine: States, Transitions, Guards & Actions)</span>
+    <span class="code-desc">Implementing a Finite State Machine with entry/exit actions and event transitions</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+
+enum class OvenState {
+    IDLE,
+    COOKING,
+    PAUSED
+};
+
+class MicrowaveOven {
+private:
+    OvenState currentState;
+    int timerSeconds;
+    bool isDoorClosed;
+
+public:
+    MicrowaveOven() : currentState(OvenState::IDLE), timerSeconds(0), isDoorClosed(true) {}
+
+    // Event 1: User enters cooking duration
+    void setTimer(int seconds) {
+        if (currentState == OvenState::IDLE) {
+            timerSeconds = seconds;
+            std::cout &lt;&lt; "Timer set to " &lt;&lt; timerSeconds &lt;&lt; " seconds." &lt;&lt; std::endl;
+        }
+    }
+
+    // Event 2: User presses 'Start' button with guard [timer &gt; 0 &amp;&amp; doorClosed]
+    void pressStart() {
+        if (currentState == OvenState::IDLE || currentState == OvenState::PAUSED) {
+            if (timerSeconds &gt; 0 &amp;&amp; isDoorClosed) { // Guard Condition
+                currentState = OvenState::COOKING;
+                std::cout &lt;&lt; "-&gt; TRANSITION to COOKING [Action: Magnetron ON, Turntable spinning]" &lt;&lt; std::endl;
+            } else {
+                std::cout &lt;&lt; "Cannot start: Door open or timer is zero!" &lt;&lt; std::endl;
+            }
+        }
+    }
+
+    // Event 3: Door opened during cooking
+    void openDoor() {
+        isDoorClosed = false;
+        if (currentState == OvenState::COOKING) {
+            currentState = OvenState::PAUSED;
+            std::cout &lt;&lt; "-&gt; TRANSITION to PAUSED [Action: Magnetron OFF immediately for safety]" &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    MicrowaveOven oven;
+    oven.setTimer(60);
+    oven.pressStart(); // Transitions to COOKING
+    oven.openDoor();   // Transitions to PAUSED
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4429,6 +5956,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Restaurant Kitchen: A Process with Multiple Chef Threads</div>
+  <p>In computing, an <strong>OS Process</strong> is like an entire independent restaurant building: it has its own private address space, business license, and separate electricity meter. Inside that kitchen, multiple chefs work as <strong>Threads</strong>: they share the same physical kitchen space, countertops, and spice rack. If two chefs reach for the exact same spice container at the exact same microsecond, chaos occurs (a <strong>Race Condition</strong>). To prevent this, they use a spatula rule (a <strong>Mutex Lock</strong>): only the chef holding the spatula may access the spice jar.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Deep Architectural Comparison: Process vs. Thread</h4>
 
@@ -4484,6 +6017,56 @@
     <h5>3. Active Objects in UML</h5>
     <p>An <strong>Active Object</strong> is an object that owns an independent thread of control and can initiate behavior autonomously. In UML, an active class is depicted as a standard class rectangle with <strong>double vertical lines on its left and right borders</strong>.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Active Objects, Threads & Mutex Synchronization)</span>
+    <span class="code-desc">Demonstrating concurrent threads sharing memory protected by std::mutex and std::lock_guard</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;vector&gt;
+
+class BankVault {
+private:
+    double totalCashReserve;
+    std::mutex vaultLock; // Mutex protecting critical section
+
+public:
+    BankVault(double initialCash) : totalCashReserve(initialCash) {}
+
+    // Synchronized method: Only one thread may execute at a time
+    void withdrawCash(int tellerId, double amount) {
+        // Acquiring lock; automatically released when exiting scope
+        std::lock_guard&lt;std::mutex&gt; lock(vaultLock);
+
+        std::cout &lt;&lt; "Teller #" &lt;&lt; tellerId &lt;&lt; " checking vault. Current: ₹" &lt;&lt; totalCashReserve &lt;&lt; std::endl;
+        if (totalCashReserve &gt;= amount) {
+            totalCashReserve -= amount;
+            std::cout &lt;&lt; "  -&gt; Teller #" &lt;&lt; tellerId &lt;&lt; " dispensed ₹" &lt;&lt; amount 
+                      &lt;&lt; ". Remaining: ₹" &lt;&lt; totalCashReserve &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "  -&gt; Teller #" &lt;&lt; tellerId &lt;&lt; " FAILED: Insufficient vault funds!" &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    BankVault centralVault(10000.0);
+
+    // Spawning 3 concurrent teller threads within the same process
+    std::thread t1(&amp;BankVault::withdrawCash, &amp;centralVault, 1, 4000.0);
+    std::thread t2(&amp;BankVault::withdrawCash, &amp;centralVault, 2, 5000.0);
+    std::thread t3(&amp;BankVault::withdrawCash, &amp;centralVault, 3, 3000.0);
+
+    t1.join();
+    t2.join();
+    t3.join();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4586,6 +6169,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Smartphone Inputs: Calls, Signals, Timers, and Battery Alerts</div>
+  <p>Your smartphone processes all 4 UML event types every day. <strong>Call Event:</strong> An incoming phone call invoking a ringtone method. <strong>Signal Event:</strong> A WhatsApp push notification arriving asynchronously over Wi-Fi. <strong>Time Event:</strong> Your 7:00 AM wake-up alarm ringing after an elapsed duration (`after(8 hours)`). <strong>Change Event:</strong> The battery indicator flashing red because a state condition became true (`when(batteryLevel < 15%)`). In software design, recognizing the event type dictates how your event loop must process it.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The Four Fundamental UML Event Types</h4>
 
@@ -4622,6 +6211,60 @@
     <h5>2. Signal Communication and Classifiers</h5>
     <p>Signals can be structured in inheritance hierarchies. For example, <code>HardwareErrorSignal</code> can generalize into <code>DiskError</code> and <code>MemoryParityError</code>. Subclasses inherit all parameters of parent signals.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Polymorphic Event Dispatcher: Call, Signal, Time, Change)</span>
+    <span class="code-desc">Handling Call Events, Signal Events, Time Events, and Change Events in an event engine</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+enum class EventType {
+    CALL_EVENT,   // Synchronous operation invocation
+    SIGNAL_EVENT, // Asynchronous notification packet
+    TIME_EVENT,   // after(500ms) timer trigger
+    CHANGE_EVENT  // when(temperature &gt; 100C) condition trigger
+};
+
+struct EventPacket {
+    EventType type;
+    std::string payload;
+    double sensorValue;
+};
+
+class EventDispatcher {
+public:
+    void dispatch(const EventPacket&amp; ev) {
+        switch (ev.type) {
+            case EventType::CALL_EVENT:
+                std::cout &lt;&lt; "[CALL EVENT] Synchronous RPC: " &lt;&lt; ev.payload &lt;&lt; "()" &lt;&lt; std::endl;
+                break;
+            case EventType::SIGNAL_EVENT:
+                std::cout &lt;&lt; "[SIGNAL EVENT] Asynchronous Signal arrived: " &lt;&lt; ev.payload &lt;&lt; std::endl;
+                break;
+            case EventType::TIME_EVENT:
+                std::cout &lt;&lt; "[TIME EVENT] Timer expired: after(" &lt;&lt; ev.payload &lt;&lt; ")" &lt;&lt; std::endl;
+                break;
+            case EventType::CHANGE_EVENT:
+                if (ev.sensorValue &gt; 100.0) {
+                    std::cout &lt;&lt; "[CHANGE EVENT] Condition TRUE: when(temp=" &lt;&lt; ev.sensorValue &lt;&lt; " &gt; 100C)!" &lt;&lt; std::endl;
+                }
+                break;
+        }
+    }
+};
+
+int main() {
+    EventDispatcher bus;
+    bus.dispatch({EventType::CALL_EVENT, "authenticateUser", 0.0});
+    bus.dispatch({EventType::SIGNAL_EVENT, "SIG_BATTERY_LOW", 0.0});
+    bus.dispatch({EventType::TIME_EVENT, "10_SECONDS_TIMEOUT", 0.0});
+    bus.dispatch({EventType::CHANGE_EVENT, "OVERHEAT", 108.5});
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4715,6 +6358,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Hospital ECG Monitor and Traffic Light Timers</div>
+  <p>A hospital patient monitor graph or an automotive traffic controller operates on a strict physical timeline. A traffic signal changes states with precise millisecond duration bounds: `Green` state lasts exactly 60 seconds; `Yellow` transition state has a strict 4-second safety bound; `Red` state lasts 45 seconds. A <strong>Timing Diagram</strong> plots states along a continuous horizontal time axis, proving whether safety-critical deadlines (such as airbag deployment within 20 milliseconds of collision) are guaranteed.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Subtopics & Real-Time Utility</h4>
 
@@ -4753,6 +6402,47 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Timing Constraints & Duration Measurement with std::chrono)</span>
+    <span class="code-desc">Enforcing real-time latency thresholds and timing duration bounds in C++</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;thread&gt;
+
+class RealTimeController {
+public:
+    void executeSafetyCriticalTask() {
+        std::cout &lt;&lt; "[TIMING DIAGRAM] Starting safety-critical operation..." &lt;&lt; std::endl;
+        
+        auto startTime = std::chrono::high_resolution_clock::now();
+
+        // Simulating sensor read &amp; airbag deployment computation
+        std::this_thread::sleep_for(std::chrono::milliseconds(12));
+
+        auto endTime = std::chrono::high_resolution_clock::now();
+        std::chrono::duration&lt;double, std::milli&gt; latency = endTime - startTime;
+
+        std::cout &lt;&lt; "Operation Latency: " &lt;&lt; latency.count() &lt;&lt; " ms" &lt;&lt; std::endl;
+
+        // Validating UML Timing Constraint: {duration &lt; 20ms}
+        if (latency.count() &lt;= 20.0) {
+            std::cout &lt;&lt; "  -&gt; PASS: Strict real-time timing constraint {latency &lt;= 20ms} met!" &lt;&lt; std::endl;
+        } else {
+            std::cout &lt;&lt; "  -&gt; VIOLATION: Deadline missed! Safety hazard." &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    RealTimeController controller;
+    controller.executeSafetyCriticalTask();
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4847,6 +6537,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Google Maps: Turn-by-Turn Timeline vs City Overview Map</div>
+  <p>Imagine driving from Delhi to Agra. Google Maps offers two equivalent views of your trip. The <strong>Sequence Diagram</strong> is the step-by-step turn list: at 10:00 AM turn left, at 10:15 AM merge onto Yamuna Expressway, at 12:30 PM arrive (ordered by chronological time). The <strong>Collaboration Diagram</strong> is the bird's-eye satellite road map showing the highways, toll booths, and interchanges physically linked together with numbered directional arrows. Both diagrams represent the <strong>exact same underlying journey</strong>—one emphasizes the timeline, the other emphasizes the structural roadmap.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The Four Standard Interaction Diagrams</h4>
 
@@ -4884,6 +6580,52 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Dual-View Equivalence: Sequence Trace vs Object Network)</span>
+    <span class="code-desc">Demonstrating how a single multi-object interaction can be logged as a timeline or as an object graph</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+class Node {
+public:
+    std::string name;
+    Node(std::string n) : name(n) {}
+};
+
+class InteractionLogger {
+public:
+    // 1. SEQUENCE VIEW: Chronological Timeline Log
+    void logSequence(std::string time, std::string sender, std::string msg, std::string receiver) {
+        std::cout &lt;&lt; "[SEQUENCE TIMELINE " &lt;&lt; time &lt;&lt; "] " &lt;&lt; sender &lt;&lt; " --(" &lt;&lt; msg &lt;&lt; ")--&gt; " &lt;&lt; receiver &lt;&lt; std::endl;
+    }
+
+    // 2. COLLABORATION VIEW: Structural Graph Topology with Decimal Sequence Numbering
+    void logCollaboration(std::string seqNo, std::string from, std::string to, std::string msg) {
+        std::cout &lt;&lt; "[COLLABORATION LINK " &lt;&lt; from &lt;&lt; " ==== " &lt;&lt; to &lt;&lt; "] Message " 
+                  &lt;&lt; seqNo &lt;&lt; ": " &lt;&lt; msg &lt;&lt; "()" &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    InteractionLogger tracer;
+
+    std::cout &lt;&lt; "--- 1. SEQUENCE PERSPECTIVE (Chronological) ---" &lt;&lt; std::endl;
+    tracer.logSequence("00:01s", "WebClient", "POST /login", "AuthGateway");
+    tracer.logSequence("00:03s", "AuthGateway", "SELECT user", "Database");
+    tracer.logSequence("00:05s", "Database", "return UserRecord", "AuthGateway");
+
+    std::cout &lt;&lt; "
+--- 2. COLLABORATION PERSPECTIVE (Topological) ---" &lt;&lt; std::endl;
+    tracer.logCollaboration("1.0", "WebClient", "AuthGateway", "login");
+    tracer.logCollaboration("1.1", "AuthGateway", "Database", "queryCredentials");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -4963,6 +6705,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Corporate Office Floors and Department Boundaries</div>
+  <p>In a 50-story corporate headquarters, 5,000 employees are not randomly seated in one chaotic room. The 10th floor is the `HumanResources` package; the 20th floor is the `Finance` package; the 30th floor is the `Engineering` package. Each department has secure keycard access. Engineering can <strong>import</strong> financial payroll calculators, but Finance cannot tamper with internal engineering source code. <strong>Package Diagrams</strong> partition complex software into manageable, cohesive namespaces and eliminate toxic circular dependencies.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Package Notation and Architectural Dependencies</h4>
 
@@ -4988,6 +6736,61 @@
       <li><strong>Preventing Cyclic Dependencies:</strong> Enforces unidirectional dependency flows across enterprise libraries.</li>
     </ul>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Package Diagrams: Namespaces, Imports & Dependency Hierarchy)</span>
+    <span class="code-desc">Organizing code into layered namespaces modeling UML packages with clear dependencies</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/* UML Package: DataAccessLayer */
+namespace DataAccessLayer {
+    class DatabaseClient {
+    public:
+        std::string fetchRecord(int id) {
+            return "Record #" + std::to_string(id) + " [Encrypted Payload]";
+        }
+    };
+}
+
+/* UML Package: BusinessLogicLayer (Imports DataAccessLayer) */
+namespace BusinessLogicLayer {
+    // Importing specific classifier from DataAccessLayer package
+    using DataAccessLayer::DatabaseClient;
+
+    class ReportGenerator {
+    private:
+        DatabaseClient db;
+    public:
+        void generateReport(int id) {
+            std::string rawData = db.fetchRecord(id);
+            std::cout &lt;&lt; "BusinessLayer: Formatted business report from: " &lt;&lt; rawData &lt;&lt; std::endl;
+        }
+    };
+}
+
+/* UML Package: PresentationLayer (Imports BusinessLogicLayer) */
+namespace PresentationLayer {
+    class WebDashboard {
+    private:
+        BusinessLogicLayer::ReportGenerator reporter;
+    public:
+        void render(int id) {
+            std::cout &lt;&lt; "[UI Dashboard Package] Requesting report for ID: " &lt;&lt; id &lt;&lt; std::endl;
+            reporter.generateReport(id);
+        }
+    };
+}
+
+int main() {
+    PresentationLayer::WebDashboard dashboard;
+    dashboard.render(104);
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -5090,6 +6893,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Kruchten's 4+1 Views of a Nuclear Power Plant</div>
+  <p>Building a nuclear power station requires multiple specialized engineering perspectives so that no single catastrophic mistake is made. The mechanical engineer consults the <strong>Implementation View</strong> (pipe specifications and valve alloys). The physicist consults the <strong>Logical View</strong> (neutron balance equations and safety state classes). The safety supervisor consults the <strong>Process View</strong> (cooling pump concurrency and alarm worker threads). The construction contractor consults the <strong>Deployment View</strong> (reinforced concrete containment domes and backup diesel generators). Kruchten's <strong>4+1 Architectural View Model</strong> ties all these distinct perspectives together around realistic end-user <strong>Use Case Scenarios</strong>.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Core Perspectives of Architectural Modeling</h4>
 
@@ -5117,6 +6926,61 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Architectural 4+1 View Implementation)</span>
+    <span class="code-desc">Demonstrating how a single enterprise entity manifests across Logical, Process, and Deployment layers</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;thread&gt;
+
+/* 1. LOGICAL VIEW: Domain Class Model */
+class PowerTelemetry {
+public:
+    double megawattsOutput;
+    double coreTemp;
+    PowerTelemetry(double mw, double t) : megawattsOutput(mw), coreTemp(t) {}
+};
+
+/* 2. PROCESS VIEW: Concurrency &amp; Worker Threads */
+class TelemetryWorker {
+public:
+    void streamTelemetry(PowerTelemetry data) {
+        std::thread backgroundWorker([data]() {
+            std::cout &lt;&lt; "  [PROCESS VIEW] Worker Thread ID " &lt;&lt; std::this_thread::get_id() 
+                      &lt;&lt; " streaming output: " &lt;&lt; data.megawattsOutput &lt;&lt; " MW" &lt;&lt; std::endl;
+        });
+        backgroundWorker.join();
+    }
+};
+
+/* 3. DEPLOYMENT VIEW: Physical Infrastructure Node */
+class SCADANetworkNode {
+private:
+    std::string ipAddress;
+    int port;
+public:
+    SCADANetworkNode(std::string ip, int p) : ipAddress(ip), port(p) {}
+
+    void sendPacket(const PowerTelemetry&amp; data) {
+        std::cout &lt;&lt; "[DEPLOYMENT VIEW] Packet transmitted to Node [" 
+                  &lt;&lt; ipAddress &lt;&lt; ":" &lt;&lt; port &lt;&lt; "] over TCP/IP protocol." &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    PowerTelemetry status(1200.5, 310.2); // Logical
+    TelemetryWorker worker;               // Process
+    SCADANetworkNode controlTower("192.168.1.50", 8080); // Deployment
+
+    worker.streamTelemetry(status);
+    controlTower.sendPacket(status);
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -5213,6 +7077,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Modular Computer Graphics Card (GPU) in a PCIe Slot</div>
+  <p>A software <strong>Component</strong> is like a modular graphics card (GPU). It is an autonomous, replaceable physical unit of packaging with clean boundaries. Whether the card is manufactured by NVIDIA or AMD, you can snap it into standard PCIe motherboard slots. The motherboard does not need to know whether the internal GPU chip uses 4,000 or 8,000 silicon cores; it only communicates through the standard hardware interface. In software, components are packaged as DLLs, shared libraries (`.so`), or JAR files that can be swapped without recompiling the host application.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Characteristics and Packaging</h4>
 
@@ -5229,6 +7099,52 @@
     <h5>2. Reusability and System Evolution</h5>
     <p>Components form the foundation of <strong>Component-Based Software Engineering (CBSE)</strong>. Systems evolve by upgrading individual components without re-architecting the entire enterprise application.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Component Packaging with Facade & PIMPL Idiom)</span>
+    <span class="code-desc">Implementing an autonomous, replaceable component hiding internal complexity behind an export facade</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+#include &lt;string&gt;
+
+/* COMPONENT BOUNDARY: EncryptedPaymentComponent */
+
+// Internal implementation hidden from external consumers
+class PaymentEngineInternal {
+public:
+    bool executeCardDeduction(std::string card, double amount) {
+        std::cout &lt;&lt; "  [COMPONENT INTERNAL] RSA-2048 encryption applied to card " &lt;&lt; card &lt;&lt; std::endl;
+        std::cout &lt;&lt; "  [COMPONENT INTERNAL] Bank ISO-8583 message transmitted: ₹" &lt;&lt; amount &lt;&lt; std::endl;
+        return true;
+    }
+};
+
+// Exported Public Component Facade
+class PaymentComponent {
+private:
+    std::unique_ptr&lt;PaymentEngineInternal&gt; pimpl; // Pointer to Implementation
+
+public:
+    PaymentComponent() : pimpl(std::make_unique&lt;PaymentEngineInternal&gt;()) {}
+
+    // Public Component API Port
+    bool pay(std::string cardNumber, double amount) {
+        std::cout &lt;&lt; "[COMPONENT FACADE] Received payment request at component port." &lt;&lt; std::endl;
+        return pimpl-&gt;executeCardDeduction(cardNumber, amount);
+    }
+};
+
+int main() {
+    // Client application utilizes the component as a black-box
+    PaymentComponent paymentModule;
+    bool status = paymentModule.pay("4532-XXXX-XXXX-9012", 2499.0);
+    std::cout &lt;&lt; "Component Payment Status: " &lt;&lt; (status ? "SUCCESS" : "FAILURE") &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -5315,6 +7231,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Universal Wall Plug Socket & Appliance Cord</div>
+  <p>An <strong>Interface</strong> is represented in UML by the famous 'Ball-and-Socket' notation. The 3-pin wall electrical socket is the <strong>Provided Interface ('O—' Lollipop)</strong>: it promises to provide 230V AC current according to a standard spec. The laptop charger plug is the <strong>Required Interface (')—' Socket)</strong>: it requires 230V AC to function. The electrical grid doesn't care whether the plugged device is a toaster, television, or Tesla charger—as long as the appliance realizes the required interface, complete decoupling is achieved!</p>
+</div>
+
 <div class="subtopics-container">
   <h4>The Two Notational Conventions in UML</h4>
 
@@ -5331,6 +7253,62 @@
     <h5>2. Stereotyped Classifier Notation</h5>
     <p>A standard rectangle adorned with <code>&lt;&lt;interface&gt;&gt;</code> listing the abstract operations. Classes and components realize this interface using a <strong>dashed line with a hollow triangle (<code>- - -▷</code>)</strong>.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Provided vs Required Interfaces & Dependency Injection)</span>
+    <span class="code-desc">Demonstrating pure virtual interfaces realizing loose coupling and dependency injection</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;memory&gt;
+
+/* 
+ * PROVIDED INTERFACE (Lollipop 'O-'): ILogger
+ * A contract defining operations without implementation.
+ */
+class ILogger {
+public:
+    virtual ~ILogger() = default;
+    virtual void log(const std::string&amp; message) = 0; // Pure virtual method
+};
+
+/* Realization: Component A provides the interface */
+class CloudLogger : public ILogger {
+public:
+    void log(const std::string&amp; message) override {
+        std::cout &lt;&lt; "  [Provided Interface Realization] CloudLogger sending log: " &lt;&lt; message &lt;&lt; std::endl;
+    }
+};
+
+/* 
+ * REQUIRED INTERFACE (Socket ')-('):
+ * UserService requires any ILogger implementation via its port.
+ */
+class UserService {
+private:
+    std::shared_ptr&lt;ILogger&gt; loggerPort; // Required Interface dependency
+
+public:
+    // Dependency Injection wiring the Provided interface to Required interface
+    UserService(std::shared_ptr&lt;ILogger&gt; logger) : loggerPort(logger) {}
+
+    void registerUser(std::string username) {
+        std::cout &lt;&lt; "UserService: Registering " &lt;&lt; username &lt;&lt; "..." &lt;&lt; std::endl;
+        loggerPort-&gt;log("User " + username + " successfully enrolled in system.");
+    }
+};
+
+int main() {
+    // Wiring the assembly connector at runtime
+    auto cloudLog = std::make_shared&lt;CloudLogger&gt;();
+    UserService service(cloudLog);
+
+    service.registerUser("shubham_upes");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -5422,6 +7400,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Hi-Fi Stereo System Wiring & Assembly Connectors</div>
+  <p>A <strong>Component Diagram</strong> models the physical wiring and assembly connectors between software components. Imagine assembling a luxury home theater: the Blu-Ray Player component provides an 'Audio-Out' port; the Surround Sound Amplifier component requires an 'Audio-In' port and provides an amplified 'Speaker-Out' port; the Subwoofer component requires a 'Speaker-In' port. Connecting an HDMI cable between these ports is an <strong>Assembly Connector</strong>. The diagram visualizes the modular architecture of the entire audio system.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Architectural Components and Adaptability</h4>
 
@@ -5439,6 +7423,61 @@
     <h5>2. Adaptable Systems & Component-Based Software Engineering (CBSE)</h5>
     <p>Component diagrams enable architects to model adaptable, loosely-coupled systems. When business rules change, only the affected component is updated and swapped without recompiling the entire system.</p>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Component Assembly Connectors & Wiring Ports)</span>
+    <span class="code-desc">Wiring decoupled components together using port delegates and assembly connectors</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;memory&gt;
+
+// Port Interface 1: Audio Signal
+class IAudioOutputPort {
+public:
+    virtual ~IAudioOutputPort() = default;
+    virtual void transmitAudio(std::string audioStream) = 0;
+};
+
+// Component 1: Media Player (Provides AudioOutputPort)
+class MediaPlayerComponent : public IAudioOutputPort {
+public:
+    void transmitAudio(std::string audioStream) override {
+        std::cout &lt;&lt; "  [MediaPlayer Port] Transmitting audio stream: " &lt;&lt; audioStream &lt;&lt; std::endl;
+    }
+};
+
+// Component 2: Sound Amplifier (Requires AudioOutputPort via Assembly Connector)
+class AmplifierComponent {
+private:
+    IAudioOutputPort* inputConnector; // Assembly connector hook
+
+public:
+    void connectAudioSource(IAudioOutputPort* source) {
+        inputConnector = source; // Wiring the assembly connector
+    }
+
+    void amplifyAndPlay(std::string track) {
+        std::cout &lt;&lt; "[Amplifier Component] Processing signal through equalizer..." &lt;&lt; std::endl;
+        if (inputConnector) {
+            inputConnector-&gt;transmitAudio(track);
+            std::cout &lt;&lt; "[Amplifier Component] Outputting 100W surround sound to speakers!" &lt;&lt; std::endl;
+        }
+    }
+};
+
+int main() {
+    MediaPlayerComponent player;
+    AmplifierComponent amp;
+
+    // Assembly Connector: Wiring Component 1 to Component 2
+    amp.connectAudioSource(&amp;player);
+    amp.amplifyAndPlay("Beethoven Symphony No. 9");
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">
@@ -5544,6 +7583,12 @@
   </div>
 </div>
 
+
+<div class="analogy-card">
+  <div class="analogy-header">💡 Real-Life Analogy: Global Banking Infrastructure: Server Nodes and ATM Kiosks</div>
+  <p>A <strong>Deployment Diagram</strong> represents the physical hardware topology where software artifacts actually run. In a nationwide bank, there is a central <strong>Mainframe Node</strong> in Mumbai housing high-capacity database servers. Connected via encrypted WAN communication links are thousands of <strong>ATM Kiosk Nodes</strong> distributed across cities, each running an embedded Windows/Linux OS and hosting a client artifact (`atm_client.exe`). The deployment diagram proves where code physically lives and verifies network latency, hardware capacity, and security firewalls.</p>
+</div>
+
 <div class="subtopics-container">
   <h4>Key Terminology & Node vs. Component Distinction</h4>
 
@@ -5591,6 +7636,56 @@
       </tbody>
     </table>
   </div>
+</div>
+
+
+<div class="code-example-card">
+  <div class="code-header">
+    <span class="code-lang">C++ (Deployment Node Client-Server Topology Simulation)</span>
+    <span class="code-desc">Demonstrating physical node topology, communication protocol, and artifact execution</span>
+  </div>
+  <pre class="code-block"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+/* Hardware Node 1: Central Database Cluster Node (Mumbai DataCenter) */
+class CentralServerNode {
+public:
+    void receiveTCPPayload(std::string clientNodeIP, std::string transactionPayload) {
+        std::cout &lt;&lt; "[SERVER NODE: 10.0.1.100 Mumbai] Received packet from " 
+                  &lt;&lt; clientNodeIP &lt;&lt; " over TLS/TCP: " &lt;&lt; transactionPayload &lt;&lt; std::endl;
+        std::cout &lt;&lt; "  -&gt; Transaction committed to Oracle Database Cluster Artifact." &lt;&lt; std::endl;
+    }
+};
+
+/* Hardware Node 2: Remote ATM Kiosk Node (Delhi Branch Device) */
+class ATMKioskDeviceNode {
+private:
+    std::string deviceIP;
+    CentralServerNode* serverLink; // WAN Communication Path: &lt;&lt;TCP/IP&gt;&gt;
+
+public:
+    ATMKioskDeviceNode(std::string ip, CentralServerNode* server) 
+        : deviceIP(ip), serverLink(server) {}
+
+    // Executing local artifact: atm_client.exe
+    void executeWithdrawal(std::string account, double amount) {
+        std::cout &lt;&lt; "[CLIENT NODE: " &lt;&lt; deviceIP &lt;&lt; " Delhi ATM] User card inserted." &lt;&lt; std::endl;
+        std::string payload = "{acc: '" + account + "', withdraw: " + std::to_string(amount) + "}";
+        
+        // Transmitting over communication path &lt;&lt;TCP/IP&gt;&gt;
+        serverLink-&gt;receiveTCPPayload(deviceIP, payload);
+        std::cout &lt;&lt; "[CLIENT NODE: " &lt;&lt; deviceIP &lt;&lt; "] Cash dispensed physically to user." &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    // Deploying software artifacts to physical execution nodes
+    CentralServerNode mumbaiDatacenter;
+    ATMKioskDeviceNode delhiKiosk("172.16.42.10", &amp;mumbaiDatacenter);
+
+    delhiKiosk.executeWithdrawal("ACC-904128", 5000.0);
+    return 0;
+}</code></pre>
 </div>
 
 <div class="diagram-container">

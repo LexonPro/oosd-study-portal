@@ -1,3 +1,4 @@
+# build_unit2_website.py: Assembles unit2.html from Parts 1 to 6 with analogies and code examples
 import os
 import json
 import generate_unit2_part1
@@ -16,7 +17,8 @@ part6 = generate_unit2_part6.get_unit2_part6_sections()
 
 all_sections = part1 + part2 + part3 + part4 + part5 + part6
 
-print(f"Total sections assembled: {len(all_sections)}")
+print(f"Total Unit 2 sections assembled: {len(all_sections)}")
+assert len(all_sections) == 36, f"Expected 36 sections, found {len(all_sections)}"
 
 parts_meta = [
     {"num": 1, "title": "PART 1 — Basic Structural Modeling", "theme_class": "part-blue", "sections": part1},
@@ -77,7 +79,7 @@ for idx, s in enumerate(all_sections):
             <span class="done-icon">○</span>
             <span class="done-text">Mark as Studied</span>
           </button>
-          <span class="reading-time">⏱ 3 min study</span>
+          <span class="reading-time">⏱ 4 min study</span>
         </div>
       </div>
       
@@ -107,7 +109,7 @@ html_template = f"""<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>OOSD — UNIT 2: Complete Master Study Guide (All 36 Topics)</title>
-  <meta name="description" content="Comprehensive, unrestricted interactive study portal covering all 36 topics of Object Oriented System Design Unit 2 with diagrams, comparisons, and exam questions.">
+  <meta name="description" content="Comprehensive, unrestricted interactive study portal covering all 36 topics of Object Oriented System Design Unit 2 with real-life analogies, commented C++ code implementations, vector UML diagrams, architectural comparisons, and exam questions.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -267,11 +269,11 @@ html_template = f"""<!DOCTYPE html>
 
       <!-- Course Hero Banner -->
       <header class="course-hero">
-        <div class="hero-badge">Curriculum-Aligned Engineering Reference</div>
+        <div class="hero-badge">Curriculum-Aligned Engineering Reference • AKTU KCS-054</div>
         <h1>Object Oriented System Design (OOSD)</h1>
         <h2>Unit 2: Basic Structural, Behavioural & Architectural Modeling</h2>
         <p class="hero-desc">
-          A fully articulated study guide covering all 36 topics in continuous unrestricted flow. Includes dedicated vector UML diagrams, architectural comparison matrices, AKTU university exam questions with answers, and 30-second rapid revision checkpoints.
+          A fully articulated study guide covering all 36 topics in continuous unrestricted flow. Features real-life analogies, commented C++ code implementations, dedicated vector UML diagrams, architectural comparison matrices, AKTU university exam questions with answers, and 30-second rapid revision checkpoints.
         </p>
 
         <div class="quick-stats-pills">
@@ -295,12 +297,11 @@ html_template = f"""<!DOCTYPE html>
           <h4>OOSD Unit 2: Complete Study Master Portal</h4>
           <p>Designed for Computer Science & Engineering (B.Tech / MCA / Software Engineering) students.</p>
           <div class="footer-links">
-            <a href="unit1.html">Switch to Unit 1 (23 Topics)</a> • 
-            <a href="unit2.html">Unit 2: Structural Modeling (36 Topics)</a> • 
-            <a href="unit3.html">Switch to Unit 3 (28 Topics)</a> • 
-            <a href="unit4.html">Switch to Unit 4 (20 Topics)</a> • 
-            <a href="unit5.html">Proceed to Unit 5 (24 Topics)</a> • 
+            <a href="unit1.html">Unit 1: OO Concepts (23 Topics)</a> • 
             <a href="#sec-1">Back to Section 01</a> • 
+            <a href="unit3.html">Proceed to Unit 3 (28 Topics)</a> • 
+            <a href="unit4.html">Proceed to Unit 4 (20 Topics)</a> • 
+            <a href="unit5.html">Proceed to Unit 5 (24 Topics)</a> • 
             <a href="#top">Top of Page</a>
           </div>
         </div>
@@ -328,84 +329,3 @@ with open("unit2.html", "w", encoding="utf-8") as f:
     f.write(html_template)
 
 print(f"unit2.html generated successfully! Size: {os.path.getsize('unit2.html')} bytes")
-
-# Write index.html as the primary entry point that always redirects to Unit 1 first!
-index_redirect_html = """<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=unit1.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>OOSD Master Portal — Redirecting to Unit 1...</title>
-  <link rel="canonical" href="unit1.html">
-  <script>
-    // If a hash like #sec-15 was provided, preserve it and route to unit2.html; otherwise always route to unit1.html!
-    if (window.location.hash && window.location.hash.startsWith('#sec-')) {
-      window.location.replace("unit2.html" + window.location.hash);
-    } else {
-      window.location.replace("unit1.html");
-    }
-  </script>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background: #f8fafc;
-      color: #0f172a;
-      text-align: center;
-    }
-    .redirect-card {
-      background: #ffffff;
-      padding: 36px 44px;
-      border-radius: 14px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      border: 1px solid #e2e8f0;
-      max-width: 460px;
-    }
-    h2 {
-      margin-bottom: 12px;
-      font-size: 1.35rem;
-      color: #0f172a;
-    }
-    p {
-      color: #64748b;
-      margin-bottom: 18px;
-      line-height: 1.5;
-    }
-    a {
-      color: #2563eb;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .spinner {
-      width: 32px;
-      height: 32px;
-      margin: 16px auto;
-      border: 3px solid #e2e8f0;
-      border-top-color: #2563eb;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
-</head>
-<body>
-  <div class="redirect-card">
-    <div class="spinner"></div>
-    <h2>OOSD Master Study Portal</h2>
-    <p>Redirecting to <a href="unit1.html">Unit 1: Object Orientation Concepts &amp; Architecture</a>...</p>
-  </div>
-</body>
-</html>
-"""
-
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(index_redirect_html)
-
-print(f"index.html router generated successfully! Size: {os.path.getsize('index.html')} bytes")
