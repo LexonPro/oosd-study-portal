@@ -657,51 +657,51 @@
     <span class="code-lang">C++ (Structural Framework: Classes & Permanent Wiring)</span>
     <span class="code-desc">Demonstrating static entities (BoardingPass, Passenger) wired with structural associations</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-/* 1. Structural Entity: Represents a static domain concept */
-class BoardingPass {
-public:
-    std::string passId;
-    std::string seatNumber;
+<span class="c-comment">/* 1. Structural Entity: Represents a static domain concept */</span>
+<span class="c-keyword">class</span> <span class="c-type">BoardingPass</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> passId;
+    <span class="c-type">std::string</span> seatNumber;
     
-    BoardingPass(std::string id, std::string seat) 
+    <span class="c-type">BoardingPass</span>(<span class="c-type">std::string</span> id, <span class="c-type">std::string</span> seat) 
         : passId(id), seatNumber(seat) {}
 };
 
-/* 2. Structural Entity with Permanent Association */
-class Passenger {
-private:
-    std::string passportNumber;
-    std::string fullName;
-    BoardingPass* currentPass; // Structural association link
+<span class="c-comment">/* 2. Structural Entity with Permanent Association */</span>
+<span class="c-keyword">class</span> <span class="c-type">Passenger</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::string</span> passportNumber;
+    <span class="c-type">std::string</span> fullName;
+    <span class="c-type">BoardingPass</span>* currentPass; <span class="c-comment">// Structural association link</span>
 
-public:
-    Passenger(std::string passport, std::string name) 
-        : passportNumber(passport), fullName(name), currentPass(nullptr) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">Passenger</span>(<span class="c-type">std::string</span> passport, <span class="c-type">std::string</span> name) 
+        : passportNumber(passport), fullName(name), currentPass(<span class="c-keyword">nullptr</span>) {}
 
-    /* Establishing structural connectivity at runtime */
-    void assignBoardingPass(BoardingPass* pass) {
+    <span class="c-comment">/* Establishing structural connectivity at runtime */</span>
+    <span class="c-type">void</span> assignBoardingPass(<span class="c-type">BoardingPass</span>* pass) {
         currentPass = pass;
     }
 
-    void displayDetails() const {
-        std::cout &lt;&lt; "Passenger: " &lt;&lt; fullName &lt;&lt; " [Passport: " &lt;&lt; passportNumber &lt;&lt; "]";
-        if (currentPass) {
-            std::cout &lt;&lt; " -&gt; Assigned Seat: " &lt;&lt; currentPass-&gt;seatNumber &lt;&lt; std::endl;
+    <span class="c-type">void</span> displayDetails() <span class="c-keyword">const</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Passenger: "</span> &lt;&lt; fullName &lt;&lt; <span class="c-string">" [Passport: "</span> &lt;&lt; passportNumber &lt;&lt; <span class="c-string">"]"</span>;
+        <span class="c-keyword">if</span> (currentPass) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">" -&gt; Assigned Seat: "</span> &lt;&lt; currentPass-&gt;seatNumber &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    // Instantiating the static structural framework
-    BoardingPass bp1("BP-9042", "14A");
-    Passenger p1("K8492019", "Aarav Sharma");
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// Instantiating the static structural framework</span>
+    <span class="c-type">BoardingPass</span> bp1(<span class="c-string">"BP-9042"</span>, <span class="c-string">"14A"</span>);
+    <span class="c-type">Passenger</span> p1(<span class="c-string">"K8492019"</span>, <span class="c-string">"Aarav Sharma"</span>);
     
     p1.assignBoardingPass(&amp;bp1);
     p1.displayDetails();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -866,46 +866,46 @@ int main() {
     <span class="code-lang">C++ (Structural vs Behavioral vs Architectural Perspectives)</span>
     <span class="code-desc">Illustrating structural entities, dynamic behavioral transitions, and architectural namespaces</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-/* 3. Architectural Modeling: Subsystem boundary &amp; packaging */
-namespace VehicleArchitecture {
+<span class="c-comment">/* 3. Architectural Modeling: Subsystem boundary &amp; packaging */</span>
+<span class="c-keyword">namespace</span> <span class="c-type">VehicleArchitecture</span> {
     
-    /* 1. Structural Modeling: Static entity definitions &amp; properties */
-    class BatteryPack {
-    public:
-        double chargePercent;
-        double tempCelsius;
-        BatteryPack() : chargePercent(100.0), tempCelsius(25.0) {}
+    <span class="c-comment">/* 1. Structural Modeling: Static entity definitions &amp; properties */</span>
+    <span class="c-keyword">class</span> <span class="c-type">BatteryPack</span> {
+    <span class="c-keyword">public</span>:
+        <span class="c-type">double</span> chargePercent;
+        <span class="c-type">double</span> tempCelsius;
+        <span class="c-type">BatteryPack</span>() : chargePercent(<span class="c-number">100.0</span>), tempCelsius(<span class="c-number">25.0</span>) {}
     };
 
-    class PowertrainController {
-    private:
-        BatteryPack battery; // Structural composition
-        bool ecoMode;
+    <span class="c-keyword">class</span> <span class="c-type">PowertrainController</span> {
+    <span class="c-keyword">private</span>:
+        <span class="c-type">BatteryPack</span> battery; <span class="c-comment">// Structural composition</span>
+        <span class="c-type">bool</span> ecoMode;
 
-    public:
-        PowertrainController() : ecoMode(false) {}
+    <span class="c-keyword">public</span>:
+        <span class="c-type">PowertrainController</span>() : ecoMode(<span class="c-keyword">false</span>) {}
 
-        /* 2. Behavioral Modeling: Dynamic state transitions &amp; algorithms */
-        void monitorThermalStatus(double currentTemp) {
+        <span class="c-comment">/* 2. Behavioral Modeling: Dynamic state transitions &amp; algorithms */</span>
+        <span class="c-type">void</span> monitorThermalStatus(<span class="c-type">double</span> currentTemp) {
             battery.tempCelsius = currentTemp;
-            if (battery.tempCelsius &gt; 65.0) {
-                std::cout &lt;&lt; "[BEHAVIORAL TRANSITION] Temp exceeded 65C! Engaging Eco-Throttle." &lt;&lt; std::endl;
-                ecoMode = true; // Runtime state modification
-            } else {
-                std::cout &lt;&lt; "[BEHAVIORAL FLOW] Operating normally at " &lt;&lt; currentTemp &lt;&lt; " C." &lt;&lt; std::endl;
+            <span class="c-keyword">if</span> (battery.tempCelsius &gt; <span class="c-number">65.0</span>) {
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[BEHAVIORAL TRANSITION] Temp exceeded 65C! Engaging Eco-Throttle."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+                ecoMode = <span class="c-keyword">true</span>; <span class="c-comment">// Runtime state modification</span>
+            } <span class="c-keyword">else</span> {
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[BEHAVIORAL FLOW] Operating normally at "</span> &lt;&lt; currentTemp &lt;&lt; <span class="c-string">" C."</span> &lt;&lt; <span class="c-type">std::endl</span>;
             }
         }
     };
 }
 
-int main() {
-    VehicleArchitecture::PowertrainController ecu;
-    ecu.monitorThermalStatus(45.0);
-    ecu.monitorThermalStatus(72.5); // Triggers behavioral transition
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">VehicleArchitecture</span>::<span class="c-type">PowertrainController</span> ecu;
+    ecu.monitorThermalStatus(<span class="c-number">45.0</span>);
+    ecu.monitorThermalStatus(<span class="c-number">72.5</span>); <span class="c-comment">// Triggers behavioral transition</span>
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -1059,52 +1059,52 @@ int main() {
     <span class="code-lang">C++ (UML Class: 3 Compartments, Visibility & Static Scope)</span>
     <span class="code-desc">Demonstrating Private (-), Protected (#), Public (+) visibility and class-level static variables</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-/* UML Class: Name Compartment = BankAccount */
-class BankAccount {
-private:
-    /* Attribute Compartment: Private (-) visibility */
-    std::string accountNumber;
-    double balance;
+<span class="c-comment">/* UML Class: Name Compartment = BankAccount */</span>
+<span class="c-keyword">class</span> <span class="c-type">BankAccount</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-comment">/* Attribute Compartment: Private (-) visibility */</span>
+    <span class="c-type">std::string</span> accountNumber;
+    <span class="c-type">double</span> balance;
 
-protected:
-    /* Attribute Compartment: Protected (#) visibility (accessible by subclasses) */
-    int tierLevel;
+<span class="c-keyword">protected</span>:
+    <span class="c-comment">/* Attribute Compartment: Protected (#) visibility (accessible by subclasses) */</span>
+    <span class="c-type">int</span> tierLevel;
 
-public:
-    /* Class-Scope Attribute: Static underlined variable in UML */
-    static double interestRate;
+<span class="c-keyword">public</span>:
+    <span class="c-comment">/* Class-Scope Attribute: Static underlined variable in UML */</span>
+    <span class="c-keyword">static</span> <span class="c-type">double</span> interestRate;
 
-    /* Operation Compartment: Public (+) visibility */
-    BankAccount(std::string accNo, double initialBal) 
-        : accountNumber(accNo), balance(initialBal), tierLevel(1) {}
+    <span class="c-comment">/* Operation Compartment: Public (+) visibility */</span>
+    <span class="c-type">BankAccount</span>(<span class="c-type">std::string</span> accNo, <span class="c-type">double</span> initialBal) 
+        : accountNumber(accNo), balance(initialBal), tierLevel(<span class="c-number">1</span>) {}
 
-    void deposit(double amount) {
-        if (amount &gt; 0) balance += amount;
+    <span class="c-type">void</span> deposit(<span class="c-type">double</span> amount) {
+        <span class="c-keyword">if</span> (amount &gt; <span class="c-number">0</span>) balance += amount;
     }
 
-    bool withdraw(double amount) {
-        if (amount &lt;= balance) {
+    <span class="c-type">bool</span> withdraw(<span class="c-type">double</span> amount) {
+        <span class="c-keyword">if</span> (amount &lt;= balance) {
             balance -= amount;
-            return true;
+            <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
         }
-        return false;
+        <span class="c-keyword">return</span> <span class="c-keyword">false</span>;
     }
 
-    double getBalance() const { return balance; }
+    <span class="c-type">double</span> getBalance() <span class="c-keyword">const</span> { <span class="c-keyword">return</span> balance; }
 };
 
-// Defining static class-scoped attribute
-double BankAccount::interestRate = 4.5;
+<span class="c-comment">// Defining static class-scoped attribute</span>
+<span class="c-type">double</span> <span class="c-type">BankAccount</span>::interestRate = <span class="c-number">4.5</span>;
 
-int main() {
-    BankAccount acc("SB-20419", 5000.0);
-    acc.deposit(1500.0);
-    std::cout &lt;&lt; "Account Balance: ₹" &lt;&lt; acc.getBalance() &lt;&lt; std::endl;
-    std::cout &lt;&lt; "Static Base Interest Rate: " &lt;&lt; BankAccount::interestRate &lt;&lt; "%" &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">BankAccount</span> acc(<span class="c-string">"SB-20419"</span>, <span class="c-number">5000.0</span>);
+    acc.deposit(<span class="c-number">1500.0</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Account Balance: ₹"</span> &lt;&lt; acc.getBalance() &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Static Base Interest Rate: "</span> &lt;&lt; <span class="c-type">BankAccount</span>::interestRate &lt;&lt; <span class="c-string">"%"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -1293,56 +1293,56 @@ int main() {
     <span class="code-lang">C++ (Implementing All UML Relationships in Code)</span>
     <span class="code-desc">Demonstrating Dependency, Association, Aggregation, Composition, and Generalization</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;memory&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;vector&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;memory&gt;</span>
 
-/* 1. Entity for Dependency */
-class MedicalReport {
-public:
-    void print() const { std::cout &lt;&lt; "Medical Report Generated." &lt;&lt; std::endl; }
+<span class="c-comment">/* 1. Entity for Dependency */</span>
+<span class="c-keyword">class</span> <span class="c-type">MedicalReport</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> print() <span class="c-keyword">const</span> { <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Medical Report Generated."</span> &lt;&lt; <span class="c-type">std::endl</span>; }
 };
 
-/* 2. Composition Entity: Part cannot outlive the Whole */
-class Heart {
-public:
-    Heart() { std::cout &lt;&lt; "Heart created." &lt;&lt; std::endl; }
-    ~Heart() { std::cout &lt;&lt; "Heart destroyed with Human." &lt;&lt; std::endl; }
+<span class="c-comment">/* 2. Composition Entity: Part cannot outlive the Whole */</span>
+<span class="c-keyword">class</span> <span class="c-type">Heart</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">Heart</span>() { <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Heart created."</span> &lt;&lt; <span class="c-type">std::endl</span>; }
+    ~<span class="c-type">Heart</span>() { <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Heart destroyed with Human."</span> &lt;&lt; <span class="c-type">std::endl</span>; }
 };
 
-/* 3. Generalization Base Class */
-class Doctor {
-public:
-    virtual void consult() { std::cout &lt;&lt; "General Doctor Consultation." &lt;&lt; std::endl; }
-    // Dependency: Uses MedicalReport as parameter
-    void reviewReport(const MedicalReport&amp; rep) { rep.print(); }
+<span class="c-comment">/* 3. Generalization Base Class */</span>
+<span class="c-keyword">class</span> <span class="c-type">Doctor</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-keyword">virtual</span> <span class="c-type">void</span> consult() { <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"General Doctor Consultation."</span> &lt;&lt; <span class="c-type">std::endl</span>; }
+    <span class="c-comment">// Dependency: Uses MedicalReport as parameter</span>
+    <span class="c-type">void</span> reviewReport(<span class="c-keyword">const</span> <span class="c-type">MedicalReport</span>&amp; rep) { rep.print(); }
 };
 
-/* 4. Generalization Subclass: Cardiologist IS-A Doctor */
-class Cardiologist : public Doctor {
-public:
-    void consult() override { std::cout &lt;&lt; "Cardiologist Heart Examination." &lt;&lt; std::endl; }
+<span class="c-comment">/* 4. Generalization Subclass: Cardiologist IS-A Doctor */</span>
+<span class="c-keyword">class</span> <span class="c-type">Cardiologist</span> : <span class="c-keyword">public</span> <span class="c-type">Doctor</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> consult() <span class="c-keyword">override</span> { <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Cardiologist Heart Examination."</span> &lt;&lt; <span class="c-type">std::endl</span>; }
 };
 
-/* 5. Whole with Composition (Heart) and Aggregation (Doctor pointer) */
-class Patient {
-private:
-    Heart biologicalHeart; // Composition: Owned value object
-    Doctor* assignedDoctor; // Aggregation: Doctor exists independently
+<span class="c-comment">/* 5. Whole with Composition (Heart) and Aggregation (Doctor pointer) */</span>
+<span class="c-keyword">class</span> <span class="c-type">Patient</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">Heart</span> biologicalHeart; <span class="c-comment">// Composition: Owned value object</span>
+    <span class="c-type">Doctor</span>* assignedDoctor; <span class="c-comment">// Aggregation: Doctor exists independently</span>
 
-public:
-    Patient(Doctor* doc) : assignedDoctor(doc) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">Patient</span>(<span class="c-type">Doctor</span>* doc) : assignedDoctor(doc) {}
 };
 
-int main() {
-    Cardiologist drMehta;
+<span class="c-type">int</span> main() {
+    <span class="c-type">Cardiologist</span> drMehta;
     {
-        // Patient owns heart; shares reference to doctor
-        Patient patient1(&amp;drMehta);
-    } // patient1 destroyed here -&gt; Heart is destroyed, but drMehta lives on!
+        <span class="c-comment">// Patient owns heart; shares reference to doctor</span>
+        <span class="c-type">Patient</span> patient1(&amp;drMehta);
+    } <span class="c-comment">// patient1 destroyed here -&gt; Heart is destroyed, but drMehta lives on!</span>
     
     drMehta.consult();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -1534,53 +1534,53 @@ int main() {
     <span class="code-lang">C++ (Stereotypes, Tagged Values & Constraints in Code)</span>
     <span class="code-desc">Representing UML extensible metadata, stereotypes, and invariant constraints in C++</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;stdexcept&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;stdexcept&gt;</span>
 
-/* UML Stereotype representation: &lt;&lt;Utility&gt;&gt; or &lt;&lt;Entity&gt;&gt; */
-enum class ClassifierStereotype {
+<span class="c-comment">/* UML Stereotype representation: &lt;&lt;Utility&gt;&gt; or &lt;&lt;Entity&gt;&gt; */</span>
+<span class="c-keyword">enum</span> <span class="c-keyword">class</span> <span class="c-type">ClassifierStereotype</span> {
     ENTITY,
     CONTROL,
     BOUNDARY
 };
 
-/* UML Tagged Values: Key-value metadata pair {author="DevTeam", version="2.1"} */
-struct UMLTaggedValues {
-    std::string author;
-    int version;
-    std::string persistenceType;
+<span class="c-comment">/* UML Tagged Values: Key-value metadata pair {author="DevTeam", version="2.1"} */</span>
+<span class="c-keyword">struct</span> <span class="c-type">UMLTaggedValues</span> {
+    <span class="c-type">std::string</span> author;
+    <span class="c-type">int</span> version;
+    <span class="c-type">std::string</span> persistenceType;
 };
 
-class CustomerProfile {
-private:
-    std::string customerId;
-    int age;
+<span class="c-keyword">class</span> <span class="c-type">CustomerProfile</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::string</span> customerId;
+    <span class="c-type">int</span> age;
 
-public:
-    CustomerProfile(std::string id, int a) : customerId(id), age(a) {
-        /* UML Constraint Enforcement: {age &gt;= 18} */
-        if (age &lt; 18) {
-            throw std::invalid_argument("UML Constraint Violation: {age &gt;= 18} violated!");
+<span class="c-keyword">public</span>:
+    <span class="c-type">CustomerProfile</span>(<span class="c-type">std::string</span> id, <span class="c-type">int</span> a) : customerId(id), age(a) {
+        <span class="c-comment">/* UML Constraint Enforcement: {age &gt;= 18} */</span>
+        <span class="c-keyword">if</span> (age &lt; <span class="c-number">18</span>) {
+            <span class="c-keyword">throw</span> std::invalid_argument(<span class="c-string">"UML Constraint Violation: {age &gt;= 18} violated!"</span>);
         }
     }
 
-    void display() const {
-        std::cout &lt;&lt; "Customer: " &lt;&lt; customerId &lt;&lt; " (Age: " &lt;&lt; age &lt;&lt; ")" &lt;&lt; std::endl;
+    <span class="c-type">void</span> display() <span class="c-keyword">const</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Customer: "</span> &lt;&lt; customerId &lt;&lt; <span class="c-string">" (Age: "</span> &lt;&lt; age &lt;&lt; <span class="c-string">")"</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    try {
-        CustomerProfile validUser("CUST-100", 22);
+<span class="c-type">int</span> main() {
+    <span class="c-keyword">try</span> {
+        <span class="c-type">CustomerProfile</span> validUser(<span class="c-string">"CUST-100"</span>, <span class="c-number">22</span>);
         validUser.display();
 
-        // Testing constraint breach
-        CustomerProfile invalidUser("CUST-101", 15);
-    } catch (const std::exception&amp; e) {
-        std::cout &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; std::endl;
+        <span class="c-comment">// Testing constraint breach</span>
+        <span class="c-type">CustomerProfile</span> invalidUser(<span class="c-string">"CUST-101"</span>, <span class="c-number">15</span>);
+    } <span class="c-keyword">catch</span> (<span class="c-keyword">const</span> std::exception&amp; e) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Error: "</span> &lt;&lt; e.what() &lt;&lt; <span class="c-type">std::endl</span>;
     }
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -1738,38 +1738,38 @@ int main() {
     <span class="code-lang">C++ (How UML Diagrams Map to Software Source Code)</span>
     <span class="code-desc">Demonstrating how Class Diagrams map to headers, Sequence to methods, and Deployment to network endpoints</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
 /* 
- * 1. CLASS DIAGRAM MAPS TO: Header declaration (.h)
- * Shows types, data members, and public contract.
+ * <span class="c-number">1</span>. CLASS DIAGRAM MAPS TO: <span class="c-type">Header</span> declaration (.h)
+ * <span class="c-type">Shows</span> types, data members, and <span class="c-keyword">public</span> contract.
  */
-class AuthenticationService {
-public:
+<span class="c-keyword">class</span> <span class="c-type">AuthenticationService</span> {
+<span class="c-keyword">public</span>:
     /* 
-     * 2. SEQUENCE DIAGRAM MAPS TO: Chronological execution flow
-     * Step 1: validateCredentials()
-     * Step 2: generateSessionToken()
-     * Step 3: return authSuccess
+     * <span class="c-number">2</span>. SEQUENCE DIAGRAM MAPS TO: <span class="c-type">Chronological</span> execution flow
+     * <span class="c-type">Step</span> <span class="c-number">1</span>: validateCredentials()
+     * <span class="c-type">Step</span> <span class="c-number">2</span>: generateSessionToken()
+     * <span class="c-type">Step</span> <span class="c-number">3</span>: <span class="c-keyword">return</span> authSuccess
      */
-    bool login(std::string username, std::string password) {
-        std::cout &lt;&lt; "Step 1: Validating credentials for " &lt;&lt; username &lt;&lt; std::endl;
-        if (username == "admin" &amp;&amp; password == "pass123") {
-            std::cout &lt;&lt; "Step 2: Generating secure JWT Token..." &lt;&lt; std::endl;
-            std::cout &lt;&lt; "Step 3: Returning true to caller." &lt;&lt; std::endl;
-            return true;
+    <span class="c-type">bool</span> login(<span class="c-type">std::string</span> username, <span class="c-type">std::string</span> password) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Step 1: Validating credentials for "</span> &lt;&lt; username &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">if</span> (username == <span class="c-string">"admin"</span> &amp;&amp; password == <span class="c-string">"pass123"</span>) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Step 2: Generating secure JWT Token..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Step 3: Returning true to caller."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+            <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
         }
-        return false;
+        <span class="c-keyword">return</span> <span class="c-keyword">false</span>;
     }
 };
 
-int main() {
-    // 3. OBJECT DIAGRAM: Concrete runtime snapshot
-    AuthenticationService authNode;
-    bool isSuccess = authNode.login("admin", "pass123");
-    std::cout &lt;&lt; "Login Result: " &lt;&lt; (isSuccess ? "SUCCESS" : "FAILED") &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// 3. OBJECT DIAGRAM: Concrete runtime snapshot</span>
+    <span class="c-type">AuthenticationService</span> authNode;
+    <span class="c-type">bool</span> isSuccess = authNode.login(<span class="c-string">"admin"</span>, <span class="c-string">"pass123"</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Login Result: "</span> &lt;&lt; (isSuccess ? <span class="c-string">"SUCCESS"</span> : <span class="c-string">"FAILED"</span>) &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -1909,64 +1909,64 @@ int main() {
     <span class="code-lang">C++ (Class Diagram: Multiplicity & Association Class)</span>
     <span class="code-desc">Demonstrating 1-to-many multiplicity containers and an Association Class (Enrollment)</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;vector&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;vector&gt;</span>
 
-class Student; // Forward declaration
+<span class="c-keyword">class</span> <span class="c-type">Student</span>; <span class="c-comment">// Forward declaration</span>
 
-/* Association Class: Holds properties of the connection itself */
-class Enrollment {
-public:
-    Student* student;
-    std::string courseCode;
-    char grade;
-    double attendancePercent;
+<span class="c-comment">/* Association Class: Holds properties of the connection itself */</span>
+<span class="c-keyword">class</span> <span class="c-type">Enrollment</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">Student</span>* student;
+    <span class="c-type">std::string</span> courseCode;
+    <span class="c-type">char</span> grade;
+    <span class="c-type">double</span> attendancePercent;
 
-    Enrollment(Student* s, std::string c, char g, double att)
+    <span class="c-type">Enrollment</span>(<span class="c-type">Student</span>* s, <span class="c-type">std::string</span> c, <span class="c-type">char</span> g, <span class="c-type">double</span> att)
         : student(s), courseCode(c), grade(g), attendancePercent(att) {}
 };
 
-class Student {
-public:
-    std::string studentId;
-    std::string name;
+<span class="c-keyword">class</span> <span class="c-type">Student</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> studentId;
+    <span class="c-type">std::string</span> name;
 
-    Student(std::string id, std::string n) : studentId(id), name(n) {}
+    <span class="c-type">Student</span>(<span class="c-type">std::string</span> id, <span class="c-type">std::string</span> n) : studentId(id), name(n) {}
 };
 
-/* Class with 1..* Multiplicity Association to Enrollment */
-class Course {
-private:
-    std::string courseName;
-    std::string courseCode;
-    std::vector&lt;Enrollment&gt; enrollments; // Multiplicity: 0..*
+<span class="c-comment">/* Class with 1..* Multiplicity Association to Enrollment */</span>
+<span class="c-keyword">class</span> <span class="c-type">Course</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::string</span> courseName;
+    <span class="c-type">std::string</span> courseCode;
+    <span class="c-type">std::vector</span>&lt;<span class="c-type">Enrollment</span>&gt; enrollments; <span class="c-comment">// Multiplicity: 0..*</span>
 
-public:
-    Course(std::string name, std::string code) : courseName(name), courseCode(code) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">Course</span>(<span class="c-type">std::string</span> name, <span class="c-type">std::string</span> code) : courseName(name), courseCode(code) {}
 
-    void enrollStudent(Student* s, char initialGrade, double initialAtt) {
+    <span class="c-type">void</span> enrollStudent(<span class="c-type">Student</span>* s, <span class="c-type">char</span> initialGrade, <span class="c-type">double</span> initialAtt) {
         enrollments.emplace_back(s, courseCode, initialGrade, initialAtt);
     }
 
-    void displayRoster() const {
-        std::cout &lt;&lt; "Roster for Course: " &lt;&lt; courseName &lt;&lt; " [" &lt;&lt; courseCode &lt;&lt; "]" &lt;&lt; std::endl;
-        for (const auto&amp; e : enrollments) {
-            std::cout &lt;&lt; " - " &lt;&lt; e.student-&gt;name &lt;&lt; " (Grade: " &lt;&lt; e.grade &lt;&lt; ", Att: " &lt;&lt; e.attendancePercent &lt;&lt; "%)" &lt;&lt; std::endl;
+    <span class="c-type">void</span> displayRoster() <span class="c-keyword">const</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Roster for Course: "</span> &lt;&lt; courseName &lt;&lt; <span class="c-string">" ["</span> &lt;&lt; courseCode &lt;&lt; <span class="c-string">"]"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">for</span> (<span class="c-keyword">const</span> <span class="c-keyword">auto</span>&amp; e : enrollments) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">" - "</span> &lt;&lt; e.student-&gt;name &lt;&lt; <span class="c-string">" (Grade: "</span> &lt;&lt; e.grade &lt;&lt; <span class="c-string">", Att: "</span> &lt;&lt; e.attendancePercent &lt;&lt; <span class="c-string">"%)"</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    Course c1("Object Oriented System Design", "KCS-054");
-    Student s1("ST-101", "Rohan Verma");
-    Student s2("ST-102", "Priya Singh");
+<span class="c-type">int</span> main() {
+    <span class="c-type">Course</span> c1(<span class="c-string">"Object Oriented System Design"</span>, <span class="c-string">"KCS-054"</span>);
+    <span class="c-type">Student</span> s1(<span class="c-string">"ST-101"</span>, <span class="c-string">"Rohan Verma"</span>);
+    <span class="c-type">Student</span> s2(<span class="c-string">"ST-102"</span>, <span class="c-string">"Priya Singh"</span>);
 
-    c1.enrollStudent(&amp;s1, 'A', 92.5);
-    c1.enrollStudent(&amp;s2, 'B', 85.0);
+    c1.enrollStudent(&amp;s1, 'A', <span class="c-number">92.5</span>);
+    c1.enrollStudent(&amp;s2, 'B', <span class="c-number">85.0</span>);
 
     c1.displayRoster();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -2202,50 +2202,50 @@ int main() {
     <span class="code-lang">C++ (Object Diagram: Freezing Runtime Instance Graph)</span>
     <span class="code-desc">Instantiating concrete objects with underlined names and printing snapshot state</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class Player {
-public:
-    std::string instanceName; // Represents underlined "messi:Player"
-    int jerseyNumber;
-    int coordinateX;
-    int coordinateY;
-    Player* linkedTeammate;   // Represents the runtime Link
+<span class="c-keyword">class</span> <span class="c-type">Player</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> instanceName; <span class="c-comment">// Represents underlined "messi:Player"</span>
+    <span class="c-type">int</span> jerseyNumber;
+    <span class="c-type">int</span> coordinateX;
+    <span class="c-type">int</span> coordinateY;
+    <span class="c-type">Player</span>* linkedTeammate;   <span class="c-comment">// Represents the runtime Link</span>
 
-    Player(std::string inst, int num, int x, int y)
-        : instanceName(inst), jerseyNumber(num), coordinateX(x), coordinateY(y), linkedTeammate(nullptr) {}
+    <span class="c-type">Player</span>(<span class="c-type">std::string</span> inst, <span class="c-type">int</span> num, <span class="c-type">int</span> x, <span class="c-type">int</span> y)
+        : instanceName(inst), jerseyNumber(num), coordinateX(x), coordinateY(y), linkedTeammate(<span class="c-keyword">nullptr</span>) {}
 
-    void passBallTo(Player* other) {
-        linkedTeammate = other; // Establishing the runtime link
+    <span class="c-type">void</span> passBallTo(<span class="c-type">Player</span>* other) {
+        linkedTeammate = other; <span class="c-comment">// Establishing the runtime link</span>
     }
 
-    void printSnapshot() const {
-        std::cout &lt;&lt; "[OBJECT SNAPSHOT] Instance: " &lt;&lt; instanceName 
-                  &lt;&lt; " (#" &lt;&lt; jerseyNumber &lt;&lt; ") at (" &lt;&lt; coordinateX &lt;&lt; ", " &lt;&lt; coordinateY &lt;&lt; ")";
-        if (linkedTeammate) {
-            std::cout &lt;&lt; " linked to -&gt; " &lt;&lt; linkedTeammate-&gt;instanceName;
+    <span class="c-type">void</span> printSnapshot() <span class="c-keyword">const</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[OBJECT SNAPSHOT] Instance: "</span> &lt;&lt; instanceName 
+                  &lt;&lt; <span class="c-string">" (#"</span> &lt;&lt; jerseyNumber &lt;&lt; <span class="c-string">") at ("</span> &lt;&lt; coordinateX &lt;&lt; <span class="c-string">", "</span> &lt;&lt; coordinateY &lt;&lt; <span class="c-string">")"</span>;
+        <span class="c-keyword">if</span> (linkedTeammate) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">" linked to -&gt; "</span> &lt;&lt; linkedTeammate-&gt;instanceName;
         }
-        std::cout &lt;&lt; std::endl;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
+<span class="c-type">int</span> main() {
     /* 
-     * Object Diagram Notation:
-     * p1 : Player (Underlined in UML)
-     * p2 : Player (Underlined in UML)
+     * <span class="c-type">Object</span> <span class="c-type">Diagram</span> <span class="c-type">Notation</span>:
+     * p1 : <span class="c-type">Player</span> (<span class="c-type">Underlined</span> in UML)
+     * p2 : <span class="c-type">Player</span> (<span class="c-type">Underlined</span> in UML)
      */
-    Player p1("messi:Player", 10, 45, 32);
-    Player p2("pedri:Player", 8, 52, 40);
+    <span class="c-type">Player</span> p1(<span class="c-string">"messi:Player"</span>, <span class="c-number">10</span>, <span class="c-number">45</span>, <span class="c-number">32</span>);
+    <span class="c-type">Player</span> p2(<span class="c-string">"pedri:Player"</span>, <span class="c-number">8</span>, <span class="c-number">52</span>, <span class="c-number">40</span>);
 
-    // Establishing the link between the two instances
+    <span class="c-comment">// Establishing the link between the two instances</span>
     p1.passBallTo(&amp;p2);
 
-    // Visualizing the runtime object graph
+    <span class="c-comment">// Visualizing the runtime object graph</span>
     p1.printSnapshot();
     p2.printSnapshot();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -2423,53 +2423,53 @@ int main() {
     <span class="code-lang">C++ (Abstract Class, Role Names & Invariant Contracts)</span>
     <span class="code-desc">Demonstrating pure virtual abstract class, role-based pointers, and invariant assertions</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;cassert&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;cassert&gt;</span>
 
-/* 1. Abstract Class: In italic in UML, cannot be directly instantiated */
-class Vehicle {
-protected:
-    std::string registrationNo;
-    double currentSpeed;
-    double maxSpeed;
+<span class="c-comment">/* 1. Abstract Class: In italic in UML, cannot be directly instantiated */</span>
+<span class="c-keyword">class</span> <span class="c-type">Vehicle</span> {
+<span class="c-keyword">protected</span>:
+    <span class="c-type">std::string</span> registrationNo;
+    <span class="c-type">double</span> currentSpeed;
+    <span class="c-type">double</span> maxSpeed;
 
-public:
-    Vehicle(std::string reg, double maxS) 
-        : registrationNo(reg), currentSpeed(0.0), maxSpeed(maxS) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">Vehicle</span>(<span class="c-type">std::string</span> reg, <span class="c-type">double</span> maxS) 
+        : registrationNo(reg), currentSpeed(<span class="c-number">0.0</span>), maxSpeed(maxS) {}
 
-    virtual ~Vehicle() = default;
+    <span class="c-keyword">virtual</span> ~<span class="c-type">Vehicle</span>() = <span class="c-keyword">default</span>;
 
-    /* Pure Virtual Function: Defines interface contract */
-    virtual double calculateTollFee() const = 0;
+    <span class="c-comment">/* Pure Virtual Function: Defines interface contract */</span>
+    <span class="c-keyword">virtual</span> <span class="c-type">double</span> calculateTollFee() <span class="c-keyword">const</span> = <span class="c-number">0</span>;
 
-    /* Class Invariant check: Invariant {currentSpeed &lt;= maxSpeed &amp;&amp; currentSpeed &gt;= 0} */
-    void setSpeed(double s) {
+    <span class="c-comment">/* Class Invariant check: Invariant {currentSpeed &lt;= maxSpeed &amp;&amp; currentSpeed &gt;= 0} */</span>
+    <span class="c-type">void</span> setSpeed(<span class="c-type">double</span> s) {
         currentSpeed = s;
         validateInvariants();
     }
 
-    void validateInvariants() const {
-        assert(currentSpeed &gt;= 0.0 &amp;&amp; "Invariant Violated: Negative Speed!");
-        assert(currentSpeed &lt;= maxSpeed &amp;&amp; "Invariant Violated: Exceeded Max Speed!");
+    <span class="c-type">void</span> validateInvariants() <span class="c-keyword">const</span> {
+        assert(currentSpeed &gt;= <span class="c-number">0.0</span> &amp;&amp; <span class="c-string">"Invariant Violated: Negative Speed!"</span>);
+        assert(currentSpeed &lt;= maxSpeed &amp;&amp; <span class="c-string">"Invariant Violated: Exceeded Max Speed!"</span>);
     }
 };
 
-/* 2. Leaf Concrete Subclass */
-class Car : public Vehicle {
-public:
-    Car(std::string reg, double maxS) : Vehicle(reg, maxS) {}
+<span class="c-comment">/* 2. Leaf Concrete Subclass */</span>
+<span class="c-keyword">class</span> <span class="c-type">Car</span> : <span class="c-keyword">public</span> <span class="c-type">Vehicle</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">Car</span>(<span class="c-type">std::string</span> reg, <span class="c-type">double</span> maxS) : <span class="c-type">Vehicle</span>(reg, maxS) {}
 
-    double calculateTollFee() const override {
-        return 120.0; // Flat toll for cars
+    <span class="c-type">double</span> calculateTollFee() <span class="c-keyword">const</span> <span class="c-keyword">override</span> {
+        <span class="c-keyword">return</span> <span class="c-number">120.0</span>; <span class="c-comment">// Flat toll for cars</span>
     }
 };
 
-int main() {
-    Car myCar("UP-32-AB-1234", 160.0);
-    myCar.setSpeed(85.0);
-    std::cout &lt;&lt; "Car registered. Toll: ₹" &lt;&lt; myCar.calculateTollFee() &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">Car</span> myCar(<span class="c-string">"UP-32-AB-1234"</span>, <span class="c-number">160.0</span>);
+    myCar.setSpeed(<span class="c-number">85.0</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Car registered. Toll: ₹"</span> &lt;&lt; myCar.calculateTollFee() &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -2667,55 +2667,55 @@ int main() {
     <span class="code-lang">C++ (Forward Engineering to Relational Schema Mapping)</span>
     <span class="code-desc">Illustrating forward-engineered classes mapping directly to relational database tables</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
 /*
  * FORWARD ENGINEERING MAPPING:
- * UML Class "Customer" ---&gt; SQL Table "CUSTOMERS"
- * Attribute customerId ---&gt; PRIMARY KEY VARCHAR(20)
- * Attribute email      ---&gt; UNIQUE VARCHAR(100)
+ * UML <span class="c-type">Class</span> <span class="c-string">"Customer"</span> ---&gt; SQL <span class="c-type">Table</span> <span class="c-string">"CUSTOMERS"</span>
+ * <span class="c-type">Attribute</span> customerId ---&gt; PRIMARY KEY VARCHAR(<span class="c-number">20</span>)
+ * <span class="c-type">Attribute</span> email      ---&gt; UNIQUE VARCHAR(<span class="c-number">100</span>)
  */
-class CustomerEntity {
-public:
-    std::string customerId; // PRIMARY KEY
-    std::string fullName;
-    std::string email;
+<span class="c-keyword">class</span> <span class="c-type">CustomerEntity</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> customerId; <span class="c-comment">// PRIMARY KEY</span>
+    <span class="c-type">std::string</span> fullName;
+    <span class="c-type">std::string</span> email;
 
-    // Generates equivalent DDL statement
-    std::string generateSQL_DDL() const {
-        return "CREATE TABLE CUSTOMERS ("
-               "customerId VARCHAR(20) PRIMARY KEY, "
-               "fullName VARCHAR(100) NOT NULL, "
-               "email VARCHAR(100) UNIQUE);";
+    <span class="c-comment">// Generates equivalent DDL statement</span>
+    <span class="c-type">std::string</span> generateSQL_DDL() <span class="c-keyword">const</span> {
+        <span class="c-keyword">return</span> <span class="c-string">"CREATE TABLE CUSTOMERS ("</span>
+               <span class="c-string">"customerId VARCHAR(20) PRIMARY KEY, "</span>
+               <span class="c-string">"fullName VARCHAR(100) NOT NULL, "</span>
+               <span class="c-string">"email VARCHAR(100) UNIQUE);"</span>;
     }
 };
 
 /*
- * Association 1-to-Many:
- * UML Association "places" ---&gt; Foreign Key column in ORDERS table
+ * <span class="c-type">Association</span> <span class="c-number">1</span>-to-<span class="c-type">Many</span>:
+ * UML <span class="c-type">Association</span> <span class="c-string">"places"</span> ---&gt; <span class="c-type">Foreign</span> <span class="c-type">Key</span> column in ORDERS table
  */
-class OrderEntity {
-public:
-    std::string orderId;    // PRIMARY KEY
-    std::string customerId; // FOREIGN KEY REFERENCES CUSTOMERS(customerId)
-    double orderTotal;
+<span class="c-keyword">class</span> <span class="c-type">OrderEntity</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> orderId;    <span class="c-comment">// PRIMARY KEY</span>
+    <span class="c-type">std::string</span> customerId; <span class="c-comment">// FOREIGN KEY REFERENCES CUSTOMERS(customerId)</span>
+    <span class="c-type">double</span> orderTotal;
 
-    std::string generateSQL_DDL() const {
-        return "CREATE TABLE ORDERS ("
-               "orderId VARCHAR(20) PRIMARY KEY, "
-               "customerId VARCHAR(20) REFERENCES CUSTOMERS(customerId), "
-               "orderTotal DECIMAL(10,2));";
+    <span class="c-type">std::string</span> generateSQL_DDL() <span class="c-keyword">const</span> {
+        <span class="c-keyword">return</span> <span class="c-string">"CREATE TABLE ORDERS ("</span>
+               <span class="c-string">"orderId VARCHAR(20) PRIMARY KEY, "</span>
+               <span class="c-string">"customerId VARCHAR(20) REFERENCES CUSTOMERS(customerId), "</span>
+               <span class="c-string">"orderTotal DECIMAL(10,2));"</span>;
     }
 };
 
-int main() {
-    CustomerEntity cust;
-    OrderEntity ord;
-    std::cout &lt;&lt; "-- Forward Engineered SQL DDL --" &lt;&lt; std::endl;
-    std::cout &lt;&lt; cust.generateSQL_DDL() &lt;&lt; std::endl;
-    std::cout &lt;&lt; ord.generateSQL_DDL() &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">CustomerEntity</span> cust;
+    <span class="c-type">OrderEntity</span> ord;
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"-- Forward Engineered SQL DDL --"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-type">std::cout</span> &lt;&lt; cust.generateSQL_DDL() &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-type">std::cout</span> &lt;&lt; ord.generateSQL_DDL() &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -2894,49 +2894,49 @@ int main() {
     <span class="code-lang">C++ (Collaboration Diagram: Object Graph & Numbered Links)</span>
     <span class="code-desc">Demonstrating interconnected objects communicating via sequenced method calls</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class KitchenManager {
-public:
-    void prepareDish(std::string dish) {
-        // Step 1.1: Nested call along structural link
-        std::cout &lt;&lt; "  [1.1] KitchenManager: Cooking " &lt;&lt; dish &lt;&lt; "..." &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">KitchenManager</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> prepareDish(<span class="c-type">std::string</span> dish) {
+        <span class="c-comment">// Step 1.1: Nested call along structural link</span>
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [1.1] KitchenManager: Cooking "</span> &lt;&lt; dish &lt;&lt; <span class="c-string">"..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-class BillingService {
-public:
-    void generateInvoice(double amount) {
-        // Step 2: Top-level subsequent sequence call
-        std::cout &lt;&lt; "  [2.0] BillingService: Printed invoice for ₹" &lt;&lt; amount &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">BillingService</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> generateInvoice(<span class="c-type">double</span> amount) {
+        <span class="c-comment">// Step 2: Top-level subsequent sequence call</span>
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [2.0] BillingService: Printed invoice for ₹"</span> &lt;&lt; amount &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-class WaiterService {
-private:
-    KitchenManager* kitchen; // Link 1: Waiter -&gt; KitchenManager
-    BillingService* billing; // Link 2: Waiter -&gt; BillingService
+<span class="c-keyword">class</span> <span class="c-type">WaiterService</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">KitchenManager</span>* kitchen; <span class="c-comment">// Link 1: Waiter -&gt; KitchenManager</span>
+    <span class="c-type">BillingService</span>* billing; <span class="c-comment">// Link 2: Waiter -&gt; BillingService</span>
 
-public:
-    WaiterService(KitchenManager* k, BillingService* b) : kitchen(k), billing(b) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">WaiterService</span>(<span class="c-type">KitchenManager</span>* k, <span class="c-type">BillingService</span>* b) : kitchen(k), billing(b) {}
 
-    void handleDineInOrder(std::string dish, double price) {
-        std::cout &lt;&lt; "[1.0] WaiterService: Received order for " &lt;&lt; dish &lt;&lt; std::endl;
-        kitchen-&gt;prepareDish(dish);     // Triggers 1.1 along Link 1
-        billing-&gt;generateInvoice(price); // Triggers 2.0 along Link 2
+    <span class="c-type">void</span> handleDineInOrder(<span class="c-type">std::string</span> dish, <span class="c-type">double</span> price) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[1.0] WaiterService: Received order for "</span> &lt;&lt; dish &lt;&lt; <span class="c-type">std::endl</span>;
+        kitchen-&gt;prepareDish(dish);     <span class="c-comment">// Triggers 1.1 along Link 1</span>
+        billing-&gt;generateInvoice(price); <span class="c-comment">// Triggers 2.0 along Link 2</span>
     }
 };
 
-int main() {
-    // Structural Object Graph: All instances linked in memory
-    KitchenManager kitchen;
-    BillingService billing;
-    WaiterService waiter(&amp;kitchen, &amp;billing);
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// Structural Object Graph: All instances linked in memory</span>
+    <span class="c-type">KitchenManager</span> kitchen;
+    <span class="c-type">BillingService</span> billing;
+    <span class="c-type">WaiterService</span> waiter(&amp;kitchen, &amp;billing);
 
-    // Initiating collaboration flow
-    waiter.handleDineInOrder("Paneer Butter Masala", 450.0);
-    return 0;
+    <span class="c-comment">// Initiating collaboration flow</span>
+    waiter.handleDineInOrder(<span class="c-string">"Paneer Butter Masala"</span>, <span class="c-number">450.0</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -3102,39 +3102,39 @@ int main() {
     <span class="code-lang">C++ (Decimal Sequence Numbering & Nested Call Stacks)</span>
     <span class="code-desc">Illustrating how sequence numbers 1, 1.1, and 1.1.1 map directly to nested function execution frames</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
 
-class DatabaseEngineer {
-public:
-    void createSchema() {
-        std::cout &lt;&lt; "    [1.1.1] DatabaseEngineer: Schema migration executed." &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">DatabaseEngineer</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> createSchema() {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"    [1.1.1] DatabaseEngineer: Schema migration executed."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-class LeadArchitect {
-private:
-    DatabaseEngineer dbDev;
-public:
-    void buildBackend() {
-        std::cout &lt;&lt; "  [1.1] LeadArchitect: Coordinating backend services..." &lt;&lt; std::endl;
-        dbDev.createSchema(); // 1.1.1: Nested call
+<span class="c-keyword">class</span> <span class="c-type">LeadArchitect</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">DatabaseEngineer</span> dbDev;
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> buildBackend() {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [1.1] LeadArchitect: Coordinating backend services..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        dbDev.createSchema(); <span class="c-comment">// 1.1.1: Nested call</span>
     }
 };
 
-class TechnicalDirector {
-private:
-    LeadArchitect architect;
-public:
-    void executeProject() {
-        std::cout &lt;&lt; "[1.0] TechnicalDirector: Project kickoff initiated." &lt;&lt; std::endl;
-        architect.buildBackend(); // 1.1: Nested delegation
+<span class="c-keyword">class</span> <span class="c-type">TechnicalDirector</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">LeadArchitect</span> architect;
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> executeProject() {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[1.0] TechnicalDirector: Project kickoff initiated."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        architect.buildBackend(); <span class="c-comment">// 1.1: Nested delegation</span>
     }
 };
 
-int main() {
-    TechnicalDirector director;
+<span class="c-type">int</span> main() {
+    <span class="c-type">TechnicalDirector</span> director;
     director.executeProject();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -3284,48 +3284,48 @@ int main() {
     <span class="code-lang">C++ (UML Message Syntax: Guards, Arguments & Return Values)</span>
     <span class="code-desc">Demonstrating [guard] condition, method arguments, and return value assignment in C++</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class TurnstileGate {
-public:
+<span class="c-keyword">class</span> <span class="c-type">TurnstileGate</span> {
+<span class="c-keyword">public</span>:
     /*
-     * UML Message Mapping:
-     * [isValidToken] 1.1: isOpened := openGate(tokenCardId, timeoutSeconds)
+     * UML <span class="c-type">Message</span> <span class="c-type">Mapping</span>:
+     * [isValidToken] <span class="c-number">1.1</span>: isOpened := openGate(tokenCardId, timeoutSeconds)
      */
-    bool openGate(std::string tokenCardId, int timeoutSeconds) {
-        std::cout &lt;&lt; "  [1.1] Gate: Unlocking flaps for Token [" 
-                  &lt;&lt; tokenCardId &lt;&lt; "] for " &lt;&lt; timeoutSeconds &lt;&lt; "s." &lt;&lt; std::endl;
-        return true; // return_val
+    <span class="c-type">bool</span> openGate(<span class="c-type">std::string</span> tokenCardId, <span class="c-type">int</span> timeoutSeconds) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [1.1] Gate: Unlocking flaps for Token ["</span> 
+                  &lt;&lt; tokenCardId &lt;&lt; <span class="c-string">"] for "</span> &lt;&lt; timeoutSeconds &lt;&lt; <span class="c-string">"s."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>; <span class="c-comment">// return_val</span>
     }
 };
 
-class TransitController {
-private:
-    TurnstileGate gate;
+<span class="c-keyword">class</span> <span class="c-type">TransitController</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">TurnstileGate</span> gate;
 
-public:
-    void processCommuter(std::string cardId, double cardBalance) {
-        // [guard] evaluation: Must have minimum travel balance &gt;= ₹30
-        bool isValidToken = (cardBalance &gt;= 30.0);
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> processCommuter(<span class="c-type">std::string</span> cardId, <span class="c-type">double</span> cardBalance) {
+        <span class="c-comment">// [guard] evaluation: Must have minimum travel balance &gt;= ₹30</span>
+        <span class="c-type">bool</span> isValidToken = (cardBalance &gt;= <span class="c-number">30.0</span>);
 
-        std::cout &lt;&lt; "[1.0] Controller: Evaluating commuter token " &lt;&lt; cardId &lt;&lt; std::endl;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[1.0] Controller: Evaluating commuter token "</span> &lt;&lt; cardId &lt;&lt; <span class="c-type">std::endl</span>;
 
-        if (isValidToken) { // The Guard [isValidToken]
-            // return_val := message_name(arguments)
-            bool isOpened = gate.openGate(cardId, 10);
-            std::cout &lt;&lt; "  Commuter passage permitted: " &lt;&lt; (isOpened ? "YES" : "NO") &lt;&lt; std::endl;
-        } else {
-            std::cout &lt;&lt; "  [Guard Denied] Insufficient balance! Alarm buzzes." &lt;&lt; std::endl;
+        <span class="c-keyword">if</span> (isValidToken) { <span class="c-comment">// The Guard [isValidToken]</span>
+            <span class="c-comment">// return_val := message_name(arguments)</span>
+            <span class="c-type">bool</span> isOpened = gate.openGate(cardId, <span class="c-number">10</span>);
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  Commuter passage permitted: "</span> &lt;&lt; (isOpened ? <span class="c-string">"YES"</span> : <span class="c-string">"NO"</span>) &lt;&lt; <span class="c-type">std::endl</span>;
+        } <span class="c-keyword">else</span> {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Guard Denied] Insufficient balance! Alarm buzzes."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    TransitController station;
-    station.processCommuter("METRO-8812", 50.0); // Guard passes
-    station.processCommuter("METRO-9931", 10.0); // Guard fails
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">TransitController</span> station;
+    station.processCommuter(<span class="c-string">"METRO-8812"</span>, <span class="c-number">50.0</span>); <span class="c-comment">// Guard passes</span>
+    station.processCommuter(<span class="c-string">"METRO-9931"</span>, <span class="c-number">10.0</span>); <span class="c-comment">// Guard fails</span>
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -3453,48 +3453,48 @@ int main() {
     <span class="code-lang">C++ (Polymorphic Dynamic Dispatch in Collaboration)</span>
     <span class="code-desc">Invoking a virtual message over an interface link, dispatching to different concrete receivers</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;memory&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;memory&gt;</span>
 
-/* 1. Interface / Abstract Base Link */
-class IPaymentChannel {
-public:
-    virtual ~IPaymentChannel() = default;
-    virtual void processPayment(double amount) = 0; // Polymorphic message
+<span class="c-comment">/* 1. Interface / Abstract Base Link */</span>
+<span class="c-keyword">class</span> <span class="c-type">IPaymentChannel</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-keyword">virtual</span> ~<span class="c-type">IPaymentChannel</span>() = <span class="c-keyword">default</span>;
+    <span class="c-keyword">virtual</span> <span class="c-type">void</span> processPayment(<span class="c-type">double</span> amount) = <span class="c-number">0</span>; <span class="c-comment">// Polymorphic message</span>
 };
 
-/* 2. Concrete Polymorphic Implementations */
-class UPIGateway : public IPaymentChannel {
-public:
-    void processPayment(double amount) override {
-        std::cout &lt;&lt; "  [Dynamic Binding] Processing ₹" &lt;&lt; amount &lt;&lt; " via UPI VPA handle." &lt;&lt; std::endl;
+<span class="c-comment">/* 2. Concrete Polymorphic Implementations */</span>
+<span class="c-keyword">class</span> <span class="c-type">UPIGateway</span> : <span class="c-keyword">public</span> <span class="c-type">IPaymentChannel</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> processPayment(<span class="c-type">double</span> amount) <span class="c-keyword">override</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Dynamic Binding] Processing ₹"</span> &lt;&lt; amount &lt;&lt; <span class="c-string">" via UPI VPA handle."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-class CardGateway : public IPaymentChannel {
-public:
-    void processPayment(double amount) override {
-        std::cout &lt;&lt; "  [Dynamic Binding] Processing ₹" &lt;&lt; amount &lt;&lt; " via EMV Chip &amp; PIN." &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">CardGateway</span> : <span class="c-keyword">public</span> <span class="c-type">IPaymentChannel</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> processPayment(<span class="c-type">double</span> amount) <span class="c-keyword">override</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Dynamic Binding] Processing ₹"</span> &lt;&lt; amount &lt;&lt; <span class="c-string">" via EMV Chip &amp; PIN."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-/* 3. Sender collaborating via the polymorphic link */
-class POSRegister {
-public:
-    void checkout(IPaymentChannel* channel, double billAmount) {
-        std::cout &lt;&lt; "[1.0] POSRegister: Sending message 'processPayment' across link..." &lt;&lt; std::endl;
-        channel-&gt;processPayment(billAmount); // Dynamic virtual dispatch
+<span class="c-comment">/* 3. Sender collaborating via the polymorphic link */</span>
+<span class="c-keyword">class</span> <span class="c-type">POSRegister</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> checkout(<span class="c-type">IPaymentChannel</span>* channel, <span class="c-type">double</span> billAmount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[1.0] POSRegister: Sending message 'processPayment' across link..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        channel-&gt;processPayment(billAmount); <span class="c-comment">// Dynamic virtual dispatch</span>
     }
 };
 
-int main() {
-    POSRegister registerNode;
-    UPIGateway upi;
-    CardGateway card;
+<span class="c-type">int</span> main() {
+    <span class="c-type">POSRegister</span> registerNode;
+    <span class="c-type">UPIGateway</span> upi;
+    <span class="c-type">CardGateway</span> card;
 
-    registerNode.checkout(&amp;upi, 850.0);  // Dynamically targets UPI
-    registerNode.checkout(&amp;card, 3200.0); // Dynamically targets Card
-    return 0;
+    registerNode.checkout(&amp;upi, <span class="c-number">850.0</span>);  <span class="c-comment">// Dynamically targets UPI</span>
+    registerNode.checkout(&amp;card, <span class="c-number">3200.0</span>); <span class="c-comment">// Dynamically targets Card</span>
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -3654,49 +3654,49 @@ int main() {
     <span class="code-lang">C++ (Iterated Messages: Sequential Loop vs Concurrent Threads)</span>
     <span class="code-desc">Demonstrating sequential iteration *[i:=1..n] and parallel concurrent iteration *[||]</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-#include &lt;thread&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;vector&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;thread&gt;</span>
 
-class NotificationService {
-public:
-    // 1. Sequential Iteration: *[i := 1..N]
-    void sendSequentialAlerts(const std::vector&lt;std::string&gt;&amp; subscribers, std::string message) {
-        std::cout &lt;&lt; "[Sequential Iteration *[i:=1..N]] Starting message loop:" &lt;&lt; std::endl;
-        for (size_t i = 0; i &lt; subscribers.size(); ++i) {
-            std::cout &lt;&lt; "  [" &lt;&lt; (i + 1) &lt;&lt; "] Alert sent to " &lt;&lt; subscribers[i] 
-                      &lt;&lt; ": " &lt;&lt; message &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">NotificationService</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-comment">// 1. Sequential Iteration: *[i := 1..N]</span>
+    <span class="c-type">void</span> sendSequentialAlerts(<span class="c-keyword">const</span> <span class="c-type">std::vector</span>&lt;<span class="c-type">std::string</span>&gt;&amp; subscribers, <span class="c-type">std::string</span> message) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Sequential Iteration *[i:=1..N]] Starting message loop:"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">for</span> (<span class="c-type">size_t</span> i = <span class="c-number">0</span>; i &lt; subscribers.size(); ++i) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  ["</span> &lt;&lt; (i + <span class="c-number">1</span>) &lt;&lt; <span class="c-string">"] Alert sent to "</span> &lt;&lt; subscribers[i] 
+                      &lt;&lt; <span class="c-string">": "</span> &lt;&lt; message &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 
-    // 2. Concurrent Iteration: *[||]
-    void sendConcurrentAlerts(const std::vector&lt;std::string&gt;&amp; sectors, std::string alertMsg) {
-        std::cout &lt;&lt; "[Concurrent Iteration *[||]] Spawning parallel worker threads:" &lt;&lt; std::endl;
-        std::vector&lt;std::thread&gt; workers;
+    <span class="c-comment">// 2. Concurrent Iteration: *[||]</span>
+    <span class="c-type">void</span> sendConcurrentAlerts(<span class="c-keyword">const</span> <span class="c-type">std::vector</span>&lt;<span class="c-type">std::string</span>&gt;&amp; sectors, <span class="c-type">std::string</span> alertMsg) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Concurrent Iteration *[||]] Spawning parallel worker threads:"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-type">std::vector</span>&lt;<span class="c-type">std::thread</span>&gt; workers;
 
-        for (const auto&amp; sec : sectors) {
+        <span class="c-keyword">for</span> (<span class="c-keyword">const</span> <span class="c-keyword">auto</span>&amp; sec : sectors) {
             workers.emplace_back([sec, alertMsg]() {
-                std::cout &lt;&lt; "  [PARALLEL SIREN] Sector " &lt;&lt; sec &lt;&lt; " sirens activated: " 
-                          &lt;&lt; alertMsg &lt;&lt; std::endl;
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [PARALLEL SIREN] Sector "</span> &lt;&lt; sec &lt;&lt; <span class="c-string">" sirens activated: "</span> 
+                          &lt;&lt; alertMsg &lt;&lt; <span class="c-type">std::endl</span>;
             });
         }
 
-        // Wait for all concurrent messages to complete
-        for (auto&amp; t : workers) {
-            if (t.joinable()) t.join();
+        <span class="c-comment">// Wait for all concurrent messages to complete</span>
+        <span class="c-keyword">for</span> (<span class="c-keyword">auto</span>&amp; t : workers) {
+            <span class="c-keyword">if</span> (t.joinable()) t.join();
         }
     }
 };
 
-int main() {
-    NotificationService notifier;
-    std::vector&lt;std::string&gt; users = {"Aarav", "Bhavna", "Chirag"};
-    notifier.sendSequentialAlerts(users, "Weather Warning");
+<span class="c-type">int</span> main() {
+    <span class="c-type">NotificationService</span> notifier;
+    <span class="c-type">std::vector</span>&lt;<span class="c-type">std::string</span>&gt; users = {<span class="c-string">"Aarav"</span>, <span class="c-string">"Bhavna"</span>, <span class="c-string">"Chirag"</span>};
+    notifier.sendSequentialAlerts(users, <span class="c-string">"Weather Warning"</span>);
 
-    std::vector&lt;std::string&gt; sectors = {"East-Zone", "Central-Square", "West-Dock"};
-    notifier.sendConcurrentAlerts(sectors, "Flash Flood Alert");
-    return 0;
+    <span class="c-type">std::vector</span>&lt;<span class="c-type">std::string</span>&gt; sectors = {<span class="c-string">"East-Zone"</span>, <span class="c-string">"Central-Square"</span>, <span class="c-string">"West-Dock"</span>};
+    notifier.sendConcurrentAlerts(sectors, <span class="c-string">"Flash Flood Alert"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -3822,43 +3822,43 @@ int main() {
     <span class="code-lang">C++ (Self-Message: Private Helper Invocation & Recursion)</span>
     <span class="code-desc">Demonstrating internal self-delegation using this->pointer and recursive member execution</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class BankTeller {
-private:
-    /* Self-message target: Private internal verification method */
-    bool verifySignatureAndWatermark(std::string checkNumber) {
-        std::cout &lt;&lt; "  [1.1: self.verifySignatureAndWatermark()] Teller inspecting check #" 
-                  &lt;&lt; checkNumber &lt;&lt; " under UV light..." &lt;&lt; std::endl;
-        return true; // Verified
+<span class="c-keyword">class</span> <span class="c-type">BankTeller</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-comment">/* Self-message target: Private internal verification method */</span>
+    <span class="c-type">bool</span> verifySignatureAndWatermark(<span class="c-type">std::string</span> checkNumber) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [1.1: self.verifySignatureAndWatermark()] Teller inspecting check #"</span> 
+                  &lt;&lt; checkNumber &lt;&lt; <span class="c-string">" under UV light..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>; <span class="c-comment">// Verified</span>
     }
 
-public:
-    void depositCheck(std::string checkNumber, double amount) {
-        std::cout &lt;&lt; "[1.0] Teller: Received deposit request for ₹" &lt;&lt; amount &lt;&lt; std::endl;
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> depositCheck(<span class="c-type">std::string</span> checkNumber, <span class="c-type">double</span> amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[1.0] Teller: Received deposit request for ₹"</span> &lt;&lt; amount &lt;&lt; <span class="c-type">std::endl</span>;
         
-        // Explicit self-message: Invoking internal method on 'this'
-        bool isValid = this-&gt;verifySignatureAndWatermark(checkNumber);
+        <span class="c-comment">// Explicit self-message: Invoking internal method on 'this'</span>
+        <span class="c-type">bool</span> isValid = <span class="c-keyword">this</span>-&gt;verifySignatureAndWatermark(checkNumber);
         
-        if (isValid) {
-            std::cout &lt;&lt; "[1.2] Teller: Check valid. Funds credited successfully." &lt;&lt; std::endl;
+        <span class="c-keyword">if</span> (isValid) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[1.2] Teller: Check valid. Funds credited successfully."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 
-    /* Recursive self-message: factorial calculation */
-    long long computeCompoundMultiplier(int period) {
-        if (period &lt;= 1) return 1;
-        // Recursive self-call: self.computeCompoundMultiplier(period - 1)
-        return period * this-&gt;computeCompoundMultiplier(period - 1);
+    <span class="c-comment">/* Recursive self-message: factorial calculation */</span>
+    <span class="c-type">long</span> <span class="c-type">long</span> computeCompoundMultiplier(<span class="c-type">int</span> period) {
+        <span class="c-keyword">if</span> (period &lt;= <span class="c-number">1</span>) <span class="c-keyword">return</span> <span class="c-number">1</span>;
+        <span class="c-comment">// Recursive self-call: self.computeCompoundMultiplier(period - 1)</span>
+        <span class="c-keyword">return</span> period * <span class="c-keyword">this</span>-&gt;computeCompoundMultiplier(period - <span class="c-number">1</span>);
     }
 };
 
-int main() {
-    BankTeller teller;
-    teller.depositCheck("CHK-774921", 25000.0);
-    std::cout &lt;&lt; "Compound Factor (5 yrs): " &lt;&lt; teller.computeCompoundMultiplier(5) &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">BankTeller</span> teller;
+    teller.depositCheck(<span class="c-string">"CHK-774921"</span>, <span class="c-number">25000.0</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Compound Factor (5 yrs): "</span> &lt;&lt; teller.computeCompoundMultiplier(<span class="c-number">5</span>) &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -3993,55 +3993,55 @@ int main() {
     <span class="code-lang">C++ (Chronological Sequence Flow Across Services)</span>
     <span class="code-desc">Demonstrating top-to-bottom time-ordered interactions across distinct service lifelines</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class DatabaseService {
-public:
-    bool verifyUserRecord(std::string user) {
-        std::cout &lt;&lt; "    [Step 3: DatabaseService] Querying DB for user: " &lt;&lt; user &lt;&lt; std::endl;
-        return true;
+<span class="c-keyword">class</span> <span class="c-type">DatabaseService</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">bool</span> verifyUserRecord(<span class="c-type">std::string</span> user) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"    [Step 3: DatabaseService] Querying DB for user: "</span> &lt;&lt; user &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
     }
 };
 
-class TokenService {
-public:
-    std::string issueJWT(std::string user) {
-        std::cout &lt;&lt; "    [Step 5: TokenService] Generating cryptographically signed JWT..." &lt;&lt; std::endl;
-        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
+<span class="c-keyword">class</span> <span class="c-type">TokenService</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> issueJWT(<span class="c-type">std::string</span> user) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"    [Step 5: TokenService] Generating cryptographically signed JWT..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."</span>;
     }
 };
 
-class AuthenticationGateway {
-private:
-    DatabaseService db;
-    TokenService tokenIssuer;
+<span class="c-keyword">class</span> <span class="c-type">AuthenticationGateway</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">DatabaseService</span> db;
+    <span class="c-type">TokenService</span> tokenIssuer;
 
-public:
-    // Chronological Message Flow: Executed top-to-bottom
-    std::string processLogin(std::string username, std::string password) {
-        std::cout &lt;&lt; "  [Step 1: Gateway] Received login request from Client." &lt;&lt; std::endl;
+<span class="c-keyword">public</span>:
+    <span class="c-comment">// Chronological Message Flow: Executed top-to-bottom</span>
+    <span class="c-type">std::string</span> processLogin(<span class="c-type">std::string</span> username, <span class="c-type">std::string</span> password) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Step 1: Gateway] Received login request from Client."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         
-        // Step 2 &amp; 3: Gateway calls Database
-        bool exists = db.verifyUserRecord(username);
+        <span class="c-comment">// Step 2 &amp; 3: Gateway calls Database</span>
+        <span class="c-type">bool</span> exists = db.verifyUserRecord(username);
         
-        if (exists) {
-            // Step 4 &amp; 5: Gateway calls TokenService
-            std::string token = tokenIssuer.issueJWT(username);
-            std::cout &lt;&lt; "  [Step 6: Gateway] Returning JWT token back to Client." &lt;&lt; std::endl;
-            return token;
+        <span class="c-keyword">if</span> (exists) {
+            <span class="c-comment">// Step 4 &amp; 5: Gateway calls TokenService</span>
+            <span class="c-type">std::string</span> token = tokenIssuer.issueJWT(username);
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Step 6: Gateway] Returning JWT token back to Client."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+            <span class="c-keyword">return</span> token;
         }
-        return "AUTH_FAILED";
+        <span class="c-keyword">return</span> <span class="c-string">"AUTH_FAILED"</span>;
     }
 };
 
-int main() {
-    // Client Lifeline initiating message flow
-    AuthenticationGateway gateway;
-    std::cout &lt;&lt; "[Step 0: Client] User submits username &amp; password:" &lt;&lt; std::endl;
-    std::string token = gateway.processLogin("kavita_cse", "pass@2026");
-    std::cout &lt;&lt; "[Step 7: Client] Authentication complete. Token: " &lt;&lt; token.substr(0, 15) &lt;&lt; "..." &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// Client Lifeline initiating message flow</span>
+    <span class="c-type">AuthenticationGateway</span> gateway;
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Step 0: Client] User submits username &amp; password:"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-type">std::string</span> token = gateway.processLogin(<span class="c-string">"kavita_cse"</span>, <span class="c-string">"pass@2026"</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Step 7: Client] Authentication complete. Token: "</span> &lt;&lt; token.substr(<span class="c-number">0</span>, <span class="c-number">15</span>) &lt;&lt; <span class="c-string">"..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -4219,45 +4219,45 @@ int main() {
     <span class="code-lang">C++ (Synchronous, Asynchronous, Return & Destruction X)</span>
     <span class="code-desc">Demonstrating blocking calls, return values, and explicit heap object destruction (~Destructor)</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class TemporarySession {
-public:
-    std::string sessionId;
-    TemporarySession(std::string id) : sessionId(id) {
-        std::cout &lt;&lt; "  [Creation] TemporarySession " &lt;&lt; sessionId &lt;&lt; " allocated in memory." &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">TemporarySession</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> sessionId;
+    <span class="c-type">TemporarySession</span>(<span class="c-type">std::string</span> id) : sessionId(id) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Creation] TemporarySession "</span> &lt;&lt; sessionId &lt;&lt; <span class="c-string">" allocated in memory."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
-    ~TemporarySession() {
-        // Corresponds to the large 'X' at the base of a UML lifeline
-        std::cout &lt;&lt; "  [Destruction 'X'] TemporarySession " &lt;&lt; sessionId &lt;&lt; " deallocated from memory!" &lt;&lt; std::endl;
-    }
-};
-
-class SecurityManager {
-public:
-    // Synchronous Call (Solid line with filled arrow) -&gt; Blocks until return
-    bool validatePIN(int pin) {
-        std::cout &lt;&lt; "  [Sync Message] Verifying PIN synchronously..." &lt;&lt; std::endl;
-        return (pin == 1234); // Dashed return line
+    ~<span class="c-type">TemporarySession</span>() {
+        <span class="c-comment">// Corresponds to the large 'X' at the base of a UML lifeline</span>
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Destruction 'X'] TemporarySession "</span> &lt;&lt; sessionId &lt;&lt; <span class="c-string">" deallocated from memory!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    SecurityManager sec;
-    
-    // 1. Synchronous Blocking Call
-    bool isValid = sec.validatePIN(1234);
-    std::cout &lt;&lt; "  [Return Reply received]: " &lt;&lt; (isValid ? "VALID" : "INVALID") &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">SecurityManager</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-comment">// Synchronous Call (Solid line with filled arrow) -&gt; Blocks until return</span>
+    <span class="c-type">bool</span> validatePIN(<span class="c-type">int</span> pin) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Sync Message] Verifying PIN synchronously..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> (pin == <span class="c-number">1234</span>); <span class="c-comment">// Dashed return line</span>
+    }
+};
 
-    // 2. Lifeline with Explicit Destruction Cross 'X'
-    TemporarySession* session = new TemporarySession("SESS-808");
+<span class="c-type">int</span> main() {
+    <span class="c-type">SecurityManager</span> sec;
     
-    // Explicitly destroying the object -&gt; triggers UML 'X' symbol
-    delete session;
-    session = nullptr;
+    <span class="c-comment">// 1. Synchronous Blocking Call</span>
+    <span class="c-type">bool</span> isValid = sec.validatePIN(<span class="c-number">1234</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Return Reply received]: "</span> &lt;&lt; (isValid ? <span class="c-string">"VALID"</span> : <span class="c-string">"INVALID"</span>) &lt;&lt; <span class="c-type">std::endl</span>;
 
-    return 0;
+    <span class="c-comment">// 2. Lifeline with Explicit Destruction Cross 'X'</span>
+    <span class="c-type">TemporarySession</span>* session = <span class="c-keyword">new</span> <span class="c-type">TemporarySession</span>(<span class="c-string">"SESS-808"</span>);
+    
+    <span class="c-comment">// Explicitly destroying the object -&gt; triggers UML 'X' symbol</span>
+    <span class="c-keyword">delete</span> session;
+    session = <span class="c-keyword">nullptr</span>;
+
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -4405,31 +4405,31 @@ int main() {
     <span class="code-lang">C++ (Asynchronous Messaging with std::async & Futures)</span>
     <span class="code-desc">Executing background non-blocking tasks with std::async without stalling main thread</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;future&gt;
-#include &lt;chrono&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;future&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;chrono&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-// Asynchronous background worker
-std::string brewCoffeeTask(int orderId) {
-    std::cout &lt;&lt; "  [Async Barista] Brewing espresso for Order #" &lt;&lt; orderId &lt;&lt; "..." &lt;&lt; std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Simulating work
-    return "Caramel Macchiato Ready!";
+<span class="c-comment">// Asynchronous background worker</span>
+<span class="c-type">std::string</span> brewCoffeeTask(<span class="c-type">int</span> orderId) {
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Async Barista] Brewing espresso for Order #"</span> &lt;&lt; orderId &lt;&lt; <span class="c-string">"..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    std::this_thread::sleep_for(std::chrono::milliseconds(<span class="c-number">500</span>)); <span class="c-comment">// Simulating work</span>
+    <span class="c-keyword">return</span> <span class="c-string">"Caramel Macchiato Ready!"</span>;
 }
 
-int main() {
-    std::cout &lt;&lt; "[Cashier Main Thread] Order #101 received." &lt;&lt; std::endl;
+<span class="c-type">int</span> main() {
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Cashier Main Thread] Order #101 received."</span> &lt;&lt; <span class="c-type">std::endl</span>;
 
-    // Solid Line with Open Arrowhead: Asynchronous Non-blocking Call
-    std::future&lt;std::string&gt; coffeeFuture = std::async(std::launch::async, brewCoffeeTask, 101);
+    <span class="c-comment">// Solid Line with Open Arrowhead: Asynchronous Non-blocking Call</span>
+    std::future&lt;<span class="c-type">std::string</span>&gt; coffeeFuture = std::async(std::launch::async, brewCoffeeTask, <span class="c-number">101</span>);
 
-    // Main thread is NOT blocked! Can continue serving next customer
-    std::cout &lt;&lt; "[Cashier Main Thread] Ready for next customer! Serving Order #102..." &lt;&lt; std::endl;
+    <span class="c-comment">// Main thread is NOT blocked! Can continue serving next customer</span>
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Cashier Main Thread] Ready for next customer! Serving Order #102..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
 
-    // Awaiting asynchronous response when needed
-    std::string result = coffeeFuture.get();
-    std::cout &lt;&lt; "[Notification] Customer picked up: " &lt;&lt; result &lt;&lt; std::endl;
-    return 0;
+    <span class="c-comment">// Awaiting asynchronous response when needed</span>
+    <span class="c-type">std::string</span> result = coffeeFuture.get();
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Notification] Customer picked up: "</span> &lt;&lt; result &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -4580,41 +4580,41 @@ int main() {
     <span class="code-lang">C++ (Callback Mechanism: std::function & Event Hooks)</span>
     <span class="code-desc">Registering a listener callback that gets invoked asynchronously when work finishes</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;functional&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;functional&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-// Type alias for callback signature: void(bool, string)
-using DownloadCallback = std::function&lt;void(bool success, std::string filename)&gt;;
+<span class="c-comment">// Type alias for callback signature: void(bool, string)</span>
+<span class="c-keyword">using</span> <span class="c-type">DownloadCallback</span> = <span class="c-type">std::function</span>&lt;<span class="c-type">void</span>(<span class="c-type">bool</span> success, <span class="c-type">std::string</span> filename)&gt;;
 
-class FileDownloader {
-public:
-    void startDownload(std::string url, DownloadCallback onComplete) {
-        std::cout &lt;&lt; "Downloader: Starting download of " &lt;&lt; url &lt;&lt; "..." &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">FileDownloader</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> startDownload(<span class="c-type">std::string</span> url, <span class="c-type">DownloadCallback</span> onComplete) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Downloader: Starting download of "</span> &lt;&lt; url &lt;&lt; <span class="c-string">"..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         
-        // Simulating completion of network transfer
-        bool downloadSuccess = true;
-        std::string localFile = "lecture_notes.pdf";
+        <span class="c-comment">// Simulating completion of network transfer</span>
+        <span class="c-type">bool</span> downloadSuccess = <span class="c-keyword">true</span>;
+        <span class="c-type">std::string</span> localFile = <span class="c-string">"lecture_notes.pdf"</span>;
 
-        // Triggering the Callback Mechanism!
-        std::cout &lt;&lt; "Downloader: Download finished. Triggering client callback hook..." &lt;&lt; std::endl;
+        <span class="c-comment">// Triggering the Callback Mechanism!</span>
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Downloader: Download finished. Triggering client callback hook..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         onComplete(downloadSuccess, localFile);
     }
 };
 
-int main() {
-    FileDownloader client;
+<span class="c-type">int</span> main() {
+    <span class="c-type">FileDownloader</span> client;
 
-    // Registering lambda function as the callback hook
-    client.startDownload("https://aktu.ac.in/syllabus/oosd.pdf", [](bool ok, std::string filename) {
-        if (ok) {
-            std::cout &lt;&lt; "  [CALLBACK TRIGGERED] UI updated! Opened file: " &lt;&lt; filename &lt;&lt; std::endl;
-        } else {
-            std::cout &lt;&lt; "  [CALLBACK TRIGGERED] Download failed!" &lt;&lt; std::endl;
+    <span class="c-comment">// Registering lambda function as the callback hook</span>
+    client.startDownload(<span class="c-string">"https://aktu.ac.in/syllabus/oosd.pdf"</span>, [](<span class="c-type">bool</span> ok, <span class="c-type">std::string</span> filename) {
+        <span class="c-keyword">if</span> (ok) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [CALLBACK TRIGGERED] UI updated! Opened file: "</span> &lt;&lt; filename &lt;&lt; <span class="c-type">std::endl</span>;
+        } <span class="c-keyword">else</span> {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [CALLBACK TRIGGERED] Download failed!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     });
 
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -4775,67 +4775,67 @@ int main() {
     <span class="code-lang">C++ (Broadcast Message: Observer / Publisher-Subscriber)</span>
     <span class="code-desc">Demonstrating 1-to-many broadcast message distribution to multiple decoupled listeners</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;vector&gt;
-#include &lt;string&gt;
-#include &lt;memory&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;vector&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;memory&gt;</span>
 
-/* Subscriber Interface */
-class IAlertSubscriber {
-public:
-    virtual ~IAlertSubscriber() = default;
-    virtual void onBroadcast(const std::string&amp; message) = 0;
+<span class="c-comment">/* Subscriber Interface */</span>
+<span class="c-keyword">class</span> <span class="c-type">IAlertSubscriber</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-keyword">virtual</span> ~<span class="c-type">IAlertSubscriber</span>() = <span class="c-keyword">default</span>;
+    <span class="c-keyword">virtual</span> <span class="c-type">void</span> onBroadcast(<span class="c-keyword">const</span> <span class="c-type">std::string</span>&amp; message) = <span class="c-number">0</span>;
 };
 
-/* Concrete Observers */
-class MobileAppUser : public IAlertSubscriber {
-private:
-    std::string username;
-public:
-    MobileAppUser(std::string name) : username(name) {}
-    void onBroadcast(const std::string&amp; message) override {
-        std::cout &lt;&lt; "  [Push Notification -&gt; " &lt;&lt; username &lt;&lt; "]: " &lt;&lt; message &lt;&lt; std::endl;
+<span class="c-comment">/* Concrete Observers */</span>
+<span class="c-keyword">class</span> <span class="c-type">MobileAppUser</span> : <span class="c-keyword">public</span> <span class="c-type">IAlertSubscriber</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::string</span> username;
+<span class="c-keyword">public</span>:
+    <span class="c-type">MobileAppUser</span>(<span class="c-type">std::string</span> name) : username(name) {}
+    <span class="c-type">void</span> onBroadcast(<span class="c-keyword">const</span> <span class="c-type">std::string</span>&amp; message) <span class="c-keyword">override</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Push Notification -&gt; "</span> &lt;&lt; username &lt;&lt; <span class="c-string">"]: "</span> &lt;&lt; message &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-class HighwayDisplayBoard : public IAlertSubscriber {
-public:
-    void onBroadcast(const std::string&amp; message) override {
-        std::cout &lt;&lt; "  [LED MATRIX BOARD]: FLASHING -&gt; " &lt;&lt; message &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">HighwayDisplayBoard</span> : <span class="c-keyword">public</span> <span class="c-type">IAlertSubscriber</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> onBroadcast(<span class="c-keyword">const</span> <span class="c-type">std::string</span>&amp; message) <span class="c-keyword">override</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [LED MATRIX BOARD]: FLASHING -&gt; "</span> &lt;&lt; message &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-/* Broadcast Publisher */
-class EmergencyBroadcastStation {
-private:
-    std::vector&lt;IAlertSubscriber*&gt; listeners;
+<span class="c-comment">/* Broadcast Publisher */</span>
+<span class="c-keyword">class</span> <span class="c-type">EmergencyBroadcastStation</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::vector</span>&lt;<span class="c-type">IAlertSubscriber</span>*&gt; listeners;
 
-public:
-    void registerSubscriber(IAlertSubscriber* sub) {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> registerSubscriber(<span class="c-type">IAlertSubscriber</span>* sub) {
         listeners.push_back(sub);
     }
 
-    // Broadcast Message: Sends signal to all registered observers
-    void broadcastAlert(std::string alertText) {
-        std::cout &lt;&lt; "[BROADCAST TRANSMITTER] Sending alert to " &lt;&lt; listeners.size() &lt;&lt; " listeners:" &lt;&lt; std::endl;
-        for (auto* l : listeners) {
-            l-&gt;onBroadcast(alertText); // Multicast distribution
+    <span class="c-comment">// Broadcast Message: Sends signal to all registered observers</span>
+    <span class="c-type">void</span> broadcastAlert(<span class="c-type">std::string</span> alertText) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[BROADCAST TRANSMITTER] Sending alert to "</span> &lt;&lt; listeners.size() &lt;&lt; <span class="c-string">" listeners:"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">for</span> (<span class="c-keyword">auto</span>* l : listeners) {
+            l-&gt;onBroadcast(alertText); <span class="c-comment">// Multicast distribution</span>
         }
     }
 };
 
-int main() {
-    EmergencyBroadcastStation tower;
-    MobileAppUser user1("Pooja");
-    MobileAppUser user2("Vikas");
-    HighwayDisplayBoard highwaySign;
+<span class="c-type">int</span> main() {
+    <span class="c-type">EmergencyBroadcastStation</span> tower;
+    <span class="c-type">MobileAppUser</span> user1(<span class="c-string">"Pooja"</span>);
+    <span class="c-type">MobileAppUser</span> user2(<span class="c-string">"Vikas"</span>);
+    <span class="c-type">HighwayDisplayBoard</span> highwaySign;
 
     tower.registerSubscriber(&amp;user1);
     tower.registerSubscriber(&amp;user2);
     tower.registerSubscriber(&amp;highwaySign);
 
-    tower.broadcastAlert("Severe Thunderstorm Warning: Seek shelter immediately!");
-    return 0;
+    tower.broadcastAlert(<span class="c-string">"Severe Thunderstorm Warning: Seek shelter immediately!"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -5003,51 +5003,51 @@ int main() {
     <span class="code-lang">C++ (Behavioral Dynamic State & Event Processing)</span>
     <span class="code-desc">Demonstrating how stateful objects change behavior dynamically in response to external events</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-enum class SystemMode {
+<span class="c-keyword">enum</span> <span class="c-keyword">class</span> <span class="c-type">SystemMode</span> {
     STANDBY,
     ACTIVE,
     EMERGENCY_SHUTDOWN
 };
 
-class ReactorCore {
-private:
-    SystemMode currentMode;
-    double coreTempCelsius;
+<span class="c-keyword">class</span> <span class="c-type">ReactorCore</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">SystemMode</span> currentMode;
+    <span class="c-type">double</span> coreTempCelsius;
 
-public:
-    ReactorCore() : currentMode(SystemMode::STANDBY), coreTempCelsius(200.0) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">ReactorCore</span>() : currentMode(<span class="c-type">SystemMode</span>::STANDBY), coreTempCelsius(<span class="c-number">200.0</span>) {}
 
-    // Behavioral Event Handler: Changes state dynamically over time
-    void onSensoryEvent(double newTemp, bool coolantFailure) {
+    <span class="c-comment">// Behavioral Event Handler: Changes state dynamically over time</span>
+    <span class="c-type">void</span> onSensoryEvent(<span class="c-type">double</span> newTemp, <span class="c-type">bool</span> coolantFailure) {
         coreTempCelsius = newTemp;
-        std::cout &lt;&lt; "[EVENT RECEIVED] Temp: " &lt;&lt; coreTempCelsius &lt;&lt; " C, Coolant Failure: " 
-                  &lt;&lt; (coolantFailure ? "YES" : "NO") &lt;&lt; std::endl;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[EVENT RECEIVED] Temp: "</span> &lt;&lt; coreTempCelsius &lt;&lt; <span class="c-string">" C, Coolant Failure: "</span> 
+                  &lt;&lt; (coolantFailure ? <span class="c-string">"YES"</span> : <span class="c-string">"NO"</span>) &lt;&lt; <span class="c-type">std::endl</span>;
 
-        if (coolantFailure &amp;&amp; coreTempCelsius &gt; 800.0) {
-            currentMode = SystemMode::EMERGENCY_SHUTDOWN;
-            std::cout &lt;&lt; "  -&gt; STATE TRANSITION: EMERGENCY_SHUTDOWN! Control rods inserted." &lt;&lt; std::endl;
-        } else if (coreTempCelsius &gt; 350.0) {
-            currentMode = SystemMode::ACTIVE;
-            std::cout &lt;&lt; "  -&gt; STATE TRANSITION: ACTIVE. Generating power." &lt;&lt; std::endl;
+        <span class="c-keyword">if</span> (coolantFailure &amp;&amp; coreTempCelsius &gt; <span class="c-number">800.0</span>) {
+            currentMode = <span class="c-type">SystemMode</span>::EMERGENCY_SHUTDOWN;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; STATE TRANSITION: EMERGENCY_SHUTDOWN! Control rods inserted."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        } <span class="c-keyword">else</span> <span class="c-keyword">if</span> (coreTempCelsius &gt; <span class="c-number">350.0</span>) {
+            currentMode = <span class="c-type">SystemMode</span>::ACTIVE;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; STATE TRANSITION: ACTIVE. Generating power."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 
-    void displayStatus() const {
-        std::cout &lt;&lt; "Current Operating State: " 
-                  &lt;&lt; (currentMode == SystemMode::ACTIVE ? "ACTIVE" : 
-                     (currentMode == SystemMode::STANDBY ? "STANDBY" : "SHUTDOWN")) &lt;&lt; std::endl;
+    <span class="c-type">void</span> displayStatus() <span class="c-keyword">const</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Current Operating State: "</span> 
+                  &lt;&lt; (currentMode == <span class="c-type">SystemMode</span>::ACTIVE ? <span class="c-string">"ACTIVE"</span> : 
+                     (currentMode == <span class="c-type">SystemMode</span>::STANDBY ? <span class="c-string">"STANDBY"</span> : <span class="c-string">"SHUTDOWN"</span>)) &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    ReactorCore core;
-    core.onSensoryEvent(420.0, false); // Transitions to ACTIVE
-    core.onSensoryEvent(890.0, true);  // Transitions to EMERGENCY_SHUTDOWN
+<span class="c-type">int</span> main() {
+    <span class="c-type">ReactorCore</span> core;
+    core.onSensoryEvent(<span class="c-number">420.0</span>, <span class="c-keyword">false</span>); <span class="c-comment">// Transitions to ACTIVE</span>
+    core.onSensoryEvent(<span class="c-number">890.0</span>, <span class="c-keyword">true</span>);  <span class="c-comment">// Transitions to EMERGENCY_SHUTDOWN</span>
     core.displayStatus();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -5181,50 +5181,50 @@ int main() {
     <span class="code-lang">C++ (Use Case Controller & Actor Interaction)</span>
     <span class="code-desc">Implementing end-to-end Use Case handlers fulfilling business goals with validation</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-// Actor: Gym Member
-struct MemberCredentials {
-    std::string memberId;
-    std::string planType;
-    bool isFeePaid;
+<span class="c-comment">// Actor: Gym Member</span>
+<span class="c-keyword">struct</span> <span class="c-type">MemberCredentials</span> {
+    <span class="c-type">std::string</span> memberId;
+    <span class="c-type">std::string</span> planType;
+    <span class="c-type">bool</span> isFeePaid;
 };
 
-// Use Case System Boundary: GymManagementSystem
-class GymManagementSystem {
-public:
-    /* USE CASE 1: 'Check-in at Turnstile' */
-    bool executeCheckIn(const MemberCredentials&amp; member) {
-        std::cout &lt;&lt; "[USE CASE: Check-in] Processing actor ID: " &lt;&lt; member.memberId &lt;&lt; std::endl;
+<span class="c-comment">// Use Case System Boundary: GymManagementSystem</span>
+<span class="c-keyword">class</span> <span class="c-type">GymManagementSystem</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-comment">/* USE CASE 1: 'Check-in at Turnstile' */</span>
+    <span class="c-type">bool</span> executeCheckIn(<span class="c-keyword">const</span> <span class="c-type">MemberCredentials</span>&amp; member) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[USE CASE: Check-in] Processing actor ID: "</span> &lt;&lt; member.memberId &lt;&lt; <span class="c-type">std::endl</span>;
         
-        // Step 1: Verify membership validity
-        if (!member.isFeePaid) {
-            std::cout &lt;&lt; "  [Alternate Flow] Membership fee overdue! Access denied." &lt;&lt; std::endl;
-            return false;
+        <span class="c-comment">// Step 1: Verify membership validity</span>
+        <span class="c-keyword">if</span> (!member.isFeePaid) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Alternate Flow] Membership fee overdue! Access denied."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+            <span class="c-keyword">return</span> <span class="c-keyword">false</span>;
         }
 
-        // Step 2: Unlock gate
-        std::cout &lt;&lt; "  [Primary Flow] Welcome! Turnstile gate unlocked." &lt;&lt; std::endl;
-        return true;
+        <span class="c-comment">// Step 2: Unlock gate</span>
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Primary Flow] Welcome! Turnstile gate unlocked."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
     }
 
-    /* USE CASE 2: 'Book Personal Trainer' */
-    void bookTrainer(std::string memberId, std::string trainerName, std::string slot) {
-        std::cout &lt;&lt; "[USE CASE: Book Trainer] Member " &lt;&lt; memberId 
-                  &lt;&lt; " booked " &lt;&lt; trainerName &lt;&lt; " for " &lt;&lt; slot &lt;&lt; std::endl;
+    <span class="c-comment">/* USE CASE 2: 'Book Personal Trainer' */</span>
+    <span class="c-type">void</span> bookTrainer(<span class="c-type">std::string</span> memberId, <span class="c-type">std::string</span> trainerName, <span class="c-type">std::string</span> slot) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[USE CASE: Book Trainer] Member "</span> &lt;&lt; memberId 
+                  &lt;&lt; <span class="c-string">" booked "</span> &lt;&lt; trainerName &lt;&lt; <span class="c-string">" for "</span> &lt;&lt; slot &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    GymManagementSystem system;
-    MemberCredentials m1{"MEM-501", "Gold", true};
-    MemberCredentials m2{"MEM-502", "Silver", false};
+<span class="c-type">int</span> main() {
+    <span class="c-type">GymManagementSystem</span> system;
+    <span class="c-type">MemberCredentials</span> m1{<span class="c-string">"MEM-501"</span>, <span class="c-string">"Gold"</span>, <span class="c-keyword">true</span>};
+    <span class="c-type">MemberCredentials</span> m2{<span class="c-string">"MEM-502"</span>, <span class="c-string">"Silver"</span>, <span class="c-keyword">false</span>};
 
-    system.executeCheckIn(m1); // Primary success path
-    system.executeCheckIn(m2); // Alternate exception path
-    system.bookTrainer("MEM-501", "Coach Vikram", "6:00 PM");
-    return 0;
+    system.executeCheckIn(m1); <span class="c-comment">// Primary success path</span>
+    system.executeCheckIn(m2); <span class="c-comment">// Alternate exception path</span>
+    system.bookTrainer(<span class="c-string">"MEM-501"</span>, <span class="c-string">"Coach Vikram"</span>, <span class="c-string">"6:00 PM"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -5391,55 +5391,55 @@ int main() {
     <span class="code-lang">C++ (Implementing <<include>> and <<extend>> Relationships)</span>
     <span class="code-desc">Demonstrating mandatory helper inclusions vs conditional extension points in code</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-class OrderFoodWorkflow {
-private:
-    /* &lt;&lt;include&gt;&gt; Mandatory sub-use cases */
-    bool include_AuthenticateUser(std::string user) {
-        std::cout &lt;&lt; "  &lt;&lt;include&gt;&gt; Step 1: User [" &lt;&lt; user &lt;&lt; "] authenticated." &lt;&lt; std::endl;
-        return true;
+<span class="c-keyword">class</span> <span class="c-type">OrderFoodWorkflow</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-comment">/* &lt;&lt;include&gt;&gt; Mandatory sub-use cases */</span>
+    <span class="c-type">bool</span> include_AuthenticateUser(<span class="c-type">std::string</span> user) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  &lt;&lt;include&gt;&gt; Step 1: User ["</span> &lt;&lt; user &lt;&lt; <span class="c-string">"] authenticated."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
     }
 
-    bool include_ProcessPayment(double amount) {
-        std::cout &lt;&lt; "  &lt;&lt;include&gt;&gt; Step 2: Payment of ₹" &lt;&lt; amount &lt;&lt; " processed." &lt;&lt; std::endl;
-        return true;
+    <span class="c-type">bool</span> include_ProcessPayment(<span class="c-type">double</span> amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  &lt;&lt;include&gt;&gt; Step 2: Payment of ₹"</span> &lt;&lt; amount &lt;&lt; <span class="c-string">" processed."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
     }
 
-    /* &lt;&lt;extend&gt;&gt; Optional sub-use case triggered by extension point */
-    double extend_ApplyPromoCode(std::string promo, double amount) {
-        std::cout &lt;&lt; "  &lt;&lt;extend&gt;&gt; Extension Point Triggered: Applied coupon [" &lt;&lt; promo &lt;&lt; "] -&gt; 10% Off!" &lt;&lt; std::endl;
-        return amount * 0.90;
+    <span class="c-comment">/* &lt;&lt;extend&gt;&gt; Optional sub-use case triggered by extension point */</span>
+    <span class="c-type">double</span> extend_ApplyPromoCode(<span class="c-type">std::string</span> promo, <span class="c-type">double</span> amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  &lt;&lt;extend&gt;&gt; Extension Point Triggered: Applied coupon ["</span> &lt;&lt; promo &lt;&lt; <span class="c-string">"] -&gt; 10% Off!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> amount * <span class="c-number">0.90</span>;
     }
 
-public:
-    // Base Use Case: "Order Meal"
-    void executeOrderMeal(std::string user, double total, std::string promoCode = "") {
-        std::cout &lt;&lt; "[BASE USE CASE: Order Meal Started]" &lt;&lt; std::endl;
+<span class="c-keyword">public</span>:
+    <span class="c-comment">// Base Use Case: "Order Meal"</span>
+    <span class="c-type">void</span> executeOrderMeal(<span class="c-type">std::string</span> user, <span class="c-type">double</span> total, <span class="c-type">std::string</span> promoCode = <span class="c-string">""</span>) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[BASE USE CASE: Order Meal Started]"</span> &lt;&lt; <span class="c-type">std::endl</span>;
 
-        // Mandatory inclusions: Always executed!
+        <span class="c-comment">// Mandatory inclusions: Always executed!</span>
         include_AuthenticateUser(user);
 
-        // Optional extension: Executed ONLY if extension condition holds
-        if (!promoCode.empty()) {
+        <span class="c-comment">// Optional extension: Executed ONLY if extension condition holds</span>
+        <span class="c-keyword">if</span> (!promoCode.empty()) {
             total = extend_ApplyPromoCode(promoCode, total);
         }
 
         include_ProcessPayment(total);
-        std::cout &lt;&lt; "[BASE USE CASE: Order Meal Completed Successfully]
-" &lt;&lt; std::endl;
+        <span class="c-type">std::cout</span> &lt;&lt; "[BASE USE CASE: <span class="c-type">Order</span> <span class="c-type">Meal</span> <span class="c-type">Completed</span> <span class="c-type">Successfully</span>]
+" &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    OrderFoodWorkflow app;
-    // Flow without extension
-    app.executeOrderMeal("rohit_cse", 500.0);
+<span class="c-type">int</span> main() {
+    <span class="c-type">OrderFoodWorkflow</span> app;
+    <span class="c-comment">// Flow without extension</span>
+    app.executeOrderMeal(<span class="c-string">"rohit_cse"</span>, <span class="c-number">500.0</span>);
 
-    // Flow WITH &lt;&lt;extend&gt;&gt; coupon applied
-    app.executeOrderMeal("ananya_it", 1000.0, "WELCOME50");
-    return 0;
+    <span class="c-comment">// Flow WITH &lt;&lt;extend&gt;&gt; coupon applied</span>
+    app.executeOrderMeal(<span class="c-string">"ananya_it"</span>, <span class="c-number">1000.0</span>, <span class="c-string">"WELCOME50"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -5591,43 +5591,43 @@ int main() {
     <span class="code-lang">C++ (Activity Workflow: Decision Nodes, Fork & Join Concurrency)</span>
     <span class="code-desc">Modeling activity decision branching and multithreaded Fork/Join synchronization</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;thread&gt;
-#include &lt;chrono&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;thread&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;chrono&gt;</span>
 
-void action_CheckBaggage() {
-    std::cout &lt;&lt; "Action State 1: Baggage checked into hold." &lt;&lt; std::endl;
+<span class="c-type">void</span> action_CheckBaggage() {
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Action State 1: Baggage checked into hold."</span> &lt;&lt; <span class="c-type">std::endl</span>;
 }
 
-void parallel_DutyFreeShopping() {
-    std::cout &lt;&lt; "  [Fork Worker A] Browsing Duty Free Shop..." &lt;&lt; std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(200));
-    std::cout &lt;&lt; "  [Fork Worker A] Duty Free Shopping Complete." &lt;&lt; std::endl;
+<span class="c-type">void</span> parallel_DutyFreeShopping() {
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Fork Worker A] Browsing Duty Free Shop..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    std::this_thread::sleep_for(std::chrono::milliseconds(<span class="c-number">200</span>));
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Fork Worker A] Duty Free Shopping Complete."</span> &lt;&lt; <span class="c-type">std::endl</span>;
 }
 
-void parallel_LoungeRefreshment() {
-    std::cout &lt;&lt; "  [Fork Worker B] Drinking coffee at airport lounge..." &lt;&lt; std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(250));
-    std::cout &lt;&lt; "  [Fork Worker B] Finished refreshment." &lt;&lt; std::endl;
+<span class="c-type">void</span> parallel_LoungeRefreshment() {
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Fork Worker B] Drinking coffee at airport lounge..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    std::this_thread::sleep_for(std::chrono::milliseconds(<span class="c-number">250</span>));
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Fork Worker B] Finished refreshment."</span> &lt;&lt; <span class="c-type">std::endl</span>;
 }
 
-int main() {
-    std::cout &lt;&lt; "--- ACTIVITY DIAGRAM WORKFLOW START ---" &lt;&lt; std::endl;
+<span class="c-type">int</span> main() {
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"--- ACTIVITY DIAGRAM WORKFLOW START ---"</span> &lt;&lt; <span class="c-type">std::endl</span>;
     action_CheckBaggage();
 
-    // FORK BAR: Concurrently executing two parallel activities
-    std::cout &lt;&lt; "== FORK BAR: Splitting into parallel threads ==" &lt;&lt; std::endl;
-    std::thread branchA(parallel_DutyFreeShopping);
-    std::thread branchB(parallel_LoungeRefreshment);
+    <span class="c-comment">// FORK BAR: Concurrently executing two parallel activities</span>
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"== FORK BAR: Splitting into parallel threads =="</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-type">std::thread</span> branchA(parallel_DutyFreeShopping);
+    <span class="c-type">std::thread</span> branchB(parallel_LoungeRefreshment);
 
-    // JOIN BAR: Synchronizing both threads before next action state
+    <span class="c-comment">// JOIN BAR: Synchronizing both threads before next action state</span>
     branchA.join();
     branchB.join();
-    std::cout &lt;&lt; "== JOIN BAR: All parallel activities synchronized ==" &lt;&lt; std::endl;
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"== JOIN BAR: All parallel activities synchronized =="</span> &lt;&lt; <span class="c-type">std::endl</span>;
 
-    std::cout &lt;&lt; "Action State 4: Passenger boarding flight at Gate 12." &lt;&lt; std::endl;
-    std::cout &lt;&lt; "--- ACTIVITY DIAGRAM WORKFLOW END ---" &lt;&lt; std::endl;
-    return 0;
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Action State 4: Passenger boarding flight at Gate 12."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"--- ACTIVITY DIAGRAM WORKFLOW END ---"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -5795,59 +5795,59 @@ int main() {
     <span class="code-lang">C++ (State Machine: States, Transitions, Guards & Actions)</span>
     <span class="code-desc">Implementing a Finite State Machine with entry/exit actions and event transitions</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
 
-enum class OvenState {
+<span class="c-keyword">enum</span> <span class="c-keyword">class</span> <span class="c-type">OvenState</span> {
     IDLE,
     COOKING,
     PAUSED
 };
 
-class MicrowaveOven {
-private:
-    OvenState currentState;
-    int timerSeconds;
-    bool isDoorClosed;
+<span class="c-keyword">class</span> <span class="c-type">MicrowaveOven</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">OvenState</span> currentState;
+    <span class="c-type">int</span> timerSeconds;
+    <span class="c-type">bool</span> isDoorClosed;
 
-public:
-    MicrowaveOven() : currentState(OvenState::IDLE), timerSeconds(0), isDoorClosed(true) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">MicrowaveOven</span>() : currentState(<span class="c-type">OvenState</span>::IDLE), timerSeconds(<span class="c-number">0</span>), isDoorClosed(<span class="c-keyword">true</span>) {}
 
-    // Event 1: User enters cooking duration
-    void setTimer(int seconds) {
-        if (currentState == OvenState::IDLE) {
+    <span class="c-comment">// Event 1: User enters cooking duration</span>
+    <span class="c-type">void</span> setTimer(<span class="c-type">int</span> seconds) {
+        <span class="c-keyword">if</span> (currentState == <span class="c-type">OvenState</span>::IDLE) {
             timerSeconds = seconds;
-            std::cout &lt;&lt; "Timer set to " &lt;&lt; timerSeconds &lt;&lt; " seconds." &lt;&lt; std::endl;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Timer set to "</span> &lt;&lt; timerSeconds &lt;&lt; <span class="c-string">" seconds."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 
-    // Event 2: User presses 'Start' button with guard [timer &gt; 0 &amp;&amp; doorClosed]
-    void pressStart() {
-        if (currentState == OvenState::IDLE || currentState == OvenState::PAUSED) {
-            if (timerSeconds &gt; 0 &amp;&amp; isDoorClosed) { // Guard Condition
-                currentState = OvenState::COOKING;
-                std::cout &lt;&lt; "-&gt; TRANSITION to COOKING [Action: Magnetron ON, Turntable spinning]" &lt;&lt; std::endl;
-            } else {
-                std::cout &lt;&lt; "Cannot start: Door open or timer is zero!" &lt;&lt; std::endl;
+    <span class="c-comment">// Event 2: User presses 'Start' button with guard [timer &gt; 0 &amp;&amp; doorClosed]</span>
+    <span class="c-type">void</span> pressStart() {
+        <span class="c-keyword">if</span> (currentState == <span class="c-type">OvenState</span>::IDLE || currentState == <span class="c-type">OvenState</span>::PAUSED) {
+            <span class="c-keyword">if</span> (timerSeconds &gt; <span class="c-number">0</span> &amp;&amp; isDoorClosed) { <span class="c-comment">// Guard Condition</span>
+                currentState = <span class="c-type">OvenState</span>::COOKING;
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"-&gt; TRANSITION to COOKING [Action: Magnetron ON, Turntable spinning]"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+            } <span class="c-keyword">else</span> {
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Cannot start: Door open or timer is zero!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
             }
         }
     }
 
-    // Event 3: Door opened during cooking
-    void openDoor() {
-        isDoorClosed = false;
-        if (currentState == OvenState::COOKING) {
-            currentState = OvenState::PAUSED;
-            std::cout &lt;&lt; "-&gt; TRANSITION to PAUSED [Action: Magnetron OFF immediately for safety]" &lt;&lt; std::endl;
+    <span class="c-comment">// Event 3: Door opened during cooking</span>
+    <span class="c-type">void</span> openDoor() {
+        isDoorClosed = <span class="c-keyword">false</span>;
+        <span class="c-keyword">if</span> (currentState == <span class="c-type">OvenState</span>::COOKING) {
+            currentState = <span class="c-type">OvenState</span>::PAUSED;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"-&gt; TRANSITION to PAUSED [Action: Magnetron OFF immediately for safety]"</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    MicrowaveOven oven;
-    oven.setTimer(60);
-    oven.pressStart(); // Transitions to COOKING
-    oven.openDoor();   // Transitions to PAUSED
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">MicrowaveOven</span> oven;
+    oven.setTimer(<span class="c-number">60</span>);
+    oven.pressStart(); <span class="c-comment">// Transitions to COOKING</span>
+    oven.openDoor();   <span class="c-comment">// Transitions to PAUSED</span>
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -6025,47 +6025,47 @@ int main() {
     <span class="code-lang">C++ (Active Objects, Threads & Mutex Synchronization)</span>
     <span class="code-desc">Demonstrating concurrent threads sharing memory protected by std::mutex and std::lock_guard</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;thread&gt;
-#include &lt;mutex&gt;
-#include &lt;vector&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;thread&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;mutex&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;vector&gt;</span>
 
-class BankVault {
-private:
-    double totalCashReserve;
-    std::mutex vaultLock; // Mutex protecting critical section
+<span class="c-keyword">class</span> <span class="c-type">BankVault</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">double</span> totalCashReserve;
+    <span class="c-type">std::mutex</span> vaultLock; <span class="c-comment">// Mutex protecting critical section</span>
 
-public:
-    BankVault(double initialCash) : totalCashReserve(initialCash) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">BankVault</span>(<span class="c-type">double</span> initialCash) : totalCashReserve(initialCash) {}
 
-    // Synchronized method: Only one thread may execute at a time
-    void withdrawCash(int tellerId, double amount) {
-        // Acquiring lock; automatically released when exiting scope
-        std::lock_guard&lt;std::mutex&gt; lock(vaultLock);
+    <span class="c-comment">// Synchronized method: Only one thread may execute at a time</span>
+    <span class="c-type">void</span> withdrawCash(<span class="c-type">int</span> tellerId, <span class="c-type">double</span> amount) {
+        <span class="c-comment">// Acquiring lock; automatically released when exiting scope</span>
+        <span class="c-type">std::lock_guard</span>&lt;<span class="c-type">std::mutex</span>&gt; lock(vaultLock);
 
-        std::cout &lt;&lt; "Teller #" &lt;&lt; tellerId &lt;&lt; " checking vault. Current: ₹" &lt;&lt; totalCashReserve &lt;&lt; std::endl;
-        if (totalCashReserve &gt;= amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Teller #"</span> &lt;&lt; tellerId &lt;&lt; <span class="c-string">" checking vault. Current: ₹"</span> &lt;&lt; totalCashReserve &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">if</span> (totalCashReserve &gt;= amount) {
             totalCashReserve -= amount;
-            std::cout &lt;&lt; "  -&gt; Teller #" &lt;&lt; tellerId &lt;&lt; " dispensed ₹" &lt;&lt; amount 
-                      &lt;&lt; ". Remaining: ₹" &lt;&lt; totalCashReserve &lt;&lt; std::endl;
-        } else {
-            std::cout &lt;&lt; "  -&gt; Teller #" &lt;&lt; tellerId &lt;&lt; " FAILED: Insufficient vault funds!" &lt;&lt; std::endl;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; Teller #"</span> &lt;&lt; tellerId &lt;&lt; <span class="c-string">" dispensed ₹"</span> &lt;&lt; amount 
+                      &lt;&lt; <span class="c-string">". Remaining: ₹"</span> &lt;&lt; totalCashReserve &lt;&lt; <span class="c-type">std::endl</span>;
+        } <span class="c-keyword">else</span> {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; Teller #"</span> &lt;&lt; tellerId &lt;&lt; <span class="c-string">" FAILED: Insufficient vault funds!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    BankVault centralVault(10000.0);
+<span class="c-type">int</span> main() {
+    <span class="c-type">BankVault</span> centralVault(<span class="c-number">10000.0</span>);
 
-    // Spawning 3 concurrent teller threads within the same process
-    std::thread t1(&amp;BankVault::withdrawCash, &amp;centralVault, 1, 4000.0);
-    std::thread t2(&amp;BankVault::withdrawCash, &amp;centralVault, 2, 5000.0);
-    std::thread t3(&amp;BankVault::withdrawCash, &amp;centralVault, 3, 3000.0);
+    <span class="c-comment">// Spawning 3 concurrent teller threads within the same process</span>
+    <span class="c-type">std::thread</span> t1(&amp;<span class="c-type">BankVault</span>::withdrawCash, &amp;centralVault, <span class="c-number">1</span>, <span class="c-number">4000.0</span>);
+    <span class="c-type">std::thread</span> t2(&amp;<span class="c-type">BankVault</span>::withdrawCash, &amp;centralVault, <span class="c-number">2</span>, <span class="c-number">5000.0</span>);
+    <span class="c-type">std::thread</span> t3(&amp;<span class="c-type">BankVault</span>::withdrawCash, &amp;centralVault, <span class="c-number">3</span>, <span class="c-number">3000.0</span>);
 
     t1.join();
     t2.join();
     t3.join();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -6219,51 +6219,51 @@ int main() {
     <span class="code-lang">C++ (Polymorphic Event Dispatcher: Call, Signal, Time, Change)</span>
     <span class="code-desc">Handling Call Events, Signal Events, Time Events, and Change Events in an event engine</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-enum class EventType {
-    CALL_EVENT,   // Synchronous operation invocation
-    SIGNAL_EVENT, // Asynchronous notification packet
-    TIME_EVENT,   // after(500ms) timer trigger
-    CHANGE_EVENT  // when(temperature &gt; 100C) condition trigger
+<span class="c-keyword">enum</span> <span class="c-keyword">class</span> <span class="c-type">EventType</span> {
+    CALL_EVENT,   <span class="c-comment">// Synchronous operation invocation</span>
+    SIGNAL_EVENT, <span class="c-comment">// Asynchronous notification packet</span>
+    TIME_EVENT,   <span class="c-comment">// after(500ms) timer trigger</span>
+    CHANGE_EVENT  <span class="c-comment">// when(temperature &gt; 100C) condition trigger</span>
 };
 
-struct EventPacket {
-    EventType type;
-    std::string payload;
-    double sensorValue;
+<span class="c-keyword">struct</span> <span class="c-type">EventPacket</span> {
+    <span class="c-type">EventType</span> type;
+    <span class="c-type">std::string</span> payload;
+    <span class="c-type">double</span> sensorValue;
 };
 
-class EventDispatcher {
-public:
-    void dispatch(const EventPacket&amp; ev) {
-        switch (ev.type) {
-            case EventType::CALL_EVENT:
-                std::cout &lt;&lt; "[CALL EVENT] Synchronous RPC: " &lt;&lt; ev.payload &lt;&lt; "()" &lt;&lt; std::endl;
-                break;
-            case EventType::SIGNAL_EVENT:
-                std::cout &lt;&lt; "[SIGNAL EVENT] Asynchronous Signal arrived: " &lt;&lt; ev.payload &lt;&lt; std::endl;
-                break;
-            case EventType::TIME_EVENT:
-                std::cout &lt;&lt; "[TIME EVENT] Timer expired: after(" &lt;&lt; ev.payload &lt;&lt; ")" &lt;&lt; std::endl;
-                break;
-            case EventType::CHANGE_EVENT:
-                if (ev.sensorValue &gt; 100.0) {
-                    std::cout &lt;&lt; "[CHANGE EVENT] Condition TRUE: when(temp=" &lt;&lt; ev.sensorValue &lt;&lt; " &gt; 100C)!" &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">EventDispatcher</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> dispatch(<span class="c-keyword">const</span> <span class="c-type">EventPacket</span>&amp; ev) {
+        <span class="c-keyword">switch</span> (ev.type) {
+            <span class="c-keyword">case</span> <span class="c-type">EventType</span>::CALL_EVENT:
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[CALL EVENT] Synchronous RPC: "</span> &lt;&lt; ev.payload &lt;&lt; <span class="c-string">"()"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+                <span class="c-keyword">break</span>;
+            <span class="c-keyword">case</span> <span class="c-type">EventType</span>::SIGNAL_EVENT:
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[SIGNAL EVENT] Asynchronous Signal arrived: "</span> &lt;&lt; ev.payload &lt;&lt; <span class="c-type">std::endl</span>;
+                <span class="c-keyword">break</span>;
+            <span class="c-keyword">case</span> <span class="c-type">EventType</span>::TIME_EVENT:
+                <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[TIME EVENT] Timer expired: after("</span> &lt;&lt; ev.payload &lt;&lt; <span class="c-string">")"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+                <span class="c-keyword">break</span>;
+            <span class="c-keyword">case</span> <span class="c-type">EventType</span>::CHANGE_EVENT:
+                <span class="c-keyword">if</span> (ev.sensorValue &gt; <span class="c-number">100.0</span>) {
+                    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[CHANGE EVENT] Condition TRUE: when(temp="</span> &lt;&lt; ev.sensorValue &lt;&lt; <span class="c-string">" &gt; 100C)!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
                 }
-                break;
+                <span class="c-keyword">break</span>;
         }
     }
 };
 
-int main() {
-    EventDispatcher bus;
-    bus.dispatch({EventType::CALL_EVENT, "authenticateUser", 0.0});
-    bus.dispatch({EventType::SIGNAL_EVENT, "SIG_BATTERY_LOW", 0.0});
-    bus.dispatch({EventType::TIME_EVENT, "10_SECONDS_TIMEOUT", 0.0});
-    bus.dispatch({EventType::CHANGE_EVENT, "OVERHEAT", 108.5});
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">EventDispatcher</span> bus;
+    bus.dispatch({<span class="c-type">EventType</span>::CALL_EVENT, <span class="c-string">"authenticateUser"</span>, <span class="c-number">0.0</span>});
+    bus.dispatch({<span class="c-type">EventType</span>::SIGNAL_EVENT, <span class="c-string">"SIG_BATTERY_LOW"</span>, <span class="c-number">0.0</span>});
+    bus.dispatch({<span class="c-type">EventType</span>::TIME_EVENT, <span class="c-string">"10_SECONDS_TIMEOUT"</span>, <span class="c-number">0.0</span>});
+    bus.dispatch({<span class="c-type">EventType</span>::CHANGE_EVENT, <span class="c-string">"OVERHEAT"</span>, <span class="c-number">108.5</span>});
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -6410,38 +6410,38 @@ int main() {
     <span class="code-lang">C++ (Timing Constraints & Duration Measurement with std::chrono)</span>
     <span class="code-desc">Enforcing real-time latency thresholds and timing duration bounds in C++</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;chrono&gt;
-#include &lt;thread&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;chrono&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;thread&gt;</span>
 
-class RealTimeController {
-public:
-    void executeSafetyCriticalTask() {
-        std::cout &lt;&lt; "[TIMING DIAGRAM] Starting safety-critical operation..." &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">RealTimeController</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> executeSafetyCriticalTask() {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[TIMING DIAGRAM] Starting safety-critical operation..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         
-        auto startTime = std::chrono::high_resolution_clock::now();
+        <span class="c-keyword">auto</span> startTime = std::chrono::high_resolution_clock::now();
 
-        // Simulating sensor read &amp; airbag deployment computation
-        std::this_thread::sleep_for(std::chrono::milliseconds(12));
+        <span class="c-comment">// Simulating sensor read &amp; airbag deployment computation</span>
+        std::this_thread::sleep_for(std::chrono::milliseconds(<span class="c-number">12</span>));
 
-        auto endTime = std::chrono::high_resolution_clock::now();
-        std::chrono::duration&lt;double, std::milli&gt; latency = endTime - startTime;
+        <span class="c-keyword">auto</span> endTime = std::chrono::high_resolution_clock::now();
+        std::chrono::duration&lt;<span class="c-type">double</span>, std::milli&gt; latency = endTime - startTime;
 
-        std::cout &lt;&lt; "Operation Latency: " &lt;&lt; latency.count() &lt;&lt; " ms" &lt;&lt; std::endl;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Operation Latency: "</span> &lt;&lt; latency.count() &lt;&lt; <span class="c-string">" ms"</span> &lt;&lt; <span class="c-type">std::endl</span>;
 
-        // Validating UML Timing Constraint: {duration &lt; 20ms}
-        if (latency.count() &lt;= 20.0) {
-            std::cout &lt;&lt; "  -&gt; PASS: Strict real-time timing constraint {latency &lt;= 20ms} met!" &lt;&lt; std::endl;
-        } else {
-            std::cout &lt;&lt; "  -&gt; VIOLATION: Deadline missed! Safety hazard." &lt;&lt; std::endl;
+        <span class="c-comment">// Validating UML Timing Constraint: {duration &lt; 20ms}</span>
+        <span class="c-keyword">if</span> (latency.count() &lt;= <span class="c-number">20.0</span>) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; PASS: Strict real-time timing constraint {latency &lt;= 20ms} met!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        } <span class="c-keyword">else</span> {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; VIOLATION: Deadline missed! Safety hazard."</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    RealTimeController controller;
+<span class="c-type">int</span> main() {
+    <span class="c-type">RealTimeController</span> controller;
     controller.executeSafetyCriticalTask();
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -6588,43 +6588,43 @@ int main() {
     <span class="code-lang">C++ (Dual-View Equivalence: Sequence Trace vs Object Network)</span>
     <span class="code-desc">Demonstrating how a single multi-object interaction can be logged as a timeline or as an object graph</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;vector&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;vector&gt;</span>
 
-class Node {
-public:
-    std::string name;
-    Node(std::string n) : name(n) {}
+<span class="c-keyword">class</span> <span class="c-type">Node</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">std::string</span> name;
+    <span class="c-type">Node</span>(<span class="c-type">std::string</span> n) : name(n) {}
 };
 
-class InteractionLogger {
-public:
-    // 1. SEQUENCE VIEW: Chronological Timeline Log
-    void logSequence(std::string time, std::string sender, std::string msg, std::string receiver) {
-        std::cout &lt;&lt; "[SEQUENCE TIMELINE " &lt;&lt; time &lt;&lt; "] " &lt;&lt; sender &lt;&lt; " --(" &lt;&lt; msg &lt;&lt; ")--&gt; " &lt;&lt; receiver &lt;&lt; std::endl;
+<span class="c-keyword">class</span> <span class="c-type">InteractionLogger</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-comment">// 1. SEQUENCE VIEW: Chronological Timeline Log</span>
+    <span class="c-type">void</span> logSequence(<span class="c-type">std::string</span> time, <span class="c-type">std::string</span> sender, <span class="c-type">std::string</span> msg, <span class="c-type">std::string</span> receiver) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[SEQUENCE TIMELINE "</span> &lt;&lt; time &lt;&lt; <span class="c-string">"] "</span> &lt;&lt; sender &lt;&lt; <span class="c-string">" --("</span> &lt;&lt; msg &lt;&lt; <span class="c-string">")--&gt; "</span> &lt;&lt; receiver &lt;&lt; <span class="c-type">std::endl</span>;
     }
 
-    // 2. COLLABORATION VIEW: Structural Graph Topology with Decimal Sequence Numbering
-    void logCollaboration(std::string seqNo, std::string from, std::string to, std::string msg) {
-        std::cout &lt;&lt; "[COLLABORATION LINK " &lt;&lt; from &lt;&lt; " ==== " &lt;&lt; to &lt;&lt; "] Message " 
-                  &lt;&lt; seqNo &lt;&lt; ": " &lt;&lt; msg &lt;&lt; "()" &lt;&lt; std::endl;
+    <span class="c-comment">// 2. COLLABORATION VIEW: Structural Graph Topology with Decimal Sequence Numbering</span>
+    <span class="c-type">void</span> logCollaboration(<span class="c-type">std::string</span> seqNo, <span class="c-type">std::string</span> from, <span class="c-type">std::string</span> to, <span class="c-type">std::string</span> msg) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[COLLABORATION LINK "</span> &lt;&lt; from &lt;&lt; <span class="c-string">" ==== "</span> &lt;&lt; to &lt;&lt; <span class="c-string">"] Message "</span> 
+                  &lt;&lt; seqNo &lt;&lt; <span class="c-string">": "</span> &lt;&lt; msg &lt;&lt; <span class="c-string">"()"</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    InteractionLogger tracer;
+<span class="c-type">int</span> main() {
+    <span class="c-type">InteractionLogger</span> tracer;
 
-    std::cout &lt;&lt; "--- 1. SEQUENCE PERSPECTIVE (Chronological) ---" &lt;&lt; std::endl;
-    tracer.logSequence("00:01s", "WebClient", "POST /login", "AuthGateway");
-    tracer.logSequence("00:03s", "AuthGateway", "SELECT user", "Database");
-    tracer.logSequence("00:05s", "Database", "return UserRecord", "AuthGateway");
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"--- 1. SEQUENCE PERSPECTIVE (Chronological) ---"</span> &lt;&lt; <span class="c-type">std::endl</span>;
+    tracer.logSequence(<span class="c-string">"00:01s"</span>, <span class="c-string">"WebClient"</span>, <span class="c-string">"POST /login"</span>, <span class="c-string">"AuthGateway"</span>);
+    tracer.logSequence(<span class="c-string">"00:03s"</span>, <span class="c-string">"AuthGateway"</span>, <span class="c-string">"SELECT user"</span>, <span class="c-string">"Database"</span>);
+    tracer.logSequence(<span class="c-string">"00:05s"</span>, <span class="c-string">"Database"</span>, <span class="c-string">"return UserRecord"</span>, <span class="c-string">"AuthGateway"</span>);
 
-    std::cout &lt;&lt; "
---- 2. COLLABORATION PERSPECTIVE (Topological) ---" &lt;&lt; std::endl;
-    tracer.logCollaboration("1.0", "WebClient", "AuthGateway", "login");
-    tracer.logCollaboration("1.1", "AuthGateway", "Database", "queryCredentials");
-    return 0;
+    <span class="c-type">std::cout</span> &lt;&lt; "
+--- <span class="c-number">2</span>. COLLABORATION PERSPECTIVE (<span class="c-type">Topological</span>) ---" &lt;&lt; <span class="c-type">std::endl</span>;
+    tracer.logCollaboration(<span class="c-string">"1.0"</span>, <span class="c-string">"WebClient"</span>, <span class="c-string">"AuthGateway"</span>, <span class="c-string">"login"</span>);
+    tracer.logCollaboration(<span class="c-string">"1.1"</span>, <span class="c-string">"AuthGateway"</span>, <span class="c-string">"Database"</span>, <span class="c-string">"queryCredentials"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -6744,52 +6744,52 @@ int main() {
     <span class="code-lang">C++ (Package Diagrams: Namespaces, Imports & Dependency Hierarchy)</span>
     <span class="code-desc">Organizing code into layered namespaces modeling UML packages with clear dependencies</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-/* UML Package: DataAccessLayer */
-namespace DataAccessLayer {
-    class DatabaseClient {
-    public:
-        std::string fetchRecord(int id) {
-            return "Record #" + std::to_string(id) + " [Encrypted Payload]";
+<span class="c-comment">/* UML Package: DataAccessLayer */</span>
+<span class="c-keyword">namespace</span> <span class="c-type">DataAccessLayer</span> {
+    <span class="c-keyword">class</span> <span class="c-type">DatabaseClient</span> {
+    <span class="c-keyword">public</span>:
+        <span class="c-type">std::string</span> fetchRecord(<span class="c-type">int</span> id) {
+            <span class="c-keyword">return</span> <span class="c-string">"Record #"</span> + std::to_string(id) + <span class="c-string">" [Encrypted Payload]"</span>;
         }
     };
 }
 
-/* UML Package: BusinessLogicLayer (Imports DataAccessLayer) */
-namespace BusinessLogicLayer {
-    // Importing specific classifier from DataAccessLayer package
-    using DataAccessLayer::DatabaseClient;
+<span class="c-comment">/* UML Package: BusinessLogicLayer (Imports DataAccessLayer) */</span>
+<span class="c-keyword">namespace</span> <span class="c-type">BusinessLogicLayer</span> {
+    <span class="c-comment">// Importing specific classifier from DataAccessLayer package</span>
+    <span class="c-keyword">using</span> <span class="c-type">DataAccessLayer</span>::<span class="c-type">DatabaseClient</span>;
 
-    class ReportGenerator {
-    private:
-        DatabaseClient db;
-    public:
-        void generateReport(int id) {
-            std::string rawData = db.fetchRecord(id);
-            std::cout &lt;&lt; "BusinessLayer: Formatted business report from: " &lt;&lt; rawData &lt;&lt; std::endl;
+    <span class="c-keyword">class</span> <span class="c-type">ReportGenerator</span> {
+    <span class="c-keyword">private</span>:
+        <span class="c-type">DatabaseClient</span> db;
+    <span class="c-keyword">public</span>:
+        <span class="c-type">void</span> generateReport(<span class="c-type">int</span> id) {
+            <span class="c-type">std::string</span> rawData = db.fetchRecord(id);
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"BusinessLayer: Formatted business report from: "</span> &lt;&lt; rawData &lt;&lt; <span class="c-type">std::endl</span>;
         }
     };
 }
 
-/* UML Package: PresentationLayer (Imports BusinessLogicLayer) */
-namespace PresentationLayer {
-    class WebDashboard {
-    private:
-        BusinessLogicLayer::ReportGenerator reporter;
-    public:
-        void render(int id) {
-            std::cout &lt;&lt; "[UI Dashboard Package] Requesting report for ID: " &lt;&lt; id &lt;&lt; std::endl;
+<span class="c-comment">/* UML Package: PresentationLayer (Imports BusinessLogicLayer) */</span>
+<span class="c-keyword">namespace</span> <span class="c-type">PresentationLayer</span> {
+    <span class="c-keyword">class</span> <span class="c-type">WebDashboard</span> {
+    <span class="c-keyword">private</span>:
+        <span class="c-type">BusinessLogicLayer</span>::<span class="c-type">ReportGenerator</span> reporter;
+    <span class="c-keyword">public</span>:
+        <span class="c-type">void</span> render(<span class="c-type">int</span> id) {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[UI Dashboard Package] Requesting report for ID: "</span> &lt;&lt; id &lt;&lt; <span class="c-type">std::endl</span>;
             reporter.generateReport(id);
         }
     };
 }
 
-int main() {
-    PresentationLayer::WebDashboard dashboard;
-    dashboard.render(104);
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-type">PresentationLayer</span>::<span class="c-type">WebDashboard</span> dashboard;
+    dashboard.render(<span class="c-number">104</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -6934,52 +6934,52 @@ int main() {
     <span class="code-lang">C++ (Architectural 4+1 View Implementation)</span>
     <span class="code-desc">Demonstrating how a single enterprise entity manifests across Logical, Process, and Deployment layers</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;thread&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;thread&gt;</span>
 
-/* 1. LOGICAL VIEW: Domain Class Model */
-class PowerTelemetry {
-public:
-    double megawattsOutput;
-    double coreTemp;
-    PowerTelemetry(double mw, double t) : megawattsOutput(mw), coreTemp(t) {}
+<span class="c-comment">/* 1. LOGICAL VIEW: Domain Class Model */</span>
+<span class="c-keyword">class</span> <span class="c-type">PowerTelemetry</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">double</span> megawattsOutput;
+    <span class="c-type">double</span> coreTemp;
+    <span class="c-type">PowerTelemetry</span>(<span class="c-type">double</span> mw, <span class="c-type">double</span> t) : megawattsOutput(mw), coreTemp(t) {}
 };
 
-/* 2. PROCESS VIEW: Concurrency &amp; Worker Threads */
-class TelemetryWorker {
-public:
-    void streamTelemetry(PowerTelemetry data) {
-        std::thread backgroundWorker([data]() {
-            std::cout &lt;&lt; "  [PROCESS VIEW] Worker Thread ID " &lt;&lt; std::this_thread::get_id() 
-                      &lt;&lt; " streaming output: " &lt;&lt; data.megawattsOutput &lt;&lt; " MW" &lt;&lt; std::endl;
+<span class="c-comment">/* 2. PROCESS VIEW: Concurrency &amp; Worker Threads */</span>
+<span class="c-keyword">class</span> <span class="c-type">TelemetryWorker</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> streamTelemetry(<span class="c-type">PowerTelemetry</span> data) {
+        <span class="c-type">std::thread</span> backgroundWorker([data]() {
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [PROCESS VIEW] Worker Thread ID "</span> &lt;&lt; std::this_thread::get_id() 
+                      &lt;&lt; <span class="c-string">" streaming output: "</span> &lt;&lt; data.megawattsOutput &lt;&lt; <span class="c-string">" MW"</span> &lt;&lt; <span class="c-type">std::endl</span>;
         });
         backgroundWorker.join();
     }
 };
 
-/* 3. DEPLOYMENT VIEW: Physical Infrastructure Node */
-class SCADANetworkNode {
-private:
-    std::string ipAddress;
-    int port;
-public:
-    SCADANetworkNode(std::string ip, int p) : ipAddress(ip), port(p) {}
+<span class="c-comment">/* 3. DEPLOYMENT VIEW: Physical Infrastructure Node */</span>
+<span class="c-keyword">class</span> <span class="c-type">SCADANetworkNode</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::string</span> ipAddress;
+    <span class="c-type">int</span> port;
+<span class="c-keyword">public</span>:
+    <span class="c-type">SCADANetworkNode</span>(<span class="c-type">std::string</span> ip, <span class="c-type">int</span> p) : ipAddress(ip), port(p) {}
 
-    void sendPacket(const PowerTelemetry&amp; data) {
-        std::cout &lt;&lt; "[DEPLOYMENT VIEW] Packet transmitted to Node [" 
-                  &lt;&lt; ipAddress &lt;&lt; ":" &lt;&lt; port &lt;&lt; "] over TCP/IP protocol." &lt;&lt; std::endl;
+    <span class="c-type">void</span> sendPacket(<span class="c-keyword">const</span> <span class="c-type">PowerTelemetry</span>&amp; data) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[DEPLOYMENT VIEW] Packet transmitted to Node ["</span> 
+                  &lt;&lt; ipAddress &lt;&lt; <span class="c-string">":"</span> &lt;&lt; port &lt;&lt; <span class="c-string">"] over TCP/IP protocol."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    PowerTelemetry status(1200.5, 310.2); // Logical
-    TelemetryWorker worker;               // Process
-    SCADANetworkNode controlTower("192.168.1.50", 8080); // Deployment
+<span class="c-type">int</span> main() {
+    <span class="c-type">PowerTelemetry</span> status(<span class="c-number">1200.5</span>, <span class="c-number">310.2</span>); <span class="c-comment">// Logical</span>
+    <span class="c-type">TelemetryWorker</span> worker;               <span class="c-comment">// Process</span>
+    <span class="c-type">SCADANetworkNode</span> controlTower(<span class="c-string">"192.168.1.50"</span>, <span class="c-number">8080</span>); <span class="c-comment">// Deployment</span>
 
     worker.streamTelemetry(status);
     controlTower.sendPacket(status);
-    return 0;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -7107,43 +7107,43 @@ int main() {
     <span class="code-lang">C++ (Component Packaging with Facade & PIMPL Idiom)</span>
     <span class="code-desc">Implementing an autonomous, replaceable component hiding internal complexity behind an export facade</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;memory&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;memory&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-/* COMPONENT BOUNDARY: EncryptedPaymentComponent */
+<span class="c-comment">/* COMPONENT BOUNDARY: EncryptedPaymentComponent */</span>
 
-// Internal implementation hidden from external consumers
-class PaymentEngineInternal {
-public:
-    bool executeCardDeduction(std::string card, double amount) {
-        std::cout &lt;&lt; "  [COMPONENT INTERNAL] RSA-2048 encryption applied to card " &lt;&lt; card &lt;&lt; std::endl;
-        std::cout &lt;&lt; "  [COMPONENT INTERNAL] Bank ISO-8583 message transmitted: ₹" &lt;&lt; amount &lt;&lt; std::endl;
-        return true;
+<span class="c-comment">// Internal implementation hidden from external consumers</span>
+<span class="c-keyword">class</span> <span class="c-type">PaymentEngineInternal</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">bool</span> executeCardDeduction(<span class="c-type">std::string</span> card, <span class="c-type">double</span> amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [COMPONENT INTERNAL] RSA-2048 encryption applied to card "</span> &lt;&lt; card &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [COMPONENT INTERNAL] Bank ISO-8583 message transmitted: ₹"</span> &lt;&lt; amount &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> <span class="c-keyword">true</span>;
     }
 };
 
-// Exported Public Component Facade
-class PaymentComponent {
-private:
-    std::unique_ptr&lt;PaymentEngineInternal&gt; pimpl; // Pointer to Implementation
+<span class="c-comment">// Exported Public Component Facade</span>
+<span class="c-keyword">class</span> <span class="c-type">PaymentComponent</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::unique_ptr</span>&lt;<span class="c-type">PaymentEngineInternal</span>&gt; pimpl; <span class="c-comment">// Pointer to Implementation</span>
 
-public:
-    PaymentComponent() : pimpl(std::make_unique&lt;PaymentEngineInternal&gt;()) {}
+<span class="c-keyword">public</span>:
+    <span class="c-type">PaymentComponent</span>() : pimpl(<span class="c-type">std::make_unique</span>&lt;<span class="c-type">PaymentEngineInternal</span>&gt;()) {}
 
-    // Public Component API Port
-    bool pay(std::string cardNumber, double amount) {
-        std::cout &lt;&lt; "[COMPONENT FACADE] Received payment request at component port." &lt;&lt; std::endl;
-        return pimpl-&gt;executeCardDeduction(cardNumber, amount);
+    <span class="c-comment">// Public Component API Port</span>
+    <span class="c-type">bool</span> pay(<span class="c-type">std::string</span> cardNumber, <span class="c-type">double</span> amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[COMPONENT FACADE] Received payment request at component port."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">return</span> pimpl-&gt;executeCardDeduction(cardNumber, amount);
     }
 };
 
-int main() {
-    // Client application utilizes the component as a black-box
-    PaymentComponent paymentModule;
-    bool status = paymentModule.pay("4532-XXXX-XXXX-9012", 2499.0);
-    std::cout &lt;&lt; "Component Payment Status: " &lt;&lt; (status ? "SUCCESS" : "FAILURE") &lt;&lt; std::endl;
-    return 0;
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// Client application utilizes the component as a black-box</span>
+    <span class="c-type">PaymentComponent</span> paymentModule;
+    <span class="c-type">bool</span> status = paymentModule.pay(<span class="c-string">"4532-XXXX-XXXX-9012"</span>, <span class="c-number">2499.0</span>);
+    <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"Component Payment Status: "</span> &lt;&lt; (status ? <span class="c-string">"SUCCESS"</span> : <span class="c-string">"FAILURE"</span>) &lt;&lt; <span class="c-type">std::endl</span>;
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -7261,53 +7261,53 @@ int main() {
     <span class="code-lang">C++ (Provided vs Required Interfaces & Dependency Injection)</span>
     <span class="code-desc">Demonstrating pure virtual interfaces realizing loose coupling and dependency injection</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;memory&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;memory&gt;</span>
 
 /* 
- * PROVIDED INTERFACE (Lollipop 'O-'): ILogger
+ * PROVIDED INTERFACE (<span class="c-type">Lollipop</span> 'O-'): <span class="c-type">ILogger</span>
  * A contract defining operations without implementation.
  */
-class ILogger {
-public:
-    virtual ~ILogger() = default;
-    virtual void log(const std::string&amp; message) = 0; // Pure virtual method
+<span class="c-keyword">class</span> <span class="c-type">ILogger</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-keyword">virtual</span> ~<span class="c-type">ILogger</span>() = <span class="c-keyword">default</span>;
+    <span class="c-keyword">virtual</span> <span class="c-type">void</span> log(<span class="c-keyword">const</span> <span class="c-type">std::string</span>&amp; message) = <span class="c-number">0</span>; <span class="c-comment">// Pure virtual method</span>
 };
 
-/* Realization: Component A provides the interface */
-class CloudLogger : public ILogger {
-public:
-    void log(const std::string&amp; message) override {
-        std::cout &lt;&lt; "  [Provided Interface Realization] CloudLogger sending log: " &lt;&lt; message &lt;&lt; std::endl;
+<span class="c-comment">/* Realization: Component A provides the interface */</span>
+<span class="c-keyword">class</span> <span class="c-type">CloudLogger</span> : <span class="c-keyword">public</span> <span class="c-type">ILogger</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> log(<span class="c-keyword">const</span> <span class="c-type">std::string</span>&amp; message) <span class="c-keyword">override</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [Provided Interface Realization] CloudLogger sending log: "</span> &lt;&lt; message &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
 /* 
- * REQUIRED INTERFACE (Socket ')-('):
- * UserService requires any ILogger implementation via its port.
+ * REQUIRED INTERFACE (<span class="c-type">Socket</span> ')-('):
+ * <span class="c-type">UserService</span> requires any <span class="c-type">ILogger</span> implementation via its port.
  */
-class UserService {
-private:
-    std::shared_ptr&lt;ILogger&gt; loggerPort; // Required Interface dependency
+<span class="c-keyword">class</span> <span class="c-type">UserService</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::shared_ptr</span>&lt;<span class="c-type">ILogger</span>&gt; loggerPort; <span class="c-comment">// Required Interface dependency</span>
 
-public:
-    // Dependency Injection wiring the Provided interface to Required interface
-    UserService(std::shared_ptr&lt;ILogger&gt; logger) : loggerPort(logger) {}
+<span class="c-keyword">public</span>:
+    <span class="c-comment">// Dependency Injection wiring the Provided interface to Required interface</span>
+    <span class="c-type">UserService</span>(<span class="c-type">std::shared_ptr</span>&lt;<span class="c-type">ILogger</span>&gt; logger) : loggerPort(logger) {}
 
-    void registerUser(std::string username) {
-        std::cout &lt;&lt; "UserService: Registering " &lt;&lt; username &lt;&lt; "..." &lt;&lt; std::endl;
-        loggerPort-&gt;log("User " + username + " successfully enrolled in system.");
+    <span class="c-type">void</span> registerUser(<span class="c-type">std::string</span> username) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"UserService: Registering "</span> &lt;&lt; username &lt;&lt; <span class="c-string">"..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        loggerPort-&gt;log(<span class="c-string">"User "</span> + username + <span class="c-string">" successfully enrolled in system."</span>);
     }
 };
 
-int main() {
-    // Wiring the assembly connector at runtime
-    auto cloudLog = std::make_shared&lt;CloudLogger&gt;();
-    UserService service(cloudLog);
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// Wiring the assembly connector at runtime</span>
+    <span class="c-keyword">auto</span> cloudLog = <span class="c-type">std::make_shared</span>&lt;<span class="c-type">CloudLogger</span>&gt;();
+    <span class="c-type">UserService</span> service(cloudLog);
 
-    service.registerUser("shubham_upes");
-    return 0;
+    service.registerUser(<span class="c-string">"shubham_upes"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -7431,52 +7431,52 @@ int main() {
     <span class="code-lang">C++ (Component Assembly Connectors & Wiring Ports)</span>
     <span class="code-desc">Wiring decoupled components together using port delegates and assembly connectors</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-#include &lt;memory&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;memory&gt;</span>
 
-// Port Interface 1: Audio Signal
-class IAudioOutputPort {
-public:
-    virtual ~IAudioOutputPort() = default;
-    virtual void transmitAudio(std::string audioStream) = 0;
+<span class="c-comment">// Port Interface 1: Audio Signal</span>
+<span class="c-keyword">class</span> <span class="c-type">IAudioOutputPort</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-keyword">virtual</span> ~<span class="c-type">IAudioOutputPort</span>() = <span class="c-keyword">default</span>;
+    <span class="c-keyword">virtual</span> <span class="c-type">void</span> transmitAudio(<span class="c-type">std::string</span> audioStream) = <span class="c-number">0</span>;
 };
 
-// Component 1: Media Player (Provides AudioOutputPort)
-class MediaPlayerComponent : public IAudioOutputPort {
-public:
-    void transmitAudio(std::string audioStream) override {
-        std::cout &lt;&lt; "  [MediaPlayer Port] Transmitting audio stream: " &lt;&lt; audioStream &lt;&lt; std::endl;
+<span class="c-comment">// Component 1: Media Player (Provides AudioOutputPort)</span>
+<span class="c-keyword">class</span> <span class="c-type">MediaPlayerComponent</span> : <span class="c-keyword">public</span> <span class="c-type">IAudioOutputPort</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> transmitAudio(<span class="c-type">std::string</span> audioStream) <span class="c-keyword">override</span> {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  [MediaPlayer Port] Transmitting audio stream: "</span> &lt;&lt; audioStream &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-// Component 2: Sound Amplifier (Requires AudioOutputPort via Assembly Connector)
-class AmplifierComponent {
-private:
-    IAudioOutputPort* inputConnector; // Assembly connector hook
+<span class="c-comment">// Component 2: Sound Amplifier (Requires AudioOutputPort via Assembly Connector)</span>
+<span class="c-keyword">class</span> <span class="c-type">AmplifierComponent</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">IAudioOutputPort</span>* inputConnector; <span class="c-comment">// Assembly connector hook</span>
 
-public:
-    void connectAudioSource(IAudioOutputPort* source) {
-        inputConnector = source; // Wiring the assembly connector
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> connectAudioSource(<span class="c-type">IAudioOutputPort</span>* source) {
+        inputConnector = source; <span class="c-comment">// Wiring the assembly connector</span>
     }
 
-    void amplifyAndPlay(std::string track) {
-        std::cout &lt;&lt; "[Amplifier Component] Processing signal through equalizer..." &lt;&lt; std::endl;
-        if (inputConnector) {
+    <span class="c-type">void</span> amplifyAndPlay(<span class="c-type">std::string</span> track) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Amplifier Component] Processing signal through equalizer..."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-keyword">if</span> (inputConnector) {
             inputConnector-&gt;transmitAudio(track);
-            std::cout &lt;&lt; "[Amplifier Component] Outputting 100W surround sound to speakers!" &lt;&lt; std::endl;
+            <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[Amplifier Component] Outputting 100W surround sound to speakers!"</span> &lt;&lt; <span class="c-type">std::endl</span>;
         }
     }
 };
 
-int main() {
-    MediaPlayerComponent player;
-    AmplifierComponent amp;
+<span class="c-type">int</span> main() {
+    <span class="c-type">MediaPlayerComponent</span> player;
+    <span class="c-type">AmplifierComponent</span> amp;
 
-    // Assembly Connector: Wiring Component 1 to Component 2
+    <span class="c-comment">// Assembly Connector: Wiring Component 1 to Component 2</span>
     amp.connectAudioSource(&amp;player);
-    amp.amplifyAndPlay("Beethoven Symphony No. 9");
-    return 0;
+    amp.amplifyAndPlay(<span class="c-string">"Beethoven Symphony No. 9"</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
@@ -7644,47 +7644,47 @@ int main() {
     <span class="code-lang">C++ (Deployment Node Client-Server Topology Simulation)</span>
     <span class="code-desc">Demonstrating physical node topology, communication protocol, and artifact execution</span>
   </div>
-  <pre class="code-block"><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
+  <pre class="code-block"><code><span class="c-keyword">#include</span> <span class="c-string">&lt;iostream&gt;</span>
+<span class="c-keyword">#include</span> <span class="c-string">&lt;string&gt;</span>
 
-/* Hardware Node 1: Central Database Cluster Node (Mumbai DataCenter) */
-class CentralServerNode {
-public:
-    void receiveTCPPayload(std::string clientNodeIP, std::string transactionPayload) {
-        std::cout &lt;&lt; "[SERVER NODE: 10.0.1.100 Mumbai] Received packet from " 
-                  &lt;&lt; clientNodeIP &lt;&lt; " over TLS/TCP: " &lt;&lt; transactionPayload &lt;&lt; std::endl;
-        std::cout &lt;&lt; "  -&gt; Transaction committed to Oracle Database Cluster Artifact." &lt;&lt; std::endl;
+<span class="c-comment">/* Hardware Node 1: Central Database Cluster Node (Mumbai DataCenter) */</span>
+<span class="c-keyword">class</span> <span class="c-type">CentralServerNode</span> {
+<span class="c-keyword">public</span>:
+    <span class="c-type">void</span> receiveTCPPayload(<span class="c-type">std::string</span> clientNodeIP, <span class="c-type">std::string</span> transactionPayload) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[SERVER NODE: 10.0.1.100 Mumbai] Received packet from "</span> 
+                  &lt;&lt; clientNodeIP &lt;&lt; <span class="c-string">" over TLS/TCP: "</span> &lt;&lt; transactionPayload &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"  -&gt; Transaction committed to Oracle Database Cluster Artifact."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-/* Hardware Node 2: Remote ATM Kiosk Node (Delhi Branch Device) */
-class ATMKioskDeviceNode {
-private:
-    std::string deviceIP;
-    CentralServerNode* serverLink; // WAN Communication Path: &lt;&lt;TCP/IP&gt;&gt;
+<span class="c-comment">/* Hardware Node 2: Remote ATM Kiosk Node (Delhi Branch Device) */</span>
+<span class="c-keyword">class</span> <span class="c-type">ATMKioskDeviceNode</span> {
+<span class="c-keyword">private</span>:
+    <span class="c-type">std::string</span> deviceIP;
+    <span class="c-type">CentralServerNode</span>* serverLink; <span class="c-comment">// WAN Communication Path: &lt;&lt;TCP/IP&gt;&gt;</span>
 
-public:
-    ATMKioskDeviceNode(std::string ip, CentralServerNode* server) 
+<span class="c-keyword">public</span>:
+    <span class="c-type">ATMKioskDeviceNode</span>(<span class="c-type">std::string</span> ip, <span class="c-type">CentralServerNode</span>* server) 
         : deviceIP(ip), serverLink(server) {}
 
-    // Executing local artifact: atm_client.exe
-    void executeWithdrawal(std::string account, double amount) {
-        std::cout &lt;&lt; "[CLIENT NODE: " &lt;&lt; deviceIP &lt;&lt; " Delhi ATM] User card inserted." &lt;&lt; std::endl;
-        std::string payload = "{acc: '" + account + "', withdraw: " + std::to_string(amount) + "}";
+    <span class="c-comment">// Executing local artifact: atm_client.exe</span>
+    <span class="c-type">void</span> executeWithdrawal(<span class="c-type">std::string</span> account, <span class="c-type">double</span> amount) {
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[CLIENT NODE: "</span> &lt;&lt; deviceIP &lt;&lt; <span class="c-string">" Delhi ATM] User card inserted."</span> &lt;&lt; <span class="c-type">std::endl</span>;
+        <span class="c-type">std::string</span> payload = <span class="c-string">"{acc: '"</span> + account + <span class="c-string">"', withdraw: "</span> + std::to_string(amount) + <span class="c-string">"}"</span>;
         
-        // Transmitting over communication path &lt;&lt;TCP/IP&gt;&gt;
+        <span class="c-comment">// Transmitting over communication path &lt;&lt;TCP/IP&gt;&gt;</span>
         serverLink-&gt;receiveTCPPayload(deviceIP, payload);
-        std::cout &lt;&lt; "[CLIENT NODE: " &lt;&lt; deviceIP &lt;&lt; "] Cash dispensed physically to user." &lt;&lt; std::endl;
+        <span class="c-type">std::cout</span> &lt;&lt; <span class="c-string">"[CLIENT NODE: "</span> &lt;&lt; deviceIP &lt;&lt; <span class="c-string">"] Cash dispensed physically to user."</span> &lt;&lt; <span class="c-type">std::endl</span>;
     }
 };
 
-int main() {
-    // Deploying software artifacts to physical execution nodes
-    CentralServerNode mumbaiDatacenter;
-    ATMKioskDeviceNode delhiKiosk("172.16.42.10", &amp;mumbaiDatacenter);
+<span class="c-type">int</span> main() {
+    <span class="c-comment">// Deploying software artifacts to physical execution nodes</span>
+    <span class="c-type">CentralServerNode</span> mumbaiDatacenter;
+    <span class="c-type">ATMKioskDeviceNode</span> delhiKiosk(<span class="c-string">"172.16.42.10"</span>, &amp;mumbaiDatacenter);
 
-    delhiKiosk.executeWithdrawal("ACC-904128", 5000.0);
-    return 0;
+    delhiKiosk.executeWithdrawal(<span class="c-string">"ACC-904128"</span>, <span class="c-number">5000.0</span>);
+    <span class="c-keyword">return</span> <span class="c-number">0</span>;
 }</code></pre>
 </div>
 
