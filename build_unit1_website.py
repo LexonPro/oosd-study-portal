@@ -102,7 +102,7 @@ html_template = f"""<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>OOSD — UNIT 1: Complete Master Study Guide (All 23 Topics)</title>
   <meta name="description" content="Comprehensive interactive study portal covering all 23 topics of Object Oriented System Design Unit 1 (Object Concepts, Object Identity, Encapsulation, Polymorphism, Generosity, Modelling Principles, OMT Models, UML Conceptual Model & Architecture) with real-life analogies, commented code examples, and vector diagrams.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -298,7 +298,7 @@ html_template = f"""<!DOCTYPE html>
     <button id="float-next" class="float-btn" title="Next Topic">❯</button>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=2.0"></script>
 </body>
 </html>
 """
