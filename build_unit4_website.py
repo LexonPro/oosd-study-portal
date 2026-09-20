@@ -48,7 +48,6 @@ for p in parts_meta:
         <a href="#{s['id']}" class="nav-item" data-id="{s['id']}" id="nav-{s['id']}">
           <span class="nav-num">{s['number']:02d}</span>
           <span class="nav-text">{s['title']}</span>
-          <span class="check-indicator" id="chk-nav-{s['id']}"></span>
         </a>
         """)
     sidebar_items_html.append("""
@@ -71,13 +70,6 @@ for idx, s in enumerate(all_sections):
     <section id="{s['id']}" class="topic-section" data-num="{s['number']}">
       <div class="section-meta">
         <span class="part-pill">{s['part']}</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('{s['id']}', this)" data-id="{s['id']}">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -113,11 +105,6 @@ html_template = f"""<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body id="top" data-unit="unit4">
-
-  <!-- Top Global Progress Bar -->
-  <div id="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
 
   <!-- Mobile Header & Toggle -->
   <header class="mobile-nav-header">
@@ -177,25 +164,19 @@ html_template = f"""<!DOCTYPE html>
           <input type="text" id="sidebar-search" placeholder="Search 20 topics (e.g. inline, virtual, memory)..." autocomplete="off">
           <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
         </div>
-
         <div class="sidebar-stats">
           <div class="stat-item">
             <span class="stat-val" id="current-sec-indicator">01 / 20</span>
             <span class="stat-lbl">Active Topic</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="progress-percent">0%</span>
-            <span class="stat-lbl">Read Progress</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-val" id="completed-count">0/20</span>
-            <span class="stat-lbl">Studied</span>
+            <span class="stat-val">20</span>
+            <span class="stat-lbl">Total Topics</span>
           </div>
         </div>
 
         <div class="sidebar-controls-row">
           <button id="expand-all-btn" class="mini-btn" title="Expand/Collapse All Parts">Toggle All</button>
-          <button id="reset-progress-btn" class="mini-btn" title="Reset checkmarks">Reset Checks</button>
         </div>
       </div>
 

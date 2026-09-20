@@ -84,15 +84,6 @@ def get_part5_sections():
     <strong>Scoring Guide:</strong> Cite the two source categories: (1) Models representing business processes (Interaction & Activity); (2) Models representing changes in underlying data (Behavioral State Machines).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Behavioral Modeling = Dynamic execution, triggers, message passing, states.</li>
-    <li>Covers Analysis (Use cases), Design (Sequences), and Implementation (State machines & threads).</li>
-    <li>2 Categories: Business process / Interaction vs. Data lifecycle / State machines.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -208,16 +199,6 @@ def get_part5_sections():
     <strong>Crucial Direction Alert:</strong> <code>&lt;&lt;include&gt;&gt;</code> points from Base to Included (Base needs the subroutine). <code>&lt;&lt;extend&gt;&gt;</code> points from Extension to Base (The extension hooks into the base). Getting arrow directions backwards loses 5 marks!
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Use case = Goal-oriented sequence yielding observable value to an actor.</li>
-    <li>Actor = External entity interacting with system (human, device, external service).</li>
-    <li><code>&lt;&lt;include&gt;&gt;</code> = Mandatory shared routine (Base &rarr; Included).</li>
-    <li><code>&lt;&lt;extend&gt;&gt;</code> = Optional hook (Extension &rarr; Base).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -331,15 +312,6 @@ def get_part5_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Always draw the rectangular <strong>System Boundary Box</strong>! Placing use cases inside without a bounding box signals an incomplete UML model to university evaluators.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Components: Actors (Outside), Use Cases (Inside), System Boundary (Box), Associations (Lines).</li>
-    <li>Utility: Requirement scoping, test-case generation, forward/reverse engineering.</li>
-    <li>Actors can be humans, external hardware sensors, or third-party web services.</li>
-  </ul>
 </div>
 """
         },
@@ -465,17 +437,6 @@ def get_part5_sections():
     <strong>Full Marks Strategy:</strong> The diagram above contains all required elements: Start node, Actions, Fork (concurrency), Join (synchronization), Swimlanes (responsibility columns), and Final bullseye state.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Activity Diagram = Flow of control and computation across steps.</li>
-    <li>Initial state = <code>●</code> | Final state = <code>◉</code>.</li>
-    <li>Fork bar = 1 flow splits into parallel flows.</li>
-    <li>Join bar = Parallel flows synchronize back into 1 flow.</li>
-    <li>Swimlanes = Group activities by role/department.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -578,16 +539,6 @@ def get_part5_sections():
   <div class="tip-box">
     <strong>Key Tip:</strong> Label transitions with the complete standard syntax: <code>Event [Guard] / Action</code>. Ensure your diagram includes the return transition (hanging up returns phone to <code>Idle</code>).
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>State Machine = Models lifecycle states of a single reactive object.</li>
-    <li>State = Rounded rectangle | Initial = <code>●</code> | Final = <code>◉</code>.</li>
-    <li>Transition syntax: <code>trigger [guard] / action</code>.</li>
-    <li>State actions: <code>entry /</code>, <code>exit /</code>, <code>do /</code>.</li>
-  </ul>
 </div>
 """
         },
@@ -715,15 +666,6 @@ def get_part5_sections():
     <strong>Exam Must-Draw:</strong> Draw the active class rectangle with <strong>double vertical border lines</strong> on the left and right edges! Explain that active objects own their own thread of control.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Process = Heavyweight, isolated memory space, owns resources.</li>
-    <li>Thread = Lightweight execution unit inside a process, shares heap.</li>
-    <li>Active Object = Box with double vertical border lines (runs its own thread).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -820,15 +762,6 @@ def get_part5_sections():
   <div class="tip-box">
     <strong>Key Scoring Formula:</strong> Write down all 4 types with exact syntax: Call event <code>op()</code>, Signal event <code>SignalName</code>, Time event <code>after(...)</code>, and Change event <code>when(...)</code>.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Event = Occurrence in time triggering a transition.</li>
-    <li>Signal = Asynchronous package of data sent between objects.</li>
-    <li>4 Types: Call, Signal, Time (<code>after</code>), Change (<code>when</code>).</li>
-  </ul>
 </div>
 """
         },
@@ -932,15 +865,6 @@ def get_part5_sections():
     <strong>Exam Distinction:</strong> Contrast Time Diagrams with Sequence Diagrams: Sequence diagrams show chronological message order without scale; Time diagrams map exact state transitions against calibrated physical time.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Time Diagram = Visualizes exact object state changes along a time axis.</li>
-    <li>Includes horizontal time scale, state levels, waveforms, and duration constraints.</li>
-    <li>Vital for embedded, real-time, and telecommunication systems.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1026,14 +950,6 @@ def get_part5_sections():
   <div class="tip-box">
     <strong>Scoring Tip:</strong> Mention that Sequence and Communication diagrams are semantically isomorphic, and explicitly list all 4 members of the family.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Interaction diagrams = Model dynamic message passing among objects.</li>
-    <li>4 types: Sequence (Time), Communication (Space/Links), Timing (Duration), Interaction Overview (Hybrid).</li>
-  </ul>
 </div>
 """
         },
@@ -1130,15 +1046,6 @@ def get_part5_sections():
   <div class="tip-box">
     <strong>Exam Blueprint:</strong> Draw the classic <strong>tabbed folder symbol</strong>. Mention that packages control namespace visibility and structure multi-tier architectures without cyclic dependencies.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Package = Tabbed folder icon for grouping elements into namespaces.</li>
-    <li>Relationships: <code>&lt;&lt;import&gt;&gt;</code> (public), <code>&lt;&lt;access&gt;&gt;</code> (private), <code>&lt;&lt;merge&gt;&gt;</code>.</li>
-    <li>Uses: Layered enterprise architecture, managing complexity, modularity.</li>
-  </ul>
 </div>
 """
         }

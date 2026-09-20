@@ -172,16 +172,6 @@ def get_unit3_part3_sections():
     <strong>Key Scoring Points:</strong> Cite the Law of Demeter (talk only to your immediate friends, never invoke methods on objects returned by another method). Explain the paperboy/wallet example. List High Cohesion, Low Coupling, and Small Focused Methods.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Good OO Style = High Cohesion, Low Coupling, Small Focused Methods.</li>
-    <li><strong>Law of Demeter:</strong> Talk only to your immediate friends; avoid <code>a.getB().getC().doD()</code>.</li>
-    <li>Methods should do one thing well and be under 20-30 lines.</li>
-    <li>Classes should represent clean, singular abstractions without god-object bloat.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -371,16 +361,6 @@ def get_unit3_part3_sections():
     <strong>Key Scoring Points:</strong> Memorize Rumbaugh's rules: <em>Keep methods coherent, small, consistent; separate policy from implementation; provide uniform coverage; avoid global state and modes</em>. Differentiate Code Reuse from Design Reuse, and state the GoF principle: <em>Favor object composition over inheritance</em>.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Code Reuse:</strong> Pre-built libraries/STL; <strong>Design Reuse:</strong> Design patterns/frameworks.</li>
-    <li><strong>Composition over Inheritance:</strong> Assembling swappable components prevents hierarchy explosion.</li>
-    <li><strong>Framework vs Library:</strong> Library is called by your code; Framework calls your code (IoC).</li>
-    <li>8 Rules: Keep methods small, coherent, consistent, and avoid global state/modes.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -554,16 +534,6 @@ def get_unit3_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Define extensibility as the ease of adding new capabilities without breaking existing software. Quote the <strong>Open-Closed Principle</strong> word-for-word. Explain how polymorphism enables extensibility by allowing new subclasses to be introduced at runtime.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Extensibility:</strong> System can accept new features without altering existing code.</li>
-    <li><strong>OCP:</strong> Open for extension (new subclasses), closed for modification (core engine).</li>
-    <li>Polymorphism is the engine of extensibility; interfaces hide concrete providers.</li>
-    <li>Hook methods in base classes allow derived plugins to customize execution.</li>
-  </ul>
 </div>
 """
         },
@@ -759,16 +729,6 @@ def get_unit3_part3_sections():
     <strong>Key Scoring Points:</strong> Define a robust method as one that never crashes even on bad inputs. Detail Rumbaugh's rules: <em>Protect against errors, optimize after running, validate external arguments, avoid predefined fixed limits, instrument for debugging</em>. Mention exception handling and assertions.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Robustness:</strong> System remains functional and stable despite erroneous inputs or faults.</li>
-    <li>Never sacrifice robustness against user errors for micro-optimizations.</li>
-    <li>Validate external arguments rigorously; enforce class invariants with assertions.</li>
-    <li>Avoid fixed-size buffers; use dynamic memory (RAII vectors/strings).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -934,16 +894,6 @@ def get_unit3_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Distinguish Programming in the Large (multi-team, large scale) from Programming in the Small (single developer, algorithms). List key solutions: <strong>Packages/Modules</strong>, <strong>Namespaces</strong> to prevent collision, <strong>Acyclic Dependency Principle</strong>, and <strong>Interface Contracts</strong>.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Programming in the Large:</strong> Managing massive systems built by teams over years.</li>
-    <li>Focus shifts from writing algorithms to managing architecture, packages, and dependencies.</li>
-    <li>Namespaces prevent symbol collisions across independent teams.</li>
-    <li>Subsystems must depend strictly on abstract API interfaces, never concrete classes.</li>
-  </ul>
 </div>
 """
         },
@@ -1164,16 +1114,6 @@ def get_unit3_part3_sections():
     <strong>Key Scoring Strategy:</strong> Always reproduce the 10-point comparison table above. Highlight the contrast between <strong>Algorithm-Centric (Top-down)</strong> and <strong>Data-Centric (Bottom-up)</strong>, and demonstrate how global data leaks in C are resolved via class encapsulation in C++.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>POP:</strong> Algorithm-centric; top-down; data is passive and exposed globally.</li>
-    <li><strong>OOP:</strong> Data-centric; bottom-up; data is bundled with methods and hidden.</li>
-    <li>OOP provides high security, high reuse (inheritance/polymorphism), and easy maintenance.</li>
-    <li>POP is preferred for OS kernels and drivers; OOP is preferred for large-scale enterprise systems.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1387,16 +1327,6 @@ def get_unit3_part3_sections():
     <strong>Key Scoring Points:</strong> Describe Encapsulation, Polymorphism (compile-time vs runtime), Inheritance, and Dynamic Binding. Reproduce the <strong>C++ vs Java comparison table</strong> (platform independence, compiled vs interpreted/bytecode, manual vs garbage-collected memory, multiple inheritance).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Dynamic Binding:</strong> Method address is resolved at runtime via the <code>vtable</code>.</li>
-    <li>Polymorphism enables one interface to control multiple underlying behaviors.</li>
-    <li>C++ uses manual/RAII memory; Java uses automatic Garbage Collection.</li>
-    <li>C++ is compiled to native machine code; Java compiles to bytecode on the JVM.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1547,16 +1477,6 @@ def get_unit3_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> State Rumbaugh's exact definition: <em>"Abstraction is the selective examination of certain aspects of a problem, isolating essential features and suppressing unimportant ones."</em> Differentiate Data Abstraction (ADTs like Stack/Queue) from Process Abstraction. Give the car driving analogy.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Abstraction:</strong> Expose essential behavior; suppress accidental complexity.</li>
-    <li>Always goal-oriented; isolates <em>WHAT</em> a system does from <em>HOW</em> it does it.</li>
-    <li><strong>Data Abstraction:</strong> Abstract Data Types (Stack, Map) hiding physical memory.</li>
-    <li>Implemented in C++ via Abstract Base Classes and Pure Virtual Functions.</li>
-  </ul>
 </div>
 """
         },
@@ -1770,16 +1690,6 @@ def get_unit3_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Always present the 6-point comparison table directly from the AKTU Quantum booklet. Key distinctions: <em>Abstraction is at the design/interface level (what); Encapsulation is at the implementation level (how); Abstraction uses abstract classes/interfaces; Encapsulation uses access modifiers (private/protected)</em>.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Encapsulation:</strong> Bundles data with operations in a single class with information hiding.</li>
-    <li><code>private</code> shields internal state; <code>public</code> exposes validated operations.</li>
-    <li>Protects class invariants against accidental or malicious corruption.</li>
-    <li><strong>Abstraction vs Encapsulation:</strong> Abstraction hides complexity (interfaces); Encapsulation hides data (access specifiers).</li>
-  </ul>
 </div>
 """
         }

@@ -148,18 +148,6 @@ def get_unit4_part3_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the purpose of a function prototype? (Declares signature to compiler before full definition).</li>
-    <li><span class="check-box"></span> What happens to local variables when a function completes execution? (Their stack frame is popped; variables are destroyed).</li>
-    <li><span class="check-box"></span> What does the <code>void</code> return type signify? (Function produces no return value).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> In theory questions asking to explain <em>"Components of a C++ function"</em>, clearly identify and define: 1. Function Prototype, 2. Formal Parameters vs Actual Arguments, 3. Function Body, and 4. Return Statement.
 </div>
@@ -369,18 +357,6 @@ def get_unit4_part3_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the syntax for creating an alias reference to a variable? (<code>int&amp; ref = var;</code>).</li>
-    <li><span class="check-box"></span> Why is it dangerous to return a reference to a local stack variable? (Becomes a dangling reference after stack frame deallocation).</li>
-    <li><span class="check-box"></span> How does return-by-reference allow a function call to appear on the Left-Hand Side (LHS) of an assignment? (Returns an lvalue).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Explain Call by Reference and Return by Reference with examples"</em>, provide the <code>swapValues(int&amp;, int&amp;)</code> function for call by reference, and demonstrate <code>getElement(i) = value;</code> for return by reference. Explicitly state the warning regarding local variable destruction.
 </div>
@@ -532,18 +508,6 @@ def get_unit4_part3_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the primary purpose of declaring a function as <code>inline</code>? (Eliminate function call overhead for small routines).</li>
-    <li><span class="check-box"></span> Are member functions defined inside the class body inline by default? (Yes, implicitly inline).</li>
-    <li><span class="check-box"></span> State at least 3 conditions where the C++ compiler will reject inline expansion. (Loops, recursion, static variables).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -736,18 +700,6 @@ def get_unit4_part3_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> In which translation phase are macros evaluated versus inline functions? (Preprocessor vs Compiler).</li>
-    <li><span class="check-box"></span> Explain the double-evaluation bug when <code>SQUARE(x++)</code> is passed to a macro.</li>
-    <li><span class="check-box"></span> Name at least 4 critical advantages of inline functions over preprocessor macros.</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

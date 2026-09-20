@@ -12,11 +12,6 @@
 </head>
 <body id="top" data-unit="unit3">
 
-  <!-- Top Global Progress Bar -->
-  <div id="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-
   <!-- Mobile Header & Toggle -->
   <header class="mobile-nav-header">
     <button id="sidebar-toggle" aria-label="Toggle Slidebar Navigation" class="icon-btn">
@@ -75,25 +70,19 @@
           <input type="text" id="sidebar-search" placeholder="Search 28 topics (e.g. SA/SD, JSD, vtable)..." autocomplete="off">
           <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
         </div>
-
         <div class="sidebar-stats">
           <div class="stat-item">
             <span class="stat-val" id="current-sec-indicator">01 / 28</span>
             <span class="stat-lbl">Active Topic</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="progress-percent">0%</span>
-            <span class="stat-lbl">Read Progress</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-val" id="completed-count">0/28</span>
-            <span class="stat-lbl">Studied</span>
+            <span class="stat-val">28</span>
+            <span class="stat-lbl">Total Topics</span>
           </div>
         </div>
 
         <div class="sidebar-controls-row">
           <button id="expand-all-btn" class="mini-btn" title="Expand/Collapse All Parts">Toggle All</button>
-          <button id="reset-progress-btn" class="mini-btn" title="Reset checkmarks">Reset Checks</button>
         </div>
       </div>
 
@@ -117,77 +106,66 @@
         <a href="#u3-sec-1" class="nav-item" data-id="u3-sec-1" id="nav-u3-sec-1">
           <span class="nav-num">01</span>
           <span class="nav-text">Object-Oriented Analysis (OOA)</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-1"></span>
         </a>
         
 
         <a href="#u3-sec-2" class="nav-item" data-id="u3-sec-2" id="nav-u3-sec-2">
           <span class="nav-num">02</span>
           <span class="nav-text">Object-Oriented Design (OOD)</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-2"></span>
         </a>
         
 
         <a href="#u3-sec-3" class="nav-item" data-id="u3-sec-3" id="nav-u3-sec-3">
           <span class="nav-num">03</span>
           <span class="nav-text">Object Design</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-3"></span>
         </a>
         
 
         <a href="#u3-sec-4" class="nav-item" data-id="u3-sec-4" id="nav-u3-sec-4">
           <span class="nav-num">04</span>
           <span class="nav-text">Combining Three Models</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-4"></span>
         </a>
         
 
         <a href="#u3-sec-5" class="nav-item" data-id="u3-sec-5" id="nav-u3-sec-5">
           <span class="nav-num">05</span>
           <span class="nav-text">Designing Algorithms</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-5"></span>
         </a>
         
 
         <a href="#u3-sec-6" class="nav-item" data-id="u3-sec-6" id="nav-u3-sec-6">
           <span class="nav-num">06</span>
           <span class="nav-text">Design Optimization</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-6"></span>
         </a>
         
 
         <a href="#u3-sec-7" class="nav-item" data-id="u3-sec-7" id="nav-u3-sec-7">
           <span class="nav-num">07</span>
           <span class="nav-text">Implementation of Control</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-7"></span>
         </a>
         
 
         <a href="#u3-sec-8" class="nav-item" data-id="u3-sec-8" id="nav-u3-sec-8">
           <span class="nav-num">08</span>
           <span class="nav-text">Adjustment of Inheritance</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-8"></span>
         </a>
         
 
         <a href="#u3-sec-9" class="nav-item" data-id="u3-sec-9" id="nav-u3-sec-9">
           <span class="nav-num">09</span>
           <span class="nav-text">Object Representation</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-9"></span>
         </a>
         
 
         <a href="#u3-sec-10" class="nav-item" data-id="u3-sec-10" id="nav-u3-sec-10">
           <span class="nav-num">10</span>
           <span class="nav-text">Physical Packaging</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-10"></span>
         </a>
         
 
         <a href="#u3-sec-11" class="nav-item" data-id="u3-sec-11" id="nav-u3-sec-11">
           <span class="nav-num">11</span>
           <span class="nav-text">Documenting Design Considerations</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-11"></span>
         </a>
         
 
@@ -212,56 +190,48 @@
         <a href="#u3-sec-12" class="nav-item" data-id="u3-sec-12" id="nav-u3-sec-12">
           <span class="nav-num">12</span>
           <span class="nav-text">Structured Analysis & Structured Design (SA/SD)</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-12"></span>
         </a>
         
 
         <a href="#u3-sec-13" class="nav-item" data-id="u3-sec-13" id="nav-u3-sec-13">
           <span class="nav-num">13</span>
           <span class="nav-text">Jackson Structured Development (JSD)</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-13"></span>
         </a>
         
 
         <a href="#u3-sec-14" class="nav-item" data-id="u3-sec-14" id="nav-u3-sec-14">
           <span class="nav-num">14</span>
           <span class="nav-text">Mapping OO Concepts to Non-OO Languages</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-14"></span>
         </a>
         
 
         <a href="#u3-sec-15" class="nav-item" data-id="u3-sec-15" id="nav-u3-sec-15">
           <span class="nav-num">15</span>
           <span class="nav-text">Translating Classes into Data Structures</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-15"></span>
         </a>
         
 
         <a href="#u3-sec-16" class="nav-item" data-id="u3-sec-16" id="nav-u3-sec-16">
           <span class="nav-num">16</span>
           <span class="nav-text">Passing Arguments to Methods</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-16"></span>
         </a>
         
 
         <a href="#u3-sec-17" class="nav-item" data-id="u3-sec-17" id="nav-u3-sec-17">
           <span class="nav-num">17</span>
           <span class="nav-text">Implementing Inheritance in Non-OO Languages</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-17"></span>
         </a>
         
 
         <a href="#u3-sec-18" class="nav-item" data-id="u3-sec-18" id="nav-u3-sec-18">
           <span class="nav-num">18</span>
           <span class="nav-text">Implementing Associations</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-18"></span>
         </a>
         
 
         <a href="#u3-sec-19" class="nav-item" data-id="u3-sec-19" id="nav-u3-sec-19">
           <span class="nav-num">19</span>
           <span class="nav-text">Implementing Encapsulation in Non-OO Languages</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-19"></span>
         </a>
         
 
@@ -286,63 +256,54 @@
         <a href="#u3-sec-20" class="nav-item" data-id="u3-sec-20" id="nav-u3-sec-20">
           <span class="nav-num">20</span>
           <span class="nav-text">Object-Oriented Programming Style</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-20"></span>
         </a>
         
 
         <a href="#u3-sec-21" class="nav-item" data-id="u3-sec-21" id="nav-u3-sec-21">
           <span class="nav-num">21</span>
           <span class="nav-text">Reusability</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-21"></span>
         </a>
         
 
         <a href="#u3-sec-22" class="nav-item" data-id="u3-sec-22" id="nav-u3-sec-22">
           <span class="nav-num">22</span>
           <span class="nav-text">Extensibility</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-22"></span>
         </a>
         
 
         <a href="#u3-sec-23" class="nav-item" data-id="u3-sec-23" id="nav-u3-sec-23">
           <span class="nav-num">23</span>
           <span class="nav-text">Robustness</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-23"></span>
         </a>
         
 
         <a href="#u3-sec-24" class="nav-item" data-id="u3-sec-24" id="nav-u3-sec-24">
           <span class="nav-num">24</span>
           <span class="nav-text">Programming in the Large</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-24"></span>
         </a>
         
 
         <a href="#u3-sec-25" class="nav-item" data-id="u3-sec-25" id="nav-u3-sec-25">
           <span class="nav-num">25</span>
           <span class="nav-text">Procedural vs Object-Oriented Programming</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-25"></span>
         </a>
         
 
         <a href="#u3-sec-26" class="nav-item" data-id="u3-sec-26" id="nav-u3-sec-26">
           <span class="nav-num">26</span>
           <span class="nav-text">Object-Oriented Language Features</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-26"></span>
         </a>
         
 
         <a href="#u3-sec-27" class="nav-item" data-id="u3-sec-27" id="nav-u3-sec-27">
           <span class="nav-num">27</span>
           <span class="nav-text">Abstraction</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-27"></span>
         </a>
         
 
         <a href="#u3-sec-28" class="nav-item" data-id="u3-sec-28" id="nav-u3-sec-28">
           <span class="nav-num">28</span>
           <span class="nav-text">Encapsulation</span>
-          <span class="check-indicator" id="chk-nav-u3-sec-28"></span>
         </a>
         
 
@@ -435,13 +396,6 @@
     <section id="u3-sec-1" class="topic-section" data-num="01">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-1', this)" data-id="u3-sec-1">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -589,15 +543,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>OOA = Focuses on the problem domain ("WHAT"), not technical implementation.</li>
-    <li>Identifies: Objects, Attributes, Operations, Associations, and Use Cases.</li>
-    <li>Produces the conceptual Object Model, Dynamic Model, and Functional Model.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -611,13 +556,6 @@
     <section id="u3-sec-2" class="topic-section" data-num="02">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-2', this)" data-id="u3-sec-2">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -781,15 +719,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>OOD = Translates the conceptual analysis model into technical software architecture ("HOW").</li>
-    <li>Deals with: Data structures, concrete algorithms, thread synchronization, and associations.</li>
-    <li>Bridges the gap between domain rules and raw computer execution.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -803,13 +732,6 @@
     <section id="u3-sec-3" class="topic-section" data-num="03">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-3', this)" data-id="u3-sec-3">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -945,15 +867,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Object Design = Shifting domain entities into detailed computer data structures and algorithms.</li>
-    <li>Trade-offs: Execution time vs. Memory footprint vs. Implementation cost.</li>
-    <li>Chooses internal representation (e.g. Arrays, Trees, Hash Maps).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -967,13 +880,6 @@
     <section id="u3-sec-4" class="topic-section" data-num="04">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-4', this)" data-id="u3-sec-4">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1098,15 +1004,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Object Model = Static identity, classes, relationships (Class Diagram).</li>
-    <li>Dynamic Model = Control, states, events over time (Statechart).</li>
-    <li>Functional Model = Data transformations, computations (DFDs).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1120,13 +1017,6 @@
     <section id="u3-sec-5" class="topic-section" data-num="05">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-5', this)" data-id="u3-sec-5">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1253,15 +1143,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Algorithm design = Choosing concrete logic for abstract class operations.</li>
-    <li>Primary trade-off: Time Complexity vs Space Complexity vs Simplicity.</li>
-    <li>Rule: Optimize for clarity first; profile and optimize for speed where bottlenecks occur.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1275,13 +1156,6 @@
     <section id="u3-sec-6" class="topic-section" data-num="06">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-6', this)" data-id="u3-sec-6">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1402,15 +1276,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Optimization = Restructuring design to satisfy speed, memory, or cost constraints.</li>
-    <li>Key technique: Adding derived/cached attributes to avoid repetitive loops.</li>
-    <li>Trade-off: Extra memory + cache invalidation logic for ultra-fast query execution.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1424,13 +1289,6 @@
     <section id="u3-sec-7" class="topic-section" data-num="07">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-7', this)" data-id="u3-sec-7">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1595,15 +1453,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Implementation of Control = Turning dynamic state machines into running code.</li>
-    <li>State as program location: Embedded in procedural code execution stacks.</li>
-    <li>State engine: Explicit state variable/pattern reacting to event messages.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1617,13 +1466,6 @@
     <section id="u3-sec-8" class="topic-section" data-num="08">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-8', this)" data-id="u3-sec-8">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1751,15 +1593,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Adjustment of Inheritance = Refactoring class hierarchies for optimal reuse.</li>
-    <li>Move common attributes and operations to a newly formed superclass.</li>
-    <li>Unify method signatures to enable polymorphic extension.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1773,13 +1606,6 @@
     <section id="u3-sec-9" class="topic-section" data-num="09">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-9', this)" data-id="u3-sec-9">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1873,15 +1699,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Static Design Model = Class &amp; Object diagrams (Invariants, structure).</li>
-    <li>Dynamic Design Model = Sequence, Collaboration &amp; Statechart diagrams (Execution flow).</li>
-    <li>Together, they form the complete specification for developers.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1895,13 +1712,6 @@
     <section id="u3-sec-10" class="topic-section" data-num="10">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-10', this)" data-id="u3-sec-10">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2018,15 +1828,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Physical Packaging = Grouping classes into modules, namespaces, and libraries.</li>
-    <li>Goals: High cohesion within packages, loose coupling between packages.</li>
-    <li>Enables team collaboration and independent deployment.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2040,13 +1841,6 @@
     <section id="u3-sec-11" class="topic-section" data-num="11">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Analysis & Design</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-11', this)" data-id="u3-sec-11">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2147,15 +1941,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Design Documentation = Captures the 'WHY' behind architectural choices.</li>
-    <li>Prevents future developers from repeating rejected, flawed approaches.</li>
-    <li>Must be kept updated alongside code in version control.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2169,13 +1954,6 @@
     <section id="u3-sec-12" class="topic-section" data-num="12">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-12', this)" data-id="u3-sec-12">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2457,16 +2235,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>SA/SD Core:</strong> Function/Process-centric; system = hierarchy of subroutines.</li>
-    <li><strong>Artifacts:</strong> DFD (flow), Data Dictionary (data definitions), Structure Chart (module call tree).</li>
-    <li><strong>Transform vs Transaction:</strong> Transform = linear input-transform-output; Transaction = menu-driven branch dispatcher.</li>
-    <li><strong>OMT vs SA/SD:</strong> OMT centers on data/objects (high reuse); SA/SD centers on functions (low reuse).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2480,13 +2248,6 @@
     <section id="u3-sec-13" class="topic-section" data-num="13">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-13', this)" data-id="u3-sec-13">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2723,16 +2484,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>JSD Core:</strong> Real-world entities modeled as Communicating Sequential Processes over time.</li>
-    <li><strong>Tree Operators:</strong> Sequence (ordered left-to-right), Selection <code>(o)</code>, Iteration <code>(*)</code>.</li>
-    <li><strong>Communication Channels:</strong> Data Streams (buffered FIFO) &amp; State Vector Inspection (direct memory read).</li>
-    <li><strong>Program Inversion:</strong> Converts long-running concurrent processes into single callable subroutines.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2746,13 +2497,6 @@
     <section id="u3-sec-14" class="topic-section" data-num="14">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-14', this)" data-id="u3-sec-14">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2952,16 +2696,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Classes become C <code>struct</code>s containing contiguous attribute variables.</li>
-    <li>Methods become standalone functions receiving an explicit <code>self*</code> pointer.</li>
-    <li>Encapsulation is achieved by hiding struct internals behind header opaque pointers.</li>
-    <li>Inheritance is modeled via struct embedding; polymorphism via function pointers.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2975,13 +2709,6 @@
     <section id="u3-sec-15" class="topic-section" data-num="15">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-15', this)" data-id="u3-sec-15">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3161,16 +2888,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Classes translate directly into contiguous C <code>struct</code> memory records.</li>
-    <li>Object variables are pointers to allow identity, sharing, and state mutations.</li>
-    <li>3 Storage types: Static (forever), Stack (function lifetime), Heap (dynamic via <code>malloc</code>).</li>
-    <li>Compilers add alignment padding so multi-byte values align with CPU memory boundaries.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3184,13 +2901,6 @@
     <section id="u3-sec-16" class="topic-section" data-num="16">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-16', this)" data-id="u3-sec-16">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3328,16 +3038,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>OO languages pass <code>this</code> implicitly; procedural C must pass <code>self*</code> explicitly.</li>
-    <li><strong>Formal params:</strong> Variable definitions in function header.</li>
-    <li><strong>Actual params:</strong> Concrete values/addresses supplied at call-site.</li>
-    <li>Pass-by-pointer avoids expensive struct copies and allows direct state updates.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3351,13 +3051,6 @@
     <section id="u3-sec-17" class="topic-section" data-num="17">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-17', this)" data-id="u3-sec-17">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3542,16 +3235,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Embedded struct at offset 0 provides seamless, zero-cost pointer upcasting.</li>
-    <li>Flattening duplicates fields across structs; simple but violates DRY.</li>
-    <li>Dynamic polymorphism is simulated via VTables (struct of function pointers).</li>
-    <li>The instance stores a <code>vptr</code> pointing to the class's shared static VTable.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3565,13 +3248,6 @@
     <section id="u3-sec-18" class="topic-section" data-num="18">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-18', this)" data-id="u3-sec-18">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3767,16 +3443,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Buried pointers:</strong> Pointers embedded in structs; fast $O(1)$, but tightly coupled.</li>
-    <li><strong>Distinct objects:</strong> Separate standalone join records; ideal for M:N and link attributes.</li>
-    <li>1:1 uses single pointer; 1:N uses pointer collection + child back-pointer.</li>
-    <li>Link attributes (e.g., grade, hireDate) require distinct association records.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3790,13 +3456,6 @@
     <section id="u3-sec-19" class="topic-section" data-num="19">
       <div class="section-meta">
         <span class="part-pill">Part 2 — SA/SD & Non-OO Implementation</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-19', this)" data-id="u3-sec-19">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3975,16 +3634,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Encapsulation is enforced in C via <strong>Opaque Pointers</strong> (incomplete struct types).</li>
-    <li>Header file declares <code>typedef struct Foo Foo;</code>; fields defined only in <code>.c</code>.</li>
-    <li>Direct field access <code>foo-&gt;bar</code> is blocked at compile-time by the compiler.</li>
-    <li><code>static</code> functions restrict scope to the single file, preventing external linker calls.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3998,13 +3647,6 @@
     <section id="u3-sec-20" class="topic-section" data-num="20">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-20', this)" data-id="u3-sec-20">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4179,16 +3821,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Good OO Style = High Cohesion, Low Coupling, Small Focused Methods.</li>
-    <li><strong>Law of Demeter:</strong> Talk only to your immediate friends; avoid <code>a.getB().getC().doD()</code>.</li>
-    <li>Methods should do one thing well and be under 20-30 lines.</li>
-    <li>Classes should represent clean, singular abstractions without god-object bloat.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4202,13 +3834,6 @@
     <section id="u3-sec-21" class="topic-section" data-num="21">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-21', this)" data-id="u3-sec-21">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4400,16 +4025,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Code Reuse:</strong> Pre-built libraries/STL; <strong>Design Reuse:</strong> Design patterns/frameworks.</li>
-    <li><strong>Composition over Inheritance:</strong> Assembling swappable components prevents hierarchy explosion.</li>
-    <li><strong>Framework vs Library:</strong> Library is called by your code; Framework calls your code (IoC).</li>
-    <li>8 Rules: Keep methods small, coherent, consistent, and avoid global state/modes.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4423,13 +4038,6 @@
     <section id="u3-sec-22" class="topic-section" data-num="22">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-22', this)" data-id="u3-sec-22">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4606,16 +4214,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Extensibility:</strong> System can accept new features without altering existing code.</li>
-    <li><strong>OCP:</strong> Open for extension (new subclasses), closed for modification (core engine).</li>
-    <li>Polymorphism is the engine of extensibility; interfaces hide concrete providers.</li>
-    <li>Hook methods in base classes allow derived plugins to customize execution.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4629,13 +4227,6 @@
     <section id="u3-sec-23" class="topic-section" data-num="23">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-23', this)" data-id="u3-sec-23">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4832,16 +4423,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Robustness:</strong> System remains functional and stable despite erroneous inputs or faults.</li>
-    <li>Never sacrifice robustness against user errors for micro-optimizations.</li>
-    <li>Validate external arguments rigorously; enforce class invariants with assertions.</li>
-    <li>Avoid fixed-size buffers; use dynamic memory (RAII vectors/strings).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4855,13 +4436,6 @@
     <section id="u3-sec-24" class="topic-section" data-num="24">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-24', this)" data-id="u3-sec-24">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5030,16 +4604,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Programming in the Large:</strong> Managing massive systems built by teams over years.</li>
-    <li>Focus shifts from writing algorithms to managing architecture, packages, and dependencies.</li>
-    <li>Namespaces prevent symbol collisions across independent teams.</li>
-    <li>Subsystems must depend strictly on abstract API interfaces, never concrete classes.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5053,13 +4617,6 @@
     <section id="u3-sec-25" class="topic-section" data-num="25">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-25', this)" data-id="u3-sec-25">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5281,16 +4838,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>POP:</strong> Algorithm-centric; top-down; data is passive and exposed globally.</li>
-    <li><strong>OOP:</strong> Data-centric; bottom-up; data is bundled with methods and hidden.</li>
-    <li>OOP provides high security, high reuse (inheritance/polymorphism), and easy maintenance.</li>
-    <li>POP is preferred for OS kernels and drivers; OOP is preferred for large-scale enterprise systems.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5304,13 +4851,6 @@
     <section id="u3-sec-26" class="topic-section" data-num="26">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-26', this)" data-id="u3-sec-26">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5526,16 +5066,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Dynamic Binding:</strong> Method address is resolved at runtime via the <code>vtable</code>.</li>
-    <li>Polymorphism enables one interface to control multiple underlying behaviors.</li>
-    <li>C++ uses manual/RAII memory; Java uses automatic Garbage Collection.</li>
-    <li>C++ is compiled to native machine code; Java compiles to bytecode on the JVM.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5549,13 +5079,6 @@
     <section id="u3-sec-27" class="topic-section" data-num="27">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-27', this)" data-id="u3-sec-27">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5709,16 +5232,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Abstraction:</strong> Expose essential behavior; suppress accidental complexity.</li>
-    <li>Always goal-oriented; isolates <em>WHAT</em> a system does from <em>HOW</em> it does it.</li>
-    <li><strong>Data Abstraction:</strong> Abstract Data Types (Stack, Map) hiding physical memory.</li>
-    <li>Implemented in C++ via Abstract Base Classes and Pure Virtual Functions.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5732,13 +5245,6 @@
     <section id="u3-sec-28" class="topic-section" data-num="28">
       <div class="section-meta">
         <span class="part-pill">Part 3 — OO Methodologies & Principles</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u3-sec-28', this)" data-id="u3-sec-28">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5952,16 +5458,6 @@
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Always present the 6-point comparison table directly from the AKTU Quantum booklet. Key distinctions: <em>Abstraction is at the design/interface level (what); Encapsulation is at the implementation level (how); Abstraction uses abstract classes/interfaces; Encapsulation uses access modifiers (private/protected)</em>.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Encapsulation:</strong> Bundles data with operations in a single class with information hiding.</li>
-    <li><code>private</code> shields internal state; <code>public</code> exposes validated operations.</li>
-    <li>Protects class invariants against accidental or malicious corruption.</li>
-    <li><strong>Abstraction vs Encapsulation:</strong> Abstraction hides complexity (interfaces); Encapsulation hides data (access specifiers).</li>
-  </ul>
 </div>
 
       </div>

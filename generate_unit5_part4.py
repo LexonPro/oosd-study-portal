@@ -197,18 +197,6 @@ Box Vol: 48</pre>
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the literal meaning of Polymorphism? (Many forms: one interface, multiple behaviors).</li>
-    <li><span class="check-box"></span> What are the two types of polymorphism in C++? (Compile-time / Early binding vs Run-time / Late binding).</li>
-    <li><span class="check-box"></span> Which polymorphism type has zero runtime execution overhead? (Compile-time polymorphism).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"What is polymorphism? Differentiate between compile-time and run-time polymorphism with suitable C++ examples."</em> is a regular 10-mark question. Draw Figure 18.1 taxonomy tree, present the comparison table, and provide function overloading and virtual function code snippets.
 </div>
@@ -362,18 +350,6 @@ After *ptr = 250, originalVal is: 250
 --- Dynamic Heap Allocation ---
 Heap integer value: 500</pre>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What does the address-of operator <code>&amp;</code> return? (The memory address of a variable).</li>
-    <li><span class="check-box"></span> What does the dereference operator <code>*</code> do? (Accesses the value stored at the memory address pointed to).</li>
-    <li><span class="check-box"></span> What is a memory leak? (Failing to deallocate heap memory using <code>delete</code>).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -554,18 +530,6 @@ Calling display() via Derived* pointer:
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>(*ptr).func()</code> equivalent to <code>ptr-&gt;func()</code>? (The arrow operator dereferences and accesses in one step).</li>
-    <li><span class="check-box"></span> Can a Base class pointer point to a Derived class object? (Yes, legally and safely).</li>
-    <li><span class="check-box"></span> Without <code>virtual</code>, which function is executed via a Base pointer pointing to a Derived object? (The Base class version, due to static early binding).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"What happens when a base class pointer points to a derived class object? Can it access derived-specific members?"</em> Answer: It can ONLY access members declared in the base class. It cannot access derived-specific members without a cast.
 </div>
@@ -744,18 +708,6 @@ int main() {
 --- Account Summary ---
 Account Owner: Vikram | Final Balance: $2050</pre>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the exact type of <code>this</code> inside a class named <code>Car</code>? (<code>Car* const this</code>).</li>
-    <li><span class="check-box"></span> Can a static member function use the <code>this</code> pointer? (No, static functions have no object context).</li>
-    <li><span class="check-box"></span> How does a function enable method chaining? (By returning <code>*this</code> by reference).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -962,18 +914,6 @@ int main() {
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Can a constructor be declared <code>virtual</code>? (No, memory and vptr do not exist yet).</li>
-    <li><span class="check-box"></span> Why must a base class destructor be declared <code>virtual</code>? (To ensure the derived destructor executes when deleting through a base pointer).</li>
-    <li><span class="check-box"></span> What are <code>vtable</code> and <code>vptr</code>? (vtable is the array of function pointers; vptr is the object's hidden pointer to its class vtable).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain virtual functions, late binding, and the working of vtable and vptr with a diagram."</em> This is the #1 most frequently repeated question in Unit 5. Draw Figure 22.1 and trace how <code>bPtr-&gt;draw()</code> resolves via <code>vptr</code>.
 </div>
@@ -1161,18 +1101,6 @@ int main() {
 [PayPal] Routing $149.99 via secure token for account: checkout@store.com
 [Destructor] PaymentGateway base cleaned up.</pre>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the syntax of a pure virtual function? (<code>virtual void func() = 0;</code>).</li>
-    <li><span class="check-box"></span> Can you instantiate an abstract class? (No, direct instantiation is a compilation error).</li>
-    <li><span class="check-box"></span> Can you create pointers to an abstract class? (Yes, abstract class pointers are essential for polymorphic interfaces).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -1460,18 +1388,6 @@ int main() {
 [Derived Destructor] Closed GCS gRPC channel.
 [Base Destructor] Storage Engine for analytics-lake-gcs shut down.</pre>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How does C++ dispatch a function call when it is declared <code>virtual</code>? (Via the object's <code>vptr</code> indexing into the class <code>vtable</code> at runtime).</li>
-    <li><span class="check-box"></span> Why is compile-time polymorphism faster than run-time polymorphism? (Direct machine instruction CALL vs indirect pointer dereference).</li>
-    <li><span class="check-box"></span> What is the role of virtual destructors in polymorphism? (Guarantees derived destructors run when deleting through base pointers, avoiding memory leaks).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

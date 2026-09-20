@@ -156,18 +156,6 @@ def get_unit4_part2_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What distinguishes an octal literal from a decimal literal in C++? (Leading zero <code>0</code>, e.g. <code>052</code>).</li>
-    <li><span class="check-box"></span> What is the hidden terminating character automatically placed at the end of every string literal? (<code>'\\0'</code> null terminator).</li>
-    <li><span class="check-box"></span> Decode the difference between <code>const int* p</code> and <code>int* const p</code>.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking to explain <em>"Types of constants in C++ with examples"</em> appear regularly in Section B (7 or 10 marks). Ensure you explicitly illustrate decimal, octal, hexadecimal, floating-point, character, string, and const pointer declarations.
 </div>
@@ -324,18 +312,6 @@ def get_unit4_part2_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What integer value is assigned to the first enumerator if not explicitly initialized? (<code>0</code>).</li>
-    <li><span class="check-box"></span> Write the syntax for declaring an enum of the days of the week.</li>
-    <li><span class="check-box"></span> What are the two primary advantages of <code>enum class</code> over classic <code>enum</code>? (Scoped names, no implicit integer conversion).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -573,18 +549,6 @@ def get_unit4_part2_sections():
       <path d="M 220 95 L 300 95" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)"/>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the syntax for deallocating an array allocated with <code>new[]</code>? (<code>delete[] ptr;</code>).</li>
-    <li><span class="check-box"></span> Which header file is required to use <code>setw</code> and <code>setfill</code>? (<code>&lt;iomanip&gt;</code>).</li>
-    <li><span class="check-box"></span> Name at least 3 fundamental advantages of <code>new</code> over <code>malloc()</code>.</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -831,19 +795,6 @@ def get_unit4_part2_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What does <code>dynamic_cast</code> return when pointer downcasting fails? (<code>nullptr</code>).</li>
-    <li><span class="check-box"></span> What prerequisite must a base class satisfy to support <code>dynamic_cast</code>? (Must contain at least one virtual function).</li>
-    <li><span class="check-box"></span> Which cast operator is used exclusively to strip constness? (<code>const_cast</code>).</li>
-    <li><span class="check-box"></span> Which header file is required to invoke the <code>typeid</code> operator? (<code>&lt;typeinfo&gt;</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking <em>"Explain different types of typecasting operators in C++ with examples"</em> appear in almost every semester exam. Always explain <code>static_cast</code>, <code>dynamic_cast</code>, <code>const_cast</code>, <code>reinterpret_cast</code>, and mention <code>typeid</code> with the comparison matrix.
 </div>
@@ -1058,18 +1009,6 @@ def get_unit4_part2_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>while</code> classified as an entry-controlled loop? (Condition checked before body entry).</li>
-    <li><span class="check-box"></span> What happens if a <code>break</code> statement is omitted in a <code>switch</code> case? (Execution falls through into subsequent cases).</li>
-    <li><span class="check-box"></span> What is the minimum number of times a <code>do-while</code> loop executes? (Exactly 1 time).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Differentiate between while and do-while loops with examples"</em>, make sure to write: 1. Condition evaluation point (Entry vs Exit), 2. Minimum iterations (0 vs 1), and 3. Provide the counter = 100 test code snippet demonstrating do-while executing once while while executes zero times.
 </div>
@@ -1238,18 +1177,6 @@ def get_unit4_part2_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why should you avoid calculating $N!$ directly when implementing Taylor series? (Causes 64-bit integer overflow).</li>
-    <li><span class="check-box"></span> Write the recurrence relation for finding the next term of $\\sin(x)$.</li>
-    <li><span class="check-box"></span> Which stream class from <code>&lt;sstream&gt;</code> is ideal for tokenizing a sentence into words? (<code>std::stringstream</code>).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

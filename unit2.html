@@ -12,11 +12,6 @@
 </head>
 <body id="top" data-unit="unit2">
 
-  <!-- Top Global Progress Bar -->
-  <div id="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-
   <!-- Mobile Header & Toggle -->
   <header class="mobile-nav-header">
     <button id="sidebar-toggle" aria-label="Toggle Slidebar Navigation" class="icon-btn">
@@ -75,25 +70,19 @@
           <input type="text" id="sidebar-search" placeholder="Search 36 topics (e.g. sequence, state)..." autocomplete="off">
           <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
         </div>
-
         <div class="sidebar-stats">
           <div class="stat-item">
             <span class="stat-val" id="current-sec-indicator">01 / 36</span>
             <span class="stat-lbl">Active Topic</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="progress-percent">0%</span>
-            <span class="stat-lbl">Read Progress</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-val" id="completed-count">0/36</span>
-            <span class="stat-lbl">Studied</span>
+            <span class="stat-val">36</span>
+            <span class="stat-lbl">Total Topics</span>
           </div>
         </div>
 
         <div class="sidebar-controls-row">
           <button id="expand-all-btn" class="mini-btn" title="Expand/Collapse All Parts">Toggle All</button>
-          <button id="reset-progress-btn" class="mini-btn" title="Reset checkmarks">Reset Checks</button>
         </div>
       </div>
 
@@ -117,42 +106,36 @@
         <a href="#sec-1" class="nav-item" data-id="sec-1" id="nav-sec-1">
           <span class="nav-num">01</span>
           <span class="nav-text">Basic Structural Modeling</span>
-          <span class="check-indicator" id="chk-nav-sec-1"></span>
         </a>
         
 
         <a href="#sec-2" class="nav-item" data-id="sec-2" id="nav-sec-2">
           <span class="nav-num">02</span>
           <span class="nav-text">Types of Modeling</span>
-          <span class="check-indicator" id="chk-nav-sec-2"></span>
         </a>
         
 
         <a href="#sec-3" class="nav-item" data-id="sec-3" id="nav-sec-3">
           <span class="nav-num">03</span>
           <span class="nav-text">Class</span>
-          <span class="check-indicator" id="chk-nav-sec-3"></span>
         </a>
         
 
         <a href="#sec-4" class="nav-item" data-id="sec-4" id="nav-sec-4">
           <span class="nav-num">04</span>
           <span class="nav-text">Relationships</span>
-          <span class="check-indicator" id="chk-nav-sec-4"></span>
         </a>
         
 
         <a href="#sec-5" class="nav-item" data-id="sec-5" id="nav-sec-5">
           <span class="nav-num">05</span>
           <span class="nav-text">Common Mechanisms</span>
-          <span class="check-indicator" id="chk-nav-sec-5"></span>
         </a>
         
 
         <a href="#sec-6" class="nav-item" data-id="sec-6" id="nav-sec-6">
           <span class="nav-num">06</span>
           <span class="nav-text">Diagrams</span>
-          <span class="check-indicator" id="chk-nav-sec-6"></span>
         </a>
         
 
@@ -177,28 +160,24 @@
         <a href="#sec-7" class="nav-item" data-id="sec-7" id="nav-sec-7">
           <span class="nav-num">07</span>
           <span class="nav-text">Class Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-7"></span>
         </a>
         
 
         <a href="#sec-8" class="nav-item" data-id="sec-8" id="nav-sec-8">
           <span class="nav-num">08</span>
           <span class="nav-text">Object Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-8"></span>
         </a>
         
 
         <a href="#sec-9" class="nav-item" data-id="sec-9" id="nav-sec-9">
           <span class="nav-num">09</span>
           <span class="nav-text">Terms and Concepts of Class/Object Diagrams</span>
-          <span class="check-indicator" id="chk-nav-sec-9"></span>
         </a>
         
 
         <a href="#sec-10" class="nav-item" data-id="sec-10" id="nav-sec-10">
           <span class="nav-num">10</span>
           <span class="nav-text">Modeling Techniques for Class and Object Diagrams</span>
-          <span class="check-indicator" id="chk-nav-sec-10"></span>
         </a>
         
 
@@ -223,42 +202,36 @@
         <a href="#sec-11" class="nav-item" data-id="sec-11" id="nav-sec-11">
           <span class="nav-num">11</span>
           <span class="nav-text">Collaboration Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-11"></span>
         </a>
         
 
         <a href="#sec-12" class="nav-item" data-id="sec-12" id="nav-sec-12">
           <span class="nav-num">12</span>
           <span class="nav-text">Terms and Concepts of Collaboration Diagrams</span>
-          <span class="check-indicator" id="chk-nav-sec-12"></span>
         </a>
         
 
         <a href="#sec-13" class="nav-item" data-id="sec-13" id="nav-sec-13">
           <span class="nav-num">13</span>
           <span class="nav-text">Depicting a Message</span>
-          <span class="check-indicator" id="chk-nav-sec-13"></span>
         </a>
         
 
         <a href="#sec-14" class="nav-item" data-id="sec-14" id="nav-sec-14">
           <span class="nav-num">14</span>
           <span class="nav-text">Polymorphism in Collaboration Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-14"></span>
         </a>
         
 
         <a href="#sec-15" class="nav-item" data-id="sec-15" id="nav-sec-15">
           <span class="nav-num">15</span>
           <span class="nav-text">Iterated Message</span>
-          <span class="check-indicator" id="chk-nav-sec-15"></span>
         </a>
         
 
         <a href="#sec-16" class="nav-item" data-id="sec-16" id="nav-sec-16">
           <span class="nav-num">16</span>
           <span class="nav-text">Use of self in Message</span>
-          <span class="check-indicator" id="chk-nav-sec-16"></span>
         </a>
         
 
@@ -283,35 +256,30 @@
         <a href="#sec-17" class="nav-item" data-id="sec-17" id="nav-sec-17">
           <span class="nav-num">17</span>
           <span class="nav-text">Sequence Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-17"></span>
         </a>
         
 
         <a href="#sec-18" class="nav-item" data-id="sec-18" id="nav-sec-18">
           <span class="nav-num">18</span>
           <span class="nav-text">Terms and Symbols in Sequence Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-18"></span>
         </a>
         
 
         <a href="#sec-19" class="nav-item" data-id="sec-19" id="nav-sec-19">
           <span class="nav-num">19</span>
           <span class="nav-text">Asynchronous Messages</span>
-          <span class="check-indicator" id="chk-nav-sec-19"></span>
         </a>
         
 
         <a href="#sec-20" class="nav-item" data-id="sec-20" id="nav-sec-20">
           <span class="nav-num">20</span>
           <span class="nav-text">Callback Mechanism</span>
-          <span class="check-indicator" id="chk-nav-sec-20"></span>
         </a>
         
 
         <a href="#sec-21" class="nav-item" data-id="sec-21" id="nav-sec-21">
           <span class="nav-num">21</span>
           <span class="nav-text">Broadcast Message</span>
-          <span class="check-indicator" id="chk-nav-sec-21"></span>
         </a>
         
 
@@ -336,70 +304,60 @@
         <a href="#sec-22" class="nav-item" data-id="sec-22" id="nav-sec-22">
           <span class="nav-num">22</span>
           <span class="nav-text">Basic Behavioural Modeling</span>
-          <span class="check-indicator" id="chk-nav-sec-22"></span>
         </a>
         
 
         <a href="#sec-23" class="nav-item" data-id="sec-23" id="nav-sec-23">
           <span class="nav-num">23</span>
           <span class="nav-text">Use Cases</span>
-          <span class="check-indicator" id="chk-nav-sec-23"></span>
         </a>
         
 
         <a href="#sec-24" class="nav-item" data-id="sec-24" id="nav-sec-24">
           <span class="nav-num">24</span>
           <span class="nav-text">Use Case Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-24"></span>
         </a>
         
 
         <a href="#sec-25" class="nav-item" data-id="sec-25" id="nav-sec-25">
           <span class="nav-num">25</span>
           <span class="nav-text">Activity Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-25"></span>
         </a>
         
 
         <a href="#sec-26" class="nav-item" data-id="sec-26" id="nav-sec-26">
           <span class="nav-num">26</span>
           <span class="nav-text">State Machine</span>
-          <span class="check-indicator" id="chk-nav-sec-26"></span>
         </a>
         
 
         <a href="#sec-27" class="nav-item" data-id="sec-27" id="nav-sec-27">
           <span class="nav-num">27</span>
           <span class="nav-text">Process and Thread</span>
-          <span class="check-indicator" id="chk-nav-sec-27"></span>
         </a>
         
 
         <a href="#sec-28" class="nav-item" data-id="sec-28" id="nav-sec-28">
           <span class="nav-num">28</span>
           <span class="nav-text">Events and Signals</span>
-          <span class="check-indicator" id="chk-nav-sec-28"></span>
         </a>
         
 
         <a href="#sec-29" class="nav-item" data-id="sec-29" id="nav-sec-29">
           <span class="nav-num">29</span>
           <span class="nav-text">Time Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-29"></span>
         </a>
         
 
         <a href="#sec-30" class="nav-item" data-id="sec-30" id="nav-sec-30">
           <span class="nav-num">30</span>
           <span class="nav-text">Interaction Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-30"></span>
         </a>
         
 
         <a href="#sec-31" class="nav-item" data-id="sec-31" id="nav-sec-31">
           <span class="nav-num">31</span>
           <span class="nav-text">Package Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-31"></span>
         </a>
         
 
@@ -424,35 +382,30 @@
         <a href="#sec-32" class="nav-item" data-id="sec-32" id="nav-sec-32">
           <span class="nav-num">32</span>
           <span class="nav-text">Architectural Modeling</span>
-          <span class="check-indicator" id="chk-nav-sec-32"></span>
         </a>
         
 
         <a href="#sec-33" class="nav-item" data-id="sec-33" id="nav-sec-33">
           <span class="nav-num">33</span>
           <span class="nav-text">Component</span>
-          <span class="check-indicator" id="chk-nav-sec-33"></span>
         </a>
         
 
         <a href="#sec-34" class="nav-item" data-id="sec-34" id="nav-sec-34">
           <span class="nav-num">34</span>
           <span class="nav-text">Interface</span>
-          <span class="check-indicator" id="chk-nav-sec-34"></span>
         </a>
         
 
         <a href="#sec-35" class="nav-item" data-id="sec-35" id="nav-sec-35">
           <span class="nav-num">35</span>
           <span class="nav-text">Component Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-35"></span>
         </a>
         
 
         <a href="#sec-36" class="nav-item" data-id="sec-36" id="nav-sec-36">
           <span class="nav-num">36</span>
           <span class="nav-text">Deployment Diagram</span>
-          <span class="check-indicator" id="chk-nav-sec-36"></span>
         </a>
         
 
@@ -547,13 +500,6 @@
     <section id="sec-1" class="topic-section" data-num="01">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Basic Structural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-1', this)" data-id="sec-1">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -769,14 +715,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Structural Modeling = Static features ("What is"), vocabulary, classes, relationships.</li>
-    <li>Behavioral Modeling = Dynamic execution ("How it behaves"), interactions, states, workflows.</li>
-    <li>Structural diagrams = Class, Object, Component, Deployment, Package.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -791,13 +730,6 @@
     <section id="sec-2" class="topic-section" data-num="02">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Basic Structural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-2', this)" data-id="sec-2">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -966,14 +898,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Structural = Class, Component, Deployment (Static physical/logical skeleton).</li>
-    <li>Behavioral = Activity, Interaction (Sequence/Collaboration), Use Case, State Machine (Dynamic messages & states).</li>
-    <li>Architectural = Package, Deployment, Subsystems (Overall structural and operational framework).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -988,13 +913,6 @@
     <section id="sec-3" class="topic-section" data-num="03">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Basic Structural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-3', this)" data-id="sec-3">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1164,14 +1082,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Class = 3 compartments: Name, Attributes, Operations.</li>
-    <li>Visibilities: <code>+</code> Public, <code>-</code> Private, <code>#</code> Protected, <code>~</code> Package.</li>
-    <li>Class is an abstraction/blueprint; an Object is a concrete runtime instance.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -1186,13 +1097,6 @@
     <section id="sec-4" class="topic-section" data-num="04">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Basic Structural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-4', this)" data-id="sec-4">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1418,15 +1322,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Dependency: Dashed arrow <code>- - -&gt;</code> (Uses-a).</li>
-    <li>Association: Solid line (Peer structural link).</li>
-    <li>Generalization: Solid line with hollow triangle <code>──▷</code> (Is-a).</li>
-    <li>Aggregation: Hollow diamond <code>◇──</code> (Weak Whole-Part); Composition: Solid diamond <code>◆──</code> (Strong Whole-Part).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -1441,13 +1337,6 @@
     <section id="sec-5" class="topic-section" data-num="05">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Basic Structural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-5', this)" data-id="sec-5">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1627,15 +1516,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Stereotypes: <code>&lt;&lt;name&gt;&gt;</code> (New model elements).</li>
-    <li>Tagged Values: <code>{tag = value}</code> (New metadata properties).</li>
-    <li>Constraints: <code>{rule}</code> (New semantic restrictions).</li>
-    <li>Common divisions: Classifier vs Instance, Interface vs Implementation.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -1650,13 +1531,6 @@
     <section id="sec-6" class="topic-section" data-num="06">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Basic Structural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-6', this)" data-id="sec-6">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1820,14 +1694,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Total 14 diagrams in modern UML: 7 Structural + 7 Behavioral.</li>
-    <li>Structural = Class, Object, Component, Deployment, Package, Composite, Profile.</li>
-    <li>Behavioral = Use Case, Activity, State Machine, Sequence, Communication, Timing, Interaction Overview.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -1842,13 +1709,6 @@
     <section id="sec-7" class="topic-section" data-num="07">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Class and Object Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-7', this)" data-id="sec-7">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2065,14 +1925,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Class diagram = Static backbone of OO systems.</li>
-    <li>Features: Classes (name, attributes, operations), Associations, Generalizations, Aggregations, Multiplicities.</li>
-    <li>Maps directly to OOP code (C++, Java, Python) and Relational DB tables.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -2087,13 +1940,6 @@
     <section id="sec-8" class="topic-section" data-num="08">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Class and Object Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-8', this)" data-id="sec-8">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2326,15 +2172,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Object diagram = Snapshot of system at a single point in time.</li>
-    <li>Object name is ALWAYS underlined: <code><u>name : Class</u></code>.</li>
-    <li>No operations compartment (objects only hold state/values).</li>
-    <li>Links = instances of associations (no multiplicity indicators).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -2349,13 +2187,6 @@
     <section id="sec-9" class="topic-section" data-num="09">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Class and Object Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-9', this)" data-id="sec-9">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2530,15 +2361,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Class = Blueprint | Object = Instance in memory.</li>
-    <li>Association = Rule | Link = Actual connection between objects.</li>
-    <li>Attribute = Field declaration | Value = Actual data held.</li>
-    <li>Multiplicity = Range (<code>0..1</code>, <code>1..*</code>, <code>*</code>) | Constraints = <code>{rule}</code>.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -2553,13 +2376,6 @@
     <section id="sec-10" class="topic-section" data-num="10">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Class and Object Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-10', this)" data-id="sec-10">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2783,16 +2599,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Noun analysis &rarr; Classes (Entities).</li>
-    <li>Adjectives &rarr; Attributes (State).</li>
-    <li>Verbs &rarr; Operations (Behavior).</li>
-    <li>Prepositions &rarr; Relationships (Associations, Aggregations).</li>
-    <li>Validation: Verify completeness, minimality, and consistency.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -2807,13 +2614,6 @@
     <section id="sec-11" class="topic-section" data-num="11">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Collaboration Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-11', this)" data-id="sec-11">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3009,14 +2809,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Collaboration Diagram = Spatial links + numbered message arrows.</li>
-    <li>Renamed to Communication Diagram in UML 2.0.</li>
-    <li>No lifelines; sequence numbering (<code>1:</code>, <code>2:</code>, <code>2.1:</code>) is mandatory for ordering.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -3031,13 +2824,6 @@
     <section id="sec-12" class="topic-section" data-num="12">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Collaboration Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-12', this)" data-id="sec-12">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3184,15 +2970,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Objects: Underlined boxes (<code><u>name : Type</u></code>).</li>
-    <li>Links: Solid lines (No multiplicities).</li>
-    <li>Messages: Arrows along links with sequence numbers (<code>1.1: method()</code>).</li>
-    <li>Sender: Dispatches | Receiver: Handles.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -3207,13 +2985,6 @@
     <section id="sec-13" class="topic-section" data-num="13">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Collaboration Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-13', this)" data-id="sec-13">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3378,14 +3149,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Syntax: <code>seq_no: return_val := opName(args)</code>.</li>
-    <li>Direction: Small arrow parallel to the link points to the receiver.</li>
-    <li>Nested numbering: <code>1.1:</code> is called during the execution of <code>1:</code>.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -3400,13 +3164,6 @@
     <section id="sec-14" class="topic-section" data-num="14">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Collaboration Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-14', this)" data-id="sec-14">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3575,14 +3332,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Polymorphism in Collaboration = Identical message signature sent to diverse receiver types.</li>
-    <li>Sequence syntax: Uses branch letters (<code>2a:</code>, <code>2b:</code>, <code>2c:</code>).</li>
-    <li>Decouples client from concrete subclass implementations.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -3597,13 +3347,6 @@
     <section id="sec-15" class="topic-section" data-num="15">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Collaboration Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-15', this)" data-id="sec-15">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3744,14 +3487,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Iteration symbol = Asterisk <code>*</code> after sequence number.</li>
-    <li>Syntax: <code>seq * [i := 1..n] : message()</code>.</li>
-    <li>Parallel iteration: <code>seq * || [clause] : message()</code>.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -3766,13 +3502,6 @@
     <section id="sec-16" class="topic-section" data-num="16">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Collaboration Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-16', this)" data-id="sec-16">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3911,14 +3640,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Self-message = Object invoking a method on itself (<code>this.func()</code>).</li>
-    <li>Depicted as a semicircular loop-back arc attached to the object box.</li>
-    <li>Common use cases: Validation, recursive calls, private helper execution.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -3933,13 +3655,6 @@
     <section id="sec-17" class="topic-section" data-num="17">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Sequence Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-17', this)" data-id="sec-17">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4114,14 +3829,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Sequence Diagram = Time-ordered message exchanges.</li>
-    <li>X-Axis = Objects / Lifelines | Y-Axis = Time progressing downwards.</li>
-    <li>Used to detail specific Use Case scenarios and method dispatch sequences.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -4136,13 +3844,6 @@
     <section id="sec-18" class="topic-section" data-num="18">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Sequence Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-18', this)" data-id="sec-18">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4317,16 +4018,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Lifeline = Vertical dashed line.</li>
-    <li>Activation = Thin vertical box (Focus of control).</li>
-    <li>Synchronous = Solid line + filled triangle <code>──▶</code>.</li>
-    <li>Asynchronous = Solid line + open stick <code>──></code>.</li>
-    <li>Destruction = Large <code>X</code> at bottom of lifeline.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -4341,13 +4033,6 @@
     <section id="sec-19" class="topic-section" data-num="19">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Sequence Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-19', this)" data-id="sec-19">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4501,15 +4186,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Asynchronous message = Non-blocking dispatch (open arrow <code>──></code>).</li>
-    <li>Without priority = FIFO queue order.</li>
-    <li>With priority = Priority tags jump messages to the front.</li>
-    <li>Multiple priority queues = Separate hardware/OS queues per priority level.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -4524,13 +4201,6 @@
     <section id="sec-20" class="topic-section" data-num="20">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Sequence Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-20', this)" data-id="sec-20">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4671,15 +4341,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Callback = Inversion of Control ("Don't call us, we'll call you").</li>
-    <li>Step 1: Client registers interest and passes a callback handler.</li>
-    <li>Step 2: Server executes work in background.</li>
-    <li>Step 3: Server fires a message BACK to the client when ready.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -4694,13 +4356,6 @@
     <section id="sec-21" class="topic-section" data-num="21">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Sequence Diagram</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-21', this)" data-id="sec-21">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4907,14 +4562,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Broadcast = Single source sending message to multiple target objects.</li>
-    <li>Underpins Publish-Subscribe and Observer patterns.</li>
-    <li>Always asynchronous; decoupled via an Event Bus or forked arrows.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -4929,13 +4577,6 @@
     <section id="sec-22" class="topic-section" data-num="22">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-22', this)" data-id="sec-22">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5082,14 +4723,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Behavioral Modeling = Dynamic execution, triggers, message passing, states.</li>
-    <li>Covers Analysis (Use cases), Design (Sequences), and Implementation (State machines & threads).</li>
-    <li>2 Categories: Business process / Interaction vs. Data lifecycle / State machines.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -5104,13 +4738,6 @@
     <section id="sec-23" class="topic-section" data-num="23">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-23', this)" data-id="sec-23">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5287,15 +4914,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Use case = Goal-oriented sequence yielding observable value to an actor.</li>
-    <li>Actor = External entity interacting with system (human, device, external service).</li>
-    <li><code>&lt;&lt;include&gt;&gt;</code> = Mandatory shared routine (Base &rarr; Included).</li>
-    <li><code>&lt;&lt;extend&gt;&gt;</code> = Optional hook (Extension &rarr; Base).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -5310,13 +4929,6 @@
     <section id="sec-24" class="topic-section" data-num="24">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-24', this)" data-id="sec-24">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5497,14 +5109,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Components: Actors (Outside), Use Cases (Inside), System Boundary (Box), Associations (Lines).</li>
-    <li>Utility: Requirement scoping, test-case generation, forward/reverse engineering.</li>
-    <li>Actors can be humans, external hardware sensors, or third-party web services.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -5519,13 +5124,6 @@
     <section id="sec-25" class="topic-section" data-num="25">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-25', this)" data-id="sec-25">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5704,16 +5302,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Activity Diagram = Flow of control and computation across steps.</li>
-    <li>Initial state = <code>●</code> | Final state = <code>◉</code>.</li>
-    <li>Fork bar = 1 flow splits into parallel flows.</li>
-    <li>Join bar = Parallel flows synchronize back into 1 flow.</li>
-    <li>Swimlanes = Group activities by role/department.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -5728,13 +5317,6 @@
     <section id="sec-26" class="topic-section" data-num="26">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-26', this)" data-id="sec-26">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5908,15 +5490,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>State Machine = Models lifecycle states of a single reactive object.</li>
-    <li>State = Rounded rectangle | Initial = <code>●</code> | Final = <code>◉</code>.</li>
-    <li>Transition syntax: <code>trigger [guard] / action</code>.</li>
-    <li>State actions: <code>entry /</code>, <code>exit /</code>, <code>do /</code>.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -5931,13 +5505,6 @@
     <section id="sec-27" class="topic-section" data-num="27">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-27', this)" data-id="sec-27">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -6122,14 +5689,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Process = Heavyweight, isolated memory space, owns resources.</li>
-    <li>Thread = Lightweight execution unit inside a process, shares heap.</li>
-    <li>Active Object = Box with double vertical border lines (runs its own thread).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -6144,13 +5704,6 @@
     <section id="sec-28" class="topic-section" data-num="28">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-28', this)" data-id="sec-28">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -6310,14 +5863,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Event = Occurrence in time triggering a transition.</li>
-    <li>Signal = Asynchronous package of data sent between objects.</li>
-    <li>4 Types: Call, Signal, Time (<code>after</code>), Change (<code>when</code>).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -6332,13 +5878,6 @@
     <section id="sec-29" class="topic-section" data-num="29">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-29', this)" data-id="sec-29">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -6490,14 +6029,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Time Diagram = Visualizes exact object state changes along a time axis.</li>
-    <li>Includes horizontal time scale, state levels, waveforms, and duration constraints.</li>
-    <li>Vital for embedded, real-time, and telecommunication systems.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -6512,13 +6044,6 @@
     <section id="sec-30" class="topic-section" data-num="30">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-30', this)" data-id="sec-30">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -6659,13 +6184,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Interaction diagrams = Model dynamic message passing among objects.</li>
-    <li>4 types: Sequence (Time), Communication (Space/Links), Timing (Duration), Interaction Overview (Hybrid).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -6680,13 +6199,6 @@
     <section id="sec-31" class="topic-section" data-num="31">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Basic Behavioural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-31', this)" data-id="sec-31">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -6846,14 +6358,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Package = Tabbed folder icon for grouping elements into namespaces.</li>
-    <li>Relationships: <code>&lt;&lt;import&gt;&gt;</code> (public), <code>&lt;&lt;access&gt;&gt;</code> (private), <code>&lt;&lt;merge&gt;&gt;</code>.</li>
-    <li>Uses: Layered enterprise architecture, managing complexity, modularity.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -6868,13 +6373,6 @@
     <section id="sec-32" class="topic-section" data-num="32">
       <div class="section-meta">
         <span class="part-pill">Part 6 — Architectural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-32', this)" data-id="sec-32">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -7030,14 +6528,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Architectural Modeling = Overall system framework and physical blueprint.</li>
-    <li>Two primary diagrams: Component Diagram (Software) + Deployment Diagram (Hardware).</li>
-    <li>Bridges high-level logical design to physical execution environments.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -7052,13 +6543,6 @@
     <section id="sec-33" class="topic-section" data-num="33">
       <div class="section-meta">
         <span class="part-pill">Part 6 — Architectural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-33', this)" data-id="sec-33">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -7184,14 +6668,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Component = Modular, deployable, replaceable part of a system.</li>
-    <li>Draw as a rectangle with two small protruding tabs on the left border.</li>
-    <li>Communicates strictly through interfaces (loose coupling).</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -7206,13 +6683,6 @@
     <section id="sec-34" class="topic-section" data-num="34">
       <div class="section-meta">
         <span class="part-pill">Part 6 — Architectural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-34', this)" data-id="sec-34">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -7352,15 +6822,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Interface = Pure contract of operation signatures without implementation.</li>
-    <li>Provided interface = Lollipop ball <code>—○</code>.</li>
-    <li>Required interface = Socket semicircle <code>—)</code>.</li>
-    <li>Interface realization = Dashed arrow with hollow triangle <code>- - -▷</code>.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -7375,13 +6837,6 @@
     <section id="sec-35" class="topic-section" data-num="35">
       <div class="section-meta">
         <span class="part-pill">Part 6 — Architectural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-35', this)" data-id="sec-35">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -7536,14 +6991,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Component Diagram = Static implementation view of software binaries and files.</li>
-    <li>Shows components, interfaces, dependencies, and database schemas.</li>
-    <li>Supports plug-and-play architecture and CBSE.</li>
-  </ul>
-</div>
+
 
       </div>
 
@@ -7558,13 +7006,6 @@
     <section id="sec-36" class="topic-section" data-num="36">
       <div class="section-meta">
         <span class="part-pill">Part 6 — Architectural Modeling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('sec-36', this)" data-id="sec-36">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 3 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -7745,15 +7186,7 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Deployment Diagram = Runtime physical architecture and hardware topology.</li>
-    <li>Node = 3D cube representing physical hardware or execution container.</li>
-    <li>Connections = Lines between nodes labeled with network protocols.</li>
-    <li>Artifacts = Software packages deployed inside the node cubes.</li>
-  </ul>
-</div>
+
 
       </div>
 

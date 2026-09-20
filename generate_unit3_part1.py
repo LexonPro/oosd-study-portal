@@ -145,15 +145,6 @@ def get_unit3_part1_sections():
     <strong>Key Tip:</strong> Always highlight that OOA answers <strong>"WHAT the system does"</strong> while OOD answers <strong>"HOW the system does it"</strong>. Mention noun analysis for discovering candidate classes and use case modeling for interactions.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>OOA = Focuses on the problem domain ("WHAT"), not technical implementation.</li>
-    <li>Identifies: Objects, Attributes, Operations, Associations, and Use Cases.</li>
-    <li>Produces the conceptual Object Model, Dynamic Model, and Functional Model.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -315,15 +306,6 @@ def get_unit3_part1_sections():
     <strong>Scoring Guide:</strong> Draw the 2-column comparison table above. Mention that OOD introduces solution-domain artifacts: thread safety, persistence, data structures, and concrete algorithms.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>OOD = Translates the conceptual analysis model into technical software architecture ("HOW").</li>
-    <li>Deals with: Data structures, concrete algorithms, thread synchronization, and associations.</li>
-    <li>Bridges the gap between domain rules and raw computer execution.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -455,15 +437,6 @@ def get_unit3_part1_sections():
     <strong>Key Tip:</strong> Explicitly mention the three engineering trade-offs: <strong>Execution Time</strong> (CPU), <strong>Memory Consumption</strong> (RAM), and <strong>Overall Cost</strong> (Development + Maintenance).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Object Design = Shifting domain entities into detailed computer data structures and algorithms.</li>
-    <li>Trade-offs: Execution time vs. Memory footprint vs. Implementation cost.</li>
-    <li>Chooses internal representation (e.g. Arrays, Trees, Hash Maps).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -585,15 +558,6 @@ def get_unit3_part1_sections():
   <div class="tip-box">
     <strong>Scoring Formula:</strong> Dedicate 3 marks to defining the triad (Object = Structure, Dynamic = Timing/Events, Functional = Transformations). Draw the triangle diagram above showing how classes execute actions triggered by dynamic events.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Object Model = Static identity, classes, relationships (Class Diagram).</li>
-    <li>Dynamic Model = Control, states, events over time (Statechart).</li>
-    <li>Functional Model = Data transformations, computations (DFDs).</li>
-  </ul>
 </div>
 """
         },
@@ -719,15 +683,6 @@ def get_unit3_part1_sections():
     <strong>Key Scoring Points:</strong> Always list the 5 selection criteria: Complexity, Execution time, Memory footprint, Flexibility, and Understandability.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Algorithm design = Choosing concrete logic for abstract class operations.</li>
-    <li>Primary trade-off: Time Complexity vs Space Complexity vs Simplicity.</li>
-    <li>Rule: Optimize for clarity first; profile and optimize for speed where bottlenecks occur.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -845,15 +800,6 @@ def get_unit3_part1_sections():
   <div class="tip-box">
     <strong>Exam Tip:</strong> Describe how adding <strong>redundant/derived attributes</strong> trades a tiny amount of memory to dramatically speed up frequent read queries.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Optimization = Restructuring design to satisfy speed, memory, or cost constraints.</li>
-    <li>Key technique: Adding derived/cached attributes to avoid repetitive loops.</li>
-    <li>Trade-off: Extra memory + cache invalidation logic for ultra-fast query execution.</li>
-  </ul>
 </div>
 """
         },
@@ -1013,15 +959,6 @@ def get_unit3_part1_sections():
     <strong>Key Tip:</strong> Contrast procedural execution (linear code location) with an event-driven state engine (decoupled state variables &amp; handler tables).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Implementation of Control = Turning dynamic state machines into running code.</li>
-    <li>State as program location: Embedded in procedural code execution stacks.</li>
-    <li>State engine: Explicit state variable/pattern reacting to event messages.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1146,15 +1083,6 @@ def get_unit3_part1_sections():
     <strong>Key Tip:</strong> Explain the term <strong>"Factoring Commonality"</strong>: detecting identical properties in peer classes and moving them into a newly created abstract ancestor.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Adjustment of Inheritance = Refactoring class hierarchies for optimal reuse.</li>
-    <li>Move common attributes and operations to a newly formed superclass.</li>
-    <li>Unify method signatures to enable polymorphic extension.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1245,15 +1173,6 @@ def get_unit3_part1_sections():
   <div class="tip-box">
     <strong>Key Tip:</strong> Clearly delineate between the <strong>Static Model</strong> (structure, class diagrams) and the <strong>Dynamic Model</strong> (behavior, interaction &amp; state diagrams).
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Static Design Model = Class &amp; Object diagrams (Invariants, structure).</li>
-    <li>Dynamic Design Model = Sequence, Collaboration &amp; Statechart diagrams (Execution flow).</li>
-    <li>Together, they form the complete specification for developers.</li>
-  </ul>
 </div>
 """
         },
@@ -1369,15 +1288,6 @@ def get_unit3_part1_sections():
     <strong>Key Tip:</strong> Define cohesion and coupling in packages. Emphasize that packaging enables separate team compilation and independent testing.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Physical Packaging = Grouping classes into modules, namespaces, and libraries.</li>
-    <li>Goals: High cohesion within packages, loose coupling between packages.</li>
-    <li>Enables team collaboration and independent deployment.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1475,15 +1385,6 @@ def get_unit3_part1_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Cite that documentation communicates intent, prevents architectural drift, explains trade-offs, and must be publicly accessible and periodically reviewed.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Design Documentation = Captures the 'WHY' behind architectural choices.</li>
-    <li>Prevents future developers from repeating rejected, flawed approaches.</li>
-    <li>Must be kept updated alongside code in version control.</li>
-  </ul>
 </div>
 """
         }

@@ -92,15 +92,6 @@ def get_part6_sections():
     <strong>Key Tip:</strong> Clearly emphasize that architectural modeling integrates structural and behavioral models to produce the physical blueprint of the system via <strong>Component Diagrams</strong> and <strong>Deployment Diagrams</strong>.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Architectural Modeling = Overall system framework and physical blueprint.</li>
-    <li>Two primary diagrams: Component Diagram (Software) + Deployment Diagram (Hardware).</li>
-    <li>Bridges high-level logical design to physical execution environments.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -171,15 +162,6 @@ def get_part6_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Explain that a component is a physical, deployable, and replaceable unit. It can be replaced at runtime or compile-time without affecting clients, as long as interface contracts are maintained.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Component = Modular, deployable, replaceable part of a system.</li>
-    <li>Draw as a rectangle with two small protruding tabs on the left border.</li>
-    <li>Communicates strictly through interfaces (loose coupling).</li>
-  </ul>
 </div>
 """
         },
@@ -255,16 +237,6 @@ def get_part6_sections():
   <div class="tip-box">
     <strong>Exam Must-Draw:</strong> Draw both the lollipop (provided) circle and the socket (required) semicircle. Show how they connect together to form an assembly connector.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Interface = Pure contract of operation signatures without implementation.</li>
-    <li>Provided interface = Lollipop ball <code>—○</code>.</li>
-    <li>Required interface = Socket semicircle <code>—)</code>.</li>
-    <li>Interface realization = Dashed arrow with hollow triangle <code>- - -▷</code>.</li>
-  </ul>
 </div>
 """
         },
@@ -356,15 +328,6 @@ def get_part6_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Draw at least 3 components (Frontend, Service, Database). Use the standard tabbed box symbol and connect them using dashed dependency arrows.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Component Diagram = Static implementation view of software binaries and files.</li>
-    <li>Shows components, interfaces, dependencies, and database schemas.</li>
-    <li>Supports plug-and-play architecture and CBSE.</li>
-  </ul>
 </div>
 """
         },
@@ -487,16 +450,6 @@ def get_part6_sections():
   <div class="tip-box">
     <strong>Key Marking Formula:</strong> Draw the 3D cube nodes with communication path protocols (e.g. <code>&lt;&lt;TCP/IP&gt;&gt;</code>, <code>&lt;&lt;HTTPS&gt;&gt;</code>). Provide the Node vs Component comparison table given above for full marks.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Deployment Diagram = Runtime physical architecture and hardware topology.</li>
-    <li>Node = 3D cube representing physical hardware or execution container.</li>
-    <li>Connections = Lines between nodes labeled with network protocols.</li>
-    <li>Artifacts = Software packages deployed inside the node cubes.</li>
-  </ul>
 </div>
 """
         }

@@ -12,11 +12,6 @@
 </head>
 <body id="top" data-unit="unit1">
 
-  <!-- Top Global Progress Bar -->
-  <div id="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-
   <!-- Mobile Header & Toggle -->
   <header class="mobile-nav-header">
     <button id="sidebar-toggle" aria-label="Toggle Slidebar Navigation" class="icon-btn">
@@ -75,25 +70,19 @@
           <input type="text" id="sidebar-search" placeholder="Search 23 topics (e.g. Identity, Polymorphism, OMT)..." autocomplete="off">
           <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
         </div>
-
         <div class="sidebar-stats">
           <div class="stat-item">
             <span class="stat-val" id="current-sec-indicator">01 / 23</span>
             <span class="stat-lbl">Active Topic</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="progress-percent">0%</span>
-            <span class="stat-lbl">Read Progress</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-val" id="completed-count">0/23</span>
-            <span class="stat-lbl">Studied</span>
+            <span class="stat-val">23</span>
+            <span class="stat-lbl">Total Topics</span>
           </div>
         </div>
 
         <div class="sidebar-controls-row">
           <button id="expand-all-btn" class="mini-btn" title="Expand/Collapse All Parts">Toggle All</button>
-          <button id="reset-progress-btn" class="mini-btn" title="Reset checkmarks">Reset Checks</button>
         </div>
       </div>
 
@@ -117,21 +106,18 @@
         <a href="#u1-sec-1" class="nav-item" data-id="u1-sec-1" id="nav-u1-sec-1">
           <span class="nav-num">01</span>
           <span class="nav-text">Meaning of Object Orientation</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-1"></span>
         </a>
         
 
         <a href="#u1-sec-2" class="nav-item" data-id="u1-sec-2" id="nav-u1-sec-2">
           <span class="nav-num">02</span>
           <span class="nav-text">Features of Object-Oriented Languages</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-2"></span>
         </a>
         
 
         <a href="#u1-sec-3" class="nav-item" data-id="u1-sec-3" id="nav-u1-sec-3">
           <span class="nav-num">03</span>
           <span class="nav-text">Object-Oriented Design Process</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-3"></span>
         </a>
         
 
@@ -156,35 +142,30 @@
         <a href="#u1-sec-4" class="nav-item" data-id="u1-sec-4" id="nav-u1-sec-4">
           <span class="nav-num">04</span>
           <span class="nav-text">Object Identity</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-4"></span>
         </a>
         
 
         <a href="#u1-sec-5" class="nav-item" data-id="u1-sec-5" id="nav-u1-sec-5">
           <span class="nav-num">05</span>
           <span class="nav-text">Encapsulation</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-5"></span>
         </a>
         
 
         <a href="#u1-sec-6" class="nav-item" data-id="u1-sec-6" id="nav-u1-sec-6">
           <span class="nav-num">06</span>
           <span class="nav-text">Information Hiding</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-6"></span>
         </a>
         
 
         <a href="#u1-sec-7" class="nav-item" data-id="u1-sec-7" id="nav-u1-sec-7">
           <span class="nav-num">07</span>
           <span class="nav-text">Polymorphism</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-7"></span>
         </a>
         
 
         <a href="#u1-sec-8" class="nav-item" data-id="u1-sec-8" id="nav-u1-sec-8">
           <span class="nav-num">08</span>
           <span class="nav-text">Generosity / Genericity</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-8"></span>
         </a>
         
 
@@ -209,56 +190,48 @@
         <a href="#u1-sec-9" class="nav-item" data-id="u1-sec-9" id="nav-u1-sec-9">
           <span class="nav-num">09</span>
           <span class="nav-text">Meaning of Modelling</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-9"></span>
         </a>
         
 
         <a href="#u1-sec-10" class="nav-item" data-id="u1-sec-10" id="nav-u1-sec-10">
           <span class="nav-num">10</span>
           <span class="nav-text">Importance of Modelling</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-10"></span>
         </a>
         
 
         <a href="#u1-sec-11" class="nav-item" data-id="u1-sec-11" id="nav-u1-sec-11">
           <span class="nav-num">11</span>
           <span class="nav-text">Principles of Modelling</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-11"></span>
         </a>
         
 
         <a href="#u1-sec-12" class="nav-item" data-id="u1-sec-12" id="nav-u1-sec-12">
           <span class="nav-num">12</span>
           <span class="nav-text">Object-Oriented Modelling</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-12"></span>
         </a>
         
 
         <a href="#u1-sec-13" class="nav-item" data-id="u1-sec-13" id="nav-u1-sec-13">
           <span class="nav-num">13</span>
           <span class="nav-text">Three Models of OMT</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-13"></span>
         </a>
         
 
         <a href="#u1-sec-14" class="nav-item" data-id="u1-sec-14" id="nav-u1-sec-14">
           <span class="nav-num">14</span>
           <span class="nav-text">Data Store</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-14"></span>
         </a>
         
 
         <a href="#u1-sec-15" class="nav-item" data-id="u1-sec-15" id="nav-u1-sec-15">
           <span class="nav-num">15</span>
           <span class="nav-text">Actors</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-15"></span>
         </a>
         
 
         <a href="#u1-sec-16" class="nav-item" data-id="u1-sec-16" id="nav-u1-sec-16">
           <span class="nav-num">16</span>
           <span class="nav-text">Control Flow</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-16"></span>
         </a>
         
 
@@ -283,21 +256,18 @@
         <a href="#u1-sec-17" class="nav-item" data-id="u1-sec-17" id="nav-u1-sec-17">
           <span class="nav-num">17</span>
           <span class="nav-text">Introduction to UML</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-17"></span>
         </a>
         
 
         <a href="#u1-sec-18" class="nav-item" data-id="u1-sec-18" id="nav-u1-sec-18">
           <span class="nav-num">18</span>
           <span class="nav-text">Why UML is Required</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-18"></span>
         </a>
         
 
         <a href="#u1-sec-19" class="nav-item" data-id="u1-sec-19" id="nav-u1-sec-19">
           <span class="nav-num">19</span>
           <span class="nav-text">Advantages and Limitations of UML</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-19"></span>
         </a>
         
 
@@ -322,21 +292,18 @@
         <a href="#u1-sec-20" class="nav-item" data-id="u1-sec-20" id="nav-u1-sec-20">
           <span class="nav-num">20</span>
           <span class="nav-text">Conceptual Model of UML</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-20"></span>
         </a>
         
 
         <a href="#u1-sec-21" class="nav-item" data-id="u1-sec-21" id="nav-u1-sec-21">
           <span class="nav-num">21</span>
           <span class="nav-text">UML Building Blocks</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-21"></span>
         </a>
         
 
         <a href="#u1-sec-22" class="nav-item" data-id="u1-sec-22" id="nav-u1-sec-22">
           <span class="nav-num">22</span>
           <span class="nav-text">UML Architecture (4+1 Views)</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-22"></span>
         </a>
         
 
@@ -361,7 +328,6 @@
         <a href="#u1-sec-23" class="nav-item" data-id="u1-sec-23" id="nav-u1-sec-23">
           <span class="nav-num">23</span>
           <span class="nav-text">Link and Association</span>
-          <span class="check-indicator" id="chk-nav-u1-sec-23"></span>
         </a>
         
 
@@ -454,13 +420,6 @@
     <section id="u1-sec-1" class="topic-section" data-num="01">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Concepts</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-1', this)" data-id="u1-sec-1">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -702,16 +661,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Object:</strong> Tangible or intangible entity in the problem domain (State + Behavior + Identity).</li>
-    <li><strong>Attribute:</strong> Data values representing object state.</li>
-    <li><strong>Class:</strong> Abstract template grouping objects with common attributes and behaviors.</li>
-    <li><strong>Message Passing:</strong> Communication mechanism where one object requests another to execute a method.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -725,13 +674,6 @@
     <section id="u1-sec-2" class="topic-section" data-num="02">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Concepts</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-2', this)" data-id="u1-sec-2">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -992,16 +934,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Encapsulation:</strong> Bundles data with methods in an inviolable shell; hides internal representation.</li>
-    <li><strong>Inheritance:</strong> Allows subclasses to reuse and extend superclass properties (code reusability).</li>
-    <li><strong>Polymorphism:</strong> Same message/operation exhibits different behaviors across different classes.</li>
-    <li>The 3 features combine to make software modular, secure, reusable, and extensible.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1015,13 +947,6 @@
     <section id="u1-sec-3" class="topic-section" data-num="03">
       <div class="section-meta">
         <span class="part-pill">Part 1 — Object-Oriented Concepts</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-3', this)" data-id="u1-sec-3">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1276,16 +1201,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>System Analysis:</strong> Captures domain requirements and builds conceptual models (WHAT).</li>
-    <li><strong>System Design:</strong> Partitions system into subsystems and allocates hardware/concurrency.</li>
-    <li><strong>Object Design:</strong> Augments domain classes with computer algorithms and data structures (HOW).</li>
-    <li><strong>Implementation:</strong> Translates design into robust code with full architectural traceability.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1299,13 +1214,6 @@
     <section id="u1-sec-4" class="topic-section" data-num="04">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Object Identity, Encapsulation & Polymorphism</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-4', this)" data-id="u1-sec-4">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1544,16 +1452,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Object Identity:</strong> Inherent property distinguishing each object uniquely from all others.</li>
-    <li><strong>State Equivalence:</strong> Objects having matching field values (<code>s1 == s2</code>).</li>
-    <li><strong>Identity Equivalence:</strong> Pointers referencing the exact same memory address (<code>&amp;s1 == &amp;s2</code>).</li>
-    <li><strong>C++ Mechanism:</strong> The address-of operator <code>&amp;</code> returns the physical OID.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1567,13 +1465,6 @@
     <section id="u1-sec-5" class="topic-section" data-num="05">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Object Identity, Encapsulation & Polymorphism</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-5', this)" data-id="u1-sec-5">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1805,16 +1696,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Encapsulation:</strong> Bundling data and methods into a single unit; hiding internal state behind public methods.</li>
-    <li><strong>Ripple Effect Prevention:</strong> Modifying internal logic does not break external dependent callers.</li>
-    <li><strong>Message Passing:</strong> Clients invoke services by dispatching messages with valid signatures.</li>
-    <li><strong>AKTU Example:</strong> <code>Employee.salary</code> is protected and queried only via <code>getSalary()</code>.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -1828,13 +1709,6 @@
     <section id="u1-sec-6" class="topic-section" data-num="06">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Object Identity, Encapsulation & Polymorphism</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-6', this)" data-id="u1-sec-6">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2057,16 +1931,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Information Hiding:</strong> Concealing internal details to produce a clean, decoupled abstraction.</li>
-    <li><strong>David Parnas Principle:</strong> Hide design decisions most likely to change or cause bugs.</li>
-    <li><strong>Encapsulation vs Hiding:</strong> Encapsulation is the vehicle (packaging); Information Hiding is the destination (abstraction).</li>
-    <li><strong>Benefit:</strong> Internal data structures can be refactored with zero ripple effect on client code.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2080,13 +1944,6 @@
     <section id="u1-sec-7" class="topic-section" data-num="07">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Object Identity, Encapsulation & Polymorphism</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-7', this)" data-id="u1-sec-7">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2302,16 +2159,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Polymorphism:</strong> "Many forms"; same interface executing different behaviors per target class.</li>
-    <li><strong>Is it OO-only?</strong> No! Ad-hoc (overloading/coercion) works in non-OO; Universal subtyping requires OO.</li>
-    <li><strong>File.print() Example:</strong> ASCII streams text, Binary dumps hex, Picture renders raster pixels.</li>
-    <li><strong>Resolution:</strong> Resolved at runtime via dynamic method lookup (VTable in C++).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2325,13 +2172,6 @@
     <section id="u1-sec-8" class="topic-section" data-num="08">
       <div class="section-meta">
         <span class="part-pill">Part 2 — Object Identity, Encapsulation & Polymorphism</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-8', this)" data-id="u1-sec-8">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2565,16 +2405,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Generosity / Genericity:</strong> Parameterizing classes with type arguments (e.g., <code>Box&lt;T&gt;</code>).</li>
-    <li><strong>Type Safety:</strong> Prevents dangerous runtime downcasting bugs; catches errors at compile time.</li>
-    <li><strong>Reusability:</strong> One template implementation serves unlimited data types.</li>
-    <li><strong>Orthogonal to Inheritance:</strong> Genericity handles uniform containers; inheritance handles behavioral specialization.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2588,13 +2418,6 @@
     <section id="u1-sec-9" class="topic-section" data-num="09">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-9', this)" data-id="u1-sec-9">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2857,16 +2680,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Model:</strong> An abstraction of reality created to understand and design a system before building it.</li>
-    <li><strong>Abstraction:</strong> Filtering out irrelevant noise to highlight core structural and behavioral invariants.</li>
-    <li><strong>Key Benefit:</strong> Catching design flaws on paper costs pennies; refactoring production code costs millions.</li>
-    <li><strong>Domain Example:</strong> E-commerce modeled cleanly as Customer, Order, Product, and Payment.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -2880,13 +2693,6 @@
     <section id="u1-sec-10" class="topic-section" data-num="10">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-10', this)" data-id="u1-sec-10">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3049,16 +2855,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Testing:</strong> Simulating a model detects architectural defects before writing thousands of lines.</li>
-    <li><strong>Communication:</strong> Provides a clear visual bridge between engineers and non-technical clients.</li>
-    <li><strong>Visualization:</strong> Makes abstract code structures and control flows tangible.</li>
-    <li><strong>Complexity Reduction:</strong> Modularizes massive systems into human-comprehensible views.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3072,13 +2868,6 @@
     <section id="u1-sec-11" class="topic-section" data-num="11">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-11', this)" data-id="u1-sec-11">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3227,16 +3016,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Choice:</strong> The modeling language chosen dictates how you conceptualize the solution.</li>
-    <li><strong>Precision:</strong> Architects use conceptual macro views; coders use microscopic API contracts.</li>
-    <li><strong>Reality:</strong> Models must reflect physical hardware and operational runtime constraints.</li>
-    <li><strong>Multiple Views:</strong> Complex systems require multiple orthogonal diagrams (4+1 views).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3250,13 +3029,6 @@
     <section id="u1-sec-12" class="topic-section" data-num="12">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-12', this)" data-id="u1-sec-12">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3436,16 +3208,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>OOM:</strong> Constructing systems out of discrete objects containing state and operations.</li>
-    <li><strong>Analysis:</strong> Focuses on the domain (WHAT); understandable to non-programmers.</li>
-    <li><strong>System Design:</strong> High-level architectural partitioning into subsystems and tiers.</li>
-    <li><strong>Object Design:</strong> Augmenting domain classes with concrete algorithms and data structures (HOW).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3459,13 +3221,6 @@
     <section id="u1-sec-13" class="topic-section" data-num="13">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-13', this)" data-id="u1-sec-13">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3665,16 +3420,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Object Model:</strong> Static blueprint of classes, attributes, operations, and associations.</li>
-    <li><strong>Dynamic Model:</strong> State machine capturing temporal behavior, events, and control flow.</li>
-    <li><strong>Functional Model:</strong> Data Flow Diagram (DFD) capturing algorithmic input-to-output data transformation.</li>
-    <li><strong>Orthogonal Views:</strong> Together, the 3 models completely define an enterprise system.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3688,13 +3433,6 @@
     <section id="u1-sec-14" class="topic-section" data-num="14">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-14', this)" data-id="u1-sec-14">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3850,16 +3588,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Passive Entity:</strong> Does not generate actions; responds only to external read/write operations.</li>
-    <li><strong>Temporal Decoupling:</strong> Allows values to be retrieved in a different order from how they were saved.</li>
-    <li><strong>Notation:</strong> Drawn as two parallel horizontal lines enclosing the store's name.</li>
-    <li><strong>Flows:</strong> Incoming arrow = write/modify/delete; Outgoing arrow = retrieve/query.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -3873,13 +3601,6 @@
     <section id="u1-sec-15" class="topic-section" data-num="15">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-15', this)" data-id="u1-sec-15">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4046,16 +3767,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Active Object:</strong> Has autonomy and drives computation by producing or consuming values.</li>
-    <li><strong>System Boundary:</strong> Always resides outside the system boundary.</li>
-    <li><strong>Three Flavors:</strong> Human users, hardware sensors (thermostat), and actuators (motor).</li>
-    <li><strong>Notation:</strong> Drawn as a solid rectangle in DFDs or a stick figure in UML Use Case models.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4069,13 +3780,6 @@
     <section id="u1-sec-16" class="topic-section" data-num="16">
       <div class="section-meta">
         <span class="part-pill">Part 3 — Modelling</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-16', this)" data-id="u1-sec-16">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4234,16 +3938,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Control Flow:</strong> A Boolean execution signal enabling or disabling a process in a DFD.</li>
-    <li><strong>Not an Input:</strong> It triggers or inhibits execution, but is not consumed as an arithmetic input.</li>
-    <li><strong>Notation:</strong> Always drawn as a <strong>dotted / dashed arrow</strong> (- - &rarr;).</li>
-    <li><strong>Contrast:</strong> Solid arrows carry data values; dotted arrows carry Boolean execution control.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4257,13 +3951,6 @@
     <section id="u1-sec-17" class="topic-section" data-num="17">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Unified Modeling Language (UML)</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-17', this)" data-id="u1-sec-17">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4434,16 +4121,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>UML:</strong> General-purpose visual modeling language for blueprinting software systems.</li>
-    <li><strong>Three Amigos:</strong> Grady Booch (Booch method), James Rumbaugh (OMT), Ivar Jacobson (OOSE).</li>
-    <li><strong>Standardization:</strong> Adopted by the Object Management Group (OMG) in 1997.</li>
-    <li><strong>4 Core Goals:</strong> Visualizing, Specifying, Constructing, and Documenting.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4457,13 +4134,6 @@
     <section id="u1-sec-18" class="topic-section" data-num="18">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Unified Modeling Language (UML)</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-18', this)" data-id="u1-sec-18">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4637,16 +4307,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Specification:</strong> Unambiguous semantic definitions of classes, methods, and constraints.</li>
-    <li><strong>Visualization:</strong> Translating code logic into rapid spatial visual diagrams.</li>
-    <li><strong>Construction:</strong> Generating executable C++/Java code skeletons directly from diagrams.</li>
-    <li><strong>Simulation &amp; Testing:</strong> Verifying sequence interactions and state transitions before coding.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4660,13 +4320,6 @@
     <section id="u1-sec-19" class="topic-section" data-num="19">
       <div class="section-meta">
         <span class="part-pill">Part 4 — Unified Modeling Language (UML)</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-19', this)" data-id="u1-sec-19">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4818,16 +4471,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Key Advantage:</strong> Bridges the communication gap between business stakeholders and technical developers.</li>
-    <li><strong>Major Challenge:</strong> High maintenance overhead to keep visual models synchronized with agile code changes.</li>
-    <li><strong>Expressiveness Limit:</strong> Fine-grained algorithmic branching is cumbersome to depict in sequence diagrams.</li>
-    <li><strong>Best Practice:</strong> Practice "Lightweight UML"—model core architectural views and critical protocols.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -4841,13 +4484,6 @@
     <section id="u1-sec-20" class="topic-section" data-num="20">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Conceptual Model of UML</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-20', this)" data-id="u1-sec-20">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5084,16 +4720,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Conceptual Model:</strong> Represents real-world problem domain entities before technical software design.</li>
-    <li><strong>Three Elements:</strong> UML building blocks, connection rules, and common mechanisms.</li>
-    <li><strong>Library Case Study:</strong> <code>Library</code> &rarr; <code>Item</code>, <code>User</code>, <code>Copy</code>.</li>
-    <li><strong>Item vs Copy:</strong> <code>Item</code> is the abstract title/ISBN; <code>Copy</code> is the physical stamped book on the shelf.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5107,13 +4733,6 @@
     <section id="u1-sec-21" class="topic-section" data-num="21">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Conceptual Model of UML</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-21', this)" data-id="u1-sec-21">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5290,16 +4909,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Three Building Blocks:</strong> Things (nouns), Relationships (verbs/connectors), and Diagrams (views).</li>
-    <li><strong>4 Things:</strong> Structural (static), Behavioral (dynamic), Grouping (packages), Annotational (notes).</li>
-    <li><strong>4 Relationships:</strong> Dependency, Association, Generalization, Realization.</li>
-    <li><strong>2 Diagram Families:</strong> Structural (static framework) and Behavioral (dynamics and interactions).</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5313,13 +4922,6 @@
     <section id="u1-sec-22" class="topic-section" data-num="22">
       <div class="section-meta">
         <span class="part-pill">Part 5 — Conceptual Model of UML</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-22', this)" data-id="u1-sec-22">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5506,16 +5108,6 @@
   </div>
 </div>
 
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>4+1 Model:</strong> Proposed by Philippe Kruchten to partition software into 5 orthogonal views.</li>
-    <li><strong>Use Case View (+1):</strong> Central anchor; captures scenarios that drive and test all other 4 views.</li>
-    <li><strong>Logical &amp; Process:</strong> Logical models classes/structure; Process models concurrency/threads.</li>
-    <li><strong>Implementation &amp; Deployment:</strong> Implementation models code components; Deployment models hardware nodes.</li>
-  </ul>
-</div>
-
       </div>
 
       <div class="section-nav-footer">
@@ -5529,13 +5121,6 @@
     <section id="u1-sec-23" class="topic-section" data-num="23">
       <div class="section-meta">
         <span class="part-pill">Part 6 — Important Object-Modelling Connection</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u1-sec-23', this)" data-id="u1-sec-23">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5793,16 +5378,6 @@
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Define Link as a relationship between objects (instance of an association). Define Association as a group of links relating objects from the same classes. Recreate AKTU Fig. 1.17.1 (Object Diagram with links) and Fig. 1.17.2 (Class Diagram with association). State that both use lines, but class associations include multiplicities while object links connect specific underlined instances.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Link:</strong> Physical/conceptual connection between specific concrete objects (instance level).</li>
-    <li><strong>Association:</strong> Group of links describing relationship structure between classes (class level).</li>
-    <li><strong>Multiplicity:</strong> Quantifies cardinality (e.g., <code>1</code>, <code>*</code>, <code>1..*</code>); belongs on associations, not links.</li>
-    <li><strong>Visual Rule:</strong> Class names are standard; object instance names are underlined (<code>rahul:Person</code>).</li>
-  </ul>
 </div>
 
       </div>

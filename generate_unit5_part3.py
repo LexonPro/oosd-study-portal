@@ -159,18 +159,6 @@ def get_unit5_part3_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What real-world relationship does inheritance model? (The "is-a" relationship).</li>
-    <li><span class="check-box"></span> How does a derived class pass arguments up to its base class constructor? (Through the derived constructor's member initialization list).</li>
-    <li><span class="check-box"></span> Are private members of a base class inherited by a derived class? (They are present in the object layout, but inaccessible to derived member functions).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"What is inheritance? What are the advantages of inheritance in C++?"</em> Emphasize two major advantages: 1) Code Reusability, and 2) Facilitating Runtime Polymorphism through dynamic binding.
 </div>
@@ -367,18 +355,6 @@ def get_unit5_part3_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the default mode of inheritance if none is specified for a class? (<code>private</code>).</li>
-    <li><span class="check-box"></span> What happens to public members of a base class under protected inheritance? (They become protected members).</li>
-    <li><span class="check-box"></span> Can private members of a base class ever become public in a derived class? (Never; base private members are inaccessible to derived classes).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -596,18 +572,6 @@ def get_unit5_part3_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Name the 5 types of inheritance supported in C++.</li>
-    <li><span class="check-box"></span> What is the primary difference between multiple and multilevel inheritance? (Multiple has multiple base classes for 1 derived; multilevel is a linear inheritance chain).</li>
-    <li><span class="check-box"></span> Which type of inheritance gives rise to the classic Diamond Problem? (Hybrid / Multipath inheritance).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain different types of inheritance in C++ with diagrams and examples"</em> is a classic 10-mark question. Draw the 5 topological boxes shown in the visual diagram above, write the class header syntax for each, and demonstrate Multiple inheritance using <code>Student</code>, <code>Faculty</code>, and <code>TeachingAssistant</code>.
 </div>
@@ -783,18 +747,6 @@ def get_unit5_part3_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How does <code>protected</code> differ from <code>private</code>? (Protected members can be accessed by derived classes; private members cannot).</li>
-    <li><span class="check-box"></span> Can code in <code>main()</code> access a protected member directly? (No, doing so triggers a compile-time access error).</li>
-    <li><span class="check-box"></span> What is the trade-off of using protected members? (Increases coupling between base and derived classes, slightly weakening pure encapsulation).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"What is the role of protected access specifier in inheritance? Compare public vs protected vs private."</em> Draw the 3-column access table above for full marks.
 </div>
@@ -961,17 +913,6 @@ def get_unit5_part3_sections():
       </tr>
     </tbody>
   </table>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What happens to the base class method when a derived class overrides it? (It is hidden in the derived scope, but remains accessible via <code>Base::method()</code>).</li>
-    <li><span class="check-box"></span> Why does function overloading happen at compile-time while overriding can be dynamic? (Overloading relies on static signature matching; overriding relies on dynamic dispatch).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -1153,18 +1094,6 @@ class C : virtual public A { /* ... */ };</code>
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the Diamond Problem in C++? (Multiple inheritance paths creating duplicate copies and ambiguous member accesses).</li>
-    <li><span class="check-box"></span> Where must the <code>virtual</code> keyword be placed to resolve the diamond problem? (In the inheritance lists of the intermediate classes: <code>class B : virtual public A</code>).</li>
-    <li><span class="check-box"></span> Which constructor is responsible for initializing the virtual base class? (The most-derived class constructor directly!).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

@@ -153,15 +153,6 @@ def get_part1_sections():
     </ol>
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Structural Modeling = Static features ("What is"), vocabulary, classes, relationships.</li>
-    <li>Behavioral Modeling = Dynamic execution ("How it behaves"), interactions, states, workflows.</li>
-    <li>Structural diagrams = Class, Object, Component, Deployment, Package.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -273,15 +264,6 @@ def get_part1_sections():
     </ul>
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Structural = Class, Component, Deployment (Static physical/logical skeleton).</li>
-    <li>Behavioral = Activity, Interaction (Sequence/Collaboration), Use Case, State Machine (Dynamic messages & states).</li>
-    <li>Architectural = Package, Deployment, Subsystems (Overall structural and operational framework).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -387,15 +369,6 @@ def get_part1_sections():
       <li>Mention that static attributes/methods are represented by <u>underlining</u> their names.</li>
     </ul>
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Class = 3 compartments: Name, Attributes, Operations.</li>
-    <li>Visibilities: <code>+</code> Public, <code>-</code> Private, <code>#</code> Protected, <code>~</code> Package.</li>
-    <li>Class is an abstraction/blueprint; an Object is a concrete runtime instance.</li>
-  </ul>
 </div>
 """
         },
@@ -555,16 +528,6 @@ def get_part1_sections():
     <strong>Common Pitfalls:</strong> Students frequently mix up the diamond placement in aggregation. Remember: <strong>The diamond always sits next to the "Whole" (Container), never the part!</strong>
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Dependency: Dashed arrow <code>- - -&gt;</code> (Uses-a).</li>
-    <li>Association: Solid line (Peer structural link).</li>
-    <li>Generalization: Solid line with hollow triangle <code>──▷</code> (Is-a).</li>
-    <li>Aggregation: Hollow diamond <code>◇──</code> (Weak Whole-Part); Composition: Solid diamond <code>◆──</code> (Strong Whole-Part).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -680,16 +643,6 @@ def get_part1_sections():
     <strong>Key Marking Formula:</strong> Define the 4 mechanisms (Specifications, Adornments, Common Divisions, Extensibility). Dedicate half your answer to <strong>Stereotypes</strong>, <strong>Tagged Values</strong>, and <strong>Constraints</strong> with precise syntax brackets (<code>&lt;&lt;&gt;&gt;</code>, <code>{}</code>).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Stereotypes: <code>&lt;&lt;name&gt;&gt;</code> (New model elements).</li>
-    <li>Tagged Values: <code>{tag = value}</code> (New metadata properties).</li>
-    <li>Constraints: <code>{rule}</code> (New semantic restrictions).</li>
-    <li>Common divisions: Classifier vs Instance, Interface vs Implementation.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -803,15 +756,6 @@ def get_part1_sections():
   <div class="tip-box">
     <strong>Exam Tip:</strong> Draw the taxonomy tree hierarchy above. It takes only 2 minutes to sketch in an exam booklet and guarantees full marks for clarity and structural neatness.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Total 14 diagrams in modern UML: 7 Structural + 7 Behavioral.</li>
-    <li>Structural = Class, Object, Component, Deployment, Package, Composite, Profile.</li>
-    <li>Behavioral = Use Case, Activity, State Machine, Sequence, Communication, Timing, Interaction Overview.</li>
-  </ul>
 </div>
 """
         }

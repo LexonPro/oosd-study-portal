@@ -135,15 +135,6 @@ def get_part3_sections():
     <strong>Key Tip:</strong> Always emphasize that both Sequence and Collaboration diagrams are semantically isomorphic (can be transformed into each other without losing information), but Collaboration diagrams highlight <strong>structural topology</strong> while Sequence diagrams highlight <strong>time chronology</strong>.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Collaboration Diagram = Spatial links + numbered message arrows.</li>
-    <li>Renamed to Communication Diagram in UML 2.0.</li>
-    <li>No lifelines; sequence numbering (<code>1:</code>, <code>2:</code>, <code>2.1:</code>) is mandatory for ordering.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -239,16 +230,6 @@ def get_part3_sections():
   <div class="tip-box">
     <strong>Scoring Formula:</strong> Clearly state that a <em>Link</em> is an instance of an association, a <em>Message</em> is a directed invocation, and a <em>Sequence Number</em> conveys chronological execution without a time axis.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Objects: Underlined boxes (<code><u>name : Type</u></code>).</li>
-    <li>Links: Solid lines (No multiplicities).</li>
-    <li>Messages: Arrows along links with sequence numbers (<code>1.1: method()</code>).</li>
-    <li>Sender: Dispatches | Receiver: Handles.</li>
-  </ul>
 </div>
 """
         },
@@ -354,15 +335,6 @@ def get_part3_sections():
   <div class="tip-box">
     <strong>Exam Tip:</strong> Always show a nested sequence example (e.g. <code>1.1:</code>, <code>1.2:</code>) to demonstrate that the author understands activation nesting in procedural systems.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Syntax: <code>seq_no: return_val := opName(args)</code>.</li>
-    <li>Direction: Small arrow parallel to the link points to the receiver.</li>
-    <li>Nested numbering: <code>1.1:</code> is called during the execution of <code>1:</code>.</li>
-  </ul>
 </div>
 """
         },
@@ -473,15 +445,6 @@ def get_part3_sections():
     <strong>Exam Must-Have:</strong> The Employee Salary calculation diagram above is the <strong>canonical textbook example</strong> in Indian university curricula. Drawing this specific diagram with letters <code>2a</code>, <code>2b</code>, <code>2c</code> awards 100% of the allocated marks.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Polymorphism in Collaboration = Identical message signature sent to diverse receiver types.</li>
-    <li>Sequence syntax: Uses branch letters (<code>2a:</code>, <code>2b:</code>, <code>2c:</code>).</li>
-    <li>Decouples client from concrete subclass implementations.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -561,15 +524,6 @@ def get_part3_sections():
   <div class="tip-box">
     <strong>Key Point:</strong> Standard sequential loop uses <code>* [clause]</code>. Parallel / concurrent iteration uses double vertical pipes: <code>* || [clause]</code>. Mentioning parallel iteration shows exceptional mastery.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Iteration symbol = Asterisk <code>*</code> after sequence number.</li>
-    <li>Syntax: <code>seq * [i := 1..n] : message()</code>.</li>
-    <li>Parallel iteration: <code>seq * || [clause] : message()</code>.</li>
-  </ul>
 </div>
 """
         },
@@ -654,15 +608,6 @@ def get_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Explain that self-messages depict internal member function calls (equivalent to <code>this.method()</code>). Draw the loop-back arc with a nested sequence number (<code>1.1</code>).
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Self-message = Object invoking a method on itself (<code>this.func()</code>).</li>
-    <li>Depicted as a semicircular loop-back arc attached to the object box.</li>
-    <li>Common use cases: Validation, recursive calls, private helper execution.</li>
-  </ul>
 </div>
 """
         }

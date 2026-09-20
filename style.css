@@ -144,24 +144,7 @@ body {
   z-index: 0;
 }
 
-/* Top Global Progress Bar */
-#progress-bar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: transparent;
-  z-index: 1000;
-}
 
-#progress-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-green));
-  box-shadow: 0 0 12px var(--accent-blue);
-  transition: width 0.1s ease-out;
-}
 
 /* App Layout Grid */
 .app-layout {
@@ -522,15 +505,7 @@ body.focus-mode .top-nav-bar {
   text-overflow: ellipsis;
 }
 
-.check-indicator {
-  font-size: 11px;
-  font-weight: bold;
-  color: var(--accent-green);
-}
 
-.nav-item.done .check-indicator::after {
-  content: '✓';
-}
 
 .sidebar-footer {
   padding: 8px 12px;
@@ -841,40 +816,7 @@ body.focus-mode .top-nav-bar {
   gap: 12px;
 }
 
-.mark-done-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-pill);
-  padding: 3px 10px;
-  color: var(--text-secondary);
-  font-size: 11px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-}
 
-.mark-done-btn:hover {
-  border-color: var(--accent-green);
-  color: var(--accent-green);
-}
-
-.mark-done-btn.is-done {
-  background: var(--accent-green-glow);
-  border-color: var(--accent-green);
-  color: var(--accent-green);
-}
-
-.mark-done-btn.is-done .done-icon::before {
-  content: '✓ ';
-}
-
-.reading-time {
-  font-size: 11px;
-  color: var(--text-muted);
-}
 
 .section-header {
   display: flex;
@@ -1268,54 +1210,7 @@ pre code,
   font-size: 13px;
 }
 
-/* 30-Second Quick Recall Checklist (Rich Emerald Accent) */
-.quick-recall {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.02) 100%);
-  border: 1px solid rgba(16, 185, 129, 0.35);
-  border-radius: var(--radius-md);
-  padding: 18px 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.05);
-}
 
-.recall-header {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--accent-green);
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.quick-recall ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.quick-recall li {
-  position: relative;
-  padding-left: 24px;
-  font-size: 13.5px;
-  margin-bottom: 8px;
-  color: var(--text-primary);
-  cursor: pointer;
-  user-select: none;
-  transition: opacity 0.2s ease;
-}
-
-.quick-recall li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--accent-green);
-  font-weight: 800;
-  font-size: 13px;
-}
-
-.quick-recall li:hover {
-  color: var(--accent-green);
-}
 
 /* Section Bottom Navigation Footer */
 .section-nav-footer {
@@ -2046,31 +1941,5 @@ pre.inline-code {
   line-height: 1.5;
 }
 
-.quick-recall {
-  background: rgba(52, 211, 153, 0.06);
-  border: 1px solid rgba(52, 211, 153, 0.22);
-  border-left: 4px solid #34d399;
-  border-radius: var(--radius-md);
-  padding: 14px 18px;
-  margin: 16px 0 24px 0;
-}
 
-.recall-header {
-  color: #34d399;
-  font-weight: 700;
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-
-[data-theme="light"] .recall-header {
-  color: #047857;
-}
-
-.quick-recall ul {
-  margin: 4px 0 0 18px;
-  padding: 0;
-  font-size: 12.5px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
 

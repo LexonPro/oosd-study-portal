@@ -210,19 +210,6 @@ def get_unit4_part4_sections():
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What are the 3 valid criteria for overloading a function in C++?</li>
-    <li><span class="check-box"></span> Why does changing only the return type produce a compile-time error?</li>
-    <li><span class="check-box"></span> Explain how compiler Name Mangling prevents symbol collisions in object files.</li>
-    <li><span class="check-box"></span> List at least 4 key differences between function overloading and function overriding.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum highlights the question: <em>"Can return type be used to overload a function? Justify with an example."</em> Always answer <strong>NO</strong> and provide the <code>compute(10);</code> ambiguity example showing the compiler cannot infer return intent without an assignment target.
 </div>
@@ -357,18 +344,6 @@ def get_unit4_part4_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the Right-to-Left rule for default arguments in C++?</li>
-    <li><span class="check-box"></span> Why must default arguments NOT be repeated in the function definition?</li>
-    <li><span class="check-box"></span> How can combining default arguments with function overloading cause call ambiguity?</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -530,18 +505,6 @@ def get_unit4_part4_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why does a friend function not have a <code>this</code> pointer?</li>
-    <li><span class="check-box"></span> Why is a forward declaration required when writing a friend function bridging two classes?</li>
-    <li><span class="check-box"></span> Does friendship transfer across class inheritance? (No, friendship is not inherited).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -707,18 +670,6 @@ def get_unit4_part4_sections():
       <path d="M 425 65 L 500 65" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)"/>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Distinguish between Early (Static) Binding and Late (Dynamic) Binding.</li>
-    <li><span class="check-box"></span> What is the role of the <code>__vptr</code> inside a polymorphic object?</li>
-    <li><span class="check-box"></span> What happens when a non-virtual function is called through a base class pointer?</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -928,19 +879,6 @@ def get_unit4_part4_sections():
       </tr>
     </tbody>
   </table>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Enumerate the 7 canonical rules of virtual functions.</li>
-    <li><span class="check-box"></span> Why can constructors never be virtual in C++?</li>
-    <li><span class="check-box"></span> Why must a base class destructor be virtual when polymorphism is involved?</li>
-    <li><span class="check-box"></span> What syntax turns a standard virtual function into a pure virtual function?</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

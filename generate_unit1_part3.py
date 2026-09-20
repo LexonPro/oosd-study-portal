@@ -263,16 +263,6 @@ def get_unit1_part3_sections():
     <strong>Key Scoring Points:</strong> Define a model as an abstraction of a system created to understand it prior to construction. Emphasize that models deliberately eliminate non-essential details. State the 4 steps engineers perform: abstract views, build precise notations, verify requirements, and transform into code.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Model:</strong> An abstraction of reality created to understand and design a system before building it.</li>
-    <li><strong>Abstraction:</strong> Filtering out irrelevant noise to highlight core structural and behavioral invariants.</li>
-    <li><strong>Key Benefit:</strong> Catching design flaws on paper costs pennies; refactoring production code costs millions.</li>
-    <li><strong>Domain Example:</strong> E-commerce modeled cleanly as Customer, Order, Product, and Payment.</li>
-  </ul>
-</div>
 """
         },
 
@@ -437,16 +427,6 @@ def get_unit1_part3_sections():
     <strong>Key Scoring Points:</strong> You must list and detail the four explicit points from Quantum: <strong>(a) Testing a physical entity before building it</strong> (cite airplane wind tunnel scale model), <strong>(b) Communication with customers</strong> (software mock-ups/storyboards), <strong>(c) Visualization</strong> (storyboards for movies/ads), and <strong>(d) Reduction of complexity</strong> (omitting non-essential details).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Testing:</strong> Simulating a model detects architectural defects before writing thousands of lines.</li>
-    <li><strong>Communication:</strong> Provides a clear visual bridge between engineers and non-technical clients.</li>
-    <li><strong>Visualization:</strong> Makes abstract code structures and control flows tangible.</li>
-    <li><strong>Complexity Reduction:</strong> Modularizes massive systems into human-comprehensible views.</li>
-  </ul>
-</div>
 """
         },
 
@@ -596,16 +576,6 @@ def get_unit1_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Write all four principles verbatim: <strong>(1) Choice of model influences how a problem is attacked, (2) Expressed at different levels of precision, (3) Best models are connected to reality, and (4) No single model is sufficient (small set of nearly independent models)</strong>. Connect point 4 to architectural views (Design, Process, Implementation, Deployment).
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Choice:</strong> The modeling language chosen dictates how you conceptualize the solution.</li>
-    <li><strong>Precision:</strong> Architects use conceptual macro views; coders use microscopic API contracts.</li>
-    <li><strong>Reality:</strong> Models must reflect physical hardware and operational runtime constraints.</li>
-    <li><strong>Multiple Views:</strong> Complex systems require multiple orthogonal diagrams (4+1 views).</li>
-  </ul>
 </div>
 """
         },
@@ -787,16 +757,6 @@ def get_unit1_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Define OOM as constructing systems using a collection of objects that encapsulate stored values and methods. Explain the four steps clearly: <strong>System Analysis</strong> (problem formulation &amp; real-world model), <strong>System Design</strong> (subsystem partitioning &amp; architecture), <strong>Object Design</strong> (data structures &amp; algorithms), and <strong>Final Implementation</strong> (translating classes to code following SE practices).
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>OOM:</strong> Constructing systems out of discrete objects containing state and operations.</li>
-    <li><strong>Analysis:</strong> Focuses on the domain (WHAT); understandable to non-programmers.</li>
-    <li><strong>System Design:</strong> High-level architectural partitioning into subsystems and tiers.</li>
-    <li><strong>Object Design:</strong> Augmenting domain classes with concrete algorithms and data structures (HOW).</li>
-  </ul>
 </div>
 """
         },
@@ -999,16 +959,6 @@ def get_unit1_part3_sections():
     <strong>Key Scoring Points:</strong> Draw the 3 orthogonal models clearly. Explain that the <strong>Object Model</strong> represents static structure via class diagrams; the <strong>Dynamic Model</strong> captures state changes over time via state diagrams; and the <strong>Functional Model</strong> details data flow transformations via DFDs (processes, actors, data stores).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Object Model:</strong> Static blueprint of classes, attributes, operations, and associations.</li>
-    <li><strong>Dynamic Model:</strong> State machine capturing temporal behavior, events, and control flow.</li>
-    <li><strong>Functional Model:</strong> Data Flow Diagram (DFD) capturing algorithmic input-to-output data transformation.</li>
-    <li><strong>Orthogonal Views:</strong> Together, the 3 models completely define an enterprise system.</li>
-  </ul>
-</div>
 """
         },
 
@@ -1165,16 +1115,6 @@ def get_unit1_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> State that a data store is a passive object in DFDs storing data for later access. Highlight that it does not generate operations on its own. Draw the pair of parallel lines notation. Explain the meaning of incoming arrows (modifying/deleting/inserting) and outgoing arrows (retrieving data).
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Passive Entity:</strong> Does not generate actions; responds only to external read/write operations.</li>
-    <li><strong>Temporal Decoupling:</strong> Allows values to be retrieved in a different order from how they were saved.</li>
-    <li><strong>Notation:</strong> Drawn as two parallel horizontal lines enclosing the store's name.</li>
-    <li><strong>Flows:</strong> Incoming arrow = write/modify/delete; Outgoing arrow = retrieve/query.</li>
-  </ul>
 </div>
 """
         },
@@ -1344,16 +1284,6 @@ def get_unit1_part3_sections():
     <strong>Key Scoring Points:</strong> Define an actor as an active object that drives the data flow graph by producing or consuming values. Emphasize that actors are attached to inputs and outputs of the diagram. Cite the exact three examples given in Quantum: <strong>(1) User of a program, (2) A thermostat, and (3) A motor under computer control</strong>. Note that it is drawn as a solid rectangle.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Active Object:</strong> Has autonomy and drives computation by producing or consuming values.</li>
-    <li><strong>System Boundary:</strong> Always resides outside the system boundary.</li>
-    <li><strong>Three Flavors:</strong> Human users, hardware sensors (thermostat), and actuators (motor).</li>
-    <li><strong>Notation:</strong> Drawn as a solid rectangle in DFDs or a stick figure in UML Use Case models.</li>
-  </ul>
-</div>
 """
         },
 
@@ -1513,16 +1443,6 @@ def get_unit1_part3_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Explain that DFDs show all possible computation paths, but not which paths execute or their sequence. Define control flow as a Boolean value affecting whether a process runs. Emphasize that it is <strong>not an input value</strong> to the calculation. State clearly that it is drawn as a <strong>dotted line</strong> from the process producing the Boolean to the process being controlled.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Control Flow:</strong> A Boolean execution signal enabling or disabling a process in a DFD.</li>
-    <li><strong>Not an Input:</strong> It triggers or inhibits execution, but is not consumed as an arithmetic input.</li>
-    <li><strong>Notation:</strong> Always drawn as a <strong>dotted / dashed arrow</strong> (- - &rarr;).</li>
-    <li><strong>Contrast:</strong> Solid arrows carry data values; dotted arrows carry Boolean execution control.</li>
-  </ul>
 </div>
 """
         }

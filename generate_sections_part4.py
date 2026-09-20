@@ -108,15 +108,6 @@ def get_part4_sections():
     <strong>Exam Answer Key:</strong> State clearly: (1) Horizontal dimension represents objects/lifelines; (2) Vertical dimension represents chronological time flowing downwards.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Sequence Diagram = Time-ordered message exchanges.</li>
-    <li>X-Axis = Objects / Lifelines | Y-Axis = Time progressing downwards.</li>
-    <li>Used to detail specific Use Case scenarios and method dispatch sequences.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -235,17 +226,6 @@ def get_part4_sections():
     <strong>Examiner Trap:</strong> Drawing an open arrow for a synchronous message is considered a major UML syntax error! Always draw a <strong>solid filled black triangle</strong> for synchronous calls, and an <strong>open stick arrow</strong> for asynchronous messages.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Lifeline = Vertical dashed line.</li>
-    <li>Activation = Thin vertical box (Focus of control).</li>
-    <li>Synchronous = Solid line + filled triangle <code>──▶</code>.</li>
-    <li>Asynchronous = Solid line + open stick <code>──></code>.</li>
-    <li>Destruction = Large <code>X</code> at bottom of lifeline.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -357,16 +337,6 @@ def get_part4_sections():
     <strong>Exam Answer Blueprint:</strong> Differentiate non-priority (FIFO) from priority-based dispatch. Explain that priority messages jump queue positions and mention multiple priority queues where schedulers drain high-priority queues first.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Asynchronous message = Non-blocking dispatch (open arrow <code>──></code>).</li>
-    <li>Without priority = FIFO queue order.</li>
-    <li>With priority = Priority tags jump messages to the front.</li>
-    <li>Multiple priority queues = Separate hardware/OS queues per priority level.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -454,16 +424,6 @@ def get_part4_sections():
   <div class="tip-box">
     <strong>Examiner Advice:</strong> Point out that the server becomes the caller in Phase 3. Draw the arrow pointing from Server back to Client, and explicitly label it as a callback invocation.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Callback = Inversion of Control ("Don't call us, we'll call you").</li>
-    <li>Step 1: Client registers interest and passes a callback handler.</li>
-    <li>Step 2: Server executes work in background.</li>
-    <li>Step 3: Server fires a message BACK to the client when ready.</li>
-  </ul>
 </div>
 """
         },
@@ -592,15 +552,6 @@ def get_part4_sections():
   <div class="tip-box">
     <strong>Key Tip:</strong> Illustrate either the forked-arrow convention or the Event Bus mediator pattern. Mention that broadcast messages are always asynchronous in nature because the publisher does not wait for each listener to reply.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Broadcast = Single source sending message to multiple target objects.</li>
-    <li>Underpins Publish-Subscribe and Observer patterns.</li>
-    <li>Always asynchronous; decoupled via an Event Bus or forked arrows.</li>
-  </ul>
 </div>
 """
         }

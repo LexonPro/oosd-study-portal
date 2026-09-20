@@ -12,11 +12,6 @@
 </head>
 <body id="top" data-unit="unit5">
 
-  <!-- Top Global Progress Bar -->
-  <div id="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-
   <!-- Mobile Header & Toggle -->
   <header class="mobile-nav-header">
     <button id="sidebar-toggle" aria-label="Toggle Sidebar Navigation" class="icon-btn">
@@ -75,25 +70,19 @@
           <input type="text" id="sidebar-search" placeholder="Search 24 topics (e.g. vtable, virtual, operator)..." autocomplete="off">
           <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
         </div>
-
         <div class="sidebar-stats">
           <div class="stat-item">
             <span class="stat-val" id="current-sec-indicator">01 / 24</span>
             <span class="stat-lbl">Active Topic</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="progress-percent">0%</span>
-            <span class="stat-lbl">Read Progress</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-val" id="completed-count">0/24</span>
-            <span class="stat-lbl">Studied</span>
+            <span class="stat-val">24</span>
+            <span class="stat-lbl">Total Topics</span>
           </div>
         </div>
 
         <div class="sidebar-controls-row">
           <button id="expand-all-btn" class="mini-btn" title="Expand/Collapse All Parts">Toggle All</button>
-          <button id="reset-progress-btn" class="mini-btn" title="Reset checkmarks">Reset Checks</button>
         </div>
       </div>
 
@@ -117,35 +106,30 @@
         <a href="#u5-sec-1" class="nav-item" data-id="u5-sec-1" id="nav-u5-sec-1">
           <span class="nav-num">01</span>
           <span class="nav-text">1. Basics of Object and Class in C++</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-1"></span>
         </a>
         
 
         <a href="#u5-sec-2" class="nav-item" data-id="u5-sec-2" id="nav-u5-sec-2">
           <span class="nav-num">02</span>
           <span class="nav-text">2. Data Members and Member Functions</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-2"></span>
         </a>
         
 
         <a href="#u5-sec-3" class="nav-item" data-id="u5-sec-3" id="nav-u5-sec-3">
           <span class="nav-num">03</span>
           <span class="nav-text">3. Private and Public Members</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-3"></span>
         </a>
         
 
         <a href="#u5-sec-4" class="nav-item" data-id="u5-sec-4" id="nav-u5-sec-4">
           <span class="nav-num">04</span>
           <span class="nav-text">4. Static Data Members</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-4"></span>
         </a>
         
 
         <a href="#u5-sec-5" class="nav-item" data-id="u5-sec-5" id="nav-u5-sec-5">
           <span class="nav-num">05</span>
           <span class="nav-text">5. Static Member Functions</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-5"></span>
         </a>
         
 
@@ -170,42 +154,36 @@
         <a href="#u5-sec-6" class="nav-item" data-id="u5-sec-6" id="nav-u5-sec-6">
           <span class="nav-num">06</span>
           <span class="nav-text">6. Constructors</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-6"></span>
         </a>
         
 
         <a href="#u5-sec-7" class="nav-item" data-id="u5-sec-7" id="nav-u5-sec-7">
           <span class="nav-num">07</span>
           <span class="nav-text">7. Types of Constructors</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-7"></span>
         </a>
         
 
         <a href="#u5-sec-8" class="nav-item" data-id="u5-sec-8" id="nav-u5-sec-8">
           <span class="nav-num">08</span>
           <span class="nav-text">8. Destructors</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-8"></span>
         </a>
         
 
         <a href="#u5-sec-9" class="nav-item" data-id="u5-sec-9" id="nav-u5-sec-9">
           <span class="nav-num">09</span>
           <span class="nav-text">9. Operator Overloading</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-9"></span>
         </a>
         
 
         <a href="#u5-sec-10" class="nav-item" data-id="u5-sec-10" id="nav-u5-sec-10">
           <span class="nav-num">10</span>
           <span class="nav-text">10. Rules of Operator Overloading</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-10"></span>
         </a>
         
 
         <a href="#u5-sec-11" class="nav-item" data-id="u5-sec-11" id="nav-u5-sec-11">
           <span class="nav-num">11</span>
           <span class="nav-text">11. Type Conversion</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-11"></span>
         </a>
         
 
@@ -230,42 +208,36 @@
         <a href="#u5-sec-12" class="nav-item" data-id="u5-sec-12" id="nav-u5-sec-12">
           <span class="nav-num">12</span>
           <span class="nav-text">12. Concept of Inheritance</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-12"></span>
         </a>
         
 
         <a href="#u5-sec-13" class="nav-item" data-id="u5-sec-13" id="nav-u5-sec-13">
           <span class="nav-num">13</span>
           <span class="nav-text">13. Modes of Inheritance</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-13"></span>
         </a>
         
 
         <a href="#u5-sec-14" class="nav-item" data-id="u5-sec-14" id="nav-u5-sec-14">
           <span class="nav-num">14</span>
           <span class="nav-text">14. Types of Inheritance</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-14"></span>
         </a>
         
 
         <a href="#u5-sec-15" class="nav-item" data-id="u5-sec-15" id="nav-u5-sec-15">
           <span class="nav-num">15</span>
           <span class="nav-text">15. Protected Members</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-15"></span>
         </a>
         
 
         <a href="#u5-sec-16" class="nav-item" data-id="u5-sec-16" id="nav-u5-sec-16">
           <span class="nav-num">16</span>
           <span class="nav-text">16. Function Overriding</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-16"></span>
         </a>
         
 
         <a href="#u5-sec-17" class="nav-item" data-id="u5-sec-17" id="nav-u5-sec-17">
           <span class="nav-num">17</span>
           <span class="nav-text">17. Virtual Base Class</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-17"></span>
         </a>
         
 
@@ -290,49 +262,42 @@
         <a href="#u5-sec-18" class="nav-item" data-id="u5-sec-18" id="nav-u5-sec-18">
           <span class="nav-num">18</span>
           <span class="nav-text">18. Polymorphism: Concept & Classification</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-18"></span>
         </a>
         
 
         <a href="#u5-sec-19" class="nav-item" data-id="u5-sec-19" id="nav-u5-sec-19">
           <span class="nav-num">19</span>
           <span class="nav-text">19. Pointers in C++</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-19"></span>
         </a>
         
 
         <a href="#u5-sec-20" class="nav-item" data-id="u5-sec-20" id="nav-u5-sec-20">
           <span class="nav-num">20</span>
           <span class="nav-text">20. Pointers and Objects</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-20"></span>
         </a>
         
 
         <a href="#u5-sec-21" class="nav-item" data-id="u5-sec-21" id="nav-u5-sec-21">
           <span class="nav-num">21</span>
           <span class="nav-text">21. this Pointer</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-21"></span>
         </a>
         
 
         <a href="#u5-sec-22" class="nav-item" data-id="u5-sec-22" id="nav-u5-sec-22">
           <span class="nav-num">22</span>
           <span class="nav-text">22. Virtual Functions</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-22"></span>
         </a>
         
 
         <a href="#u5-sec-23" class="nav-item" data-id="u5-sec-23" id="nav-u5-sec-23">
           <span class="nav-num">23</span>
           <span class="nav-text">23. Pure Virtual Functions & Abstract Classes</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-23"></span>
         </a>
         
 
         <a href="#u5-sec-24" class="nav-item" data-id="u5-sec-24" id="nav-u5-sec-24">
           <span class="nav-num">24</span>
           <span class="nav-text">24. Implementing Polymorphism: Complete Pipeline</span>
-          <span class="check-indicator" id="chk-nav-u5-sec-24"></span>
         </a>
         
 
@@ -425,13 +390,6 @@
     <section id="u5-sec-1" class="topic-section" data-num="1">
       <div class="section-meta">
         <span class="part-pill">PART 1 — OBJECTS AND CLASSES</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-1', this)" data-id="u5-sec-1">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -634,18 +592,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why does declaring a class allocate zero bytes of RAM? (Only provides type metadata to compiler).</li>
-    <li><span class="check-box"></span> What is the formula for calculating the memory footprint of an object? (Sum of non-static data members + alignment padding).</li>
-    <li><span class="check-box"></span> State at least 4 critical distinctions between a Class and an Object.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"Define class and object. Differentiate between them with a suitable C++ example."</em> Write the 5-point comparison table above, include the <code>Student</code> class code, and state clearly that member functions reside in the code segment once, while data members replicate per object instance in the stack/heap.
 </div>
@@ -663,13 +609,6 @@
     <section id="u5-sec-2" class="topic-section" data-num="2">
       <div class="section-meta">
         <span class="part-pill">PART 1 — OBJECTS AND CLASSES</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-2', this)" data-id="u5-sec-2">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -853,18 +792,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the default inlining behavior of functions defined inside a class? (Treated as inline candidate by compiler).</li>
-    <li><span class="check-box"></span> Write the syntax for defining a member function outside its class. (<code>returnType ClassName::funcName(params)</code>).</li>
-    <li><span class="check-box"></span> Why is the scope resolution operator <code>::</code> required for outside definitions? (Binds the function body to the class symbol table).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"How are member functions defined inside and outside the class? Explain with syntax and code."</em> Always demonstrate both styles using the <code>BankAccount</code> example and mention that defining outside with <code>::</code> promotes header/source code separation.
 </div>
@@ -882,13 +809,6 @@
     <section id="u5-sec-3" class="topic-section" data-num="3">
       <div class="section-meta">
         <span class="part-pill">PART 1 — OBJECTS AND CLASSES</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-3', this)" data-id="u5-sec-3">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1082,18 +1002,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the default access specifier for members of a C++ class? (<code>private</code>).</li>
-    <li><span class="check-box"></span> How does data hiding prevent corrupted states in software applications? (Enforces validation in mutator functions).</li>
-    <li><span class="check-box"></span> Can a private member function exist? (Yes, used as helper / utility subroutines internal to the class).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When examiners ask: <em>"What is the difference between private and public access specifiers in C++?"</em>, provide the 4-point comparison table above and explain how private variables prevent invalid state (e.g. negative balance or invalid age) using getter/setter validation code.
 </div>
@@ -1111,13 +1019,6 @@
     <section id="u5-sec-4" class="topic-section" data-num="4">
       <div class="section-meta">
         <span class="part-pill">PART 1 — OBJECTS AND CLASSES</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-4', this)" data-id="u5-sec-4">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1275,18 +1176,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Where does a static data member reside in physical memory? (In the static/global data segment, not on object stack/heap).</li>
-    <li><span class="check-box"></span> Why does omitting the outside definition cause a linker error? (Unresolved external symbol: memory was never allocated).</li>
-    <li><span class="check-box"></span> Does a static data member increase the <code>sizeof</code> an object? (No! <code>sizeof(Car)</code> remains unaffected by static variables).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Explain static data member with an example"</em>, emphasize that it MUST be defined outside the class using <code>Type Class::var = val;</code>. Forgetting this definition is the #1 mistake students make in programming exams!
 </div>
@@ -1304,13 +1193,6 @@
     <section id="u5-sec-5" class="topic-section" data-num="5">
       <div class="section-meta">
         <span class="part-pill">PART 1 — OBJECTS AND CLASSES</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-5', this)" data-id="u5-sec-5">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1517,18 +1399,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why can a static member function not access non-static data members? (It lacks an object context and an implicit <code>this</code> pointer).</li>
-    <li><span class="check-box"></span> Can a static member function be declared as <code>virtual</code>? (No, virtual functions require dynamic dispatch via an object's <code>vptr</code>).</li>
-    <li><span class="check-box"></span> Can a static member function be declared with the <code>const</code> qualifier? (No, <code>const</code> qualifies the <code>this</code> pointer, which does not exist here).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions on <em>"Explain static member functions and state their properties"</em> frequently appear in 5-mark short notes. Write the 3 rules: 1) No <code>this</code> pointer, 2) Only access static data, 3) Called via <code>Class::func()</code>. Mentioning that static functions cannot be virtual or const earns full marks!
 </div>
@@ -1546,13 +1416,6 @@
     <section id="u5-sec-6" class="topic-section" data-num="6">
       <div class="section-meta">
         <span class="part-pill">PART 2 — CONSTRUCTORS, DESTRUCTORS & TYPE CONVERSION</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-6', this)" data-id="u5-sec-6">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1734,18 +1597,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What happens if a programmer writes <code>void ClassName()</code>? (The compiler treats it as a normal member function, not a constructor!).</li>
-    <li><span class="check-box"></span> Can a constructor return a value using <code>return 10;</code>? (No, returning a value from a constructor is a compile error).</li>
-    <li><span class="check-box"></span> Why can constructors never be virtual in C++? (VTable/VPtr does not exist until construction completes).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"What is a constructor? Differentiate it from a normal function"</em>, draw the comparison table above. Highlight that a constructor has NO return type and is invoked implicitly by the runtime system.
 </div>
@@ -1763,13 +1614,6 @@
     <section id="u5-sec-7" class="topic-section" data-num="7">
       <div class="section-meta">
         <span class="part-pill">PART 2 — CONSTRUCTORS, DESTRUCTORS & TYPE CONVERSION</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-7', this)" data-id="u5-sec-7">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1968,18 +1812,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why must a copy constructor take its argument by reference (<code>const ClassName&amp;</code>)? (Passing by value would trigger infinite recursion).</li>
-    <li><span class="check-box"></span> What is the fatal bug of a shallow copy when raw dynamic pointers are present? (Pointer aliasing leads to double-free undefined behavior).</li>
-    <li><span class="check-box"></span> When does the compiler stop generating an implicit default constructor? (As soon as any parameterized constructor is declared).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain the different types of constructors with examples. Why is the copy constructor argument passed by reference?"</em> is a guaranteed 10-mark question. Provide code for all 3 constructors and state clearly that pass-by-value causes infinite constructor recursion.
 </div>
@@ -1997,13 +1829,6 @@
     <section id="u5-sec-8" class="topic-section" data-num="8">
       <div class="section-meta">
         <span class="part-pill">PART 2 — CONSTRUCTORS, DESTRUCTORS & TYPE CONVERSION</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-8', this)" data-id="u5-sec-8">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2184,18 +2009,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why can a destructor never have parameters or return values? (It is invoked automatically by the runtime with no call-site syntax).</li>
-    <li><span class="check-box"></span> In what order are local stack objects destructed? (Strict reverse order of construction: LIFO).</li>
-    <li><span class="check-box"></span> What happens if you forget to write <code>delete</code> on a heap object allocated with <code>new</code>? (Its destructor never runs, causing a permanent memory leak).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking to predict the output of nested scopes with constructors and destructors are common. Remember the rule: <strong>Objects created last are destructed first (LIFO)</strong>, and local scope objects die at the closing brace <code>}</code> before subsequent code executes.
 </div>
@@ -2213,13 +2026,6 @@
     <section id="u5-sec-9" class="topic-section" data-num="9">
       <div class="section-meta">
         <span class="part-pill">PART 2 — CONSTRUCTORS, DESTRUCTORS & TYPE CONVERSION</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-9', this)" data-id="u5-sec-9">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2366,18 +2172,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How many arguments does a binary operator take when overloaded as a member function? (Exactly 1; left operand is <code>this</code>).</li>
-    <li><span class="check-box"></span> Why must <code>&lt;&lt;</code> and <code>&gt;&gt;</code> stream operators be overloaded as friend functions? (Because the left operand is <code>std::ostream</code> or <code>std::istream</code>, which cannot be modified).</li>
-    <li><span class="check-box"></span> How does the compiler distinguish between prefix <code>++c</code> and postfix <code>c++</code>? (Postfix takes a dummy <code>int</code> parameter: <code>operator++(int)</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Write a complete C++ program to add two Complex numbers by overloading the '+' operator"</em> is one of the top 3 most frequently asked 10-mark questions in Unit 5. The exact code above provides the full solution.
 </div>
@@ -2395,13 +2189,6 @@
     <section id="u5-sec-10" class="topic-section" data-num="10">
       <div class="section-meta">
         <span class="part-pill">PART 2 — CONSTRUCTORS, DESTRUCTORS & TYPE CONVERSION</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-10', this)" data-id="u5-sec-10">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2602,18 +2389,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Name the 6 operators in C++ that can NEVER be overloaded. (<code>.</code>, <code>.*</code>, <code>::</code>, <code>?:</code>, <code>sizeof</code>, <code>typeid</code>).</li>
-    <li><span class="check-box"></span> Name the 4 operators that MUST be overloaded as member functions only. (<code>=</code>, <code>[]</code>, <code>()</code>, <code>-&gt;</code>).</li>
-    <li><span class="check-box"></span> Can you invent a new operator such as <code>**</code> for exponents in C++? (No! Only existing operators can be overloaded).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"List the rules of operator overloading and mention which operators cannot be overloaded"</em> is a classic 5-mark and 10-mark examination question. Recite the 5 rules above and list all 6 forbidden operators for maximum score.
 </div>
@@ -2631,13 +2406,6 @@
     <section id="u5-sec-11" class="topic-section" data-num="11">
       <div class="section-meta">
         <span class="part-pill">PART 2 — CONSTRUCTORS, DESTRUCTORS & TYPE CONVERSION</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-11', this)" data-id="u5-sec-11">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2794,18 +2562,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How is Basic-to-Class type conversion implemented? (Using a single-argument conversion constructor in the class).</li>
-    <li><span class="check-box"></span> What are the 3 syntax rules of a Class-to-Basic casting operator? (No return type, no arguments, must be a class member function).</li>
-    <li><span class="check-box"></span> How do you prevent unintentional implicit basic-to-class conversions? (Prefix the constructor with the <code>explicit</code> keyword).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking: <em>"Explain type conversion in C++: Basic to Class type and Class to Basic type with examples"</em> appear repeatedly. Always write the <code>Duration</code> / <code>Time</code> class with its constructor <code>Time(int)</code> and casting operator <code>operator int()</code>.
 </div>
@@ -2823,13 +2579,6 @@
     <section id="u5-sec-12" class="topic-section" data-num="12">
       <div class="section-meta">
         <span class="part-pill">PART 3 — INHERITANCE</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-12', this)" data-id="u5-sec-12">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2982,18 +2731,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What real-world relationship does inheritance model? (The "is-a" relationship).</li>
-    <li><span class="check-box"></span> How does a derived class pass arguments up to its base class constructor? (Through the derived constructor's member initialization list).</li>
-    <li><span class="check-box"></span> Are private members of a base class inherited by a derived class? (They are present in the object layout, but inaccessible to derived member functions).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"What is inheritance? What are the advantages of inheritance in C++?"</em> Emphasize two major advantages: 1) Code Reusability, and 2) Facilitating Runtime Polymorphism through dynamic binding.
 </div>
@@ -3011,13 +2748,6 @@
     <section id="u5-sec-13" class="topic-section" data-num="13">
       <div class="section-meta">
         <span class="part-pill">PART 3 — INHERITANCE</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-13', this)" data-id="u5-sec-13">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3209,18 +2939,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the default mode of inheritance if none is specified for a class? (<code>private</code>).</li>
-    <li><span class="check-box"></span> What happens to public members of a base class under protected inheritance? (They become protected members).</li>
-    <li><span class="check-box"></span> Can private members of a base class ever become public in a derived class? (Never; base private members are inaccessible to derived classes).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> AKTU questions routinely ask: <em>"Explain the visibility of base class members in public, private, and protected inheritance modes with a table."</em> Draw the 3x3 table above and highlight that <code>private</code> members are NEVER directly accessible in derived classes.
 </div>
@@ -3238,13 +2956,6 @@
     <section id="u5-sec-14" class="topic-section" data-num="14">
       <div class="section-meta">
         <span class="part-pill">PART 3 — INHERITANCE</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-14', this)" data-id="u5-sec-14">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3453,18 +3164,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Name the 5 types of inheritance supported in C++.</li>
-    <li><span class="check-box"></span> What is the primary difference between multiple and multilevel inheritance? (Multiple has multiple base classes for 1 derived; multilevel is a linear inheritance chain).</li>
-    <li><span class="check-box"></span> Which type of inheritance gives rise to the classic Diamond Problem? (Hybrid / Multipath inheritance).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain different types of inheritance in C++ with diagrams and examples"</em> is a classic 10-mark question. Draw the 5 topological boxes shown in the visual diagram above, write the class header syntax for each, and demonstrate Multiple inheritance using <code>Student</code>, <code>Faculty</code>, and <code>TeachingAssistant</code>.
 </div>
@@ -3482,13 +3181,6 @@
     <section id="u5-sec-15" class="topic-section" data-num="15">
       <div class="section-meta">
         <span class="part-pill">PART 3 — INHERITANCE</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-15', this)" data-id="u5-sec-15">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3657,18 +3349,6 @@
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How does <code>protected</code> differ from <code>private</code>? (Protected members can be accessed by derived classes; private members cannot).</li>
-    <li><span class="check-box"></span> Can code in <code>main()</code> access a protected member directly? (No, doing so triggers a compile-time access error).</li>
-    <li><span class="check-box"></span> What is the trade-off of using protected members? (Increases coupling between base and derived classes, slightly weakening pure encapsulation).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"What is the role of protected access specifier in inheritance? Compare public vs protected vs private."</em> Draw the 3-column access table above for full marks.
 </div>
@@ -3686,13 +3366,6 @@
     <section id="u5-sec-16" class="topic-section" data-num="16">
       <div class="section-meta">
         <span class="part-pill">PART 3 — INHERITANCE</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-16', this)" data-id="u5-sec-16">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3854,17 +3527,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What happens to the base class method when a derived class overrides it? (It is hidden in the derived scope, but remains accessible via <code>Base::method()</code>).</li>
-    <li><span class="check-box"></span> Why does function overloading happen at compile-time while overriding can be dynamic? (Overloading relies on static signature matching; overriding relies on dynamic dispatch).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When examiners ask: <em>"Differentiate between function overloading and function overriding with examples"</em>, write the 4-point matrix above. Mention that changing only the parameter list in a derived class results in <strong>Function Hiding</strong>, not overriding.
 </div>
@@ -3882,13 +3544,6 @@
     <section id="u5-sec-17" class="topic-section" data-num="17">
       <div class="section-meta">
         <span class="part-pill">PART 3 — INHERITANCE</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-17', this)" data-id="u5-sec-17">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4063,18 +3718,6 @@ class C : virtual public A { /* ... */ };</code>
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the Diamond Problem in C++? (Multiple inheritance paths creating duplicate copies and ambiguous member accesses).</li>
-    <li><span class="check-box"></span> Where must the <code>virtual</code> keyword be placed to resolve the diamond problem? (In the inheritance lists of the intermediate classes: <code>class B : virtual public A</code>).</li>
-    <li><span class="check-box"></span> Which constructor is responsible for initializing the virtual base class? (The most-derived class constructor directly!).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"What is a virtual base class? Explain the Diamond Problem with an example and diagram"</em> is one of the most famous 10-mark questions in the entire AKTU curriculum. Draw the diamond diagram above, provide the complete code with <code>virtual public Person</code>, and mention that only one shared copy of <code>Person</code> is instantiated.
 </div>
@@ -4092,13 +3735,6 @@ class C : virtual public A { /* ... */ };</code>
     <section id="u5-sec-18" class="topic-section" data-num="18">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-18', this)" data-id="u5-sec-18">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4288,18 +3924,6 @@ Box Vol: 48</pre>
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the literal meaning of Polymorphism? (Many forms: one interface, multiple behaviors).</li>
-    <li><span class="check-box"></span> What are the two types of polymorphism in C++? (Compile-time / Early binding vs Run-time / Late binding).</li>
-    <li><span class="check-box"></span> Which polymorphism type has zero runtime execution overhead? (Compile-time polymorphism).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"What is polymorphism? Differentiate between compile-time and run-time polymorphism with suitable C++ examples."</em> is a regular 10-mark question. Draw Figure 18.1 taxonomy tree, present the comparison table, and provide function overloading and virtual function code snippets.
 </div>
@@ -4317,13 +3941,6 @@ Box Vol: 48</pre>
     <section id="u5-sec-19" class="topic-section" data-num="19">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-19', this)" data-id="u5-sec-19">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4473,18 +4090,6 @@ Heap integer value: 500</pre>
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What does the address-of operator <code>&amp;</code> return? (The memory address of a variable).</li>
-    <li><span class="check-box"></span> What does the dereference operator <code>*</code> do? (Accesses the value stored at the memory address pointed to).</li>
-    <li><span class="check-box"></span> What is a memory leak? (Failing to deallocate heap memory using <code>delete</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked about <em>"Pointers in C++ and their applications"</em>, mention: 1) Dynamic memory management (new/delete), 2) Efficient data passing by address, 3) Base class pointers to derived objects for runtime polymorphism.
 </div>
@@ -4502,13 +4107,6 @@ Heap integer value: 500</pre>
     <section id="u5-sec-20" class="topic-section" data-num="20">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-20', this)" data-id="u5-sec-20">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4681,18 +4279,6 @@ Calling display() via Derived* pointer:
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>(*ptr).func()</code> equivalent to <code>ptr-&gt;func()</code>? (The arrow operator dereferences and accesses in one step).</li>
-    <li><span class="check-box"></span> Can a Base class pointer point to a Derived class object? (Yes, legally and safely).</li>
-    <li><span class="check-box"></span> Without <code>virtual</code>, which function is executed via a Base pointer pointing to a Derived object? (The Base class version, due to static early binding).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"What happens when a base class pointer points to a derived class object? Can it access derived-specific members?"</em> Answer: It can ONLY access members declared in the base class. It cannot access derived-specific members without a cast.
 </div>
@@ -4710,13 +4296,6 @@ Calling display() via Derived* pointer:
     <section id="u5-sec-21" class="topic-section" data-num="21">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-21', this)" data-id="u5-sec-21">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4891,18 +4470,6 @@ Account Owner: Vikram | Final Balance: $2050</pre>
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the exact type of <code>this</code> inside a class named <code>Car</code>? (<code>Car* const this</code>).</li>
-    <li><span class="check-box"></span> Can a static member function use the <code>this</code> pointer? (No, static functions have no object context).</li>
-    <li><span class="check-box"></span> How does a function enable method chaining? (By returning <code>*this</code> by reference).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain the significance of the this pointer with examples illustrating parameter shadowing and returning reference."</em> Always write: 1) Definition, 2) Disambiguation example (<code>this-&gt;x = x</code>), 3) Cascade method chaining (<code>return *this</code>).
 </div>
@@ -4920,13 +4487,6 @@ Account Owner: Vikram | Final Balance: $2050</pre>
     <section id="u5-sec-22" class="topic-section" data-num="22">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-22', this)" data-id="u5-sec-22">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5125,18 +4685,6 @@ int main() {
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Can a constructor be declared <code>virtual</code>? (No, memory and vptr do not exist yet).</li>
-    <li><span class="check-box"></span> Why must a base class destructor be declared <code>virtual</code>? (To ensure the derived destructor executes when deleting through a base pointer).</li>
-    <li><span class="check-box"></span> What are <code>vtable</code> and <code>vptr</code>? (vtable is the array of function pointers; vptr is the object's hidden pointer to its class vtable).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain virtual functions, late binding, and the working of vtable and vptr with a diagram."</em> This is the #1 most frequently repeated question in Unit 5. Draw Figure 22.1 and trace how <code>bPtr-&gt;draw()</code> resolves via <code>vptr</code>.
 </div>
@@ -5154,13 +4702,6 @@ int main() {
     <section id="u5-sec-23" class="topic-section" data-num="23">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-23', this)" data-id="u5-sec-23">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5343,18 +4884,6 @@ int main() {
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the syntax of a pure virtual function? (<code>virtual void func() = 0;</code>).</li>
-    <li><span class="check-box"></span> Can you instantiate an abstract class? (No, direct instantiation is a compilation error).</li>
-    <li><span class="check-box"></span> Can you create pointers to an abstract class? (Yes, abstract class pointers are essential for polymorphic interfaces).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"What is an abstract class? What is the role of pure virtual functions in achieving abstraction?"</em> State: 1) Abstract class contains ≥ 1 pure virtual function (<code>= 0</code>), 2) Cannot be instantiated, 3) Mandates derived classes to provide concrete definitions, 4) Provides pure interface contracts.
 </div>
@@ -5372,13 +4901,6 @@ int main() {
     <section id="u5-sec-24" class="topic-section" data-num="24">
       <div class="section-meta">
         <span class="part-pill">PART 4 — POLYMORPHISM AND POINTERS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u5-sec-24', this)" data-id="u5-sec-24">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 5 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -5658,18 +5180,6 @@ int main() {
 [Derived Destructor] Closed GCS gRPC channel.
 [Base Destructor] Storage Engine for analytics-lake-gcs shut down.</pre>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How does C++ dispatch a function call when it is declared <code>virtual</code>? (Via the object's <code>vptr</code> indexing into the class <code>vtable</code> at runtime).</li>
-    <li><span class="check-box"></span> Why is compile-time polymorphism faster than run-time polymorphism? (Direct machine instruction CALL vs indirect pointer dereference).</li>
-    <li><span class="check-box"></span> What is the role of virtual destructors in polymorphism? (Guarantees derived destructors run when deleting through base pointers, avoiding memory leaks).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

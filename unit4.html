@@ -12,11 +12,6 @@
 </head>
 <body id="top" data-unit="unit4">
 
-  <!-- Top Global Progress Bar -->
-  <div id="progress-bar-container">
-    <div id="progress-bar"></div>
-  </div>
-
   <!-- Mobile Header & Toggle -->
   <header class="mobile-nav-header">
     <button id="sidebar-toggle" aria-label="Toggle Sidebar Navigation" class="icon-btn">
@@ -75,25 +70,19 @@
           <input type="text" id="sidebar-search" placeholder="Search 20 topics (e.g. inline, virtual, memory)..." autocomplete="off">
           <button id="clear-search" class="clear-btn" title="Clear search" style="display: none;">✕</button>
         </div>
-
         <div class="sidebar-stats">
           <div class="stat-item">
             <span class="stat-val" id="current-sec-indicator">01 / 20</span>
             <span class="stat-lbl">Active Topic</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="progress-percent">0%</span>
-            <span class="stat-lbl">Read Progress</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-val" id="completed-count">0/20</span>
-            <span class="stat-lbl">Studied</span>
+            <span class="stat-val">20</span>
+            <span class="stat-lbl">Total Topics</span>
           </div>
         </div>
 
         <div class="sidebar-controls-row">
           <button id="expand-all-btn" class="mini-btn" title="Expand/Collapse All Parts">Toggle All</button>
-          <button id="reset-progress-btn" class="mini-btn" title="Reset checkmarks">Reset Checks</button>
         </div>
       </div>
 
@@ -117,77 +106,66 @@
         <a href="#u4-sec-1" class="nav-item" data-id="u4-sec-1" id="nav-u4-sec-1">
           <span class="nav-num">01</span>
           <span class="nav-text">1. C++ Overview & Industrial Applications</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-1"></span>
         </a>
         
 
         <a href="#u4-sec-2" class="nav-item" data-id="u4-sec-2" id="nav-u4-sec-2">
           <span class="nav-num">02</span>
           <span class="nav-text">2. Structure of a C++ Program & Interface Separation</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-2"></span>
         </a>
         
 
         <a href="#u4-sec-3" class="nav-item" data-id="u4-sec-3" id="nav-u4-sec-3">
           <span class="nav-num">03</span>
           <span class="nav-text">3. Namespace & Scope Resolution</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-3"></span>
         </a>
         
 
         <a href="#u4-sec-4" class="nav-item" data-id="u4-sec-4" id="nav-u4-sec-4">
           <span class="nav-num">04</span>
           <span class="nav-text">4. Identifiers & Lexical Naming Rules</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-4"></span>
         </a>
         
 
         <a href="#u4-sec-5" class="nav-item" data-id="u4-sec-5" id="nav-u4-sec-5">
           <span class="nav-num">05</span>
           <span class="nav-text">5. Variables & Memory Allocation Concepts</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-5"></span>
         </a>
         
 
         <a href="#u4-sec-6" class="nav-item" data-id="u4-sec-6" id="nav-u4-sec-6">
           <span class="nav-num">06</span>
           <span class="nav-text">6. Constants, Literal Types & The const Concept</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-6"></span>
         </a>
         
 
         <a href="#u4-sec-7" class="nav-item" data-id="u4-sec-7" id="nav-u4-sec-7">
           <span class="nav-num">07</span>
           <span class="nav-text">7. Enumeration — enum & Scoped Enumerators</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-7"></span>
         </a>
         
 
         <a href="#u4-sec-8" class="nav-item" data-id="u4-sec-8" id="nav-u4-sec-8">
           <span class="nav-num">08</span>
           <span class="nav-text">8. Operators in C++ & Memory Management</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-8"></span>
         </a>
         
 
         <a href="#u4-sec-9" class="nav-item" data-id="u4-sec-9" id="nav-u4-sec-9">
           <span class="nav-num">09</span>
           <span class="nav-text">9. Typecasting, The 4 Modern Casts & typeid</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-9"></span>
         </a>
         
 
         <a href="#u4-sec-10" class="nav-item" data-id="u4-sec-10" id="nav-u4-sec-10">
           <span class="nav-num">10</span>
           <span class="nav-text">10. Control Structures: Decisions & Loops</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-10"></span>
         </a>
         
 
         <a href="#u4-sec-11" class="nav-item" data-id="u4-sec-11" id="nav-u4-sec-11">
           <span class="nav-num">11</span>
           <span class="nav-text">11. Basic C++ Programming Problems & Algorithms</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-11"></span>
         </a>
         
 
@@ -212,63 +190,54 @@
         <a href="#u4-sec-12" class="nav-item" data-id="u4-sec-12" id="nav-u4-sec-12">
           <span class="nav-num">12</span>
           <span class="nav-text">12. Simple Functions: Prototypes, Calls & Stack Frames</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-12"></span>
         </a>
         
 
         <a href="#u4-sec-13" class="nav-item" data-id="u4-sec-13" id="nav-u4-sec-13">
           <span class="nav-num">13</span>
           <span class="nav-text">13. Call by Reference & Return by Reference</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-13"></span>
         </a>
         
 
         <a href="#u4-sec-14" class="nav-item" data-id="u4-sec-14" id="nav-u4-sec-14">
           <span class="nav-num">14</span>
           <span class="nav-text">14. Inline Functions & Call Overhead Optimization</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-14"></span>
         </a>
         
 
         <a href="#u4-sec-15" class="nav-item" data-id="u4-sec-15" id="nav-u4-sec-15">
           <span class="nav-num">15</span>
           <span class="nav-text">15. Macro vs Inline Function: The Safety & Semantics Divide</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-15"></span>
         </a>
         
 
         <a href="#u4-sec-16" class="nav-item" data-id="u4-sec-16" id="nav-u4-sec-16">
           <span class="nav-num">16</span>
           <span class="nav-text">16. Function Overloading & Compile-Time Polymorphism</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-16"></span>
         </a>
         
 
         <a href="#u4-sec-17" class="nav-item" data-id="u4-sec-17" id="nav-u4-sec-17">
           <span class="nav-num">17</span>
           <span class="nav-text">17. Default Arguments & Syntactic Binding Rules</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-17"></span>
         </a>
         
 
         <a href="#u4-sec-18" class="nav-item" data-id="u4-sec-18" id="nav-u4-sec-18">
           <span class="nav-num">18</span>
           <span class="nav-text">18. Friend Functions & Inter-Class Architectural Bridges</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-18"></span>
         </a>
         
 
         <a href="#u4-sec-19" class="nav-item" data-id="u4-sec-19" id="nav-u4-sec-19">
           <span class="nav-num">19</span>
           <span class="nav-text">19. Virtual Functions & Dynamic Dispatch (VTable/VPtr Mechanics)</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-19"></span>
         </a>
         
 
         <a href="#u4-sec-20" class="nav-item" data-id="u4-sec-20" id="nav-u4-sec-20">
           <span class="nav-num">20</span>
           <span class="nav-text">20. Rules of Virtual Functions, Virtual Destructors & Abstract Interfaces</span>
-          <span class="check-indicator" id="chk-nav-u4-sec-20"></span>
         </a>
         
 
@@ -361,13 +330,6 @@
     <section id="u4-sec-1" class="topic-section" data-num="1">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-1', this)" data-id="u4-sec-1">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -580,19 +542,6 @@
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Can you state who developed C++, in what year, and at which facility? (Bjarne Stroustrup, 1979, Bell Labs).</li>
-    <li><span class="check-box"></span> What did the <code>++</code> in C++ signify? (Increment operator in C, indicating an evolutionary step forward).</li>
-    <li><span class="check-box"></span> State the Zero-Overhead Principle in your own words.</li>
-    <li><span class="check-box"></span> Name at least 4 critical real-world application domains where C++ is mandatory.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Explain features and applications of C++"</em> (frequently asked 10-mark question), draw the evolutionary chart showing C (speed) + Simula67 (classes) = C++, and list at least 5 industrial applications with concrete software names (e.g. Unreal Engine, Windows Kernel, V8 Engine).
 </div>
@@ -610,13 +559,6 @@
     <section id="u4-sec-2" class="topic-section" data-num="2">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-2', this)" data-id="u4-sec-2">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -827,19 +769,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Can you draw the 4 sequential tiers of a C++ program from memory?</li>
-    <li><span class="check-box"></span> What is the exact purpose of the scope resolution operator (<code>::</code>) when defining member functions?</li>
-    <li><span class="check-box"></span> Why does separating interface (<code>.h</code>) from implementation (<code>.cpp</code>) improve large software projects?</li>
-    <li><span class="check-box"></span> What does returning <code>0</code> from <code>main()</code> signal to the host operating system?</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Describe the basic structure of a C++ program with an example"</em>, explicitly write out the code showing member functions defined <strong>outside</strong> the class using <code>ReturnType ClassName::FunctionName(...)</code>. This proves your mastery of scope resolution.
 </div>
@@ -857,13 +786,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-3" class="topic-section" data-num="3">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-3', this)" data-id="u4-sec-3">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1014,18 +936,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>using namespace std;</code> discouraged in production header (<code>.h</code>) files? (It forces all symbols into anyone who includes that header).</li>
-    <li><span class="check-box"></span> What is the syntax to access a member inside a namespace? (<code>NamespaceName::MemberName</code>).</li>
-    <li><span class="check-box"></span> What is an anonymous (unnamed) namespace used for? (Internal linkage within a single translation unit).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> In 2-mark questions, examiners frequently ask: <em>"What is the significance of namespace in C++?"</em> Write: <em>"Namespaces prevent name collisions by creating separate declarative scopes for identifiers. All standard library entities are grouped under namespace std."</em>
 </div>
@@ -1043,13 +953,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-4" class="topic-section" data-num="4">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-4', this)" data-id="u4-sec-4">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1228,18 +1131,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>2nd_rank</code> an invalid identifier? (Starts with a numeric digit).</li>
-    <li><span class="check-box"></span> Why is <code>total-sum</code> invalid? (Hyphen is parsed as subtraction operator).</li>
-    <li><span class="check-box"></span> Name the only non-alphanumeric character permitted in a standard C++ identifier. (Underscore <code>_</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking <em>"Identify valid and invalid identifiers with reasons"</em> are guaranteed 2 to 5-mark scorers. State the exact reason (e.g. "contains hyphen", "starts with digit", "is a keyword") for each candidate.
 </div>
@@ -1257,13 +1148,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-5" class="topic-section" data-num="5">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-5', this)" data-id="u4-sec-5">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1407,19 +1291,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What are the 4 fundamental properties of every variable in C++? (Name, Type, Address, Value).</li>
-    <li><span class="check-box"></span> Distinguish between variable declaration and variable definition.</li>
-    <li><span class="check-box"></span> Which C++ operator retrieves the physical hexadecimal memory address of a variable? (Address-of operator <code>&amp;</code>).</li>
-    <li><span class="check-box"></span> How many bytes do typical <code>int</code>, <code>double</code>, and <code>char</code> occupy on 64-bit systems? (4, 8, 1).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum explicitly asks: <em>"Explain the memory concept of a variable."</em> Always write: <em>"A variable is a symbolic name associated with a memory location where its value is stored as binary bits. Its address remains fixed during its scope lifetime while its stored value can mutate."</em>
 </div>
@@ -1437,13 +1308,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-6" class="topic-section" data-num="6">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-6', this)" data-id="u4-sec-6">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1603,18 +1467,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What distinguishes an octal literal from a decimal literal in C++? (Leading zero <code>0</code>, e.g. <code>052</code>).</li>
-    <li><span class="check-box"></span> What is the hidden terminating character automatically placed at the end of every string literal? (<code>'\0'</code> null terminator).</li>
-    <li><span class="check-box"></span> Decode the difference between <code>const int* p</code> and <code>int* const p</code>.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking to explain <em>"Types of constants in C++ with examples"</em> appear regularly in Section B (7 or 10 marks). Ensure you explicitly illustrate decimal, octal, hexadecimal, floating-point, character, string, and const pointer declarations.
 </div>
@@ -1632,13 +1484,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-7" class="topic-section" data-num="7">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-7', this)" data-id="u4-sec-7">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -1790,18 +1635,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What integer value is assigned to the first enumerator if not explicitly initialized? (<code>0</code>).</li>
-    <li><span class="check-box"></span> Write the syntax for declaring an enum of the days of the week.</li>
-    <li><span class="check-box"></span> What are the two primary advantages of <code>enum class</code> over classic <code>enum</code>? (Scoped names, no implicit integer conversion).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> In short questions (2 marks), examiners routinely ask: <em>"What is an enumeration? Write its syntax."</em> Always provide the <code>enum days { Sun, Mon, Tue, Wed, Thu, Fri, Sat };</code> example as specified directly in the AKTU Quantum guide.
 </div>
@@ -1819,13 +1652,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-8" class="topic-section" data-num="8">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-8', this)" data-id="u4-sec-8">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2056,18 +1882,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the syntax for deallocating an array allocated with <code>new[]</code>? (<code>delete[] ptr;</code>).</li>
-    <li><span class="check-box"></span> Which header file is required to use <code>setw</code> and <code>setfill</code>? (<code>&lt;iomanip&gt;</code>).</li>
-    <li><span class="check-box"></span> Name at least 3 fundamental advantages of <code>new</code> over <code>malloc()</code>.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Compare malloc vs new and free vs delete"</em> (classic 5 or 10-mark question), write the comparison table above. Highlight that <strong>constructors and destructors are invoked</strong> by C++ operators, which is impossible with C library calls.
 </div>
@@ -2085,13 +1899,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-9" class="topic-section" data-num="9">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-9', this)" data-id="u4-sec-9">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2329,19 +2136,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What does <code>dynamic_cast</code> return when pointer downcasting fails? (<code>nullptr</code>).</li>
-    <li><span class="check-box"></span> What prerequisite must a base class satisfy to support <code>dynamic_cast</code>? (Must contain at least one virtual function).</li>
-    <li><span class="check-box"></span> Which cast operator is used exclusively to strip constness? (<code>const_cast</code>).</li>
-    <li><span class="check-box"></span> Which header file is required to invoke the <code>typeid</code> operator? (<code>&lt;typeinfo&gt;</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking <em>"Explain different types of typecasting operators in C++ with examples"</em> appear in almost every semester exam. Always explain <code>static_cast</code>, <code>dynamic_cast</code>, <code>const_cast</code>, <code>reinterpret_cast</code>, and mention <code>typeid</code> with the comparison matrix.
 </div>
@@ -2359,13 +2153,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-10" class="topic-section" data-num="10">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-10', this)" data-id="u4-sec-10">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2573,18 +2360,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>while</code> classified as an entry-controlled loop? (Condition checked before body entry).</li>
-    <li><span class="check-box"></span> What happens if a <code>break</code> statement is omitted in a <code>switch</code> case? (Execution falls through into subsequent cases).</li>
-    <li><span class="check-box"></span> What is the minimum number of times a <code>do-while</code> loop executes? (Exactly 1 time).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Differentiate between while and do-while loops with examples"</em>, make sure to write: 1. Condition evaluation point (Entry vs Exit), 2. Minimum iterations (0 vs 1), and 3. Provide the counter = 100 test code snippet demonstrating do-while executing once while while executes zero times.
 </div>
@@ -2602,13 +2377,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-11" class="topic-section" data-num="11">
       <div class="section-meta">
         <span class="part-pill">PART 1 — C++ BASICS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-11', this)" data-id="u4-sec-11">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2772,18 +2540,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why should you avoid calculating $N!$ directly when implementing Taylor series? (Causes 64-bit integer overflow).</li>
-    <li><span class="check-box"></span> Write the recurrence relation for finding the next term of $\\sin(x)$.</li>
-    <li><span class="check-box"></span> Which stream class from <code>&lt;sstream&gt;</code> is ideal for tokenizing a sentence into words? (<code>std::stringstream</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When writing the Taylor series code in an exam, always comment on the recurrence formula. Examiners specifically look for students who avoid direct factorial multiplication!
 </div>
@@ -2801,13 +2557,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-12" class="topic-section" data-num="12">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-12', this)" data-id="u4-sec-12">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -2959,18 +2708,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the purpose of a function prototype? (Declares signature to compiler before full definition).</li>
-    <li><span class="check-box"></span> What happens to local variables when a function completes execution? (Their stack frame is popped; variables are destroyed).</li>
-    <li><span class="check-box"></span> What does the <code>void</code> return type signify? (Function produces no return value).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> In theory questions asking to explain <em>"Components of a C++ function"</em>, clearly identify and define: 1. Function Prototype, 2. Formal Parameters vs Actual Arguments, 3. Function Body, and 4. Return Statement.
 </div>
@@ -2988,13 +2725,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-13" class="topic-section" data-num="13">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-13', this)" data-id="u4-sec-13">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3197,18 +2927,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the syntax for creating an alias reference to a variable? (<code>int&amp; ref = var;</code>).</li>
-    <li><span class="check-box"></span> Why is it dangerous to return a reference to a local stack variable? (Becomes a dangling reference after stack frame deallocation).</li>
-    <li><span class="check-box"></span> How does return-by-reference allow a function call to appear on the Left-Hand Side (LHS) of an assignment? (Returns an lvalue).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Explain Call by Reference and Return by Reference with examples"</em>, provide the <code>swapValues(int&amp;, int&amp;)</code> function for call by reference, and demonstrate <code>getElement(i) = value;</code> for return by reference. Explicitly state the warning regarding local variable destruction.
 </div>
@@ -3226,13 +2944,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-14" class="topic-section" data-num="14">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-14', this)" data-id="u4-sec-14">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3379,18 +3090,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the primary purpose of declaring a function as <code>inline</code>? (Eliminate function call overhead for small routines).</li>
-    <li><span class="check-box"></span> Are member functions defined inside the class body inline by default? (Yes, implicitly inline).</li>
-    <li><span class="check-box"></span> State at least 3 conditions where the C++ compiler will reject inline expansion. (Loops, recursion, static variables).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Whenever asked <em>"What are inline functions? What are their limitations?"</em>, list the 5 situations where compilers ignore inlining (loops, switch, recursion, large bodies, static variables) to score full marks.
 </div>
@@ -3408,13 +3107,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-15" class="topic-section" data-num="15">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-15', this)" data-id="u4-sec-15">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3600,18 +3292,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> In which translation phase are macros evaluated versus inline functions? (Preprocessor vs Compiler).</li>
-    <li><span class="check-box"></span> Explain the double-evaluation bug when <code>SQUARE(x++)</code> is passed to a macro.</li>
-    <li><span class="check-box"></span> Name at least 4 critical advantages of inline functions over preprocessor macros.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Compare Macro and Inline Functions with an example"</em> is one of the most frequently asked 5-mark and 10-mark questions in AKTU OOSD. Always draw the comparison table above and demonstrate the <code>a++</code> double-increment bug in code!
 </div>
@@ -3629,13 +3309,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-16" class="topic-section" data-num="16">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-16', this)" data-id="u4-sec-16">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -3840,19 +3513,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What are the 3 valid criteria for overloading a function in C++?</li>
-    <li><span class="check-box"></span> Why does changing only the return type produce a compile-time error?</li>
-    <li><span class="check-box"></span> Explain how compiler Name Mangling prevents symbol collisions in object files.</li>
-    <li><span class="check-box"></span> List at least 4 key differences between function overloading and function overriding.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum highlights the question: <em>"Can return type be used to overload a function? Justify with an example."</em> Always answer <strong>NO</strong> and provide the <code>compute(10);</code> ambiguity example showing the compiler cannot infer return intent without an assignment target.
 </div>
@@ -3870,13 +3530,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-17" class="topic-section" data-num="17">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-17', this)" data-id="u4-sec-17">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4006,18 +3659,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the Right-to-Left rule for default arguments in C++?</li>
-    <li><span class="check-box"></span> Why must default arguments NOT be repeated in the function definition?</li>
-    <li><span class="check-box"></span> How can combining default arguments with function overloading cause call ambiguity?</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Watch out for the famous ambiguity trap:
   <code>void print(int x);</code> and <code>void print(int x, int y = 10);</code>. Calling <code>print(5);</code> causes a compiler error because the compiler cannot determine whether to invoke the single-argument version or the two-argument version with its default value.
@@ -4036,13 +3677,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-18" class="topic-section" data-num="18">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-18', this)" data-id="u4-sec-18">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4196,18 +3830,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why does a friend function not have a <code>this</code> pointer?</li>
-    <li><span class="check-box"></span> Why is a forward declaration required when writing a friend function bridging two classes?</li>
-    <li><span class="check-box"></span> Does friendship transfer across class inheritance? (No, friendship is not inherited).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> AKTU consistently asks: <em>"Write a program to find the maximum of two numbers belonging to two different classes using a friend function."</em> The code above directly solves this 10-mark question with full formatting and forward declaration.
 </div>
@@ -4225,13 +3847,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-19" class="topic-section" data-num="19">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-19', this)" data-id="u4-sec-19">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4390,18 +4005,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Distinguish between Early (Static) Binding and Late (Dynamic) Binding.</li>
-    <li><span class="check-box"></span> What is the role of the <code>__vptr</code> inside a polymorphic object?</li>
-    <li><span class="check-box"></span> What happens when a non-virtual function is called through a base class pointer?</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When explaining virtual functions, always sketch the <strong>VTable and VPtr diagram</strong> shown above. AKTU examiners reward full marks to students who demonstrate that <code>vptr</code> points to the class's table of function pointers.
 </div>
@@ -4419,13 +4022,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
     <section id="u4-sec-20" class="topic-section" data-num="20">
       <div class="section-meta">
         <span class="part-pill">PART 2 — C++ FUNCTIONS</span>
-        <div class="meta-actions">
-          <button class="mark-done-btn" onclick="toggleSectionDone('u4-sec-20', this)" data-id="u4-sec-20">
-            <span class="done-icon">○</span>
-            <span class="done-text">Mark as Studied</span>
-          </button>
-          <span class="reading-time">⏱ 4 min study</span>
-        </div>
       </div>
       
       <div class="section-header">
@@ -4626,19 +4222,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
       </tr>
     </tbody>
   </table>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Enumerate the 7 canonical rules of virtual functions.</li>
-    <li><span class="check-box"></span> Why can constructors never be virtual in C++?</li>
-    <li><span class="check-box"></span> Why must a base class destructor be virtual when polymorphism is involved?</li>
-    <li><span class="check-box"></span> What syntax turns a standard virtual function into a pure virtual function?</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

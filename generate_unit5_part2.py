@@ -188,18 +188,6 @@ def get_unit5_part2_sections():
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What happens if a programmer writes <code>void ClassName()</code>? (The compiler treats it as a normal member function, not a constructor!).</li>
-    <li><span class="check-box"></span> Can a constructor return a value using <code>return 10;</code>? (No, returning a value from a constructor is a compile error).</li>
-    <li><span class="check-box"></span> Why can constructors never be virtual in C++? (VTable/VPtr does not exist until construction completes).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"What is a constructor? Differentiate it from a normal function"</em>, draw the comparison table above. Highlight that a constructor has NO return type and is invoked implicitly by the runtime system.
 </div>
@@ -405,18 +393,6 @@ def get_unit5_part2_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why must a copy constructor take its argument by reference (<code>const ClassName&amp;</code>)? (Passing by value would trigger infinite recursion).</li>
-    <li><span class="check-box"></span> What is the fatal bug of a shallow copy when raw dynamic pointers are present? (Pointer aliasing leads to double-free undefined behavior).</li>
-    <li><span class="check-box"></span> When does the compiler stop generating an implicit default constructor? (As soon as any parameterized constructor is declared).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"Explain the different types of constructors with examples. Why is the copy constructor argument passed by reference?"</em> is a guaranteed 10-mark question. Provide code for all 3 constructors and state clearly that pass-by-value causes infinite constructor recursion.
 </div>
@@ -604,18 +580,6 @@ def get_unit5_part2_sections():
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why can a destructor never have parameters or return values? (It is invoked automatically by the runtime with no call-site syntax).</li>
-    <li><span class="check-box"></span> In what order are local stack objects destructed? (Strict reverse order of construction: LIFO).</li>
-    <li><span class="check-box"></span> What happens if you forget to write <code>delete</code> on a heap object allocated with <code>new</code>? (Its destructor never runs, causing a permanent memory leak).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking to predict the output of nested scopes with constructors and destructors are common. Remember the rule: <strong>Objects created last are destructed first (LIFO)</strong>, and local scope objects die at the closing brace <code>}</code> before subsequent code executes.
 </div>
@@ -767,18 +731,6 @@ def get_unit5_part2_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How many arguments does a binary operator take when overloaded as a member function? (Exactly 1; left operand is <code>this</code>).</li>
-    <li><span class="check-box"></span> Why must <code>&lt;&lt;</code> and <code>&gt;&gt;</code> stream operators be overloaded as friend functions? (Because the left operand is <code>std::ostream</code> or <code>std::istream</code>, which cannot be modified).</li>
-    <li><span class="check-box"></span> How does the compiler distinguish between prefix <code>++c</code> and postfix <code>c++</code>? (Postfix takes a dummy <code>int</code> parameter: <code>operator++(int)</code>).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -988,18 +940,6 @@ def get_unit5_part2_sections():
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Name the 6 operators in C++ that can NEVER be overloaded. (<code>.</code>, <code>.*</code>, <code>::</code>, <code>?:</code>, <code>sizeof</code>, <code>typeid</code>).</li>
-    <li><span class="check-box"></span> Name the 4 operators that MUST be overloaded as member functions only. (<code>=</code>, <code>[]</code>, <code>()</code>, <code>-&gt;</code>).</li>
-    <li><span class="check-box"></span> Can you invent a new operator such as <code>**</code> for exponents in C++? (No! Only existing operators can be overloaded).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> <em>"List the rules of operator overloading and mention which operators cannot be overloaded"</em> is a classic 5-mark and 10-mark examination question. Recite the 5 rules above and list all 6 forbidden operators for maximum score.
 </div>
@@ -1161,18 +1101,6 @@ def get_unit5_part2_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> How is Basic-to-Class type conversion implemented? (Using a single-argument conversion constructor in the class).</li>
-    <li><span class="check-box"></span> What are the 3 syntax rules of a Class-to-Basic casting operator? (No return type, no arguments, must be a class member function).</li>
-    <li><span class="check-box"></span> How do you prevent unintentional implicit basic-to-class conversions? (Prefix the constructor with the <code>explicit</code> keyword).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

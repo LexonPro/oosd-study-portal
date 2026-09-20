@@ -239,16 +239,6 @@ def get_unit1_part1_sections():
     <strong>Key Scoring Points:</strong> Define all 6 elements clearly. Cite both tangible entities (Student, Employee, Patient) and intangible entities (Bank Account). Explain that message passing is the only mechanism through which encapsulated object methods are triggered.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Object:</strong> Tangible or intangible entity in the problem domain (State + Behavior + Identity).</li>
-    <li><strong>Attribute:</strong> Data values representing object state.</li>
-    <li><strong>Class:</strong> Abstract template grouping objects with common attributes and behaviors.</li>
-    <li><strong>Message Passing:</strong> Communication mechanism where one object requests another to execute a method.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -507,16 +497,6 @@ def get_unit1_part1_sections():
     <strong>Key Scoring Points:</strong> Always define the triad: <strong>Encapsulation</strong> (protects data), <strong>Inheritance</strong> (reuses code), and <strong>Polymorphism</strong> (allows many forms). Draw the 3 pillars diagram and summarize their mutual synergy using the formula: <em>Encapsulation protects data + Inheritance reuses structure + Polymorphism provides flexible behavior</em>.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Encapsulation:</strong> Bundles data with methods in an inviolable shell; hides internal representation.</li>
-    <li><strong>Inheritance:</strong> Allows subclasses to reuse and extend superclass properties (code reusability).</li>
-    <li><strong>Polymorphism:</strong> Same message/operation exhibits different behaviors across different classes.</li>
-    <li>The 3 features combine to make software modular, secure, reusable, and extensible.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -768,16 +748,6 @@ def get_unit1_part1_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Memorize the four-stage sequence: <strong>System Analysis &rarr; System Design &rarr; Object Design &rarr; Final Implementation</strong>. Highlight that System Analysis focuses on the problem domain (WHAT), System Design structures architecture into subsystems, Object Design details data structures/algorithms, and Implementation codes the classes while preserving traceability.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>System Analysis:</strong> Captures domain requirements and builds conceptual models (WHAT).</li>
-    <li><strong>System Design:</strong> Partitions system into subsystems and allocates hardware/concurrency.</li>
-    <li><strong>Object Design:</strong> Augments domain classes with computer algorithms and data structures (HOW).</li>
-    <li><strong>Implementation:</strong> Translates design into robust code with full architectural traceability.</li>
-  </ul>
 </div>
 """
         }

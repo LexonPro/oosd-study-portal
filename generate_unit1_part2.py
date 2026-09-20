@@ -239,16 +239,6 @@ def get_unit1_part2_sections():
     <strong>Key Scoring Points:</strong> Define OID as an intrinsic property distinguishing data independent of attribute values. Highlight that in C++, an object's memory address serves as its unique identifier via the <code>&amp;</code> operator, and pointer comparison evaluates identity. Mention that two objects with identical attributes <code>("Rahul", 21)</code> are still distinct entities.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Object Identity:</strong> Inherent property distinguishing each object uniquely from all others.</li>
-    <li><strong>State Equivalence:</strong> Objects having matching field values (<code>s1 == s2</code>).</li>
-    <li><strong>Identity Equivalence:</strong> Pointers referencing the exact same memory address (<code>&amp;s1 == &amp;s2</code>).</li>
-    <li><strong>C++ Mechanism:</strong> The address-of operator <code>&amp;</code> returns the physical OID.</li>
-  </ul>
-</div>
 """
         },
 
@@ -482,16 +472,6 @@ def get_unit1_part2_sections():
     <strong>Key Scoring Points:</strong> Draw AKTU Fig. 1.9.1 showing methods surrounding hidden attributes. Clearly state that external callers only interact with operation signatures via messages; the receiver decides how to process the request. Explain that encapsulation prevents ripple effects by allowing internal state refactoring without breaking clients.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Encapsulation:</strong> Bundling data and methods into a single unit; hiding internal state behind public methods.</li>
-    <li><strong>Ripple Effect Prevention:</strong> Modifying internal logic does not break external dependent callers.</li>
-    <li><strong>Message Passing:</strong> Clients invoke services by dispatching messages with valid signatures.</li>
-    <li><strong>AKTU Example:</strong> <code>Employee.salary</code> is protected and queried only via <code>getSalary()</code>.</li>
-  </ul>
-</div>
 """
         },
 
@@ -716,16 +696,6 @@ def get_unit1_part2_sections():
     <strong>Key Scoring Points:</strong> Define Information Hiding as the design principle of concealing volatile decisions to decouple calling code. Emphasize that Encapsulation is the language mechanism (class + access modifiers) while Information Hiding is the design motivation (decoupling &amp; modularity). Mention that it prevents ripple effects and simplifies mental models through abstraction.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Information Hiding:</strong> Concealing internal details to produce a clean, decoupled abstraction.</li>
-    <li><strong>David Parnas Principle:</strong> Hide design decisions most likely to change or cause bugs.</li>
-    <li><strong>Encapsulation vs Hiding:</strong> Encapsulation is the vehicle (packaging); Information Hiding is the destination (abstraction).</li>
-    <li><strong>Benefit:</strong> Internal data structures can be refactored with zero ripple effect on client code.</li>
-  </ul>
-</div>
 """
         },
 
@@ -942,16 +912,6 @@ def get_unit1_part2_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Answer the applicability question clearly: <strong>No, polymorphism is NOT exclusively applicable to OO systems!</strong> Ad-hoc polymorphism (function overloading and coercion) exists in traditional procedural languages (like C and Pascal). However, <strong>Universal Polymorphism (specifically Subtyping/Dynamic Binding)</strong> is strictly unique to object-oriented systems. Explain <code>File.print()</code> across ASCII, Binary, and Picture files.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Polymorphism:</strong> "Many forms"; same interface executing different behaviors per target class.</li>
-    <li><strong>Is it OO-only?</strong> No! Ad-hoc (overloading/coercion) works in non-OO; Universal subtyping requires OO.</li>
-    <li><strong>File.print() Example:</strong> ASCII streams text, Binary dumps hex, Picture renders raster pixels.</li>
-    <li><strong>Resolution:</strong> Resolved at runtime via dynamic method lookup (VTable in C++).</li>
-  </ul>
 </div>
 """
         },
@@ -1187,16 +1147,6 @@ def get_unit1_part2_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Write that Generosity / Genericity is parametric polymorphism. Explain that it parameterizes classes with type variables (e.g. <code>template &lt;typename T&gt;</code>), enabling high code reusability without sacrificing compile-time type safety. Contrast it with unsafe <code>void*</code> pointers and compare it with inheritance.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Generosity / Genericity:</strong> Parameterizing classes with type arguments (e.g., <code>Box&lt;T&gt;</code>).</li>
-    <li><strong>Type Safety:</strong> Prevents dangerous runtime downcasting bugs; catches errors at compile time.</li>
-    <li><strong>Reusability:</strong> One template implementation serves unlimited data types.</li>
-    <li><strong>Orthogonal to Inheritance:</strong> Genericity handles uniform containers; inheritance handles behavioral specialization.</li>
-  </ul>
 </div>
 """
         }

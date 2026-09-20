@@ -171,16 +171,6 @@ def get_unit1_part4_sections():
     <strong>Key Scoring Points:</strong> Write that UML stands for Unified Modeling Language. Mention that it was created by Grady Booch, James Rumbaugh, and Ivar Jacobson ("The Three Amigos") and standardized by the OMG in 1997. Explain the four fundamental goals: <strong>Visualizing, Specifying, Constructing, and Documenting</strong>. Note that it is not a programming language but facilitates code generation.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>UML:</strong> General-purpose visual modeling language for blueprinting software systems.</li>
-    <li><strong>Three Amigos:</strong> Grady Booch (Booch method), James Rumbaugh (OMT), Ivar Jacobson (OOSE).</li>
-    <li><strong>Standardization:</strong> Adopted by the Object Management Group (OMG) in 1997.</li>
-    <li><strong>4 Core Goals:</strong> Visualizing, Specifying, Constructing, and Documenting.</li>
-  </ul>
-</div>
 """
         },
 
@@ -356,16 +346,6 @@ def get_unit1_part4_sections():
     <strong>Key Scoring Points:</strong> Memorize and list the six exact tasks: <strong>(i) Specification, (ii) Visualization, (iii) Architecture design, (iv) Construction, (v) Simulation and testing, and (vi) Documentation</strong>. Explain each task in 1–2 crisp sentences showing why natural language text is inadequate for enterprise systems.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Specification:</strong> Unambiguous semantic definitions of classes, methods, and constraints.</li>
-    <li><strong>Visualization:</strong> Translating code logic into rapid spatial visual diagrams.</li>
-    <li><strong>Construction:</strong> Generating executable C++/Java code skeletons directly from diagrams.</li>
-    <li><strong>Simulation &amp; Testing:</strong> Verifying sequence interactions and state transitions before coding.</li>
-  </ul>
-</div>
 """
         },
 
@@ -518,16 +498,6 @@ def get_unit1_part4_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Structure your answer into clear bullet points. <strong>Pros:</strong> Wide industry acceptance, supports OOAD methodology, bridges communication gap between clients and developers, easy to understand for non-programmers, standardized. <strong>Cons:</strong> Criticized as large and complex, time-consuming to keep synchronized with actual code, sequence diagrams cannot represent every branch condition, enterprise tools cost money.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Key Advantage:</strong> Bridges the communication gap between business stakeholders and technical developers.</li>
-    <li><strong>Major Challenge:</strong> High maintenance overhead to keep visual models synchronized with agile code changes.</li>
-    <li><strong>Expressiveness Limit:</strong> Fine-grained algorithmic branching is cumbersome to depict in sequence diagrams.</li>
-    <li><strong>Best Practice:</strong> Practice "Lightweight UML"—model core architectural views and critical protocols.</li>
-  </ul>
 </div>
 """
         },
@@ -767,16 +737,6 @@ def get_unit1_part4_sections():
     <strong>Key Scoring Points:</strong> Draw AKTU Fig. 1.20.1 showing the four interconnected classes: <strong>Library, User, Item, Copy</strong>. State the multiplicities clearly: <code>Library (1) has (*) User</code>, <code>Library (1) contains (1..*) Item</code>, <code>Item (1) has_copies (*) Copy</code>, <code>User (*) reserves (*) Item</code>, <code>User (*) consults (0..1) Item</code>, <code>User (*) borrows (*) Copy</code>. Highlight that users borrow physical <em>Copies</em>, not abstract catalog <em>Items</em>.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Conceptual Model:</strong> Represents real-world problem domain entities before technical software design.</li>
-    <li><strong>Three Elements:</strong> UML building blocks, connection rules, and common mechanisms.</li>
-    <li><strong>Library Case Study:</strong> <code>Library</code> &rarr; <code>Item</code>, <code>User</code>, <code>Copy</code>.</li>
-    <li><strong>Item vs Copy:</strong> <code>Item</code> is the abstract title/ISBN; <code>Copy</code> is the physical stamped book on the shelf.</li>
-  </ul>
-</div>
 """
         },
 
@@ -954,16 +914,6 @@ def get_unit1_part4_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Structure your answer into the three distinct tiers: <strong>Things, Relationships, and Diagrams</strong>. Under Things, list all 4 sub-types: Structural (Class/Node), Behavioral (Interaction/State), Grouping (Package), and Annotational (Note). Under Relationships, list Dependency, Association, Generalization, and Realization with their graphical symbols.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Three Building Blocks:</strong> Things (nouns), Relationships (verbs/connectors), and Diagrams (views).</li>
-    <li><strong>4 Things:</strong> Structural (static), Behavioral (dynamic), Grouping (packages), Annotational (notes).</li>
-    <li><strong>4 Relationships:</strong> Dependency, Association, Generalization, Realization.</li>
-    <li><strong>2 Diagram Families:</strong> Structural (static framework) and Behavioral (dynamics and interactions).</li>
-  </ul>
 </div>
 """
         },
@@ -1152,16 +1102,6 @@ def get_unit1_part4_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Draw the 4+1 Views diagram with Use Case View at the center. Name all five views: <strong>Use Case View (+1), Logical View, Process View, Implementation (Development) View, and Deployment (Physical) View</strong>. For each view, cite the primary stakeholder (e.g. End User, Architect, Programmer, DevOps) and associated UML diagrams.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>4+1 Model:</strong> Proposed by Philippe Kruchten to partition software into 5 orthogonal views.</li>
-    <li><strong>Use Case View (+1):</strong> Central anchor; captures scenarios that drive and test all other 4 views.</li>
-    <li><strong>Logical &amp; Process:</strong> Logical models classes/structure; Process models concurrency/threads.</li>
-    <li><strong>Implementation &amp; Deployment:</strong> Implementation models code components; Deployment models hardware nodes.</li>
-  </ul>
 </div>
 """
         },
@@ -1423,16 +1363,6 @@ def get_unit1_part4_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Define Link as a relationship between objects (instance of an association). Define Association as a group of links relating objects from the same classes. Recreate AKTU Fig. 1.17.1 (Object Diagram with links) and Fig. 1.17.2 (Class Diagram with association). State that both use lines, but class associations include multiplicities while object links connect specific underlined instances.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Link:</strong> Physical/conceptual connection between specific concrete objects (instance level).</li>
-    <li><strong>Association:</strong> Group of links describing relationship structure between classes (class level).</li>
-    <li><strong>Multiplicity:</strong> Quantifies cardinality (e.g., <code>1</code>, <code>*</code>, <code>1..*</code>); belongs on associations, not links.</li>
-    <li><strong>Visual Rule:</strong> Class names are standard; object instance names are underlined (<code>rahul:Person</code>).</li>
-  </ul>
 </div>
 """
         }

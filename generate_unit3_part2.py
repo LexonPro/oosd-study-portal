@@ -279,16 +279,6 @@ def get_unit3_part2_sections():
     <strong>Key Scoring Strategy:</strong> Draw both the DFD and Structure Chart side-by-side. Highlight that SA/SD organizes around <em>functions</em> (functional decomposition) whereas OMT organizes around <em>real-world objects</em>. Mention the 2 mapping strategies: Transform Analysis and Transaction Analysis.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>SA/SD Core:</strong> Function/Process-centric; system = hierarchy of subroutines.</li>
-    <li><strong>Artifacts:</strong> DFD (flow), Data Dictionary (data definitions), Structure Chart (module call tree).</li>
-    <li><strong>Transform vs Transaction:</strong> Transform = linear input-transform-output; Transaction = menu-driven branch dispatcher.</li>
-    <li><strong>OMT vs SA/SD:</strong> OMT centers on data/objects (high reuse); SA/SD centers on functions (low reuse).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -523,16 +513,6 @@ def get_unit3_part2_sections():
     <strong>Key Scoring Points:</strong> Always list the 3 phases: <strong>Modeling</strong> (Entities, Actions, ESD), <strong>Specification</strong> (SSD, Data Streams, State Vector), and <strong>Implementation</strong> (Program Inversion). Mention Michael Jackson (1983) and draw the ESD tree with sequence, selection <code>(o)</code>, and iteration <code>(*)</code>.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>JSD Core:</strong> Real-world entities modeled as Communicating Sequential Processes over time.</li>
-    <li><strong>Tree Operators:</strong> Sequence (ordered left-to-right), Selection <code>(o)</code>, Iteration <code>(*)</code>.</li>
-    <li><strong>Communication Channels:</strong> Data Streams (buffered FIFO) &amp; State Vector Inspection (direct memory read).</li>
-    <li><strong>Program Inversion:</strong> Converts long-running concurrent processes into single callable subroutines.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -730,16 +710,6 @@ def get_unit3_part2_sections():
     <strong>Key Scoring Points:</strong> Systematically list the 6 transformations: Classes &rarr; Structs, Methods &rarr; Functions with explicit self pointer, Storage allocation &rarr; malloc/stack, Inheritance &rarr; Embedded records, Method resolution &rarr; Function pointers, Encapsulation &rarr; Opaque pointers. Provide a clean C code example.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Classes become C <code>struct</code>s containing contiguous attribute variables.</li>
-    <li>Methods become standalone functions receiving an explicit <code>self*</code> pointer.</li>
-    <li>Encapsulation is achieved by hiding struct internals behind header opaque pointers.</li>
-    <li>Inheritance is modeled via struct embedding; polymorphism via function pointers.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -917,16 +887,6 @@ def get_unit3_part2_sections():
     <strong>Key Scoring Points:</strong> Clearly explain all three allocation schemes: <strong>Static</strong> (global segment, fixed count), <strong>Stack</strong> (automatic scope, temporary variables), and <strong>Heap</strong> (dynamic <code>malloc()</code> for objects whose count is determined at runtime). Mention why object references must be pointers (for identity and side effects).
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Classes translate directly into contiguous C <code>struct</code> memory records.</li>
-    <li>Object variables are pointers to allow identity, sharing, and state mutations.</li>
-    <li>3 Storage types: Static (forever), Stack (function lifetime), Heap (dynamic via <code>malloc</code>).</li>
-    <li>Compilers add alignment padding so multi-byte values align with CPU memory boundaries.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1061,16 +1021,6 @@ def get_unit3_part2_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> State that in OO languages the object reference is implicit (<code>this</code>), whereas in non-OO languages it must be passed explicitly as the first argument. Define formal vs actual parameters clearly and explain why passing by pointer is mandatory for mutating state.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>OO languages pass <code>this</code> implicitly; procedural C must pass <code>self*</code> explicitly.</li>
-    <li><strong>Formal params:</strong> Variable definitions in function header.</li>
-    <li><strong>Actual params:</strong> Concrete values/addresses supplied at call-site.</li>
-    <li>Pass-by-pointer avoids expensive struct copies and allows direct state updates.</li>
-  </ul>
 </div>
 """
         },
@@ -1253,16 +1203,6 @@ def get_unit3_part2_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Cite the 3 ways: <strong>Avoid it</strong>, <strong>Flatten the hierarchy</strong>, and <strong>Embedded records (best)</strong>. Explain that placing the base struct at offset 0 guarantees that a derived pointer equals the base pointer. Explain how a table of function pointers (VTable) simulates polymorphism.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Embedded struct at offset 0 provides seamless, zero-cost pointer upcasting.</li>
-    <li>Flattening duplicates fields across structs; simple but violates DRY.</li>
-    <li>Dynamic polymorphism is simulated via VTables (struct of function pointers).</li>
-    <li>The instance stores a <code>vptr</code> pointing to the class's shared static VTable.</li>
-  </ul>
 </div>
 """
         },
@@ -1457,16 +1397,6 @@ def get_unit3_part2_sections():
     <strong>Key Scoring Points:</strong> Draw the comparison table above. Highlight that Buried Pointers provide fast dereferencing for 1:1 and 1:N relations, while Distinct Association Objects decouple classes, support link attributes, and naturally implement M:N associations.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li><strong>Buried pointers:</strong> Pointers embedded in structs; fast $O(1)$, but tightly coupled.</li>
-    <li><strong>Distinct objects:</strong> Separate standalone join records; ideal for M:N and link attributes.</li>
-    <li>1:1 uses single pointer; 1:N uses pointer collection + child back-pointer.</li>
-    <li>Link attributes (e.g., grade, hireDate) require distinct association records.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -1642,16 +1572,6 @@ def get_unit3_part2_sections():
   <div class="tip-box">
     <strong>Key Scoring Points:</strong> Explain the <strong>Opaque Pointer technique</strong> (incomplete struct type in header). Show how attempting direct field access triggers a compiler error. Mention <code>static</code> internal linkage for private subroutines.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Encapsulation is enforced in C via <strong>Opaque Pointers</strong> (incomplete struct types).</li>
-    <li>Header file declares <code>typedef struct Foo Foo;</code>; fields defined only in <code>.c</code>.</li>
-    <li>Direct field access <code>foo-&gt;bar</code> is blocked at compile-time by the compiler.</li>
-    <li><code>static</code> functions restrict scope to the single file, preventing external linker calls.</li>
-  </ul>
 </div>
 """
         }

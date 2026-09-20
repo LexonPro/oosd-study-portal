@@ -141,15 +141,6 @@ def get_part2_sections():
     <strong>Full Marks Strategy:</strong> Never draw an isolated class! Always draw at least 3 connected classes (e.g. <code>Library</code>, <code>Book</code>, <code>Patron</code>) with multiplicities (<code>1</code>, <code>1..*</code>), visibilities (<code>+</code>, <code>-</code>, <code>#</code>), and relationship types clearly labeled.
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Class diagram = Static backbone of OO systems.</li>
-    <li>Features: Classes (name, attributes, operations), Associations, Generalizations, Aggregations, Multiplicities.</li>
-    <li>Maps directly to OOP code (C++, Java, Python) and Relational DB tables.</li>
-  </ul>
-</div>
 """
         },
         {
@@ -321,16 +312,6 @@ def get_part2_sections():
     <strong>Crucial Examiner Alert:</strong> In exams, 90% of lost marks occur because students forget to <strong>UNDERLINE the object name</strong> or mistakenly include operations inside object boxes. Never draw operations in an object diagram!
   </div>
 </div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Object diagram = Snapshot of system at a single point in time.</li>
-    <li>Object name is ALWAYS underlined: <code><u>name : Class</u></code>.</li>
-    <li>No operations compartment (objects only hold state/values).</li>
-    <li>Links = instances of associations (no multiplicity indicators).</li>
-  </ul>
-</div>
 """
         },
         {
@@ -440,16 +421,6 @@ def get_part2_sections():
       <li><strong>Constraint:</strong> A condition that extends semantics and must be evaluated as true at all times.</li>
     </ul>
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Class = Blueprint | Object = Instance in memory.</li>
-    <li>Association = Rule | Link = Actual connection between objects.</li>
-    <li>Attribute = Field declaration | Value = Actual data held.</li>
-    <li>Multiplicity = Range (<code>0..1</code>, <code>1..*</code>, <code>*</code>) | Constraints = <code>{rule}</code>.</li>
-  </ul>
 </div>
 """
         },
@@ -607,17 +578,6 @@ def get_part2_sections():
   <div class="tip-box">
     <strong>Key Tip:</strong> Frame your answer around the <strong>Noun-Verb Analysis</strong>: Nouns become Classes, Adjectives become Attributes, Verbs become Operations, and Prepositional phrases (<em>"belongs to"</em>, <em>"works in"</em>) become Associations.
   </div>
-</div>
-
-<div class="quick-recall">
-  <div class="recall-header">⚡ 30-Second Quick Recall</div>
-  <ul>
-    <li>Noun analysis &rarr; Classes (Entities).</li>
-    <li>Adjectives &rarr; Attributes (State).</li>
-    <li>Verbs &rarr; Operations (Behavior).</li>
-    <li>Prepositions &rarr; Relationships (Associations, Aggregations).</li>
-    <li>Validation: Verify completeness, minimality, and consistency.</li>
-  </ul>
 </div>
 """
         }

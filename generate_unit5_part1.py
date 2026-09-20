@@ -208,18 +208,6 @@ def get_unit5_part1_sections():
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why does declaring a class allocate zero bytes of RAM? (Only provides type metadata to compiler).</li>
-    <li><span class="check-box"></span> What is the formula for calculating the memory footprint of an object? (Sum of non-static data members + alignment padding).</li>
-    <li><span class="check-box"></span> State at least 4 critical distinctions between a Class and an Object.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Quantum asks: <em>"Define class and object. Differentiate between them with a suitable C++ example."</em> Write the 5-point comparison table above, include the <code>Student</code> class code, and state clearly that member functions reside in the code segment once, while data members replicate per object instance in the stack/heap.
 </div>
@@ -408,18 +396,6 @@ def get_unit5_part1_sections():
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the default inlining behavior of functions defined inside a class? (Treated as inline candidate by compiler).</li>
-    <li><span class="check-box"></span> Write the syntax for defining a member function outside its class. (<code>returnType ClassName::funcName(params)</code>).</li>
-    <li><span class="check-box"></span> Why is the scope resolution operator <code>::</code> required for outside definitions? (Binds the function body to the class symbol table).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -622,18 +598,6 @@ def get_unit5_part1_sections():
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What is the default access specifier for members of a C++ class? (<code>private</code>).</li>
-    <li><span class="check-box"></span> How does data hiding prevent corrupted states in software applications? (Enforces validation in mutator functions).</li>
-    <li><span class="check-box"></span> Can a private member function exist? (Yes, used as helper / utility subroutines internal to the class).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When examiners ask: <em>"What is the difference between private and public access specifiers in C++?"</em>, provide the 4-point comparison table above and explain how private variables prevent invalid state (e.g. negative balance or invalid age) using getter/setter validation code.
 </div>
@@ -796,18 +760,6 @@ def get_unit5_part1_sections():
       <path d="M 430 100 L 480 90" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Where does a static data member reside in physical memory? (In the static/global data segment, not on object stack/heap).</li>
-    <li><span class="check-box"></span> Why does omitting the outside definition cause a linker error? (Unresolved external symbol: memory was never allocated).</li>
-    <li><span class="check-box"></span> Does a static data member increase the <code>sizeof</code> an object? (No! <code>sizeof(Car)</code> remains unaffected by static variables).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -1021,18 +973,6 @@ def get_unit5_part1_sections():
       </tr>
     </tbody>
   </table>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why can a static member function not access non-static data members? (It lacks an object context and an implicit <code>this</code> pointer).</li>
-    <li><span class="check-box"></span> Can a static member function be declared as <code>virtual</code>? (No, virtual functions require dynamic dispatch via an object's <code>vptr</code>).</li>
-    <li><span class="check-box"></span> Can a static member function be declared with the <code>const</code> qualifier? (No, <code>const</code> qualifies the <code>this</code> pointer, which does not exist here).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">

@@ -209,19 +209,6 @@ def get_unit4_part1_sections():
   </table>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Can you state who developed C++, in what year, and at which facility? (Bjarne Stroustrup, 1979, Bell Labs).</li>
-    <li><span class="check-box"></span> What did the <code>++</code> in C++ signify? (Increment operator in C, indicating an evolutionary step forward).</li>
-    <li><span class="check-box"></span> State the Zero-Overhead Principle in your own words.</li>
-    <li><span class="check-box"></span> Name at least 4 critical real-world application domains where C++ is mandatory.</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Explain features and applications of C++"</em> (frequently asked 10-mark question), draw the evolutionary chart showing C (speed) + Simula67 (classes) = C++, and list at least 5 industrial applications with concrete software names (e.g. Unreal Engine, Windows Kernel, V8 Engine).
 </div>
@@ -439,19 +426,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Can you draw the 4 sequential tiers of a C++ program from memory?</li>
-    <li><span class="check-box"></span> What is the exact purpose of the scope resolution operator (<code>::</code>) when defining member functions?</li>
-    <li><span class="check-box"></span> Why does separating interface (<code>.h</code>) from implementation (<code>.cpp</code>) improve large software projects?</li>
-    <li><span class="check-box"></span> What does returning <code>0</code> from <code>main()</code> signal to the host operating system?</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> When asked <em>"Describe the basic structure of a C++ program with an example"</em>, explicitly write out the code showing member functions defined <strong>outside</strong> the class using <code>ReturnType ClassName::FunctionName(...)</code>. This proves your mastery of scope resolution.
 </div>
@@ -607,18 +581,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>using namespace std;</code> discouraged in production header (<code>.h</code>) files? (It forces all symbols into anyone who includes that header).</li>
-    <li><span class="check-box"></span> What is the syntax to access a member inside a namespace? (<code>NamespaceName::MemberName</code>).</li>
-    <li><span class="check-box"></span> What is an anonymous (unnamed) namespace used for? (Internal linkage within a single translation unit).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
@@ -806,18 +768,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
   </div>
 </div>
 
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> Why is <code>2nd_rank</code> an invalid identifier? (Starts with a numeric digit).</li>
-    <li><span class="check-box"></span> Why is <code>total-sum</code> invalid? (Hyphen is parsed as subtraction operator).</li>
-    <li><span class="check-box"></span> Name the only non-alphanumeric character permitted in a standard C++ identifier. (Underscore <code>_</code>).</li>
-  </ul>
-</div>
-
 <div class="exam-tip">
   <strong>AKTU Exam Tip:</strong> Questions asking <em>"Identify valid and invalid identifiers with reasons"</em> are guaranteed 2 to 5-mark scorers. State the exact reason (e.g. "contains hyphen", "starts with digit", "is a keyword") for each candidate.
 </div>
@@ -966,19 +916,6 @@ BankAccount::BankAccount(<span class="c-type">std::string</span> accNum, <span c
       </g>
     </svg>
   </div>
-</div>
-
-<div class="checklist-card">
-  <div class="checklist-header">
-    <span class="checklist-icon">📋</span>
-    <span>Self-Recall Checklist &amp; Exam Quick-Prep</span>
-  </div>
-  <ul class="checklist-items">
-    <li><span class="check-box"></span> What are the 4 fundamental properties of every variable in C++? (Name, Type, Address, Value).</li>
-    <li><span class="check-box"></span> Distinguish between variable declaration and variable definition.</li>
-    <li><span class="check-box"></span> Which C++ operator retrieves the physical hexadecimal memory address of a variable? (Address-of operator <code>&amp;</code>).</li>
-    <li><span class="check-box"></span> How many bytes do typical <code>int</code>, <code>double</code>, and <code>char</code> occupy on 64-bit systems? (4, 8, 1).</li>
-  </ul>
 </div>
 
 <div class="exam-tip">
